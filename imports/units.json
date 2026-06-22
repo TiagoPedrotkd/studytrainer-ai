@@ -1,0 +1,133 @@
+[
+  {
+    "html": "d:/Treinador_Curso/Resumos/SubUnidade1_V1.html",
+    "id": "sub1",
+    "number": 1,
+    "title": "Planeamento e Treino",
+    "description": "Prazos de planeamento, modelo de Bompa, desenvolvimento motor e fases LTAD.",
+    "extraFlashcards": [
+      {
+        "q": "Qual é a relação entre carga, recuperação e adaptação?",
+        "a": "Carga + Recuperação equilibradas → adaptação positiva. Se a carga supera consistentemente a recuperação → fadiga excessiva e overtraining, com queda de rendimento."
+      },
+      {
+        "q": "O que é a fase «Treinar para Competir» no LTAD?",
+        "a": "Fase de otimização física, técnica e tática. Preparação específica para competição de alto nível, sem idades fixas — depende do desenvolvimento do atleta."
+      },
+      {
+        "q": "O que incluem os «Meios» na unidade de treino?",
+        "a": "Recursos materiais (equipamento, espaço), organizacionais (estrutura de treino) e informativos (vídeo, dados, feedback)."
+      },
+      {
+        "q": "Porque é o calendário competitivo um factor directo de Bompa?",
+        "a": "Porque é a base do planeamento — define os macrociclos, picos de forma e distribuição de carga ao longo da época."
+      },
+      {
+        "q": "O que é o desenvolvimento motor?",
+        "a": "Alterações na capacidade motora ao longo de toda a vida, desde a infância até à idade adulta e terceira idade."
+      },
+      {
+        "q": "Qual é o foco da fase «Treinar para Treinar»?",
+        "a": "Capacidade aeróbia de base e força. Rapazes: 12–16 anos; meninas: 11–15 anos."
+      }
+    ],
+    "extraQuiz": [
+      {
+        "q": "Qual é o prazo de planeamento de longo prazo?",
+        "opts": ["2 anos", "4 anos", "8–10 anos", "1 época"],
+        "ans": 2
+      },
+      {
+        "q": "O equilíbrio entre carga e recuperação promove:",
+        "opts": ["Fadiga crónica", "Adaptação positiva", "Lesão imediata", "Overtraining"],
+        "ans": 1
+      },
+      {
+        "q": "A mnemónica «Fico Atento, Treino, Treino, Triunfo, Acabo» ajuda a memorizar:",
+        "opts": ["Sistemas energéticos", "Fases do LTAD", "Zonas de treino", "Tipos de fibras"],
+        "ans": 1
+      },
+      {
+        "q": "Na fase FUN, qual é o foco principal?",
+        "opts": ["Rendimento máximo", "Movimentos fundamentais e divertimento", "Força máxima", "Especialização táctica"],
+        "ans": 1
+      },
+      {
+        "q": "O que significa «controlo motor»?",
+        "opts": [
+          "Evolução de uma habilidade especializada",
+          "Coordenação dos movimentos e graus de liberdade",
+          "Alterações na capacidade motora ao longo da vida",
+          "Avaliação da maturação biológica"
+        ],
+        "ans": 1
+      }
+    ]
+  },
+  {
+    "html": "d:/Treinador_Curso/Resumos/SubUnidade1_V2.html",
+    "id": "sub2",
+    "number": 2,
+    "title": "Sistemas Energéticos",
+    "description": "ATP-PCr, glicolítico, oxidativo, zonas de treino, limiares e unidades motoras.",
+    "extraFlashcards": [
+      {
+        "q": "Que sistema energético domina num sprint de 100m?",
+        "a": "ATP-PCr (fosfagénio anaeróbio) nos primeiros segundos, com contribuição crescente do sistema glicolítico."
+      },
+      {
+        "q": "Qual a diferença entre VT1 e VT2?",
+        "a": "VT1 (limiar aeróbio): ~2 mmol/L lactato, ~65% FC máx. VT2 (limiar anaeróbio): >4 mmol/L lactato, acumulação exponencial de lactato."
+      },
+      {
+        "q": "O sistema ATP-PCr produz lactato?",
+        "a": "Não. Funciona sem oxigénio e sem produção de lactato — usa fosfocreatina para regenerar ATP rapidamente."
+      },
+      {
+        "q": "Que tipo de fibra é recrutada primeiro em qualquer movimento?",
+        "a": "Tipo S (lentas / Tipo I) — menor limiar de recrutamento, sempre activadas primeiro (Princípio de Henneman)."
+      },
+      {
+        "q": "Em que zona de treino se desenvolve principalmente a base aeróbia?",
+        "a": "Zona leve (<65% FC máx), com lactato estável — ideal para recuperação activa e volume aeróbio."
+      }
+    ],
+    "extraQuiz": [
+      {
+        "q": "O sistema ATP-PCr recupera 70% da capacidade em:",
+        "opts": ["10 segundos", "30 segundos", "2 minutos", "20–24 horas"],
+        "ans": 1
+      },
+      {
+        "q": "Quantos ATP produz o glicogénio na via glicolítica?",
+        "opts": ["2 ATP", "3 ATP", "38 ATP", "39 ATP"],
+        "ans": 1
+      },
+      {
+        "q": "A zona leve de treino corresponde a:",
+        "opts": [">85% FC máx", "65–85% FC máx", "<65% FC máx", "100% FC máx"],
+        "ans": 2
+      },
+      {
+        "q": "O que caracteriza as fibras Tipo FR (IIa)?",
+        "opts": [
+          "Limiar alto, fadiga rápida",
+          "Características intermédias, alguma resistência à fadiga",
+          "Apenas usadas em repouso",
+          "Não existem em humanos"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "Para além do recrutamento de UM, como se aumenta a força?",
+        "opts": [
+          "Diminuindo a frequência de descarga",
+          "Aumentando a frequência de descarga do motoneurónio",
+          "Reduzindo a acetilcolina",
+          "Apenas com estiramentos"
+        ],
+        "ans": 1
+      }
+    ]
+  }
+]

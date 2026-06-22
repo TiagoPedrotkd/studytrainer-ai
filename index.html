@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="App de estudo para o curso de Treinador Desportivo">
+  <meta name="theme-color" content="#1a1f2e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="StudyTrainer">
+  <title>StudyTrainer — Treinador Desportivo</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="logo" aria-hidden="true">📚</span>
+        <div>
+          <h1>StudyTrainer</h1>
+          <p class="subtitle">Curso de Treinador Desportivo</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="install-app" class="btn-install" hidden>Instalar app</button>
+        <button id="theme-toggle" class="btn-icon" aria-label="Alternar modo escuro" title="Alternar tema">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Subunidades</h2>
+      <p class="hero-text">Escolhe uma subunidade para estudar conteúdo, rever flashcards ou fazer quiz.</p>
+    </section>
+
+    <div id="subunits-grid" class="subunits-grid" role="list">
+      <!-- Cards gerados por app.js -->
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <p>StudyTrainer &copy; 2026</p>
+  </footer>
+
+  <script src="data/sub1.js"></script>
+  <script src="data/sub2.js"></script>
+  <script src="data/sub2.js"></script>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Subunidade de estudo — Treinador Desportivo">
+  <meta name="theme-color" content="#1a1f2e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="StudyTrainer">
+  <title>Subunidade — StudyTrainer</title>
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../icons/icon.svg">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/content.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <a href="../index.html" class="btn-back" aria-label="Voltar ao menu">←</a>
+      <div class="header-brand header-brand-compact">
+        <div>
+          <h1 id="subunit-title">Subunidade</h1>
+          <p id="subunit-subtitle" class="subtitle"></p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="install-app" class="btn-install" hidden>Instalar</button>
+        <button id="theme-toggle" class="btn-icon" aria-label="Alternar modo escuro" title="Alternar tema">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Secções da subunidade">
+    <button class="tab active" role="tab" aria-selected="true" aria-controls="panel-conteudo" data-tab="conteudo">Conteúdo</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-flashcards" data-tab="flashcards">Flashcards</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-quiz" data-tab="quiz">Quiz</button>
+  </nav>
+
+  <main class="container">
+    <!-- Painel Conteúdo -->
+    <section id="panel-conteudo" class="tab-panel active" role="tabpanel">
+      <div id="content-blocks" class="content-blocks"></div>
+    </section>
+
+    <!-- Painel Flashcards -->
+    <section id="panel-flashcards" class="tab-panel" role="tabpanel" hidden>
+      <div class="flashcards-header">
+        <div class="progress-info">
+          <span id="fc-progress-text">0 / 0</span>
+          <div class="progress-bar">
+            <div id="fc-progress-fill" class="progress-fill" style="width: 0%"></div>
+          </div>
+        </div>
+        <button id="fc-reset" class="btn-secondary btn-sm">Repor progresso</button>
+      </div>
+
+      <div class="flashcard-area">
+        <div id="flashcard" class="flashcard" tabindex="0" role="button" aria-label="Virar flashcard">
+          <div class="flashcard-inner">
+            <div class="flashcard-front">
+              <span class="fc-label">Pergunta</span>
+              <p id="fc-question"></p>
+            </div>
+            <div class="flashcard-back">
+              <span class="fc-label">Resposta</span>
+              <p id="fc-answer"></p>
+            </div>
+          </div>
+        </div>
+        <p class="fc-hint">Toca no cartão para virar</p>
+      </div>
+
+      <div class="flashcard-controls">
+        <button id="fc-prev" class="btn-secondary" disabled>← Anterior</button>
+        <button id="fc-know" class="btn-success">Sei ✓</button>
+        <button id="fc-dont-know" class="btn-danger">Não sei ✗</button>
+        <button id="fc-next" class="btn-secondary">Seguinte →</button>
+      </div>
+    </section>
+
+    <!-- Painel Quiz -->
+    <section id="panel-quiz" class="tab-panel" role="tabpanel" hidden>
+      <div id="quiz-intro" class="quiz-intro">
+        <h2>Quiz</h2>
+        <p id="quiz-intro-text">Testa os teus conhecimentos com perguntas de escolha múltipla.</p>
+        <button id="quiz-start" class="btn-primary">Começar quiz</button>
+      </div>
+
+      <div id="quiz-active" class="quiz-active" hidden>
+        <div class="quiz-progress">
+          <span id="quiz-counter">1 / 10</span>
+          <div class="progress-bar">
+            <div id="quiz-progress-fill" class="progress-fill" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <div class="quiz-question-card">
+          <p id="quiz-question" class="quiz-question"></p>
+          <div id="quiz-options" class="quiz-options" role="radiogroup"></div>
+        </div>
+
+        <div class="quiz-actions">
+          <button id="quiz-confirm" class="btn-primary" disabled>Confirmar</button>
+          <button id="quiz-next" class="btn-primary" hidden>Próxima pergunta</button>
+        </div>
+      </div>
+
+      <div id="quiz-results" class="quiz-results" hidden>
+        <div class="results-card">
+          <h2>Resultado</h2>
+          <div class="score-circle">
+            <span id="quiz-score">0</span>
+            <span class="score-total">/ <span id="quiz-total">10</span></span>
+          </div>
+          <p id="quiz-feedback" class="quiz-feedback"></p>
+          <button id="quiz-retry" class="btn-primary">Tentar novamente</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../data/sub1.js"></script>
+  <script src="../data/sub2.js"></script>
+  <script src="../data/sub2.js"></script>
+  <script src="../app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('../sw.js').catch(() => {});
+    }
+  </script>
+</body>
+</html>

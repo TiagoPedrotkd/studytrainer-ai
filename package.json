@@ -1,0 +1,9 @@
+{
+  "name": "studytrainer-ai",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve . -l 3000",
+    "serve": "npx --yes serve . -l 3000",
+    "import": "node scripts/import-unit.js"
+  }
+}
