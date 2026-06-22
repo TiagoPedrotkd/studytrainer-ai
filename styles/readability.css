@@ -1,0 +1,220 @@
+/* ==========================================================================
+   Legibilidade — corrige contraste no conteúdo importado (modo escuro)
+   ========================================================================== */
+
+/* Texto base mais legível */
+.rich-content {
+  color: var(--text-primary);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.rich-content .section-label {
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+
+.rich-content .card,
+.rich-content .col-card,
+.rich-content .cap-card,
+.rich-content .carga-card,
+.rich-content .hetero-card,
+.rich-content .princip-card,
+.rich-content .param-card,
+.rich-content .factor-card,
+.rich-content .struct-item,
+.rich-content .pillar {
+  color: var(--text-primary);
+}
+
+/* Parágrafos inline nos HTML importados */
+.rich-content [style*="color:var(--color-text-secondary)"],
+.rich-content [style*="color: var(--color-text-secondary)"] {
+  color: var(--text-secondary) !important;
+}
+
+.rich-content [style*="color:var(--color-text-tertiary)"],
+.rich-content [style*="color: var(--color-text-tertiary)"] {
+  color: var(--text-muted) !important;
+}
+
+.rich-content .col-item,
+.rich-content .cap-item,
+.rich-content .card-sub,
+.rich-content .tl-desc,
+.rich-content .carga-card p,
+.rich-content .carga-card .ex,
+.rich-content .hetero-card p,
+.rich-content .princip-card p,
+.rich-content .param-card p,
+.rich-content .factor-card p,
+.rich-content .ex-card p,
+.rich-content .struct-item p,
+.rich-content .pillar p,
+.rich-content .step-text,
+.rich-content .recruit-label,
+.rich-content .fiber-detail,
+.rich-content .compare-card .detail,
+.rich-content .newell-card p,
+.rich-content .phv-card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.rich-content .detail-key {
+  color: var(--text-muted);
+}
+
+.rich-content .detail-val {
+  color: var(--text-primary);
+}
+
+.rich-content .alert-box {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.rich-content .alert-box strong {
+  color: var(--text-primary);
+}
+
+.rich-content .mnem-box {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.rich-content .phase-table td {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.rich-content .phase-table th {
+  color: var(--text-muted);
+}
+
+.rich-content .step-h .ex {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Cards com fundos claros inline (HTML pensado para tema claro) → adaptar ao escuro */
+:root:not([data-theme="light"]) .rich-content .ex-card[style*="background:#"] {
+  background: var(--bg-elevated) !important;
+  border-color: var(--border) !important;
+}
+
+:root:not([data-theme="light"]) .rich-content .ex-card[style*="background:#"] h4,
+:root:not([data-theme="light"]) .rich-content .ex-card[style*="background:#"] p,
+:root:not([data-theme="light"]) .rich-content .ex-card[style*="background:#"] .badge {
+  color: inherit;
+}
+
+:root:not([data-theme="light"]) .rich-content .ex-card[style*="background:#"] h4 {
+  color: var(--text-primary) !important;
+}
+
+:root:not([data-theme="light"]) .rich-content .ex-card[style*="background:#"] p {
+  color: var(--text-secondary) !important;
+}
+
+/* Cards com borda colorida — manter borda, garantir texto legível */
+:root:not([data-theme="light"]) .rich-content .col-card[style*="border-color:#"],
+:root:not([data-theme="light"]) .rich-content .carga-card[style*="border-color:#"] {
+  color: var(--text-primary);
+}
+
+:root:not([data-theme="light"]) .rich-content .col-card[style*="border-color:#"] .col-item,
+:root:not([data-theme="light"]) .rich-content .carga-card[style*="border-color:#"] p,
+:root:not([data-theme="light"]) .rich-content .carga-card[style*="border-color:#"] .ex {
+  color: var(--text-secondary);
+}
+
+/* Inline styles com variáveis do HTML original */
+.rich-content [style*="color:var(--color-text-primary)"],
+.rich-content [style*="color: var(--color-text-primary)"] {
+  color: var(--text-primary) !important;
+}
+
+/* Pirâmide multilateral — texto branco sem transparência */
+:root:not([data-theme="light"]) .rich-content .pyr-row[style*="background:#"] {
+  color: #fff !important;
+}
+
+:root:not([data-theme="light"]) .rich-content .pyr-row[style*="background:#"] h4,
+:root:not([data-theme="light"]) .rich-content .pyr-row[style*="background:#"] p {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* Texto demasiado pequeno ou apagado */
+.rich-content .section-label {
+  color: var(--accent);
+}
+
+.rich-content .factor-card p,
+.rich-content .param-card p {
+  font-size: 12px;
+}
+
+.rich-content .step-h .ex {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.rich-content .pyr-row p {
+  opacity: 1;
+}
+
+/* Badges — mais contraste no modo escuro */
+:root:not([data-theme="light"]) .rich-content .badge-teal { background: rgba(74, 222, 128, 0.18); color: #86efac; }
+:root:not([data-theme="light"]) .rich-content .badge-amber { background: rgba(251, 191, 36, 0.18); color: #fcd34d; }
+:root:not([data-theme="light"]) .rich-content .badge-blue { background: rgba(108, 158, 255, 0.18); color: #93c5fd; }
+:root:not([data-theme="light"]) .rich-content .badge-coral { background: rgba(248, 113, 113, 0.18); color: #fca5a5; }
+:root:not([data-theme="light"]) .rich-content .badge-purple { background: rgba(167, 139, 250, 0.18); color: #c4b5fd; }
+:root:not([data-theme="light"]) .rich-content .badge-green { background: rgba(74, 222, 128, 0.18); color: #86efac; }
+
+:root:not([data-theme="light"]) .rich-content .badge-red { background: rgba(248, 113, 113, 0.18); color: #fca5a5; }
+
+/* UI global — badges e meta info */
+.meta-badge {
+  color: var(--text-primary);
+}
+
+.subunit-desc,
+.progress-info span {
+  color: var(--text-secondary);
+}
+
+/* Navegação interna */
+.content-subnav-btn {
+  color: var(--text-primary);
+  font-size: 0.85rem;
+}
+
+/* Quiz — opções desactivadas mais legíveis */
+.quiz-option:disabled {
+  opacity: 1;
+  color: var(--text-primary);
+}
+
+.quiz-option.correct,
+.quiz-option.incorrect {
+  color: var(--text-primary);
+}
+
+.option-letter {
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+
+/* Modo claro — cards coloridos mantêm texto escuro */
+[data-theme="light"] .rich-content .ex-card[style*="background:#"] p {
+  color: #374151 !important;
+}
+
+[data-theme="light"] .rich-content .ex-card[style*="background:#"] h4 {
+  color: #1a1f2e !important;
+}

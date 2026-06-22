@@ -18,17 +18,69 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const UNITS_FILE = path.join(ROOT, 'imports', 'units.json');
 
+const MULTI_PANELS = [
+  { id: 'resistencia', label: 'Resistência' },
+  { id: 'metodos', label: 'Métodos' },
+  { id: 'avaliacao', label: 'Avaliação' },
+  { id: 'velocidade', label: 'Velocidade' },
+];
+
+function extractPanelInner(html, panelId) {
+  const startTag = `<div id="${panelId}"`;
+  const startIdx = html.indexOf(startTag);
+  if (startIdx === -1) return null;
+
+  const contentStart = html.indexOf('>', startIdx) + 1;
+  let depth = 1;
+  let i = contentStart;
+
+  while (i < html.length && depth > 0) {
+    const nextOpen = html.indexOf('<div', i);
+    const nextClose = html.indexOf('</div>', i);
+    if (nextClose === -1) break;
+
+    if (nextOpen !== -1 && nextOpen < nextClose) {
+      depth += 1;
+      i = nextOpen + 4;
+    } else {
+      depth -= 1;
+      if (depth === 0) return html.slice(contentStart, nextClose).trim();
+      i = nextClose + 6;
+    }
+  }
+  return null;
+}
+
+function extractMultiPanelConteudo(html) {
+  const parts = [];
+  const sections = [];
+
+  for (const panel of MULTI_PANELS) {
+    const inner = extractPanelInner(html, panel.id);
+    if (inner) {
+      parts.push(`<div id="sec-${panel.id}" class="content-section">${inner}</div>`);
+      sections.push({ id: `sec-${panel.id}`, label: panel.label });
+    }
+  }
+
+  if (parts.length === 0) return null;
+  return { html: parts.join('\n\n'), sections };
+}
+
 function extractConteudo(html) {
+  const multi = extractMultiPanelConteudo(html);
+  if (multi) return multi;
+
   const startTag = '<div id="conteudo"';
   const startIdx = html.indexOf(startTag);
-  if (startIdx === -1) throw new Error('Painel #conteudo não encontrado no HTML');
+  if (startIdx === -1) throw new Error('Painel #conteudo (ou painéis resistencia/metodos/…) não encontrado no HTML');
 
   const contentStart = html.indexOf('>', startIdx) + 1;
   const endMarker = '<div id="flashcards"';
   const endIdx = html.indexOf(endMarker, contentStart);
   if (endIdx === -1) throw new Error('Painel #flashcards não encontrado no HTML');
 
-  return html.slice(contentStart, endIdx).replace(/\s*<\/div>\s*$/, '').trim();
+  return { html: html.slice(contentStart, endIdx).replace(/\s*<\/div>\s*$/, '').trim(), sections: [] };
 }
 
 function extractArray(html, name) {
@@ -83,8 +135,11 @@ function mergeUniqueQuiz(base, extra) {
   return result;
 }
 
-function generateSubFile(unit, contentHtml, flashcards, quiz) {
+function generateSubFile(unit, contentHtml, contentSections, flashcards, quiz) {
   const indent = (obj) => JSON.stringify(obj, null, 2).replace(/\n/g, '\n  ');
+  const sectionsLine = contentSections.length
+    ? `  contentSections: ${indent(contentSections)},\n`
+    : '';
 
   return `/**
  * Gerado automaticamente por scripts/import-unit.js
@@ -102,7 +157,7 @@ window.STUDY_SUBUNITS.push({
   number: ${unit.number},
   title: ${JSON.stringify(unit.title)},
   description: ${JSON.stringify(unit.description)},
-  contentHtml: \`${escapeTemplate(contentHtml)}\`,
+${sectionsLine}  contentHtml: \`${escapeTemplate(contentHtml)}\`,
   flashcards: ${indent(flashcards)},
   quiz: ${indent(quiz)},
 });
@@ -119,7 +174,9 @@ function importUnit(unit) {
   }
 
   const html = fs.readFileSync(htmlPath, 'utf8');
-  const contentHtml = extractConteudo(html);
+  const extracted = extractConteudo(html);
+  const contentHtml = extracted.html;
+  const contentSections = unit.contentSections || extracted.sections || [];
   const rawFlashcards = extractArray(html, 'flashcards');
   const rawQuiz = extractArray(html, 'questions');
 
@@ -134,7 +191,7 @@ function importUnit(unit) {
   );
 
   const outPath = path.join(ROOT, 'data', `${unit.id}.js`);
-  fs.writeFileSync(outPath, generateSubFile(unit, contentHtml, flashcards, quiz), 'utf8');
+  fs.writeFileSync(outPath, generateSubFile(unit, contentHtml, contentSections, flashcards, quiz), 'utf8');
 
   console.log(`✓ ${unit.id}.js — ${flashcards.length} flashcards, ${quiz.length} perguntas quiz`);
   return unit.id;
@@ -147,22 +204,16 @@ function syncScriptTags(units) {
   const indexPath = path.join(ROOT, 'index.html');
   let indexHtml = fs.readFileSync(indexPath, 'utf8');
   indexHtml = indexHtml.replace(
-    /  <script src="data\/sub\d+\.js"><\/script>(\n  <script src="data\/sub\d+\.js"><\/script>)*/,
-    scripts
+    /(  <script src="data\/sub\d+\.js"><\/script>\r?\n)+/,
+    `${scripts}\r\n`
   );
-  if (!indexHtml.includes('data/sub1.js')) {
-    indexHtml = indexHtml.replace(
-      '  <script src="app.js"></script>',
-      `${scripts}\n  <script src="app.js"></script>`
-    );
-  }
   fs.writeFileSync(indexPath, indexHtml, 'utf8');
 
   const pagePath = path.join(ROOT, 'pages', 'subunidade.html');
   let pageHtml = fs.readFileSync(pagePath, 'utf8');
   pageHtml = pageHtml.replace(
-    /  <script src="..\/data\/sub\d+\.js"><\/script>(\n  <script src="..\/data\/sub\d+\.js"><\/script>)*/,
-    scriptsPages
+    /(  <script src="\.\.\/data\/sub\d+\.js"><\/script>\r?\n)+/,
+    `${scriptsPages}\r\n`
   );
   fs.writeFileSync(pagePath, pageHtml, 'utf8');
 
@@ -170,16 +221,9 @@ function syncScriptTags(units) {
   let sw = fs.readFileSync(swPath, 'utf8');
   const dataAssets = units.map((u) => `  '/data/${u.id}.js',`).join('\n');
   sw = sw.replace(
-    /  '\/data\/sub\d+\.js',(\n  '\/data\/sub\d+\.js',)*/,
-    dataAssets
+    /(  '\/data\/sub\d+\.js',\r?\n)+/,
+    `${dataAssets}\r\n`
   );
-  sw = sw.replace(
-    "  '/styles/main.css',",
-    "  '/styles/main.css',\n  '/styles/content.css',"
-  );
-  if (!sw.includes("content.css")) {
-    sw = sw.replace("  '/styles/main.css',", "  '/styles/main.css',\n  '/styles/content.css',");
-  }
   fs.writeFileSync(swPath, sw, 'utf8');
 
   console.log('✓ index.html, subunidade.html e sw.js sincronizados');

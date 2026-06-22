@@ -13,30 +13,46 @@ window.STUDY_SUBUNITS.push({
   id: 'sub1',
   number: 1,
   title: "Planeamento e Treino",
-  description: "Prazos de planeamento, modelo de Bompa, desenvolvimento motor e fases LTAD.",
-  contentHtml: `<p class="section-label">Bloco 1 — Planeamento e Treino</p>
+  description: "Planeamento, treino, Bompa, desenvolvimento motor, maturação e fases LTAD.",
+  contentHtml: `<p class="section-label">Introdução — O processo de treino</p>
+  <div class="card">
+    <div style="font-size:14px;font-weight:500;margin-bottom:.75rem">Ciclo integrado do processo desportivo</div>
+    <div class="detail-row"><span class="detail-key">Planeamento</span><span class="detail-val">Organizar estratégias para atingir objetivos (procedimento metódico e científico)</span></div>
+    <div class="detail-row"><span class="detail-key">Treino</span><span class="detail-val">Indução sistemática de estímulo → resposta fisiológica após recuperação</span></div>
+    <div class="detail-row"><span class="detail-key">Competição</span><span class="detail-val">Objectivo final do processo de preparação</span></div>
+    <div class="detail-row"><span class="detail-key">Controlo</span><span class="detail-val">Monitorização diária integrada no planeamento</span></div>
+  </div>
+  <div class="alert-box"><strong>Planeamento</strong> é a ferramenta mais importante do treinador — organiza estratégias com base científica. O ciclo de gestão: <strong>Elaboração → Execução → Avaliação</strong> (ajustes contínuos ao plano).</div>
+  <div class="card">
+    <div style="font-size:13px;font-weight:500;margin-bottom:.5rem">Definição de treino</div>
+    <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.7"><strong style="font-weight:500">Carvalho (1984):</strong> processo que organiza estratégias para atingir os objectivos do planeamento.<br><strong style="font-weight:500">Komi (1986):</strong> indução sistemática de um estímulo que causa resposta fisiológica específica, após indução da recuperação.</div>
+  </div>
+
+  <p class="section-label">Bloco 1 — Planeamento e Treino</p>
   <div class="card">
     <div style="font-size:14px;font-weight:500;margin-bottom:.75rem">Prazos de planeamento</div>
-    <div class="detail-row"><span class="detail-key">Longo prazo</span><span class="detail-val">8–10 anos (carreira do atleta)</span></div>
-    <div class="detail-row"><span class="detail-key">Médio prazo</span><span class="detail-val">~4 anos (ciclo olímpico)</span></div>
-    <div class="detail-row"><span class="detail-key">Curto prazo</span><span class="detail-val">~2 anos (Mundial / Europeu)</span></div>
-    <div class="detail-row"><span class="detail-key">Anual</span><span class="detail-val">1 época</span></div>
+    <div class="detail-row"><span class="detail-key">Longo prazo</span><span class="detail-val">8–10 anos — plano orientador da carreira, etapas e fases de formação</span></div>
+    <div class="detail-row"><span class="detail-key">Médio prazo</span><span class="detail-val">~4 anos — plano intermédio de carreira ou preparação para Jogos Olímpicos</span></div>
+    <div class="detail-row"><span class="detail-key">Curto prazo</span><span class="detail-val">~2 anos — preparação olímpica segura (Mundial, Europeu)</span></div>
+    <div class="detail-row"><span class="detail-key">Anual</span><span class="detail-val">1 época — tudo minuciosamente organizado e previsto</span></div>
   </div>
   <div class="alert-box"><strong>Relação-chave:</strong> Carga + Recuperação equilibradas → adaptação positiva. Carga &gt; Recuperação (repetida) → fadiga excessiva → <strong>overtraining</strong>.</div>
   <div class="two-col">
     <div class="col-card">
       <div class="badge badge-teal">4 componentes da unidade de treino</div>
-      <div class="col-item"><strong style="font-weight:500">Objetivo</strong> — foco fisiológico, psicológico ou cognitivo</div>
-      <div class="col-item"><strong style="font-weight:500">Conteúdo</strong> — tarefas gerais, específicas ou de competição</div>
-      <div class="col-item"><strong style="font-weight:500">Métodos</strong> — princípios científicos do treino</div>
-      <div class="col-item"><strong style="font-weight:500">Meios</strong> — recursos materiais, organizacionais e informativos</div>
+      <div class="col-item"><strong style="font-weight:500">Objetivo</strong> — o que se pretende atingir (geral ou operacional; psicomotor, cognitivo, psicológico)</div>
+      <div class="col-item"><strong style="font-weight:500">Conteúdo</strong> — todas as tarefas: gerais, específicas ou de competição</div>
+      <div class="col-item"><strong style="font-weight:500">Métodos</strong> — ajustes sistemáticos baseados na ciência do treino</div>
+      <div class="col-item"><strong style="font-weight:500">Meios</strong> — recursos organizacionais, materiais/instrumentais e informativos</div>
     </div>
     <div class="col-card">
-      <div class="badge badge-blue">Indicadores de controlo</div>
+      <div class="badge badge-blue">Indicadores de controlo (Bompa et al., 2018)</div>
       <div class="col-item">Frequência cardíaca de repouso</div>
       <div class="col-item">Variabilidade da FC</div>
       <div class="col-item">Estado de humor</div>
-      <div class="col-item">Questionários de monitorização</div>
+      <div class="col-item">Padrões de sono</div>
+      <div class="col-item">Percepção subjetiva de esforço (PSE)</div>
+      <div class="col-item">Questionários de monitorização diária</div>
     </div>
   </div>
 
@@ -55,6 +71,7 @@ window.STUDY_SUBUNITS.push({
       <div class="badge badge-purple">Fatores de Apoio</div>
       <h4 style="font-size:12px;color:var(--color-text-secondary);margin-bottom:.5rem">Contexto à volta do atleta</h4>
       <div class="col-item">Estrutura administrativa e recursos económicos do clube</div>
+      <div class="col-item">Estilos dos profissionais envolvidos no processo</div>
       <div class="col-item">Estilo de vida: alimentação, recuperação e descanso</div>
     </div>
   </div>
@@ -65,6 +82,16 @@ window.STUDY_SUBUNITS.push({
     <div class="detail-row"><span class="detail-key">Desenvolvimento motor</span><span class="detail-val">Alterações na capacidade motora ao longo de toda a vida</span></div>
     <div class="detail-row"><span class="detail-key">Controlo motor</span><span class="detail-val">Coordenação dos movimentos e graus de liberdade</span></div>
     <div class="detail-row"><span class="detail-key">Aprendizagem motora</span><span class="detail-val">Evolução de uma habilidade até à performance especializada</span></div>
+  </div>
+  <div class="two-col" style="margin-bottom:.75rem">
+    <div class="col-card">
+      <div class="badge badge-green">Crescimento</div>
+      <div class="col-item">Modificações quantitativas: estatura, peso, ossos, massa muscular, massa adiposa e órgãos</div>
+    </div>
+    <div class="col-card">
+      <div class="badge badge-purple">Maturação</div>
+      <div class="col-item"><strong>Óssea</strong> · <strong>Sexual</strong> · <strong>Somática</strong> · <strong>Dentária</strong></div>
+    </div>
   </div>
   <div class="newell-grid">
     <div class="newell-card">
@@ -90,27 +117,47 @@ window.STUDY_SUBUNITS.push({
   <div class="alert-box" style="border-left-color:#EF9F27"><strong>Relative Age Effect (RAE):</strong> Atletas nascidos no início do ano têm vantagem maturacional dentro do mesmo escalão — podem ter quase 12 meses a mais de desenvolvimento físico. Pode levar à desistência de quem nasce no fim do ano.</div>
   <div class="phv-wrap">
     <div class="phv-card">
+      <div class="badge badge-teal">PHV — Pico de Velocidade de Crescimento</div>
+      <h4>Referência biológica</h4>
+      <p>Estimativa não invasiva da idade biológica. Influenciado por <strong>genética</strong> e <strong>envolvimento</strong>. Meninas ~12 anos / Rapazes ~14 anos. Informa o treino dos sistemas energéticos e do SNC — permite explorar <strong>períodos críticos (janelas de oportunidade)</strong>.</p>
+    </div>
+  </div>
+  <div class="phv-wrap">
+    <div class="phv-card">
       <div class="badge badge-teal">Antes do PHV</div>
       <h4>Janela da Flexibilidade</h4>
-      <p>Meninas ~12 anos / Rapazes ~14 anos. Período ideal para trabalhar amplitude de movimento.</p>
+      <p>Período ideal para amplitude de movimento e coordenação. A <strong>velocidade</strong> tem janela de oportunidade antes do PHV.</p>
     </div>
     <div class="phv-card">
       <div class="badge badge-blue">Depois do PHV</div>
       <h4>Janela da Força e Aeróbia</h4>
-      <p>Após o pico de crescimento abrem-se as janelas de força e capacidade aeróbia. Velocidade tem duas janelas: antes e depois.</p>
+      <p>Abrem-se as janelas de força e capacidade aeróbia (salto pubertário + PHV). A velocidade tem segunda janela após o PHV.</p>
     </div>
   </div>
 
-  <p class="section-label">Bloco 4 — Etapas LTAD (especialização tardia)</p>
+  <p class="section-label">Bloco 4 — LTAD: dois modelos de especialização</p>
+  <div class="two-col" style="margin-bottom:.75rem">
+    <div class="col-card">
+      <div class="badge badge-coral">Especialização PRECOCE</div>
+      <div class="col-item">Ex.: ginástica, ginástica rítmica, patinagem</div>
+      <div class="col-item"><strong>4 fases</strong> (sem FUN): Treinar p/ Treinar → Treinar p/ Competir → Treinar p/ Vitória → Abandono</div>
+    </div>
+    <div class="col-card">
+      <div class="badge badge-teal">Especialização TARDIA</div>
+      <div class="col-item">Ex.: desportos de combate, desportos de equipa</div>
+      <div class="col-item"><strong>6 fases</strong> (com FUN): FUN → Aprender → Treinar p/ Treinar → Treinar p/ Competir → Treinar p/ Vitória → Abandono</div>
+    </div>
+  </div>
+  <p class="section-label">Fases LTAD — especialização tardia (detalhe)</p>
   <table class="phase-table">
     <thead><tr><th>#</th><th>Fase</th><th>Rapazes</th><th>Meninas</th><th>Foco</th></tr></thead>
     <tbody>
-      <tr><td class="phase-num">1</td><td><strong style="font-weight:500">Fase FUN</strong></td><td>6–9 anos</td><td>6–8 anos</td><td>Movimentos fundamentais, divertimento</td></tr>
-      <tr><td class="phase-num">2</td><td><strong style="font-weight:500">Aprender a Treinar</strong></td><td>9–12 anos</td><td>8–11 anos</td><td>Habilidades motoras, coordenação</td></tr>
-      <tr><td class="phase-num">3</td><td><strong style="font-weight:500">Treinar para Treinar</strong></td><td>12–16 anos</td><td>11–15 anos</td><td>Capacidade aeróbia e força</td></tr>
-      <tr><td class="phase-num">4</td><td><strong style="font-weight:500">Treinar para Competir</strong></td><td>—</td><td>—</td><td>Otimização física, técnica e tática</td></tr>
-      <tr><td class="phase-num">5</td><td><strong style="font-weight:500">Treinar para a Vitória</strong></td><td>≥ 18 anos</td><td>≥ 17 anos</td><td>Maximização do rendimento</td></tr>
-      <tr><td class="phase-num">6</td><td><strong style="font-weight:500">Abandono</strong></td><td>—</td><td>—</td><td>Transição pós-competitiva</td></tr>
+      <tr><td class="phase-num">1</td><td><strong style="font-weight:500">Fase FUN</strong></td><td>6–9 anos</td><td>6–8 anos</td><td>Movimentos fundamentais, divertimento, máximo de experiências motoras</td></tr>
+      <tr><td class="phase-num">2</td><td><strong style="font-weight:500">Aprender a Treinar</strong></td><td>9–12 anos</td><td>8–11 anos</td><td>Habilidades motoras especializadas · janela: coordenação</td></tr>
+      <tr><td class="phase-num">3</td><td><strong style="font-weight:500">Treinar para Treinar</strong></td><td>12–16 anos</td><td>11–15 anos</td><td>Aeróbia de base e força · janela: PHV e salto pubertário</td></tr>
+      <tr><td class="phase-num">4</td><td><strong style="font-weight:500">Treinar para Competir</strong></td><td>16–18 anos</td><td>15–17 anos</td><td>Otimizar prep. física, técnica/tática e performance; dividir tempo entre treino e competição</td></tr>
+      <tr><td class="phase-num">5</td><td><strong style="font-weight:500">Treinar para a Vitória</strong></td><td>≥ 18 anos</td><td>≥ 17 anos</td><td>Maximizar prep. física, habilidades individuais e performance</td></tr>
+      <tr><td class="phase-num">6</td><td><strong style="font-weight:500">Abandono</strong></td><td>—</td><td>—</td><td>Transição pós-competitiva / desporto para a vida</td></tr>
     </tbody>
   </table>
   <div class="mnem-box">🧠 <strong>Mnemónica:</strong> "Fico Atento, Treino, Treino, Triunfo, Acabo."<br>FUN → Aprender → Treinar p/ Treinar → Treinar p/ Competir → Treinar p/ Vitória → Abandono</div>
@@ -165,28 +212,28 @@ window.STUDY_SUBUNITS.push({
       "answer": "Por 4 métodos: radiografia óssea do punho, desenvolvimento sexual (puberdade), crescimento somático (altura/peso) e dentição."
     },
     {
-      "question": "Qual é a relação entre carga, recuperação e adaptação?",
-      "answer": "Carga + Recuperação equilibradas → adaptação positiva. Se a carga supera consistentemente a recuperação → fadiga excessiva e overtraining, com queda de rendimento."
+      "question": "Qual é o ciclo de gestão do planeamento?",
+      "answer": "Elaboração → Execução → Avaliação. A avaliação permite verificar se o treino está a atingir os objectivos e ajustar o plano."
     },
     {
-      "question": "O que é a fase «Treinar para Competir» no LTAD?",
-      "answer": "Fase de otimização física, técnica e tática. Preparação específica para competição de alto nível, sem idades fixas — depende do desenvolvimento do atleta."
+      "question": "Quais indicadores de controlo devem ser monitorizados diariamente?",
+      "answer": "FC repouso, variabilidade da FC, humor, padrões de sono, PSE e questionários — informam sobre recuperação e prontidão do atleta."
     },
     {
-      "question": "O que incluem os «Meios» na unidade de treino?",
-      "answer": "Recursos materiais (equipamento, espaço), organizacionais (estrutura de treino) e informativos (vídeo, dados, feedback)."
+      "question": "Qual a diferença entre crescimento e maturação?",
+      "answer": "Crescimento = modificações quantitativas (estatura, peso, ossos, massa muscular/adiposa). Maturação = tipos óssea, sexual, somática e dentária."
     },
     {
-      "question": "Porque é o calendário competitivo um factor directo de Bompa?",
-      "answer": "Porque é a base do planeamento — define os macrociclos, picos de forma e distribuição de carga ao longo da época."
+      "question": "Para que serve o PHV no treino?",
+      "answer": "Referência da idade biológica que informa o treino dos sistemas energéticos e do SNC, permitindo explorar períodos críticos (janelas de oportunidade)."
     },
     {
-      "question": "O que é o desenvolvimento motor?",
-      "answer": "Alterações na capacidade motora ao longo de toda a vida, desde a infância até à idade adulta e terceira idade."
+      "question": "Quais as idades da fase «Treinar para Competir»?",
+      "answer": "Rapazes: 16–18 anos. Raparigas: 15–17 anos. Foco: optimizar preparação física, técnica/tática; dividir tempo entre treino e competição."
     },
     {
-      "question": "Qual é o foco da fase «Treinar para Treinar»?",
-      "answer": "Capacidade aeróbia de base e força. Rapazes: 12–16 anos; meninas: 11–15 anos."
+      "question": "LTAD precoce vs tardio — qual a diferença?",
+      "answer": "Precoce (ginástica, patinagem): 4 fases, sem FUN. Tardio (equipas, combate): 6 fases, inclui FUN e Aprender a Treinar."
     }
   ],
   quiz: [
@@ -291,52 +338,42 @@ window.STUDY_SUBUNITS.push({
       "correct": 2
     },
     {
-      "question": "Qual é o prazo de planeamento de longo prazo?",
+      "question": "A fase «Treinar para Competir» corresponde a que idades nos rapazes?",
       "options": [
-        "2 anos",
-        "4 anos",
-        "8–10 anos",
-        "1 época"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "O equilíbrio entre carga e recuperação promove:",
-      "options": [
-        "Fadiga crónica",
-        "Adaptação positiva",
-        "Lesão imediata",
-        "Overtraining"
+        "12–16 anos",
+        "16–18 anos",
+        "≥18 anos",
+        "6–9 anos"
       ],
       "correct": 1
     },
     {
-      "question": "A mnemónica «Fico Atento, Treino, Treino, Triunfo, Acabo» ajuda a memorizar:",
+      "question": "Qual modelo LTAD inclui a fase FUN?",
       "options": [
-        "Sistemas energéticos",
-        "Fases do LTAD",
-        "Zonas de treino",
-        "Tipos de fibras"
+        "Especialização precoce",
+        "Especialização tardia",
+        "Ambos",
+        "Nenhum"
       ],
       "correct": 1
     },
     {
-      "question": "Na fase FUN, qual é o foco principal?",
+      "question": "O ciclo de gestão do planeamento é:",
       "options": [
-        "Rendimento máximo",
-        "Movimentos fundamentais e divertimento",
-        "Força máxima",
-        "Especialização táctica"
+        "Planeamento → Treino → Competição",
+        "Elaboração → Execução → Avaliação",
+        "Carga → Recuperação → Adaptação",
+        "Treino → Avaliação → Overtraining"
       ],
       "correct": 1
     },
     {
-      "question": "O que significa «controlo motor»?",
+      "question": "Para além de FC e humor, que indicador monitoriza a recuperação?",
       "options": [
-        "Evolução de uma habilidade especializada",
-        "Coordenação dos movimentos e graus de liberdade",
-        "Alterações na capacidade motora ao longo da vida",
-        "Avaliação da maturação biológica"
+        "VO₂ máx semanal",
+        "Padrões de sono e PSE",
+        "Apenas peso corporal",
+        "Temperatura ambiente"
       ],
       "correct": 1
     }

@@ -13,8 +13,13 @@ window.STUDY_SUBUNITS.push({
   id: 'sub2',
   number: 2,
   title: "Sistemas Energéticos",
-  description: "ATP-PCr, glicolítico, oxidativo, zonas de treino, limiares e unidades motoras.",
+  description: "ATP-PCr, glicolítico, oxidativo, domínios de intensidade, limiares e unidades motoras.",
   contentHtml: `<p class="section-label">Sistemas Energéticos</p>
+
+  <div class="card" style="margin-bottom:.75rem">
+    <div class="card-title">Pré-requisito energético</div>
+    <div class="card-sub">A energia é indispensável ao movimento no treino e competição. A quantidade de <strong>ATP armazenado no músculo é limitada</strong> — o corpo repõe ATP por <strong>3 sistemas</strong>, com contributo distinto consoante intensidade e duração (Gastin, 2001).</div>
+  </div>
 
   <div style="position:relative">
     <div class="timeline">
@@ -22,21 +27,33 @@ window.STUDY_SUBUNITS.push({
         <div class="tl-dot teal"></div>
         <div class="tl-time">0 → 10 segundos</div>
         <div class="tl-title">Sistema ATP-PCr <span class="badge badge-teal" style="margin-left:6px">Fosfagénio anaeróbio</span></div>
-        <div class="tl-desc">Usa <strong style="font-weight:500">fosfocreatina (PCr)</strong> para regenerar ADP em ATP. Sem oxigénio, sem lactato. Recuperação: 70% em 30 s / 100% em 3–5 min.</div>
+        <div class="tl-desc">Ressíntese de ATP: ADP + <strong>fosfocreatina (PCr)</strong>. Depleção da PCr em ~10 s de esforço máximo. Exemplos: sprints, arremessos, saltos. Recuperação ATP: 70% em 30 s / 100% em 3–5 min. Recuperação completa da PCr: ~8 min. Sem O₂, sem lactato.</div>
       </div>
       <div class="tl-item">
         <div class="tl-dot amber"></div>
         <div class="tl-time">20 segundos → 2 minutos</div>
         <div class="tl-title">Sistema Glicolítico <span class="badge badge-amber" style="margin-left:6px">Anaeróbio</span></div>
-        <div class="tl-desc">Duas fontes: <strong style="font-weight:500">glicose sanguínea</strong> (2 ATP) e <strong style="font-weight:500">glicogénio</strong> (3 ATP). Produz piruvato → lactato. Ressíntese do glicogénio: 20–24 h.</div>
+        <div class="tl-desc">Fontes: <strong>glicose sanguínea</strong> (2 ATP) e <strong>glicogénio</strong> muscular/hepático (3 ATP). Piruvato → mitocôndrias (oxidativo) ou lactato → fígado (glicose) / músculo cardíaco. Ressíntese glicogénio: 20–24 h — <strong>2 h pós-exercício = janela de oportunidade</strong> para acelerar ressíntese.</div>
       </div>
       <div class="tl-item">
         <div class="tl-dot blue"></div>
         <div class="tl-time">Acima de 2 minutos</div>
         <div class="tl-title">Sistema Oxidativo <span class="badge badge-blue" style="margin-left:6px">Aeróbio</span></div>
-        <div class="tl-desc">Ciclo de Krebs + Cadeia de transporte de eletrões. Rendimento: <strong style="font-weight:500">38 ATP (glicose)</strong> / <strong style="font-weight:500">39 ATP (glicogénio)</strong>. Maior capacidade, mas ativação mais lenta.</div>
+        <div class="tl-desc">Respiração mitocondrial: <strong>Ciclo de Krebs</strong> + <strong>cadeia de transporte de electrões</strong>. Oxida glícidos, lípidos e aminoácidos. Resultado: ATP + H₂O (O₂ = recetor final de hidrogénio). Rendimento: <strong>38 ATP (glicose)</strong> / <strong>39 ATP (glicogénio)</strong>. Maior capacidade, activação mais lenta.</div>
       </div>
     </div>
+  </div>
+
+  <p class="section-label">Transição repouso → exercício (Powers &amp; Howley, 2017)</p>
+  <div class="card">
+    <div class="card-sub">De repouso para exercício leve/moderado, o consumo de O₂ aumenta rapidamente e atinge estado estacionário em <strong>1–4 minutos</strong>. Como o O₂ não sobe instantaneamente, as <strong>vias anaeróbias contribuem no início</strong> do exercício. Atletas treinados atingem o estado estacionário mais depressa → <strong>menor utilização das vias anaeróbias</strong>.</div>
+  </div>
+
+  <p class="section-label">Domínios de intensidade (lactato)</p>
+  <div class="card">
+    <div class="detail-row"><span class="detail-key">Moderado</span><span class="detail-val">Abaixo do limiar láctico (LL)</span></div>
+    <div class="detail-row"><span class="detail-key">Pesado</span><span class="detail-val">Abaixo do EEML e acima do LL</span></div>
+    <div class="detail-row"><span class="detail-key">Severo</span><span class="detail-val">Acima do estado estacionário máximo de lactato (EEML)</span></div>
   </div>
 
   <p class="section-label">Comparação rápida</p>
@@ -99,36 +116,38 @@ window.STUDY_SUBUNITS.push({
     </div>
   </div>
   <div class="card">
-    <div class="detail-row"><span class="detail-key">VT1 — Limiar aeróbio</span><span class="detail-val">≈ 2 mmol/L lactato</span></div>
-    <div class="detail-row"><span class="detail-key">VT2 — Limiar anaeróbio</span><span class="detail-val">> 4 mmol/L · acumulação exponencial</span></div>
-    <div class="detail-row"><span class="detail-key">VO₂ máx</span><span class="detail-val">Atingido ~4 min de esforço progressivo</span></div>
+    <div class="detail-row"><span class="detail-key">VT1 — Limiar aeróbio</span><span class="detail-val">≈ 2 mmol/L · Cap. aeróbia 1 (A1)</span></div>
+    <div class="detail-row"><span class="detail-key">VT2 — Limiar anaeróbio</span><span class="detail-val">> 4 mmol/L · EEML · Cap. aeróbia 3 (A3)</span></div>
+    <div class="detail-row"><span class="detail-key">Entre VT1 e VT2</span><span class="detail-val">Cap. aeróbia 2 (A2) · intensidade pesada</span></div>
+    <div class="detail-row"><span class="detail-key">VO₂ máx</span><span class="detail-val">~4 min esforço progressivo · Zona anaeróbia máxima</span></div>
   </div>
 
   <p class="section-label">Unidade Motora</p>
   <div class="card" style="margin-bottom:.75rem">
-    <div class="card-title">Definição</div>
-    <div class="card-sub">Motoneurónio alfa + todas as fibras musculares que inerva. É a base funcional de toda a ação muscular. A ligação neurónio-músculo ocorre por sinapse química via <strong style="font-weight:500">acetilcolina</strong>.</div>
+    <div class="card-title">Definição e estrutura</div>
+    <div class="card-sub">Motoneurónio alfa + todas as fibras que inerva = <strong>unidade motora (UM)</strong>. ~70% das fibras das raízes anteriores são axónios do motoneurónio alfa. A UM liga o SNC ao músculo — base funcional do movimento. <strong>Taxa de inervação</strong> = n.º de fibras por UM (dezenas a milhares). Conjunto de UM de um músculo = <strong>grupo motor</strong>. Sinapse neuromuscular via <strong>acetilcolina</strong> → despolarização → contração.</div>
   </div>
+  <div class="alert-box">Todas as fibras de uma UM são do <strong>mesmo tipo</strong>, adaptadas ao tipo de actividade do motoneurónio respectivo.</div>
   <div class="fiber-grid">
     <div class="fiber-card">
       <div class="badge badge-teal">Tipo S</div>
       <h4>Lentas (Tipo I)</h4>
       <div class="fiber-detail">
-        Motoneurónios pequenos<br>Limiar baixo<br>Alta resistência à fadiga<br>Baixa força/velocidade<br>Recrutadas primeiro
+        Motoneurónios pequenos<br>Axónios finos, condução lenta<br>Limiar baixo · Tipo I<br>Resistentes, baixa força<br>Recrutadas primeiro
       </div>
     </div>
     <div class="fiber-card">
       <div class="badge badge-amber">Tipo FR</div>
       <h4>Intermédias (Tipo IIa)</h4>
       <div class="fiber-detail">
-        Resistentes à fadiga<br>Componente de velocidade<br>Limiar intermédio<br>Fibras tipo 2a
+        Motoneurónios grandes<br>Axónios grossos, condução rápida<br>Limiar intermédio · Tipo IIa<br>Contrações rápidas e potentes<br>Boa resistência à fadiga
       </div>
     </div>
     <div class="fiber-card">
       <div class="badge badge-coral">Tipo FF</div>
       <h4>Rápidas (Tipo IIb)</h4>
       <div class="fiber-detail">
-        Maior força e potência<br>Fatigam rapidamente<br>Limiar alto<br>Reservadas para esforços máximos
+        Maiores motoneurónios<br>Axónios mais grossos<br>Limiar alto · Tipo IIb<br>Máxima força e potência<br>Fadiga muito rápida
       </div>
     </div>
   </div>
@@ -146,7 +165,7 @@ window.STUDY_SUBUNITS.push({
       <div class="recruit-dot" style="background:#D85A30"></div>
       <div class="recruit-label"><strong style="font-weight:500">3º</strong> Tipo FF (rápidas) — esforços máximos</div>
     </div>
-    <div style="font-size:12px;color:var(--color-text-secondary);margin-top:.75rem">A força também se regula pela <strong style="font-weight:500">frequência de descarga</strong> do estímulo nervoso.</div>
+    <div style="font-size:12px;color:var(--color-text-secondary);margin-top:.75rem">A força regula-se por: <strong>1)</strong> n.º de UM recrutadas e <strong>2)</strong> frequência de descarga. Henneman (princípio do tamanho): recrutamento do motoneurónio menor para o maior — forma <strong>económica</strong> de funcionamento; poupa fibras rápidas para esforços máximos.</div>
   </div>`,
   flashcards: [
     {
@@ -190,24 +209,28 @@ window.STUDY_SUBUNITS.push({
       "answer": "1) Número de unidades motoras recrutadas. 2) Frequência de descarga do estímulo nervoso (taxa de disparo do motoneurónio)."
     },
     {
-      "question": "Que sistema energético domina num sprint de 100m?",
-      "answer": "ATP-PCr (fosfagénio anaeróbio) nos primeiros segundos, com contribuição crescente do sistema glicolítico."
+      "question": "Quanto tempo demora a recuperação completa da PCr?",
+      "answer": "Cerca de 8 minutos (vs. 3–5 min para recuperação completa do ATP)."
     },
     {
-      "question": "Qual a diferença entre VT1 e VT2?",
-      "answer": "VT1 (limiar aeróbio): ~2 mmol/L lactato, ~65% FC máx. VT2 (limiar anaeróbio): >4 mmol/L lactato, acumulação exponencial de lactato."
+      "question": "O que é a janela de oportunidade pós-exercício para o glicogénio?",
+      "answer": "As 2 horas após exercício intenso — período em que se pode aumentar significativamente a taxa de ressíntese de glicogénio muscular."
     },
     {
-      "question": "O sistema ATP-PCr produz lactato?",
-      "answer": "Não. Funciona sem oxigénio e sem produção de lactato — usa fosfocreatina para regenerar ATP rapidamente."
+      "question": "Porque as vias anaeróbias são importantes no início do exercício?",
+      "answer": "O consumo de O₂ demora 1–4 min a atingir estado estacionário; até lá, as fontes anaeróbias compensam o défice energético."
     },
     {
-      "question": "Que tipo de fibra é recrutada primeiro em qualquer movimento?",
-      "answer": "Tipo S (lentas / Tipo I) — menor limiar de recrutamento, sempre activadas primeiro (Princípio de Henneman)."
+      "question": "O que é taxa de inervação e grupo motor?",
+      "answer": "Taxa de inervação = n.º de fibras musculares inervadas por uma UM (dezenas a milhares). Grupo motor = conjunto de UM de um músculo."
     },
     {
-      "question": "Em que zona de treino se desenvolve principalmente a base aeróbia?",
-      "answer": "Zona leve (<65% FC máx), com lactato estável — ideal para recuperação activa e volume aeróbio."
+      "question": "Quais os 3 domínios de intensidade baseados no lactato?",
+      "answer": "Moderado (abaixo LL), Pesado (abaixo EEML, acima LL), Severo (acima EEML/acumulação máxima de lactato)."
+    },
+    {
+      "question": "Porque é económico o princípio de Henneman?",
+      "answer": "Recruta primeiro motoneurónios pequenos (Tipo S) e só activa os maiores (Tipo FF) em esforços máximos — poupa fibras rápidas e resistentes à fadiga."
     }
   ],
   quiz: [
@@ -312,54 +335,44 @@ window.STUDY_SUBUNITS.push({
       "correct": 2
     },
     {
-      "question": "O sistema ATP-PCr recupera 70% da capacidade em:",
+      "question": "O consumo de O₂ atinge estado estacionário em exercício leve/moderado em:",
       "options": [
         "10 segundos",
         "30 segundos",
-        "2 minutos",
+        "1–4 minutos",
         "20–24 horas"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "Quantos ATP produz o glicogénio na via glicolítica?",
-      "options": [
-        "2 ATP",
-        "3 ATP",
-        "38 ATP",
-        "39 ATP"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "A zona leve de treino corresponde a:",
-      "options": [
-        ">85% FC máx",
-        "65–85% FC máx",
-        "<65% FC máx",
-        "100% FC máx"
       ],
       "correct": 2
     },
     {
-      "question": "O que caracteriza as fibras Tipo FR (IIa)?",
+      "question": "Atletas treinados, comparativamente com sedentários:",
       "options": [
-        "Limiar alto, fadiga rápida",
-        "Características intermédias, alguma resistência à fadiga",
-        "Apenas usadas em repouso",
-        "Não existem em humanos"
+        "Usam mais vias anaeróbias no início",
+        "Atingem o estado estacionário de O₂ mais depressa",
+        "Produzem menos ATP oxidativo",
+        "Recrutam primeiro fibras FF"
       ],
       "correct": 1
     },
     {
-      "question": "Para além do recrutamento de UM, como se aumenta a força?",
+      "question": "A recuperação completa da fosfocreatina (PCr) demora cerca de:",
       "options": [
-        "Diminuindo a frequência de descarga",
-        "Aumentando a frequência de descarga do motoneurónio",
-        "Reduzindo a acetilcolina",
-        "Apenas com estiramentos"
+        "30 segundos",
+        "3–5 minutos",
+        "8 minutos",
+        "20–24 horas"
       ],
-      "correct": 1
+      "correct": 2
+    },
+    {
+      "question": "O domínio de intensidade «severo» corresponde a:",
+      "options": [
+        "Abaixo do limiar láctico",
+        "Entre VT1 e VT2",
+        "Acima do EEML",
+        "Apenas repouso"
+      ],
+      "correct": 2
     }
   ],
 });

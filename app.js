@@ -174,6 +174,24 @@
     container.innerHTML = '';
 
     if (sub.contentHtml) {
+      if (sub.contentSections && sub.contentSections.length > 1) {
+        const nav = document.createElement('nav');
+        nav.className = 'content-subnav';
+        nav.setAttribute('aria-label', 'Secções do conteúdo');
+        sub.contentSections.forEach((section) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'content-subnav-btn';
+          btn.textContent = section.label;
+          btn.addEventListener('click', () => {
+            const target = document.getElementById(section.id);
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+          nav.appendChild(btn);
+        });
+        container.appendChild(nav);
+      }
+
       const wrapper = document.createElement('div');
       wrapper.className = 'rich-content';
       wrapper.innerHTML = sub.contentHtml;

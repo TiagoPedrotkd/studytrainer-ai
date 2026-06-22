@@ -1,0 +1,193 @@
+
+--- PAGE 1 ---
+Unidade 1 - Teoria e metodologia do treino desportivo 
+Subunidade 1 - Fundamentos do processo de treino
+Aula 2 - Bases fisiológicas do processo de treino 
+--- PAGE 2 ---
+TÓPICO 1 | OS SISTEMAS DE ENERGIA
+--- PAGE 3 ---
+A energia é um pré-requisito para a realização de
+movimento durante o treino e competição.
+A quantidade de ATP armazenada no músculo é limitada.
+O corpo pode restabelecer as reservas de ATP por meio de
+três sistemas de energia, assumindo cada um contributo
+distinto de acordo com a intensidade e duração do esforço:
+1. Sistema fosfagénio anaeróbio (ATP-CP);
+2. Sistema glicolítico anaeróbio;
+3. Sistema oxidativo aeróbio.
+Gastin (2001). Sports Med . 
+2001;31(10):725-41
+--- PAGE 4 ---
+Fonte: Sousa et al., 2019
+Sistema ATP-CP
+Ressíntese de ATP através de  ADP e fosfocreatina  (PCr – um fosfato é removido da PCr, formando Pi e Creatina como 
+produtos de reação).
+PCr - A sua depleção ocorre em 10 s de exercício de alta intensidade.
+Principal fonte energética de sprints curtos, mergulho, arremessos, saltos, entre outros.
+➢ 70% da restauração do ATP ocorre em cerca de 30 s e completa em 3 a 5 min.;
+➢ A PCr demora mais tempo, com 8 min. para a restauração completa.
+--- PAGE 5 ---
+Sistema glicolítico
+A fonte de energia desta  via são a glucose sanguínea e o glicogénio muscular e hepático.
+• O piruvato é transportado para as mitocôndrias, onde é utilizado pelo sistema oxidativo;
+• O lactato é transportado para o fígado onde é convertido em glicose, ou vai para os tecidos ativos, como o músculo
+esquelético e cardíaco, onde é convertido em piruvato, e utilizado pelo metabolismo oxidativo;
+Fonte: Sousa et al., 2019
+--- PAGE 6 ---
+Sistema glicolítico
+• Sistema fundamental para atividades com cerca de 20 s a 2 min.;
+• São precisas 20 a 24h para restaurar completamente o  glicogénio muscular, sendo as 2h após o exercício uma janela de  
+oportunidade para aumentar a taxa de ressíntese.
+Fonte: Sousa et al., 2019
+--- PAGE 7 ---
+Sistema oxidativo
+Produz energia por via da respiração mitocondrial, e compreende dois processos fundamentais: o 
+Ciclo de Krebs e  
+a cadeia de transporte de eletrões.
+Fonte: Sousa et al., 2019
+A sua função primária é a oxidação de glícidos,
+lípidos e aminoácidos a NADH (3 ATP) e FADH (2
+ATP), gerando potencial redutor a ser utilizado na
+cadeia transportadora de eletrões.
+O seu resultado é a formação de ATP e
+água (o O2 não participa nas reações, mas é
+recetor final de hidrogénio (H2O).
+
+--- PAGE 8 ---
+Sistema oxidativo
+Fonte: Sousa et al., 2019
+A oxidação de uma molécula de glicose resulta em 38 ATP ,enquanto que de uma molécula de glicogénio 39 ATP.
+
+--- PAGE 9 ---
+Fonte: Bompa & Buzzichelli, 2019
+--- PAGE 10 ---
+TÓPICO 2 | SOLICITAÇÃO ENERGÉTICA DAS ATIVIDADES DESPORTIVAS
+--- PAGE 11 ---
+Na transição de repouso para exercício leve a moderado, o
+consumo de O2 aumenta rapidamente e atinge um estado
+estacionário num período de 1 a 4 minutos (Powers &
+Howley, 2017).
+O facto de o consumo de O2 não aumentar
+instantaneamente até atingir um valor de estado
+estacionário sugere que as fontes anaeróbias de energia
+contribuem para a produção global de ATP no início do
+exercício.
+Fonte: Powers & Howley, 2017.
+--- PAGE 12 ---
+Indivíduos treinados atingem o estado estacionário mais rápido,  o que resulta numa menor utilização das vias 
+anaeróbias.
+Fonte: Powers & Howley, 2017.
+ Tempo (min.)
+Consumo de oxigénio (min.)
+Aumento 
+mais rápido 
+do VO2
+Pré-treino
+Pós-treino
+• Aumento mais rápido do 
+consumo de oxigénio
+• Menor utilização das vias 
+anaeróbias
+--- PAGE 13 ---
+Sistemas energéticos
+Anaeróbia Aeróbia
+P C P C
+Resistência
+Anaeróbio Aeróbio
+10s 20s 1min 2min 5min 15min
+--- PAGE 14 ---
+• Se o exercício for realizado a uma intensidade abaixo do
+limiar láctico considera-se que estamos no domínio da
+de intensidade moderada;
+• Se o exercício for realizado a uma intensidade abaixo do
+estado estacionário máximo de lactato e acima do limiar
+láctico considera-se que estamos no domínio de
+intensidade pesada;
+• Se o exercício for realizado a uma intensidade acima do
+estado estacionário máximo de lactato considera-se que
+estamos no domínio de intensidade severa.
+Consumo de oxigénio (L/min)Intensidade de esforço 
+LL EEML
+Moderado Pesado Severo
+--- PAGE 15 ---
+
+--- PAGE 16 ---
+Intensidade máxima
+Treino anaeróbio (V) ou Zona 1
+VO2max
+Intensidade extrema
+Treino anaeróbio (PL/ TL) ou Zona 2
+VO2peak
+EEML
+Intensidade severa
+Capacidade aeróbia 3 (A3) ou Zona 3
+VT2
+Limiar 
+láctico
+Intensidade pesada
+Capacidade aeróbia 2 (A2) ou Zona 4
+VT1
+Intensidade moderada
+Capacidade aeróbia 1 (A1) ou Zona 5
+--- PAGE 17 ---
+TÓPICO 3 | UNIDADE MOTORA E FUNÇÃO NEUROMUSCULAR
+--- PAGE 18 ---
+Para haver contração muscular o SNC tem de controlar a atividade dos músculos envolvidos.
+A UM é a estrutura base funcional para produzir movimento – liga o SNC ao músculo.
+https://www.freepik.com/
+--- PAGE 19 ---
+• Cerca de 70% das fibras nervosas que saem pelas raízes  anteriores dos nervos espinhais são axónios do motoneurónio 
+alfa;
+• O conjunto de um motoneurónio alfa e as fibras musculares que  este inerva designa-se por UM.
+Marieb, E. N., & Hoehn, K. (2007). Human 
+anatomy & physiology. Pearson education.
+--- PAGE 20 ---
+O local onde o motoneurónio e a célula muscular se encontram é denominado por junção neuromuscular. 
+A acetilcolina é o neurotransmissor que estimula a fibra muscular à despolarização, sendo este o sinal para o início do 
+processo contrátil. 
+Fox, S. (2015). Human physiology. McGraw-Hill Education.
+--- PAGE 21 ---
+• O número de fibras de uma UM designa-se por taxa de inervação e pode variar entre menos de uma dezena (ações 
+muito precisas) e uns milhares (ações grosseiras). 
+• O conjunto de UM de um músculo designa-se por grupo motor.
+Silverthorn, D. U., Ober, W. C., Garrison, C. W., Silverthorn, A. C., & Johnson, 
+B. R. (2010). Human physiology: an integrated approach, Pearson/Benjamin 
+Cummings.
+--- PAGE 22 ---
+As fibras musculares que constituem uma UM são todas do
+mesmo tipo, está adaptada a um certo tipo de contração, e
+é determinada pelas caraterísticas e pelo tipo de atividade
+no motoneurónio respetivo.
+Existem 3 tipos de UM:
+1 – Tipo S (Slow );
+2 – Tipo FR (Fast Resistant );
+3 – Tipo FF (Fast Fatigable ).
+Silverthorn, D. U., Ober, W. C., Garrison, C. W., Silverthorn, A. C., & Johnson, 
+B. R. (2010). Human physiology: an integrated approach, Pearson/Benjamin 
+Cummings.
+--- PAGE 23 ---
+Tipo S (Slow )
+Constituídas por motoneurónios de menores dimensões, com limiar de excitação baixo e axónios de pequeno calibre e
+reduzida velocidade de condução. Inervam fibras musculares muito resistentes (tipo I), mas incapazes de desenvolver
+forças elevadas e com velocidade de contração reduzida.
+--- PAGE 24 ---
+Tipo FR (Fast Resistant )
+Apresentam motoneurónios de grandes dimensões, com limiar mais elevado e axónio de grande calibre e elevada
+velocidade de condução. As suas fibras estão adaptadas a contrações rápidas e potentes, apresentando, também, boa
+resistência à fadiga (tipo IIa).
+Tipo FF (Fast Fatigable )
+Constituídas pelos maiores motoneurónios e de limiar de excitação mais elevado, com axónio de maior calibre e maior
+velocidade de condução. Inervam fibras musculares muito rápidas e fortes mas muito pouco resistentes à fadiga (tipo
+IIb).
+--- PAGE 25 ---
+A regulação da força produzida por um músculo baseia-se essencialmente em dois mecanismos:
+1 – Número de UM recrutadas;
+2 – Frequência de descarga.
+--- PAGE 26 ---
+Princípio de Hennenman – Princípio do tamanho
+• Há uma relação entre dimensão do motoneurónio, o seu limiar de excitação e o nível de força em que é recrutado;
+• O recrutamento dos motoneurónios alfa de um grupo motor faz-se segundo o seu tamanho, sendo os motoneurónios
+de menores dimensões recrutados sempre antes dos maiores.
+1. Forma mais eficaz e económica de funcionamento do sistema neuromuscular;
+2. Permite que as UM mais rápidas sejam recrutadas somente em determinados esforços.
+--- PAGE 27 ---
