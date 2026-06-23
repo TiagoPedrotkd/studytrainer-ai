@@ -8,8 +8,152 @@
 
   const STORAGE_THEME = 'studytrainer-theme';
   const STORAGE_FC_PREFIX = 'studytrainer-fc-';
+  const QUIZ_PER_SESSION = 14;
+  const EXAM_GLOBAL_PER_SESSION = 14;
+  const QUIZ_OPTION_LETTERS = ['A', 'B', 'C', 'D'];
 
-  // ---- Tema (modo escuro / claro) ----
+  function shuffle(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  function getQuizSessionSize(poolSize, perSession) {
+    return Math.min(perSession, poolSize);
+  }
+
+  function pickQuizQuestions(pool, perSession) {
+    return shuffle(pool).slice(0, getQuizSessionSize(pool.length, perSession));
+  }
+
+  function formatQuizIntro(poolSize, sessionSize, contextLabel) {
+    if (poolSize <= sessionSize) {
+      return `Testa os teus conhecimentos com ${poolSize} perguntas de escolha múltipla sobre ${contextLabel}. A ordem é aleatória em cada tentativa.`;
+    }
+    return `Banco de ${poolSize} perguntas sobre ${contextLabel}. Cada teste sorteia ${sessionSize} perguntas diferentes — repete para treinar com combinações novas.`;
+  }
+
+  function getAllQuizQuestions(unitId) {
+    if (unitId) {
+      const unit = getUnitById(unitId);
+      return unit ? unit.subunits.flatMap((sub) => sub.quiz) : [];
+    }
+    return getUnits().flatMap((unit) => unit.subunits.flatMap((sub) => sub.quiz));
+  }
+
+  // ---- Carregamento de dados ----
+
+  function getDataBasePath() {
+    return window.location.pathname.includes('/pages/') ? '../data/' : 'data/';
+  }
+
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      const absoluteSrc = new URL(src, document.baseURI).href;
+      const existing = [...document.scripts].find((s) => s.src === absoluteSrc);
+
+      if (existing) {
+        if (existing.dataset.loaded === 'true') {
+          resolve();
+          return;
+        }
+        if (existing.readyState === 'complete' || existing.readyState === 'loaded') {
+          existing.dataset.loaded = 'true';
+          resolve();
+          return;
+        }
+        existing.addEventListener('load', () => resolve(), { once: true });
+        existing.addEventListener('error', () => reject(new Error(`Não foi possível carregar ${src}`)), {
+          once: true,
+        });
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = src;
+      script.onload = () => {
+        script.dataset.loaded = 'true';
+        resolve();
+      };
+      script.onerror = () => reject(new Error(`Não foi possível carregar ${src}`));
+      document.head.appendChild(script);
+    });
+  }
+
+  async function ensureCourseLoaded() {
+    if (window.STUDY_COURSE?.units?.length) return;
+    await loadScript(`${getDataBasePath()}course.js`);
+  }
+
+  async function ensureUnitLoaded(unitId) {
+    await loadScript(`${getDataBasePath()}${unitId}.js`);
+  }
+
+  async function ensureAllUnitsLoaded() {
+    await ensureCourseLoaded();
+    for (const unit of getCourseUnits()) {
+      await ensureUnitLoaded(unit.id);
+    }
+  }
+
+  function getCourseUnits() {
+    return (window.STUDY_COURSE?.units || []).sort((a, b) => a.number - b.number);
+  }
+
+  function getCourseUnitById(id) {
+    return getCourseUnits().find((u) => u.id === id);
+  }
+
+  function getUnits() {
+    return (window.STUDY_UNITS || []).sort((a, b) => a.number - b.number);
+  }
+
+  function getUnitById(id) {
+    return getUnits().find((u) => u.id === id);
+  }
+
+  function getSubunits(unitId) {
+    const unit = getUnitById(unitId);
+    if (!unit) return [];
+    return [...unit.subunits].sort((a, b) => a.number - b.number);
+  }
+
+  function getSubunit(unitId, subId) {
+    return getSubunits(unitId).find((s) => s.id === subId);
+  }
+
+  function getFcStorageKey(unitId, subunitId) {
+    return `${STORAGE_FC_PREFIX}${unitId}-${subunitId}`;
+  }
+
+  function loadFcProgress(unitId, subunitId) {
+    try {
+      const data = localStorage.getItem(getFcStorageKey(unitId, subunitId));
+      if (data) return JSON.parse(data);
+      const legacy = localStorage.getItem(STORAGE_FC_PREFIX + subunitId);
+      return legacy ? JSON.parse(legacy) : { known: [], index: 0 };
+    } catch {
+      return { known: [], index: 0 };
+    }
+  }
+
+  function saveFcProgress(unitId, subunitId, progress) {
+    localStorage.setItem(getFcStorageKey(unitId, subunitId), JSON.stringify(progress));
+  }
+
+  function getUnitFlashcardProgress(unitId, subunits) {
+    let known = 0;
+    let total = 0;
+    for (const sub of subunits) {
+      const progress = loadFcProgress(unitId, sub.id);
+      known += progress.known.length;
+      total += sub.flashcards.length;
+    }
+    return { known, total, pct: total > 0 ? Math.round((known / total) * 100) : 0 };
+  }
 
   function initTheme() {
     const saved = localStorage.getItem(STORAGE_THEME);
@@ -37,32 +181,7 @@
     if (icon) icon.textContent = theme === 'light' ? '🌙' : '☀️';
   }
 
-  // ---- Utilitários ----
-
-  function getSubunits() {
-    return (window.STUDY_SUBUNITS || []).sort((a, b) => a.number - b.number);
-  }
-
-  function getSubunitById(id) {
-    return getSubunits().find((s) => s.id === id);
-  }
-
-  function getFcStorageKey(subunitId) {
-    return STORAGE_FC_PREFIX + subunitId;
-  }
-
-  function loadFcProgress(subunitId) {
-    try {
-      const data = localStorage.getItem(getFcStorageKey(subunitId));
-      return data ? JSON.parse(data) : { known: [], index: 0 };
-    } catch {
-      return { known: [], index: 0 };
-    }
-  }
-
-  function saveFcProgress(subunitId, progress) {
-    localStorage.setItem(getFcStorageKey(subunitId), JSON.stringify(progress));
-  }
+  // ---- Conteúdo ----
 
   function renderContentBlock(block) {
     const el = document.createElement('article');
@@ -111,27 +230,100 @@
   }
 
   function initIndex() {
-    const grid = document.getElementById('subunits-grid');
+    const grid = document.getElementById('units-grid');
     if (!grid) return;
 
-    const subunits = getSubunits();
+    const units = getCourseUnits();
 
-    if (subunits.length === 0) {
-      grid.innerHTML = '<p class="hero-text">Nenhuma subunidade disponível.</p>';
+    if (units.length === 0) {
+      grid.innerHTML =
+        '<p class="hero-text">Nenhuma unidade disponível. Corre <code>npm run import</code> e actualiza a página (Ctrl+F5).</p>';
       return;
     }
 
+    units.forEach((unit) => {
+      const card = document.createElement('a');
+      card.className = 'subunit-card unit-card';
+      card.href = `pages/unidade.html?unit=${unit.id}`;
+      card.setAttribute('role', 'listitem');
+      card.innerHTML = `
+        <div class="subunit-card-header">
+          <span class="subunit-number">${unit.number}</span>
+          <h3>${unit.title}</h3>
+        </div>
+        <p>${unit.description}</p>
+        <div class="subunit-meta">
+          <span class="meta-badge">📑 ${unit.subunitCount} subunidades</span>
+          <span class="meta-badge">🃏 ${unit.flashcardCount} cards</span>
+          <span class="meta-badge">❓ ${unit.quizCount} perguntas</span>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+    const totalQuiz = units.reduce((n, u) => n + u.quizCount, 0);
+    if (units.length > 1 && totalQuiz > 0) {
+      const examSection = document.createElement('section');
+      examSection.className = 'exam-promo';
+      examSection.innerHTML = `
+        <a href="pages/exame.html?scope=course" class="subunit-card exam-card" role="listitem">
+          <div class="subunit-card-header">
+            <span class="subunit-number exam-icon" aria-hidden="true">🎯</span>
+            <h3>Exame Rotativo do Curso</h3>
+          </div>
+          <p>${EXAM_GLOBAL_PER_SESSION} perguntas sorteadas de um banco de ${totalQuiz} — mistura todas as unidades.</p>
+          <div class="subunit-meta">
+            <span class="meta-badge">🔄 Rotativo</span>
+            <span class="meta-badge">📚 ${units.length} unidades</span>
+            <span class="meta-badge">❓ ${totalQuiz} no banco</span>
+          </div>
+        </a>
+      `;
+      grid.parentNode.insertBefore(examSection, grid);
+    }
+  }
+
+  function initUnit(unitId) {
+    const grid = document.getElementById('subunits-grid');
+    const unit = getUnitById(unitId);
+    const courseUnit = getCourseUnitById(unitId);
+
+    if (!grid || !unit || !courseUnit) {
+      document.querySelector('.container').innerHTML =
+        '<p class="hero-text">Unidade não encontrada. <a href="../index.html">Voltar ao menu</a></p>';
+      return;
+    }
+
+    document.title = `${unit.title} — StudyTrainer`;
+    document.getElementById('unit-title').textContent = `Unidade ${unit.number}`;
+    document.getElementById('unit-subtitle').textContent = unit.title;
+
+    const hero = document.getElementById('unit-hero-text');
+    if (hero) hero.textContent = unit.description;
+
+    const backLink = document.getElementById('unit-back');
+    if (backLink) backLink.href = '../index.html';
+
+    const subunits = getSubunits(unitId);
+    const unitProgress = getUnitFlashcardProgress(unitId, subunits);
+
     subunits.forEach((sub) => {
-      const progress = loadFcProgress(sub.id);
+      const manifestSub = courseUnit.subunits.find((s) => s.id === sub.id) || sub;
+      const progress = loadFcProgress(unitId, sub.id);
       const total = sub.flashcards.length;
       const known = progress.known.length;
       const pct = total > 0 ? Math.round((known / total) * 100) : 0;
+      const blockCount = manifestSub.blockCount ?? getBlockCount(sub);
 
-      const blockCount = getBlockCount(sub);
+      const sessionSize = getQuizSessionSize(sub.quiz.length, QUIZ_PER_SESSION);
+      const quizLabel =
+        sub.quiz.length > sessionSize
+          ? `❓ ${sub.quiz.length} (${sessionSize} rotativas)`
+          : `❓ ${sub.quiz.length} perguntas`;
 
       const card = document.createElement('a');
       card.className = 'subunit-card';
-      card.href = `pages/subunidade.html?id=${sub.id}`;
+      card.href = `subunidade.html?unit=${unitId}&id=${sub.id}`;
       card.setAttribute('role', 'listitem');
       card.innerHTML = `
         <div class="subunit-card-header">
@@ -142,7 +334,7 @@
         <div class="subunit-meta">
           <span class="meta-badge">📖 ${blockCount} blocos</span>
           <span class="meta-badge">🃏 ${sub.flashcards.length} cards</span>
-          <span class="meta-badge">❓ ${sub.quiz.length} perguntas</span>
+          <span class="meta-badge">${quizLabel}</span>
         </div>
         <div class="subunit-progress">
           <span class="meta-badge">Flashcards: ${known}/${total} (${pct}%)</span>
@@ -153,16 +345,46 @@
       `;
       grid.appendChild(card);
     });
+
+    const progressEl = document.getElementById('unit-progress');
+    if (progressEl) {
+      progressEl.innerHTML = `
+        <span class="meta-badge">Progresso global: ${unitProgress.known}/${unitProgress.total} flashcards (${unitProgress.pct}%)</span>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: ${unitProgress.pct}%"></div>
+        </div>
+      `;
+    }
+
+    const totalPool = getAllQuizQuestions(unitId).length;
+    if (totalPool > 0) {
+      const examSection = document.createElement('section');
+      examSection.className = 'exam-promo';
+      examSection.innerHTML = `
+        <a href="exame.html?unit=${unitId}" class="subunit-card exam-card" role="listitem">
+          <div class="subunit-card-header">
+            <span class="subunit-number exam-icon" aria-hidden="true">🎯</span>
+            <h3>Exame Rotativo da Unidade</h3>
+          </div>
+          <p>${EXAM_GLOBAL_PER_SESSION} perguntas sorteadas de um banco de ${totalPool} — todas as subunidades desta unidade.</p>
+          <div class="subunit-meta">
+            <span class="meta-badge">🔄 Rotativo</span>
+            <span class="meta-badge">📑 ${subunits.length} subunidades</span>
+            <span class="meta-badge">❓ ${totalPool} no banco</span>
+          </div>
+        </a>
+      `;
+      grid.parentNode.insertBefore(examSection, grid);
+    }
   }
 
   // ---- Página da subunidade ----
 
-  function initSubunit() {
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
-    const sub = getSubunitById(id);
+  function initSubunit(unitId, subId) {
+    const sub = getSubunit(unitId, subId);
+    const unit = getUnitById(unitId);
 
-    if (!sub) {
+    if (!sub || !unit) {
       document.querySelector('.container').innerHTML =
         '<p class="hero-text">Subunidade não encontrada. <a href="../index.html">Voltar ao menu</a></p>';
       return;
@@ -172,9 +394,15 @@
     document.getElementById('subunit-title').textContent = `Subunidade ${sub.number}`;
     document.getElementById('subunit-subtitle').textContent = sub.title;
 
+    const unitLabel = document.getElementById('subunit-unit');
+    if (unitLabel) unitLabel.textContent = unit.title;
+
+    const backLink = document.getElementById('subunit-back');
+    if (backLink) backLink.href = `unidade.html?unit=${unitId}`;
+
     renderContent(sub);
     initTabs();
-    initFlashcards(sub);
+    initFlashcards(unitId, sub);
     initQuiz(sub);
   }
 
@@ -247,7 +475,7 @@
 
   // ---- Flashcards ----
 
-  function initFlashcards(sub) {
+  function initFlashcards(unitId, sub) {
     const flashcard = document.getElementById('flashcard');
     const fcQuestion = document.getElementById('fc-question');
     const fcAnswer = document.getElementById('fc-answer');
@@ -259,7 +487,7 @@
     const btnDontKnow = document.getElementById('fc-dont-know');
     const btnReset = document.getElementById('fc-reset');
 
-    let progress = loadFcProgress(sub.id);
+    let progress = loadFcProgress(unitId, sub.id);
     let currentIndex = Math.min(progress.index, sub.flashcards.length - 1);
     if (currentIndex < 0) currentIndex = 0;
 
@@ -299,7 +527,7 @@
       if (currentIndex > 0) {
         currentIndex--;
         progress.index = currentIndex;
-        saveFcProgress(sub.id, progress);
+        saveFcProgress(unitId, sub.id, progress);
         updateUI();
       }
     });
@@ -308,7 +536,7 @@
       if (currentIndex < sub.flashcards.length - 1) {
         currentIndex++;
         progress.index = currentIndex;
-        saveFcProgress(sub.id, progress);
+        saveFcProgress(unitId, sub.id, progress);
         updateUI();
       }
     });
@@ -318,7 +546,7 @@
         progress.known.push(currentIndex);
       }
       progress.index = currentIndex;
-      saveFcProgress(sub.id, progress);
+      saveFcProgress(unitId, sub.id, progress);
       flashcard.classList.add('known');
       flashcard.classList.remove('unknown');
 
@@ -326,7 +554,7 @@
         setTimeout(() => {
           currentIndex++;
           progress.index = currentIndex;
-          saveFcProgress(sub.id, progress);
+          saveFcProgress(unitId, sub.id, progress);
           updateUI();
         }, 400);
       } else {
@@ -337,7 +565,7 @@
     btnDontKnow.addEventListener('click', () => {
       progress.known = progress.known.filter((i) => i !== currentIndex);
       progress.index = currentIndex;
-      saveFcProgress(sub.id, progress);
+      saveFcProgress(unitId, sub.id, progress);
       flashcard.classList.add('unknown');
       flashcard.classList.remove('known');
       updateUI();
@@ -347,7 +575,7 @@
       if (confirm('Repor todo o progresso dos flashcards desta subunidade?')) {
         progress = { known: [], index: 0 };
         currentIndex = 0;
-        saveFcProgress(sub.id, progress);
+        saveFcProgress(unitId, sub.id, progress);
         updateUI();
       }
     });
@@ -357,24 +585,29 @@
 
   // ---- Quiz ----
 
-  function initQuiz(sub) {
-    const intro = document.getElementById('quiz-intro');
-    const active = document.getElementById('quiz-active');
-    const results = document.getElementById('quiz-results');
-    const btnStart = document.getElementById('quiz-start');
-    const btnConfirm = document.getElementById('quiz-confirm');
-    const btnNext = document.getElementById('quiz-next');
-    const btnRetry = document.getElementById('quiz-retry');
-    const quizQuestion = document.getElementById('quiz-question');
-    const quizOptions = document.getElementById('quiz-options');
-    const quizCounter = document.getElementById('quiz-counter');
-    const quizProgressFill = document.getElementById('quiz-progress-fill');
-    const quizScore = document.getElementById('quiz-score');
-    const quizTotal = document.getElementById('quiz-total');
-    const quizFeedback = document.getElementById('quiz-feedback');
+  function runQuizEngine(config) {
+    const {
+      pool,
+      perSession,
+      introTextEl,
+      introEl,
+      activeEl,
+      resultsEl,
+      btnStart,
+      btnConfirm,
+      btnNext,
+      btnRetry,
+      quizQuestion,
+      quizOptions,
+      quizCounter,
+      quizProgressFill,
+      quizScore,
+      quizTotal,
+      quizFeedback,
+    } = config;
 
-    document.getElementById('quiz-intro-text').textContent =
-      `Testa os teus conhecimentos com ${sub.quiz.length} perguntas de escolha múltipla sobre ${sub.title}.`;
+    const sessionSize = getQuizSessionSize(pool.length, perSession);
+    introTextEl.textContent = formatQuizIntro(pool.length, sessionSize, config.contextLabel);
 
     let questions = [];
     let currentQ = 0;
@@ -382,34 +615,23 @@
     let selectedOption = -1;
     let answered = false;
 
-    const letters = ['A', 'B', 'C', 'D'];
-
-    function shuffle(array) {
-      const arr = [...array];
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
     function showIntro() {
-      intro.hidden = false;
-      active.hidden = true;
-      results.hidden = true;
+      introEl.hidden = false;
+      activeEl.hidden = true;
+      resultsEl.hidden = true;
     }
 
     function startQuiz() {
-      questions = shuffle(sub.quiz);
+      questions = pickQuizQuestions(pool, perSession);
       currentQ = 0;
       score = 0;
       selectedOption = -1;
       answered = false;
       quizTotal.textContent = questions.length;
 
-      intro.hidden = true;
-      active.hidden = false;
-      results.hidden = true;
+      introEl.hidden = true;
+      activeEl.hidden = false;
+      resultsEl.hidden = true;
 
       renderQuestion();
     }
@@ -421,14 +643,14 @@
 
       quizQuestion.textContent = q.question;
       quizCounter.textContent = `${currentQ + 1} / ${questions.length}`;
-      quizProgressFill.style.width = `${((currentQ) / questions.length) * 100}%`;
+      quizProgressFill.style.width = `${(currentQ / questions.length) * 100}%`;
 
       quizOptions.innerHTML = '';
       q.options.forEach((opt, i) => {
         const btn = document.createElement('button');
         btn.className = 'quiz-option';
         btn.type = 'button';
-        btn.innerHTML = `<span class="option-letter">${letters[i]}</span><span>${opt}</span>`;
+        btn.innerHTML = `<span class="option-letter">${QUIZ_OPTION_LETTERS[i]}</span><span>${opt}</span>`;
         btn.addEventListener('click', () => selectOption(i, btn));
         quizOptions.appendChild(btn);
       });
@@ -476,8 +698,8 @@
     }
 
     function showResults() {
-      active.hidden = true;
-      results.hidden = false;
+      activeEl.hidden = true;
+      resultsEl.hidden = false;
       quizProgressFill.style.width = '100%';
       quizScore.textContent = score;
 
@@ -497,6 +719,84 @@
     btnConfirm.addEventListener('click', confirmAnswer);
     btnNext.addEventListener('click', nextQuestion);
     btnRetry.addEventListener('click', startQuiz);
+  }
+
+  function initQuiz(sub) {
+    runQuizEngine({
+      pool: sub.quiz,
+      perSession: QUIZ_PER_SESSION,
+      contextLabel: sub.title,
+      introTextEl: document.getElementById('quiz-intro-text'),
+      introEl: document.getElementById('quiz-intro'),
+      activeEl: document.getElementById('quiz-active'),
+      resultsEl: document.getElementById('quiz-results'),
+      btnStart: document.getElementById('quiz-start'),
+      btnConfirm: document.getElementById('quiz-confirm'),
+      btnNext: document.getElementById('quiz-next'),
+      btnRetry: document.getElementById('quiz-retry'),
+      quizQuestion: document.getElementById('quiz-question'),
+      quizOptions: document.getElementById('quiz-options'),
+      quizCounter: document.getElementById('quiz-counter'),
+      quizProgressFill: document.getElementById('quiz-progress-fill'),
+      quizScore: document.getElementById('quiz-score'),
+      quizTotal: document.getElementById('quiz-total'),
+      quizFeedback: document.getElementById('quiz-feedback'),
+    });
+  }
+
+  function initGlobalExam(scope, unitId) {
+    let pool;
+    let contextLabel;
+    let backHref = '../index.html';
+
+    if (scope === 'course') {
+      pool = getAllQuizQuestions();
+      contextLabel = 'todo o curso';
+    } else if (unitId) {
+      const unit = getUnitById(unitId);
+      pool = getAllQuizQuestions(unitId);
+      contextLabel = unit ? unit.title : 'esta unidade';
+      backHref = `unidade.html?unit=${unitId}`;
+    } else {
+      pool = getAllQuizQuestions();
+      contextLabel = 'todo o curso';
+    }
+
+    if (pool.length === 0) {
+      document.querySelector('.container').innerHTML =
+        `<p class="hero-text">Nenhuma pergunta disponível. <a href="${backHref}">Voltar</a></p>`;
+      return;
+    }
+
+    const subtitle = document.getElementById('exam-subtitle');
+    if (subtitle) subtitle.textContent = contextLabel;
+
+    const backLink = document.getElementById('exam-back');
+    if (backLink) backLink.href = backHref;
+
+    const backLinkResults = document.getElementById('exam-back-link');
+    if (backLinkResults) backLinkResults.href = backHref;
+
+    runQuizEngine({
+      pool,
+      perSession: EXAM_GLOBAL_PER_SESSION,
+      contextLabel,
+      introTextEl: document.getElementById('quiz-intro-text'),
+      introEl: document.getElementById('quiz-intro'),
+      activeEl: document.getElementById('quiz-active'),
+      resultsEl: document.getElementById('quiz-results'),
+      btnStart: document.getElementById('quiz-start'),
+      btnConfirm: document.getElementById('quiz-confirm'),
+      btnNext: document.getElementById('quiz-next'),
+      btnRetry: document.getElementById('quiz-retry'),
+      quizQuestion: document.getElementById('quiz-question'),
+      quizOptions: document.getElementById('quiz-options'),
+      quizCounter: document.getElementById('quiz-counter'),
+      quizProgressFill: document.getElementById('quiz-progress-fill'),
+      quizScore: document.getElementById('quiz-score'),
+      quizTotal: document.getElementById('quiz-total'),
+      quizFeedback: document.getElementById('quiz-feedback'),
+    });
   }
 
   // ---- Instalação PWA ----
@@ -534,14 +834,44 @@
 
   // ---- Inicialização ----
 
-  function init() {
+  async function init() {
     initTheme();
     initInstallPrompt();
 
-    if (document.getElementById('subunits-grid')) {
-      initIndex();
-    } else if (document.getElementById('subunit-title')) {
-      initSubunit();
+    const params = new URLSearchParams(window.location.search);
+
+    try {
+      if (document.getElementById('units-grid')) {
+        initIndex();
+      } else if (document.getElementById('unit-page')) {
+        const unitId = params.get('unit');
+        await ensureCourseLoaded();
+        await ensureUnitLoaded(unitId);
+        initUnit(unitId);
+      } else if (document.getElementById('global-exam')) {
+        const unitId = params.get('unit');
+        const scope = params.get('scope');
+        await ensureCourseLoaded();
+        if (scope === 'course') {
+          await ensureAllUnitsLoaded();
+        } else if (unitId) {
+          await ensureUnitLoaded(unitId);
+        } else {
+          await ensureAllUnitsLoaded();
+        }
+        initGlobalExam(scope, unitId);
+      } else if (document.getElementById('subunit-title')) {
+        const unitId = params.get('unit');
+        const subId = params.get('id');
+        await ensureCourseLoaded();
+        await ensureUnitLoaded(unitId);
+        initSubunit(unitId, subId);
+      }
+    } catch (err) {
+      const container = document.querySelector('.container');
+      if (container) {
+        container.innerHTML = `<p class="hero-text">Erro ao carregar conteúdo: ${err.message}</p>`;
+      }
     }
   }
 

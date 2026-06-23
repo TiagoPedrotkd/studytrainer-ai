@@ -1,22 +1,32 @@
 #!/usr/bin/env node
 /**
- * Importa HTML de estudo e gera ficheiros /data/subN.js
+ * Importa HTML de estudo e gera ficheiros em /data
+ *
+ * Estrutura do curso: imports/course.json
+ *   └── units[] → subunits[] (HTML, extras, painéis)
+ *
+ * Saída:
+ *   data/course.js        — manifesto leve (menu principal)
+ *   data/<unit-id>.js     — conteúdo completo de cada unidade
  *
  * Uso:
- *   npm run import                          → importa todas as unidades em imports/units.json
- *   node scripts/import-unit.js <ficheiro>   → importa uma unidade (ver abaixo)
+ *   npm run import
  *
  * Para adicionar nova unidade:
- *   1. Coloca o HTML em imports/ (ou aponta o caminho em units.json)
- *   2. Adiciona entrada em imports/units.json
+ *   1. Adiciona bloco em imports/course.json → units[]
+ *   2. Coloca entradas em subunits[] com caminho HTML
  *   3. Corre: npm run import
+ *
+ * Extras: extraFlashcards / extraQuiz por subunidade
+ * Banco rotativo: imports/exam-quiz.json → { "unit-id": { "sub-id": [...] } }
  */
 
 const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const UNITS_FILE = path.join(ROOT, 'imports', 'units.json');
+const COURSE_FILE = path.join(ROOT, 'imports', 'course.json');
+const EXAM_QUIZ_FILE = path.join(ROOT, 'imports', 'exam-quiz.json');
 
 const DEFAULT_CONTENT_PANELS = [
   { id: 'resistencia', label: 'Resistência' },
@@ -280,115 +290,232 @@ function mergeUniqueQuiz(base, extra) {
   return result;
 }
 
-function generateSubFile(unit, contentHtml, contentSections, flashcards, quiz) {
-  const indent = (obj) => JSON.stringify(obj, null, 2).replace(/\n/g, '\n  ');
-  const sectionsLine = contentSections.length
-    ? `  contentSections: ${indent(contentSections)},\n`
-    : '';
-
-  return `/**
- * Gerado automaticamente por scripts/import-unit.js
- * Fonte: ${unit.html}
- *
- * Para actualizar: edita o HTML fonte e corre «npm run import»
- * Para flashcards/quiz extra: adiciona em imports/units.json → extraFlashcards / extraQuiz
- */
-
-window.STUDY_SUBUNITS = window.STUDY_SUBUNITS || [];
-window.STUDY_SUBUNITS = window.STUDY_SUBUNITS.filter((s) => s.id !== '${unit.id}');
-
-window.STUDY_SUBUNITS.push({
-  id: '${unit.id}',
-  number: ${unit.number},
-  title: ${JSON.stringify(unit.title)},
-  description: ${JSON.stringify(unit.description)},
-${sectionsLine}  contentHtml: \`${escapeTemplate(contentHtml)}\`,
-  flashcards: ${indent(flashcards)},
-  quiz: ${indent(quiz)},
-});
-`;
+function getBlockCount(sub) {
+  if (sub.content?.length) return sub.content.length;
+  if (sub.contentHtml) {
+    const labels = (sub.contentHtml.match(/class="section-label"/g) || []).length;
+    if (labels > 0) return labels;
+  }
+  if (sub.contentSections?.length) return sub.contentSections.length;
+  return 0;
 }
 
-function importUnit(unit) {
-  const htmlPath = path.isAbsolute(unit.html)
-    ? unit.html
-    : path.join(ROOT, unit.html);
+function getExamQuizForSub(examQuizBank, unitId, subId) {
+  if (examQuizBank[unitId]?.[subId]) return examQuizBank[unitId][subId];
+  if (examQuizBank[subId]) return examQuizBank[subId];
+  return [];
+}
+
+function importSubunit(subunit, unitId, examQuizBank) {
+  const htmlPath = path.isAbsolute(subunit.html)
+    ? subunit.html
+    : path.join(ROOT, subunit.html);
 
   if (!fs.existsSync(htmlPath)) {
     throw new Error(`Ficheiro não encontrado: ${htmlPath}`);
   }
 
   const html = fs.readFileSync(htmlPath, 'utf8');
-  const extracted = extractConteudo(html, unit.contentPanels);
+  const extracted = extractConteudo(html, subunit.contentPanels);
   const contentHtml = extracted.html;
-  const contentSections = unit.contentSections || extracted.sections || [];
+  const contentSections = subunit.contentSections || extracted.sections || [];
   const rawFlashcards = extractFlashcardsFromHtml(html);
   const rawQuiz = extractQuizFromHtml(html);
 
   const flashcards = mergeUniqueFlashcards(
     toFlashcards(rawFlashcards),
-    toFlashcards(unit.extraFlashcards || [])
+    toFlashcards(subunit.extraFlashcards || [])
   );
 
   const quiz = mergeUniqueQuiz(
-    toQuiz(rawQuiz),
-    toQuiz(unit.extraQuiz || [])
+    mergeUniqueQuiz(toQuiz(rawQuiz), toQuiz(subunit.extraQuiz || [])),
+    toQuiz(getExamQuizForSub(examQuizBank, unitId, subunit.id))
   );
 
-  const outPath = path.join(ROOT, 'data', `${unit.id}.js`);
-  fs.writeFileSync(outPath, generateSubFile(unit, contentHtml, contentSections, flashcards, quiz), 'utf8');
+  const data = {
+    id: subunit.id,
+    number: subunit.number,
+    title: subunit.title,
+    description: subunit.description,
+    flashcards,
+    quiz,
+  };
 
-  console.log(`✓ ${unit.id}.js — ${flashcards.length} flashcards, ${quiz.length} perguntas quiz`);
-  return unit.id;
+  if (contentSections.length) {
+    data.contentSections = contentSections;
+  }
+  data.contentHtml = contentHtml;
+
+  console.log(
+    `  ✓ ${subunit.id} — ${flashcards.length} flashcards, ${quiz.length} perguntas quiz`
+  );
+
+  return data;
 }
 
-function syncScriptTags(units) {
-  const scripts = units.map((u) => `  <script src="data/${u.id}.js"></script>`).join('\n');
-  const scriptsPages = units.map((u) => `  <script src="../data/${u.id}.js"></script>`).join('\n');
+function indentJson(obj) {
+  return JSON.stringify(obj, null, 2).replace(/\n/g, '\n  ');
+}
 
-  const indexPath = path.join(ROOT, 'index.html');
-  let indexHtml = fs.readFileSync(indexPath, 'utf8');
-  indexHtml = indexHtml.replace(
-    /(  <script src="data\/sub\d+\.js"><\/script>\r?\n)+/,
-    `${scripts}\r\n`
-  );
-  fs.writeFileSync(indexPath, indexHtml, 'utf8');
+function serializeSubunit(sub) {
+  const sectionsLine = sub.contentSections?.length
+    ? `    contentSections: ${indentJson(sub.contentSections)},\n`
+    : '';
+  const rest = {
+    id: sub.id,
+    number: sub.number,
+    title: sub.title,
+    description: sub.description,
+    flashcards: sub.flashcards,
+    quiz: sub.quiz,
+  };
+  const restLines = JSON.stringify(rest, null, 2).split('\n').slice(1, -1).join('\n');
+  return `  {\n${restLines},\n${sectionsLine}    contentHtml: \`${escapeTemplate(sub.contentHtml)}\`\n  }`;
+}
 
-  const pagePath = path.join(ROOT, 'pages', 'subunidade.html');
-  let pageHtml = fs.readFileSync(pagePath, 'utf8');
-  pageHtml = pageHtml.replace(
-    /(  <script src="\.\.\/data\/sub\d+\.js"><\/script>\r?\n)+/,
-    `${scriptsPages}\r\n`
-  );
-  fs.writeFileSync(pagePath, pageHtml, 'utf8');
+function generateUnitFile(unit, subunits) {
+  const subunitsJson = subunits.map((sub) => serializeSubunit(sub)).join(',\n');
 
+  return `/**
+ * Gerado automaticamente por scripts/import-unit.js
+ * Unidade: ${unit.title}
+ *
+ * Para actualizar: edita o HTML fonte e corre «npm run import»
+ */
+
+window.STUDY_UNITS = window.STUDY_UNITS || [];
+window.STUDY_UNITS = window.STUDY_UNITS.filter((u) => u.id !== '${unit.id}');
+
+window.STUDY_UNITS.push({
+  id: '${unit.id}',
+  number: ${unit.number},
+  title: ${JSON.stringify(unit.title)},
+  description: ${JSON.stringify(unit.description)},
+  subunits: [
+${subunitsJson}
+  ],
+});
+`;
+}
+
+function generateCourseManifest(units) {
+  const manifestUnits = units.map(({ unit, subunits }) => {
+    const totalFlashcards = subunits.reduce((n, s) => n + s.flashcards.length, 0);
+    const totalQuiz = subunits.reduce((n, s) => n + s.quiz.length, 0);
+    const totalBlocks = subunits.reduce((n, s) => n + getBlockCount(s), 0);
+
+    return {
+      id: unit.id,
+      number: unit.number,
+      title: unit.title,
+      description: unit.description,
+      subunitCount: subunits.length,
+      flashcardCount: totalFlashcards,
+      quizCount: totalQuiz,
+      blockCount: totalBlocks,
+      subunits: subunits.map((s) => ({
+        id: s.id,
+        number: s.number,
+        title: s.title,
+        description: s.description,
+        flashcardCount: s.flashcards.length,
+        quizCount: s.quiz.length,
+        blockCount: getBlockCount(s),
+      })),
+    };
+  });
+
+  return `/**
+ * Gerado automaticamente por scripts/import-unit.js
+ * Manifesto do curso (menu principal)
+ */
+
+window.STUDY_COURSE = ${JSON.stringify({ units: manifestUnits }, null, 2)};
+`;
+}
+
+function cleanupLegacySubFiles(currentUnitIds) {
+  const dataDir = path.join(ROOT, 'data');
+  if (!fs.existsSync(dataDir)) return;
+
+  for (const file of fs.readdirSync(dataDir)) {
+    if (/^sub\d+\.js$/.test(file)) {
+      fs.unlinkSync(path.join(dataDir, file));
+      console.log(`  − removido legado data/${file}`);
+    }
+  }
+}
+
+function syncServiceWorker(unitIds) {
   const swPath = path.join(ROOT, 'sw.js');
   let sw = fs.readFileSync(swPath, 'utf8');
-  const dataAssets = units.map((u) => `  '/data/${u.id}.js',`).join('\n');
-  sw = sw.replace(
-    /(  '\/data\/sub\d+\.js',\r?\n)+/,
-    `${dataAssets}\r\n`
-  );
-  fs.writeFileSync(swPath, sw, 'utf8');
 
-  console.log('✓ index.html, subunidade.html e sw.js sincronizados');
+  const dataAssets = [
+    "  '/data/course.js',",
+    ...unitIds.map((id) => `  '/data/${id}.js',`),
+  ].join('\n');
+
+  sw = sw.replace(
+    /(  '\/data\/(?:course|unit-|sub)\S*',\r?\n)+/,
+    `${dataAssets}\n`
+  );
+
+  if (!sw.includes('/pages/unidade.html')) {
+    sw = sw.replace(
+      "  '/pages/subunidade.html',",
+      "  '/pages/unidade.html',\n  '/pages/subunidade.html',"
+    );
+  }
+
+  const cacheMatch = sw.match(/const CACHE_NAME = 'studytrainer-v(\d+)'/);
+  if (cacheMatch) {
+    const next = parseInt(cacheMatch[1], 10) + 1;
+    sw = sw.replace(/const CACHE_NAME = 'studytrainer-v\d+'/, `const CACHE_NAME = 'studytrainer-v${next}'`);
+  }
+
+  fs.writeFileSync(swPath, sw, 'utf8');
+  console.log('✓ sw.js sincronizado');
+}
+
+function importCourseUnit(courseUnit, examQuizBank) {
+  console.log(`\n${courseUnit.title} (${courseUnit.id})`);
+
+  const subunits = courseUnit.subunits.map((sub) =>
+    importSubunit(sub, courseUnit.id, examQuizBank)
+  );
+
+  const outPath = path.join(ROOT, 'data', `${courseUnit.id}.js`);
+  fs.writeFileSync(outPath, generateUnitFile(courseUnit, subunits), 'utf8');
+  console.log(`✓ ${courseUnit.id}.js — ${subunits.length} subunidades`);
+
+  return { unit: courseUnit, subunits };
 }
 
 function main() {
-  if (!fs.existsSync(UNITS_FILE)) {
-    console.error('Ficheiro imports/units.json não encontrado.');
+  if (!fs.existsSync(COURSE_FILE)) {
+    console.error('Ficheiro imports/course.json não encontrado.');
     process.exit(1);
   }
 
-  const units = JSON.parse(fs.readFileSync(UNITS_FILE, 'utf8'));
-  const ids = [];
+  const course = JSON.parse(fs.readFileSync(COURSE_FILE, 'utf8'));
+  const examQuizBank = fs.existsSync(EXAM_QUIZ_FILE)
+    ? JSON.parse(fs.readFileSync(EXAM_QUIZ_FILE, 'utf8'))
+    : {};
 
-  for (const unit of units) {
-    ids.push(importUnit(unit));
+  const imported = [];
+
+  for (const courseUnit of course.units) {
+    imported.push(importCourseUnit(courseUnit, examQuizBank));
   }
 
-  syncScriptTags(units);
-  console.log(`\nImportação concluída: ${ids.join(', ')}`);
+  const manifestPath = path.join(ROOT, 'data', 'course.js');
+  fs.writeFileSync(manifestPath, generateCourseManifest(imported), 'utf8');
+  console.log(`\n✓ course.js — ${imported.length} unidade(s)`);
+
+  cleanupLegacySubFiles(imported.map((i) => i.unit.id));
+  syncServiceWorker(imported.map((i) => i.unit.id));
+
+  console.log(`\nImportação concluída: ${imported.map((i) => i.unit.id).join(', ')}`);
 }
 
 main();

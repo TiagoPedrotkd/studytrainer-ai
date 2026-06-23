@@ -1,0 +1,332 @@
+{
+  "units": [
+    {
+      "id": "unit-tmt",
+      "number": 1,
+      "title": "Teoria e metodologia do treino desportivo",
+      "description": "Planeamento, princípios biológicos e metodológicos, capacidades físicas, sessão e estrutura do treino.",
+      "subunits": [
+        {
+          "html": "d:/Treinador_Curso/Resumos/SubUnidade1_V1.html",
+          "id": "sub1",
+          "number": 1,
+          "title": "Planeamento e Treino",
+          "description": "Planeamento, treino, Bompa, desenvolvimento motor, maturação e fases LTAD.",
+          "extraFlashcards": [],
+          "extraQuiz": [
+            {
+              "question": "No percurso de formação desportiva de um praticante, quando ocorre a fase de treinar para a vitória?",
+              "options": [
+                "A partir dos 18 anos nos rapazes e 17 nas raparigas.",
+                "A partir dos 16 anos nos rapazes e 15 nas raparigas.",
+                "Entre os 9-12 anos nos rapazes e 8-11 anos nas raparigas.",
+                "Entre os 12-16 anos nos rapazes e 11-15 nas raparigas."
+              ],
+              "correct": 0
+            },
+            {
+              "question": "Em que idades se deve dar primazia ao desenvolvimento de habilidades motoras especializadas?",
+              "options": [
+                "Entre os 9-12 anos em ambos os sexos.",
+                "Entre os 6-9 anos nos meninos e 6-8 anos nas meninas.",
+                "Entre os 9-12 anos nos rapazes e 8-11 anos nas raparigas.",
+                "Entre os 12-16 anos nos rapazes e 11-15 nas raparigas."
+              ],
+              "correct": 2
+            }
+          ]
+        },
+        {
+          "html": "d:/Treinador_Curso/Resumos/SubUnidade1_V2.html",
+          "id": "sub2",
+          "number": 2,
+          "title": "Sistemas Energéticos",
+          "description": "ATP-PCr, glicolítico, oxidativo, domínios de intensidade, limiares e unidades motoras.",
+          "extraFlashcards": [],
+          "extraQuiz": [
+            {
+              "question": "O ciclo de Krebs tem como função:",
+              "options": [
+                "Formação de dióxido de carbono.",
+                "Formação de ácido lático.",
+                "Formação de ATP e água.",
+                "Oxidar substratos energéticos para reduzir NAD+."
+              ],
+              "correct": 3
+            }
+          ]
+        },
+        {
+          "html": "d:/Treinador_Curso/Resumos/SubUnidade2_V1.html",
+          "id": "sub3",
+          "number": 3,
+          "title": "Princípios Biológicos do Treino",
+          "description": "Sobrecarga, especificidade, reversibilidade, heterocronia e supercompensação.",
+          "extraFlashcards": [],
+          "extraQuiz": [
+            {
+              "question": "A procura em aumentar o estímulo de treino, que posteriormente levará a novas adaptações, define:",
+              "options": [
+                "O princípio da especificidade.",
+                "O princípio da sobrecarga.",
+                "O princípio da heterocronia.",
+                "O princípio da continuidade."
+              ],
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "html": "d:/Treinador_Curso/Resumos/SubUnidade2_V2.html",
+          "id": "sub4",
+          "number": 4,
+          "title": "Princípios Metodológicos do Treino",
+          "description": "Progressão, individualização, multilateralidade, especialização e literacia física.",
+          "extraFlashcards": [],
+          "extraQuiz": [
+            {
+              "question": "O princípio da individualização depende de fatores como:",
+              "options": [
+                "Maturação.",
+                "A hora do treino.",
+                "Número de treinos por semana.",
+                "Número de exercícios no treino."
+              ],
+              "correct": 0
+            },
+            {
+              "question": "A literacia física:",
+              "options": [
+                "Apenas é desenvolvida na infância.",
+                "Incorpora a motivação, confiança, competência física, conhecimento e compreensão.",
+                "Nada tem que ver com o processo de treino.",
+                "Promove o desenvolvimento especializado."
+              ],
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "html": "d:/Treinador_Curso/Resumos/SubUnidade3_V1.html",
+          "id": "sub5",
+          "number": 5,
+          "title": "Carga de Treino e Capacidades",
+          "description": "Carga externa/interna, capacidades motoras, estrutura e tipos de exercícios.",
+          "extraFlashcards": [],
+          "extraQuiz": [
+            {
+              "question": "A carga de treino:",
+              "options": [
+                "É medida apenas de forma individual.",
+                "Só é mensurável através de parâmetros fisiológicos.",
+                "Compreende apenas uma grandeza externa.",
+                "Determina a grandeza e a intensidade dos processos de recuperação."
+              ],
+              "correct": 3
+            },
+            {
+              "question": "Entre que idades as capacidades coordenativas têm o seu período de desenvolvimento crucial:",
+              "options": [
+                "Depende da modalidade desportiva.",
+                "Entre os 5 e 8 anos.",
+                "Entre os 9 e os 11 anos.",
+                "Entre os 12 e 14 anos."
+              ],
+              "correct": 2
+            }
+          ]
+        },
+        {
+          "html": "d:/Treinador_Curso/Resumos/SubUnidade3_V2.html",
+          "id": "sub6",
+          "number": 6,
+          "title": "Resistência e Velocidade",
+          "description": "Classificação da resistência, métodos de treino, avaliação aeróbia/anaeróbia e velocidade.",
+          "extraFlashcards": [],
+          "extraQuiz": [
+            {
+              "question": "O método contínuo deve ser aplicado para desenvolver:",
+              "options": [
+                "O estado estacionário máximo de lactato.",
+                "Capacidade aeróbia de alta intensidade.",
+                "Capacidade aeróbia de baixa intensidade.",
+                "A velocidade."
+              ],
+              "correct": 2
+            }
+          ]
+        },
+        {
+          "html": "d:/Treinador_Curso/Resumos/SubUnidade3_V3.html",
+          "id": "sub7",
+          "number": 7,
+          "title": "Força, Flexibilidade e CAE",
+          "description": "Produção de força, prescrição e avaliação, flexibilidade, fuso/OTG e ciclo alongamento-encurtamento.",
+          "contentPanels": [
+            {
+              "id": "forca",
+              "label": "Força"
+            },
+            {
+              "id": "prescricao",
+              "label": "Prescrição"
+            },
+            {
+              "id": "avaliacao",
+              "label": "Avaliação"
+            },
+            {
+              "id": "flexibilidade",
+              "label": "Flexibilidade"
+            },
+            {
+              "id": "cae",
+              "label": "CAE"
+            }
+          ],
+          "extraFlashcards": [],
+          "extraQuiz": [
+            {
+              "question": "O treino da força máxima implica:",
+              "options": [
+                "Percentagens de carga entre 90 a 100% da 1RM, e realização de 1 a 5 repetições.",
+                "Percentagens de carga entre 45 a 55% da 1 RM, e realização de 1 a 5 repetições.",
+                "Percentagens de carga entre 60 a 80% da 1RM, e realização de 6 a 12 repetições.",
+                "Percentagens de carga entre 90 a 100% da 1 RM, e realização de 10 a 15 repetições."
+              ],
+              "correct": 0
+            },
+            {
+              "question": "O método de treino mais eficaz para melhorar a flexibilidade corresponde:",
+              "options": [
+                "Ao método PNF.",
+                "Ao método estático.",
+                "Ao método passivo.",
+                "Ao método balístico."
+              ],
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "html": "d:/Treinador_Curso/Resumos/SubUnidade4_V1.html",
+          "id": "sub8",
+          "number": 8,
+          "title": "A Sessão de Treino",
+          "description": "Planeamento da sessão, tipos e objetivos, iniciação 7–11 anos, maturação, ficha de treino e avaliação.",
+          "contentPanels": [
+            {
+              "id": "t1",
+              "label": "Elemento Central"
+            },
+            {
+              "id": "t2",
+              "label": "Interdependência"
+            },
+            {
+              "id": "t3",
+              "label": "Tipos de Sessões"
+            },
+            {
+              "id": "t4",
+              "label": "Objetivos"
+            },
+            {
+              "id": "t5",
+              "label": "Iniciação 7–11 anos"
+            },
+            {
+              "id": "t6",
+              "label": "Maturação"
+            },
+            {
+              "id": "t7",
+              "label": "Ficha & Avaliação"
+            },
+            {
+              "id": "vf",
+              "label": "Verdadeiro / Falso"
+            }
+          ],
+          "extraFlashcards": [],
+          "extraQuiz": [
+            {
+              "question": "Que tipo de sessões de treino é constituído por um conjunto mínimo de exercícios que são executados a um nível de intensidade e densidade reduzidos:",
+              "options": [
+                "Sessões de reconhecimento.",
+                "Sessões de repetição.",
+                "Sessões de controlo.",
+                "Sessões de aprendizagem."
+              ],
+              "correct": 3
+            },
+            {
+              "question": "Existem três tipos de objetivos fundamentais numa sessão, que são:",
+              "options": [
+                "Os primários, secundários e terciários.",
+                "Os principais, secundários e terciários.",
+                "Os prioritários, secundários e suplementares.",
+                "Os principais, os gerais e os específicos."
+              ],
+              "correct": 2
+            }
+          ]
+        },
+        {
+          "html": "d:/Treinador_Curso/Resumos/SubUnidade4_V2.html",
+          "id": "sub9",
+          "number": 9,
+          "title": "Estrutura da Sessão de Treino",
+          "description": "Partes inicial, preparatória, principal e final, fases do aquecimento, ficha, microciclos e supercompensação.",
+          "contentPanels": [
+            {
+              "id": "visao",
+              "label": "Visão Geral"
+            },
+            {
+              "id": "t1",
+              "label": "Parte Inicial"
+            },
+            {
+              "id": "t2",
+              "label": "Aquecimento"
+            },
+            {
+              "id": "t3",
+              "label": "Parte Principal"
+            },
+            {
+              "id": "t4",
+              "label": "Parte Final"
+            },
+            {
+              "id": "t5",
+              "label": "Ficha & Planeamento"
+            },
+            {
+              "id": "t6",
+              "label": "Microciclos"
+            },
+            {
+              "id": "vf",
+              "label": "Verdadeiro / Falso"
+            }
+          ],
+          "extraFlashcards": [],
+          "extraQuiz": [
+            {
+              "question": "A parte da sessão de treino em que são apresentados os objetivos planeados para essa sessão treino é:",
+              "options": [
+                "A parte fundamental.",
+                "A parte introdutória.",
+                "A parte final.",
+                "A parte preparatória."
+              ],
+              "correct": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

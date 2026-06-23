@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Exame rotativo — Treinador Desportivo">
+  <meta name="theme-color" content="#1a1f2e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="StudyTrainer">
+  <title>Exame Rotativo — StudyTrainer</title>
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../icons/icon.svg">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/content.css">
+  <link rel="stylesheet" href="../styles/readability.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <a id="exam-back" href="../index.html" class="btn-back" aria-label="Voltar">←</a>
+      <div class="header-brand header-brand-compact">
+        <div>
+          <h1 id="global-exam">Exame Rotativo</h1>
+          <p id="exam-subtitle" class="subtitle"></p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="install-app" class="btn-install" hidden>Instalar</button>
+        <button id="theme-toggle" class="btn-icon" aria-label="Alternar modo escuro" title="Alternar tema">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="quiz-intro" class="quiz-intro">
+      <h2>Simulacro de exame</h2>
+      <p id="quiz-intro-text">Perguntas de escolha múltipla sorteadas.</p>
+      <button id="quiz-start" class="btn-primary">Começar exame</button>
+    </section>
+
+    <section id="quiz-active" class="quiz-active" hidden>
+      <div class="quiz-progress">
+        <span id="quiz-counter">1 / 14</span>
+        <div class="progress-bar">
+          <div id="quiz-progress-fill" class="progress-fill" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="quiz-question-card">
+        <p id="quiz-question" class="quiz-question"></p>
+        <div id="quiz-options" class="quiz-options" role="radiogroup"></div>
+      </div>
+
+      <div class="quiz-actions">
+        <button id="quiz-confirm" class="btn-primary" disabled>Confirmar</button>
+        <button id="quiz-next" class="btn-primary" hidden>Próxima pergunta</button>
+      </div>
+    </section>
+
+    <section id="quiz-results" class="quiz-results" hidden>
+      <div class="results-card">
+        <h2>Resultado</h2>
+        <div class="score-circle">
+          <span id="quiz-score">0</span>
+          <span class="score-total">/ <span id="quiz-total">14</span></span>
+        </div>
+        <p id="quiz-feedback" class="quiz-feedback"></p>
+        <button id="quiz-retry" class="btn-primary">Novo exame (perguntas diferentes)</button>
+        <p style="margin-top: 1rem;"><a id="exam-back-link" href="../index.html" class="btn-secondary">Voltar</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>StudyTrainer &copy; 2026</p>
+  </footer>
+
+  <script src="../app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('../sw.js').catch(() => {});
+    }
+  </script>
+</body>
+</html>

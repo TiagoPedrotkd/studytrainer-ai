@@ -19,9 +19,10 @@
 <body>
   <header class="app-header">
     <div class="header-inner">
-      <a href="../index.html" class="btn-back" aria-label="Voltar ao menu">←</a>
+      <a id="subunit-back" href="../index.html" class="btn-back" aria-label="Voltar à unidade">←</a>
       <div class="header-brand header-brand-compact">
         <div>
+          <p id="subunit-unit" class="breadcrumb"></p>
           <h1 id="subunit-title">Subunidade</h1>
           <p id="subunit-subtitle" class="subtitle"></p>
         </div>
@@ -118,21 +119,12 @@
             <span class="score-total">/ <span id="quiz-total">10</span></span>
           </div>
           <p id="quiz-feedback" class="quiz-feedback"></p>
-          <button id="quiz-retry" class="btn-primary">Tentar novamente</button>
+          <button id="quiz-retry" class="btn-primary">Tentar novamente (perguntas diferentes)</button>
         </div>
       </div>
     </section>
   </main>
 
-  <script src="../data/sub1.js"></script>
-  <script src="../data/sub2.js"></script>
-  <script src="../data/sub3.js"></script>
-  <script src="../data/sub4.js"></script>
-  <script src="../data/sub5.js"></script>
-  <script src="../data/sub6.js"></script>
-  <script src="../data/sub7.js"></script>
-  <script src="../data/sub8.js"></script>
-  <script src="../data/sub9.js"></script>
   <script src="../app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
