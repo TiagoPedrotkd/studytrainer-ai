@@ -100,6 +100,16 @@
 
   // ---- Página principal (index) ----
 
+  function getBlockCount(sub) {
+    if (sub.content?.length) return sub.content.length;
+    if (sub.contentHtml) {
+      const labels = (sub.contentHtml.match(/class="section-label"/g) || []).length;
+      if (labels > 0) return labels;
+    }
+    if (sub.contentSections?.length) return sub.contentSections.length;
+    return 0;
+  }
+
   function initIndex() {
     const grid = document.getElementById('subunits-grid');
     if (!grid) return;
@@ -117,8 +127,7 @@
       const known = progress.known.length;
       const pct = total > 0 ? Math.round((known / total) * 100) : 0;
 
-      const blockCount = sub.content?.length
-        || (sub.contentHtml ? (sub.contentHtml.match(/class="section-label"/g) || []).length : 0);
+      const blockCount = getBlockCount(sub);
 
       const card = document.createElement('a');
       card.className = 'subunit-card';

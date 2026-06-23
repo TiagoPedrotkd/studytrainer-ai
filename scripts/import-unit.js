@@ -18,19 +18,20 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const UNITS_FILE = path.join(ROOT, 'imports', 'units.json');
 
-const MULTI_PANELS = [
+const DEFAULT_CONTENT_PANELS = [
   { id: 'resistencia', label: 'Resistência' },
   { id: 'metodos', label: 'Métodos' },
   { id: 'avaliacao', label: 'Avaliação' },
   { id: 'velocidade', label: 'Velocidade' },
 ];
 
-function extractPanelInner(html, panelId) {
-  const startTag = `<div id="${panelId}"`;
-  const startIdx = html.indexOf(startTag);
-  if (startIdx === -1) return null;
+function extractElementById(html, id) {
+  const re = new RegExp(`<div[^>]*\\bid="${id}"[^>]*>`, 'i');
+  const match = html.match(re);
+  if (!match) return null;
 
-  const contentStart = html.indexOf('>', startIdx) + 1;
+  const startIdx = html.indexOf(match[0]);
+  const contentStart = startIdx + match[0].length;
   let depth = 1;
   let i = contentStart;
 
@@ -51,14 +52,132 @@ function extractPanelInner(html, panelId) {
   return null;
 }
 
-function extractMultiPanelConteudo(html) {
+function extractSectionBodyContent(html, sectionId) {
+  const inner = extractElementById(html, sectionId);
+  if (!inner) return null;
+
+  const bodyTag = '<div class="section-body">';
+  const bodyStart = inner.indexOf(bodyTag);
+  if (bodyStart === -1) return inner;
+
+  const contentStart = bodyStart + bodyTag.length;
+  let depth = 1;
+  let i = contentStart;
+
+  while (i < inner.length && depth > 0) {
+    const nextOpen = inner.indexOf('<div', i);
+    const nextClose = inner.indexOf('</div>', i);
+    if (nextClose === -1) break;
+
+    if (nextOpen !== -1 && nextOpen < nextClose) {
+      depth += 1;
+      i = nextOpen + 4;
+    } else {
+      depth -= 1;
+      if (depth === 0) return inner.slice(contentStart, nextClose).trim();
+      i = nextClose + 6;
+    }
+  }
+  return null;
+}
+
+function extractVfSection(html) {
+  const marker = '<!-- V/F -->';
+  const idx = html.indexOf(marker);
+  if (idx === -1) return null;
+
+  const slice = html.slice(idx);
+  const bodyTag = '<div class="section-body">';
+  const bodyStart = slice.indexOf(bodyTag);
+  if (bodyStart === -1) return null;
+
+  const contentStart = bodyStart + bodyTag.length;
+  let depth = 1;
+  let i = contentStart;
+
+  while (i < slice.length && depth > 0) {
+    const nextOpen = slice.indexOf('<div', i);
+    const nextClose = slice.indexOf('</div>', i);
+    if (nextClose === -1) break;
+
+    if (nextOpen !== -1 && nextOpen < nextClose) {
+      depth += 1;
+      i = nextOpen + 4;
+    } else {
+      depth -= 1;
+      if (depth === 0) return slice.slice(contentStart, nextClose).trim();
+      i = nextClose + 6;
+    }
+  }
+  return null;
+}
+
+function extractPanelInner(html, panelId) {
+  if (panelId === 'vf') return extractVfSection(html);
+  const body = extractSectionBodyContent(html, panelId);
+  if (body) return body;
+  return extractElementById(html, panelId);
+}
+
+function isSectionBodyFormat(html, panelId) {
+  if (panelId === 'vf') return true;
+  return extractSectionBodyContent(html, panelId) !== null;
+}
+
+function normalizeImportedContent(html, panelLabel, isSectionFormat) {
+  let content = html.trim();
+
+  if (isSectionFormat) {
+    content = `<p class="section-label">${panelLabel}</p>\n${content}`;
+  }
+
+  content = content.replace(
+    /<div class="subsec-title">([\s\S]*?)<\/div>/g,
+    '<p class="section-label">$1</p>'
+  );
+
+  content = content.replace(
+    /<div class="box-good">([\s\S]*?)<\/div>/g,
+    '<div class="alert-box" style="border-left-color:#1D9E75">$1</div>'
+  );
+  content = content.replace(
+    /<div class="box-warn">([\s\S]*?)<\/div>/g,
+    '<div class="alert-box" style="border-left-color:#EF9F27">$1</div>'
+  );
+  content = content.replace(
+    /<div class="box-info">([\s\S]*?)<\/div>/g,
+    '<div class="alert-box" style="border-left-color:#378ADD">$1</div>'
+  );
+  content = content.replace(
+    /<div class="box-purple">([\s\S]*?)<\/div>/g,
+    '<div class="alert-box" style="border-left-color:#533AB7">$1</div>'
+  );
+
+  content = content.replace(
+    /<p>([\s\S]*?)<\/p>\s*(?=<div class="alert-box")/g,
+    '<div class="card"><p style="font-size:13px;line-height:1.6;margin:0">$1</p></div>\n'
+  );
+  content = content.replace(
+    /<p>([\s\S]*?)<\/p>\s*(?=<table class="data-table")/g,
+    '<div class="card"><p style="font-size:13px;line-height:1.6;margin:0">$1</p></div>\n'
+  );
+
+  return content;
+}
+
+function extractMultiPanelConteudo(html, panels) {
   const parts = [];
   const sections = [];
 
-  for (const panel of MULTI_PANELS) {
+  for (const panel of panels) {
     const inner = extractPanelInner(html, panel.id);
     if (inner) {
-      parts.push(`<div id="sec-${panel.id}" class="content-section">${inner}</div>`);
+      const normalized = normalizeImportedContent(
+        inner,
+        panel.label,
+        isSectionBodyFormat(html, panel.id)
+      );
+      parts.push(`<div id="sec-${panel.id}" class="content-section">${normalized}</div>`);
       sections.push({ id: `sec-${panel.id}`, label: panel.label });
     }
   }
@@ -67,8 +186,9 @@ function extractMultiPanelConteudo(html) {
   return { html: parts.join('\n\n'), sections };
 }
 
-function extractConteudo(html) {
-  const multi = extractMultiPanelConteudo(html);
+function extractConteudo(html, panels) {
+  const panelList = panels?.length ? panels : DEFAULT_CONTENT_PANELS;
+  const multi = extractMultiPanelConteudo(html, panelList);
   if (multi) return multi;
 
   const startTag = '<div id="conteudo"';
@@ -84,10 +204,35 @@ function extractConteudo(html) {
 }
 
 function extractArray(html, name) {
-  const regex = new RegExp(`const ${name}=\\[([\\s\\S]*?)\\];`);
+  const regex = new RegExp(`const ${name}\\s*=\\s*\\[([\\s\\S]*?)\\];`);
   const match = html.match(regex);
   if (!match) throw new Error(`Array «${name}» não encontrado no HTML`);
   return new Function(`return [${match[1]}];`)();
+}
+
+function extractFlashcardsFromHtml(html) {
+  if (/const flashcards\s*=/.test(html)) {
+    return toFlashcards(extractArray(html, 'flashcards'));
+  }
+  if (/const flashData\s*=/.test(html)) {
+    return extractArray(html, 'flashData').map((item) => {
+      if (Array.isArray(item)) {
+        return { question: item[0], answer: item[1] };
+      }
+      return toFlashcards([item])[0];
+    });
+  }
+  throw new Error('Flashcards não encontrados no HTML (flashcards ou flashData)');
+}
+
+function extractQuizFromHtml(html) {
+  if (/const questions\s*=/.test(html)) {
+    return toQuiz(extractArray(html, 'questions'));
+  }
+  if (/const quizData\s*=/.test(html)) {
+    return toQuiz(extractArray(html, 'quizData'));
+  }
+  throw new Error('Quiz não encontrado no HTML (questions ou quizData)');
 }
 
 function escapeTemplate(str) {
@@ -174,11 +319,11 @@ function importUnit(unit) {
   }
 
   const html = fs.readFileSync(htmlPath, 'utf8');
-  const extracted = extractConteudo(html);
+  const extracted = extractConteudo(html, unit.contentPanels);
   const contentHtml = extracted.html;
   const contentSections = unit.contentSections || extracted.sections || [];
-  const rawFlashcards = extractArray(html, 'flashcards');
-  const rawQuiz = extractArray(html, 'questions');
+  const rawFlashcards = extractFlashcardsFromHtml(html);
+  const rawQuiz = extractQuizFromHtml(html);
 
   const flashcards = mergeUniqueFlashcards(
     toFlashcards(rawFlashcards),

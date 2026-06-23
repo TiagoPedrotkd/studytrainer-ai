@@ -32,7 +32,8 @@ window.STUDY_SUBUNITS.push({
       "label": "Velocidade"
     }
   ],
-  contentHtml: `<div id="sec-resistencia" class="content-section"><p class="section-label">Resistência — Conceito</p>
+  contentHtml: `<div id="sec-resistencia" class="content-section"><p class="section-label">Resistência</p>
+<p class="section-label">Resistência — Conceito</p>
   <div class="card">
     <div style="font-size:13px;line-height:1.6;margin-bottom:.5rem">Capacidade de <strong>retardar a fadiga</strong> e manter alto nível de atividade muscular durante treinos e competições. O atleta consegue realizar esforços prolongados, repetir ações intensas, manter potência com precisão e recuperar rapidamente.</div>
     <div class="detail-row"><span class="detail-key">Potencial energético</span><span class="detail-val">Sistemas bioenergéticos do atleta</span></div>
@@ -86,7 +87,8 @@ window.STUDY_SUBUNITS.push({
   </div>
   <div class="alert-box"><strong>Potência vs. Capacidade:</strong> Potência aeróbia = VO₂máx (intensidade máxima de produção de energia aeróbia). Capacidade aeróbia = quanto tempo se mantém perto do VO₂máx. O mesmo racional aplica-se à via anaeróbia (potência = pico láctico; capacidade = tolerância ao lactato).</div></div>
 
-<div id="sec-metodos" class="content-section"><p class="section-label">Visão Geral dos Métodos</p>
+<div id="sec-metodos" class="content-section"><p class="section-label">Métodos</p>
+<p class="section-label">Visão Geral dos Métodos</p>
   <div class="card">
     <div style="font-size:13px;line-height:1.6;margin-bottom:.5rem">Os métodos organizam-se em <strong>Contínuos</strong> (sem interrupção — exercícios de longa duração com ajustes bioquímicos/fisiológicos constantes; preferencialmente modalidades cíclicas) e <strong>Por Intervalos</strong> (períodos curtos, regulares e repetidos; cíclicas e acíclicas). O método de Competição/Controlo exige uma única carga com rendimento máximo.</div>
     <div class="detail-row"><span class="detail-key">Contínuo uniforme</span><span class="detail-val">Extensivo e Intensivo</span></div>
@@ -152,7 +154,8 @@ window.STUDY_SUBUNITS.push({
     </div>
   </div></div>
 
-<div id="sec-avaliacao" class="content-section"><p class="section-label">Testes de Resistência Aeróbia</p>
+<div id="sec-avaliacao" class="content-section"><p class="section-label">Avaliação</p>
+<p class="section-label">Testes de Resistência Aeróbia</p>
   <div class="two-col">
     <div class="col-card" style="border-color:#378ADD">
       <div class="badge badge-blue">Testes submáximos</div>
@@ -203,7 +206,8 @@ window.STUDY_SUBUNITS.push({
   </div>
   <div class="alert-box">Ambos os testes medem: <strong>potência máxima, potência mínima, potência média</strong> e <strong>índice de fadiga</strong>.</div></div>
 
-<div id="sec-velocidade" class="content-section"><p class="section-label">Velocidade — Conceito</p>
+<div id="sec-velocidade" class="content-section"><p class="section-label">Velocidade</p>
+<p class="section-label">Velocidade — Conceito</p>
   <div class="card">
     <div style="font-size:13px;line-height:1.6;margin-bottom:.5rem">Capacidade de percorrer uma distância no <strong>menor tempo possível</strong>. Exercício de intensidade máxima (supra-máxima face ao VO₂máx) com duração típica até 10 segundos. Velocidade cíclica = frequência gestual × distância de ciclo.</div>
     <div class="detail-row"><span class="detail-key">Sistema energético dominante</span><span class="detail-val">ATP-PCr (fosfagénio)</span></div>

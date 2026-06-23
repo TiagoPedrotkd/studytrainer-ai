@@ -799,3 +799,263 @@
 
 .rich-content .badge-purple { background: rgba(127, 119, 221, 0.2); color: #a78bfa; }
 [data-theme="light"] .rich-content .badge-purple { background: #EEEDFE; color: #3C3489; }
+
+/* Subunidade 8 — Sessão de Treino (formato section/box) */
+.rich-content .subsec-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 1rem 0 0.5rem;
+}
+
+.rich-content .bullets {
+  margin: 0.5rem 0 0.75rem 1.25rem;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.rich-content .bullets li { margin-bottom: 0.35rem; }
+
+.rich-content .box-good,
+.rich-content .box-warn,
+.rich-content .box-info {
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.rich-content .box-good {
+  background: rgba(74, 222, 128, 0.12);
+  border-left: 3px solid var(--success);
+}
+
+.rich-content .box-warn {
+  background: rgba(251, 191, 36, 0.12);
+  border-left: 3px solid var(--warning);
+}
+
+.rich-content .box-info {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+}
+
+.rich-content .box-good strong,
+.rich-content .box-warn strong,
+.rich-content .box-info strong {
+  color: var(--text-primary);
+}
+
+.rich-content .data-table,
+.rich-content .vf-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 0.75rem 0;
+}
+
+.rich-content .data-table th,
+.rich-content .vf-table th {
+  background: rgba(108, 158, 255, 0.2);
+  color: var(--text-primary);
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.rich-content .data-table td,
+.rich-content .vf-table td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.rich-content .data-table tr:last-child td,
+.rich-content .vf-table tr:last-child td {
+  border-bottom: none;
+}
+
+.rich-content .data-table td:first-child {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.rich-content .badge-gold {
+  background: rgba(251, 191, 36, 0.18);
+  color: #fcd34d;
+}
+
+[data-theme="light"] .rich-content .badge-gold {
+  background: #FAEEDA;
+  color: #854F0B;
+}
+
+.rich-content .hier-list { margin: 0.75rem 0; }
+
+.rich-content .hier-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 3px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.rich-content .hier-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.rich-content .hier-star { background: var(--accent); }
+.rich-content .hier-normal { background: var(--text-muted); }
+
+.rich-content .priority-chain {
+  display: flex;
+  gap: 0;
+  margin: 0.75rem 0;
+  flex-wrap: wrap;
+}
+
+.rich-content .prio-step {
+  flex: 1;
+  min-width: 100px;
+  text-align: center;
+  padding: 0.7rem 0.5rem;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.rich-content .prio-1 { background: #0D8A8A; }
+.rich-content .prio-2 { background: #5DCAA5; color: #0a3d3d; }
+.rich-content .prio-3 { background: rgba(29, 158, 117, 0.2); color: var(--text-primary); }
+
+.rich-content .prio-label {
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.rich-content .vf-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.rich-content .vf-true {
+  background: rgba(74, 222, 128, 0.2);
+  color: #86efac;
+}
+
+.rich-content .vf-false {
+  background: rgba(248, 113, 113, 0.2);
+  color: #fca5a5;
+}
+
+:root:not([data-theme="light"]) .rich-content .hier-item[style*="background:#E1F5EE"] {
+  background: var(--accent-soft) !important;
+}
+
+:root:not([data-theme="light"]) .rich-content .hier-item[style*="background:#E1F5EE"] strong {
+  color: var(--text-primary);
+}
+
+/* Subunidade 9 — fluxo da sessão e fases do aquecimento */
+.rich-content .session-flow {
+  display: flex;
+  gap: 0;
+  margin: 0.75rem 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.rich-content .sf-part {
+  flex: 1;
+  min-width: 100px;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.rich-content .sf-1 { background: #0D8A8A; }
+.rich-content .sf-2 { background: #1D9E75; }
+.rich-content .sf-3 { background: #085041; }
+.rich-content .sf-4 { background: #3C3489; }
+
+.rich-content .sf-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.rich-content .sf-name {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+.rich-content .sf-time {
+  font-size: 11px;
+  margin-top: 2px;
+  opacity: 0.85;
+}
+
+.rich-content .fase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.rich-content .fase-card {
+  border-radius: var(--radius-sm);
+  padding: 0.875rem;
+  border: 1px solid var(--border);
+}
+
+:root:not([data-theme="light"]) .rich-content .fase-1,
+:root:not([data-theme="light"]) .rich-content .fase-2,
+:root:not([data-theme="light"]) .rich-content .fase-3,
+:root:not([data-theme="light"]) .rich-content .fase-4 {
+  background: var(--bg-elevated) !important;
+  border-color: var(--border) !important;
+}
+
+.rich-content .fase-num {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 4px;
+  color: var(--accent);
+}
+
+.rich-content .fase-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.rich-content .fase-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
