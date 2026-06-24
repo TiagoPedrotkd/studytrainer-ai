@@ -97,6 +97,108 @@ window.STUDY_COURSE = {
           "blockCount": 23
         }
       ]
+    },
+    {
+      "id": "unit-pdd",
+      "number": 2,
+      "title": "Pedagogia e didática do Desporto",
+      "description": "Treino como ato pedagógico, valor educativo do desporto, papel do treinador e competição formativa.",
+      "subunitCount": 10,
+      "flashcardCount": 136,
+      "quizCount": 98,
+      "blockCount": 42,
+      "subunits": [
+        {
+          "id": "sub1",
+          "number": 1,
+          "title": "O treino como ato pedagógico",
+          "description": "Pedagogia do treino, competição educativa, valores do desporto e papel do treinador de formação.",
+          "flashcardCount": 10,
+          "quizCount": 8,
+          "blockCount": 3
+        },
+        {
+          "id": "sub2",
+          "number": 2,
+          "title": "Igualdade como princípio estruturante",
+          "description": "Igualdade, equidade e liberdade; sete dimensões no desporto; treinador promotor do respeito.",
+          "flashcardCount": 12,
+          "quizCount": 8,
+          "blockCount": 3
+        },
+        {
+          "id": "sub3",
+          "number": 3,
+          "title": "Papel e responsabilidade do treinador",
+          "description": "Profissão e missão, competências básicas, promoção desportiva e comunicação pedagógica.",
+          "flashcardCount": 12,
+          "quizCount": 8,
+          "blockCount": 4
+        },
+        {
+          "id": "sub4",
+          "number": 4,
+          "title": "Boas práticas e adesão ao desporto",
+          "description": "Práticas pedagógicas, adesão à prática, lidar com o erro, elogio e repreensão com critério.",
+          "flashcardCount": 12,
+          "quizCount": 8,
+          "blockCount": 4
+        },
+        {
+          "id": "sub5",
+          "number": 5,
+          "title": "Afiliação à prática desportiva",
+          "description": "Retenção do atleta, gestão de expectativas, diferenças interindividuais e valorização do desempenho.",
+          "flashcardCount": 12,
+          "quizCount": 8,
+          "blockCount": 4
+        },
+        {
+          "id": "sub6",
+          "number": 6,
+          "title": "Autonomia do praticante",
+          "description": "Autonomia, estratégias pedagógicas, responsabilidade, compromisso e delegação.",
+          "flashcardCount": 14,
+          "quizCount": 10,
+          "blockCount": 5
+        },
+        {
+          "id": "sub7",
+          "number": 7,
+          "title": "O treinador como agente promotor",
+          "description": "Facilitador, aprendizagem cooperativa, competências individuais e individualização no coletivo.",
+          "flashcardCount": 16,
+          "quizCount": 12,
+          "blockCount": 4
+        },
+        {
+          "id": "sub8",
+          "number": 8,
+          "title": "Competição na formação desportiva",
+          "description": "Lugar da competição, formação global, relativizar vitória/derrota, inclusão e ética do treinador.",
+          "flashcardCount": 16,
+          "quizCount": 12,
+          "blockCount": 5
+        },
+        {
+          "id": "sub9",
+          "number": 9,
+          "title": "Gestão da participação em competição",
+          "description": "Coerência treino-competição, observação, postura do treinador, participação equitativa e soluções práticas.",
+          "flashcardCount": 15,
+          "quizCount": 12,
+          "blockCount": 5
+        },
+        {
+          "id": "sub10",
+          "number": 10,
+          "title": "Fatores de eficácia pedagógica",
+          "description": "Gestão do tempo, instrução, clima relacional, logística e ciclo planear-executar-avaliar.",
+          "flashcardCount": 17,
+          "quizCount": 12,
+          "blockCount": 5
+        }
+      ]
     }
   ]
 };

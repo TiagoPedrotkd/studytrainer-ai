@@ -1,4 +1,4 @@
-const CACHE_NAME = 'studytrainer-v11';
+const CACHE_NAME = 'studytrainer-v21';
 
 const ASSETS = [
   '/',
@@ -12,6 +12,7 @@ const ASSETS = [
   '/pages/exame.html',
   '/data/course.js',
   '/data/unit-tmt.js',
+  '/data/unit-pdd.js',
   '/manifest.webmanifest',
   '/icons/icon.svg',
   '/icons/icon-192.png',

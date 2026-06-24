@@ -196,10 +196,78 @@ function extractMultiPanelConteudo(html, panels) {
   return { html: parts.join('\n\n'), sections };
 }
 
+function normalizeTopicAccordionContent(html) {
+  const parts = [];
+  const topicRegex = /<div class="topic">([\s\S]*?)<\/div>\s*(?=<div class="topic">|$)/g;
+  let match;
+
+  while ((match = topicRegex.exec(html)) !== null) {
+    const topicHtml = match[1];
+    const headerMatch = topicHtml.match(/<h3>([\s\S]*?)<\/h3>/);
+    const bodyMatch = topicHtml.match(/<div class="topic-body[^"]*">([\s\S]*)/);
+    if (!headerMatch || !bodyMatch) continue;
+
+    const title = headerMatch[1].replace(/<span[^>]*>[\s\S]*?<\/span>/g, '').trim();
+    let body = bodyMatch[1].replace(/<\/div>\s*$/, '');
+    body = body.replace(/<div class="pt"([^>]*)>/g, '<div class="point"$1>');
+    body = body.replace(/<div class="point"([^>]*)>/g, '<p class="point"$1>');
+    body = body.replace(/<\/div>(\s*)(?=<p class="point"|<div class="(?:tip|ex|grid3|grid4|grid|cycle|six|three|two-col|four|dim|mini|law|warn|quote)")/g, '</p>$1');
+    body = body.replace(/<div class="ex"([^>]*)>/g, '<div class="alert-box ex-box"$1>');
+    body = body.replace(/<div class="warn"([^>]*)>/g, '<div class="alert-box warn-box"$1>');
+    parts.push(`<div class="card topic-card"><p class="section-label">${title}</p>${body}</div>`);
+  }
+
+  return parts.join('\n');
+}
+
+function normalizeResumoContent(html) {
+  let content = html.trim();
+
+  content = content.replace(
+    /<div class="(?:card-title|ct)">([\s\S]*?)<\/div>/g,
+    '<p class="section-label">$1</p>'
+  );
+  content = content.replace(
+    /<div class="topic-title">([\s\S]*?)<\/div>/g,
+    '<p class="section-label">$1</p>'
+  );
+  content = content.replace(/<div class="topic-card">/g, '<div class="card topic-card">');
+  content = content.replace(
+    /<div class="quote-box">([\s\S]*?)<\/div>/g,
+    '<div class="alert-box quote-box">$1</div>'
+  );
+  content = content.replace(
+    /<div class="law-box">([\s\S]*?)<\/div>/g,
+    '<div class="alert-box law-box">$1</div>'
+  );
+  content = content.replace(
+    /<div class="warn-box">([\s\S]*?)<\/div>/g,
+    '<div class="alert-box warn-box">$1</div>'
+  );
+  content = content.replace(/<div class="(?:point|pt)">/g, '<p class="point">');
+  content = content.replace(/<\/div>\s*(?=<p class="point">|<div class="(?:card|alert-box)")/g, '</p>\n');
+
+  return content;
+}
+
+function extractResumoConteudo(html) {
+  const inner = extractElementById(html, 'resumo');
+  if (!inner) return null;
+
+  const normalized = inner.includes('class="topic"')
+    ? normalizeTopicAccordionContent(inner)
+    : normalizeResumoContent(inner);
+
+  return { html: normalized, sections: [] };
+}
+
 function extractConteudo(html, panels) {
   const panelList = panels?.length ? panels : DEFAULT_CONTENT_PANELS;
   const multi = extractMultiPanelConteudo(html, panelList);
   if (multi) return multi;
+
+  const resumo = extractResumoConteudo(html);
+  if (resumo) return resumo;
 
   const startTag = '<div id="conteudo"';
   const startIdx = html.indexOf(startTag);
@@ -224,6 +292,9 @@ function extractFlashcardsFromHtml(html) {
   if (/const flashcards\s*=/.test(html)) {
     return toFlashcards(extractArray(html, 'flashcards'));
   }
+  if (/const cards\s*=/.test(html)) {
+    return toFlashcards(extractArray(html, 'cards'));
+  }
   if (/const flashData\s*=/.test(html)) {
     return extractArray(html, 'flashData').map((item) => {
       if (Array.isArray(item)) {
@@ -232,17 +303,20 @@ function extractFlashcardsFromHtml(html) {
       return toFlashcards([item])[0];
     });
   }
-  throw new Error('Flashcards não encontrados no HTML (flashcards ou flashData)');
+  throw new Error('Flashcards não encontrados no HTML (flashcards, cards ou flashData)');
 }
 
 function extractQuizFromHtml(html) {
   if (/const questions\s*=/.test(html)) {
     return toQuiz(extractArray(html, 'questions'));
   }
+  if (/const qs\s*=/.test(html)) {
+    return toQuiz(extractArray(html, 'qs'));
+  }
   if (/const quizData\s*=/.test(html)) {
     return toQuiz(extractArray(html, 'quizData'));
   }
-  throw new Error('Quiz não encontrado no HTML (questions ou quizData)');
+  throw new Error('Quiz não encontrado no HTML (questions, qs ou quizData)');
 }
 
 function escapeTemplate(str) {
@@ -257,10 +331,10 @@ function toFlashcards(arr) {
 }
 
 function toQuiz(arr) {
-  return arr.map(({ q, opts, ans, question, options, correct }) => ({
+  return arr.map(({ q, opts, ans, question, options, correct, c }) => ({
     question: q || question,
     options: opts || options,
-    correct: ans !== undefined ? ans : correct,
+    correct: ans !== undefined ? ans : correct !== undefined ? correct : c,
   }));
 }
 
@@ -295,6 +369,8 @@ function getBlockCount(sub) {
   if (sub.contentHtml) {
     const labels = (sub.contentHtml.match(/class="section-label"/g) || []).length;
     if (labels > 0) return labels;
+    const topics = (sub.contentHtml.match(/class="topic-card"/g) || []).length;
+    if (topics > 0) return topics;
   }
   if (sub.contentSections?.length) return sub.contentSections.length;
   return 0;

@@ -7,7 +7,7 @@
       "description": "Planeamento, princípios biológicos e metodológicos, capacidades físicas, sessão e estrutura do treino.",
       "subunits": [
         {
-          "html": "d:/Treinador_Curso/Resumos/SubUnidade1_V1.html",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 1/SubUnidade1_V1.html",
           "id": "sub1",
           "number": 1,
           "title": "Planeamento e Treino",
@@ -37,7 +37,7 @@
           ]
         },
         {
-          "html": "d:/Treinador_Curso/Resumos/SubUnidade1_V2.html",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 1/SubUnidade1_V2.html",
           "id": "sub2",
           "number": 2,
           "title": "Sistemas Energéticos",
@@ -57,7 +57,7 @@
           ]
         },
         {
-          "html": "d:/Treinador_Curso/Resumos/SubUnidade2_V1.html",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 1/SubUnidade2_V1.html",
           "id": "sub3",
           "number": 3,
           "title": "Princípios Biológicos do Treino",
@@ -77,7 +77,7 @@
           ]
         },
         {
-          "html": "d:/Treinador_Curso/Resumos/SubUnidade2_V2.html",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 1/SubUnidade2_V2.html",
           "id": "sub4",
           "number": 4,
           "title": "Princípios Metodológicos do Treino",
@@ -107,7 +107,7 @@
           ]
         },
         {
-          "html": "d:/Treinador_Curso/Resumos/SubUnidade3_V1.html",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 1/SubUnidade3_V1.html",
           "id": "sub5",
           "number": 5,
           "title": "Carga de Treino e Capacidades",
@@ -137,7 +137,7 @@
           ]
         },
         {
-          "html": "d:/Treinador_Curso/Resumos/SubUnidade3_V2.html",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 1/SubUnidade3_V2.html",
           "id": "sub6",
           "number": 6,
           "title": "Resistência e Velocidade",
@@ -157,7 +157,7 @@
           ]
         },
         {
-          "html": "d:/Treinador_Curso/Resumos/SubUnidade3_V3.html",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 1/SubUnidade3_V3.html",
           "id": "sub7",
           "number": 7,
           "title": "Força, Flexibilidade e CAE",
@@ -209,7 +209,7 @@
           ]
         },
         {
-          "html": "d:/Treinador_Curso/Resumos/SubUnidade4_V1.html",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 1/SubUnidade4_V1.html",
           "id": "sub8",
           "number": 8,
           "title": "A Sessão de Treino",
@@ -273,7 +273,7 @@
           ]
         },
         {
-          "html": "d:/Treinador_Curso/Resumos/SubUnidade4_V2.html",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 1/SubUnidade4_V2.html",
           "id": "sub9",
           "number": 9,
           "title": "Estrutura da Sessão de Treino",
@@ -325,6 +325,104 @@
               "correct": 1
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "unit-pdd",
+      "number": 2,
+      "title": "Pedagogia e didática do Desporto",
+      "description": "Treino como ato pedagógico, valor educativo do desporto, papel do treinador e competição formativa.",
+      "subunits": [
+        {
+          "id": "sub1",
+          "number": 1,
+          "title": "O treino como ato pedagógico",
+          "description": "Pedagogia do treino, competição educativa, valores do desporto e papel do treinador de formação.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade1_V1.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub2",
+          "number": 2,
+          "title": "Igualdade como princípio estruturante",
+          "description": "Igualdade, equidade e liberdade; sete dimensões no desporto; treinador promotor do respeito.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade2_V1.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub3",
+          "number": 3,
+          "title": "Papel e responsabilidade do treinador",
+          "description": "Profissão e missão, competências básicas, promoção desportiva e comunicação pedagógica.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade3_V1.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub4",
+          "number": 4,
+          "title": "Boas práticas e adesão ao desporto",
+          "description": "Práticas pedagógicas, adesão à prática, lidar com o erro, elogio e repreensão com critério.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade4_V1.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub5",
+          "number": 5,
+          "title": "Afiliação à prática desportiva",
+          "description": "Retenção do atleta, gestão de expectativas, diferenças interindividuais e valorização do desempenho.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade4_V2.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub6",
+          "number": 6,
+          "title": "Autonomia do praticante",
+          "description": "Autonomia, estratégias pedagógicas, responsabilidade, compromisso e delegação.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade5_V1.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub7",
+          "number": 7,
+          "title": "O treinador como agente promotor",
+          "description": "Facilitador, aprendizagem cooperativa, competências individuais e individualização no coletivo.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade5_V2.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub8",
+          "number": 8,
+          "title": "Competição na formação desportiva",
+          "description": "Lugar da competição, formação global, relativizar vitória/derrota, inclusão e ética do treinador.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade6_V1.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub9",
+          "number": 9,
+          "title": "Gestão da participação em competição",
+          "description": "Coerência treino-competição, observação, postura do treinador, participação equitativa e soluções práticas.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade6_V2.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub10",
+          "number": 10,
+          "title": "Fatores de eficácia pedagógica",
+          "description": "Gestão do tempo, instrução, clima relacional, logística e ciclo planear-executar-avaliar.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade7_V1.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
         }
       ]
     }

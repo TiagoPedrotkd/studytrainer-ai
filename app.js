@@ -224,6 +224,8 @@
     if (sub.contentHtml) {
       const labels = (sub.contentHtml.match(/class="section-label"/g) || []).length;
       if (labels > 0) return labels;
+      const topics = (sub.contentHtml.match(/class="topic-card"/g) || []).length;
+      if (topics > 0) return topics;
     }
     if (sub.contentSections?.length) return sub.contentSections.length;
     return 0;
