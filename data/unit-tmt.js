@@ -285,22 +285,52 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
-      "question": "Qual destes indicadores NÃO é habitualmente monitorizado no controlo diário do atleta?",
-      "options": [
-        "Qualidade do sono.",
-        "Humor e motivação.",
-        "Percentagem de gordura corporal medida diariamente.",
-        "Perceção subjetiva de esforço (RPE)."
-      ],
-      "correct": 2
-    },
-    {
       "question": "O ciclo de gestão do planeamento segue a sequência:",
       "options": [
         "Planear → Executar → Controlar → Avaliar.",
         "Executar → Planear → Avaliar → Controlar.",
         "Controlar → Planear → Executar → Avaliar.",
         "Avaliar → Executar → Controlar → Planear."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "O planeamento de médio prazo corresponde aproximadamente a:",
+      "options": [
+        "8 a 10 anos.",
+        "4 anos (ex.: ciclo olímpico).",
+        "2 anos.",
+        "1 época desportiva."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "As quatro componentes da unidade de treino são:",
+      "options": [
+        "Objetivo, Conteúdo, Métodos e Meios.",
+        "Volume, Intensidade, Densidade e Recuperação.",
+        "Técnica, Tática, Física e Mental.",
+        "Macrociclo, Mesociclo, Microciclo e Sessão."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Segundo o modelo de Newell, a aprendizagem motora resulta da interação de:",
+      "options": [
+        "Praticante, Envolvimento e Tarefa.",
+        "Carga, Volume e Intensidade.",
+        "Técnica, Tática e Estratégia.",
+        "Objetivo, Conteúdo e Método."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "O Peak Height Velocity (PHV) ocorre aproximadamente aos:",
+      "options": [
+        "12 anos nas meninas e 14 nos rapazes.",
+        "14 anos nas meninas e 12 nos rapazes.",
+        "10 anos em ambos os sexos.",
+        "16 anos em ambos os sexos."
       ],
       "correct": 0
     }
@@ -687,16 +717,6 @@ window.STUDY_UNITS.push({
       "correct": 0
     },
     {
-      "question": "O domínio de intensidade «moderado» corresponde tipicamente a:",
-      "options": [
-        "Intensidade muito baixa, abaixo do limiar aeróbio.",
-        "Intensidade abaixo do limiar anaeróbio/lactato.",
-        "Intensidade entre o limiar anaeróbio e o VO₂máx.",
-        "Intensidade acima do VO₂máx."
-      ],
-      "correct": 1
-    },
-    {
       "question": "As fibras musculares do tipo I caracterizam-se por:",
       "options": [
         "Alta velocidade de contração e baixa resistência à fadiga.",
@@ -713,16 +733,6 @@ window.STUDY_UNITS.push({
         "Glicogénio e ácidos gordos.",
         "Apenas ATP armazenado.",
         "Apenas lactato."
-      ],
-      "correct": 1
-    },
-    {
-      "question": "Treinar próximo do limiar anaeróbio/lactato visa sobretudo melhorar:",
-      "options": [
-        "A potência máxima de 1–5 segundos.",
-        "A capacidade aeróbia de alta intensidade.",
-        "A flexibilidade estática.",
-        "A força máxima (1RM)."
       ],
       "correct": 1
     }
@@ -1100,26 +1110,6 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
-      "question": "Segundo Castelo (1996), as adaptações que se perdem primeiro com o destreino são:",
-      "options": [
-        "As adaptações estruturais profundas.",
-        "As adaptações funcionais e metabólicas mais recentes.",
-        "A massa óssea.",
-        "As adaptações genéticas."
-      ],
-      "correct": 1
-    },
-    {
-      "question": "No princípio da heterocronia, um estímulo de baixa intensidade:",
-      "options": [
-        "Induz adaptações mais rápidas mas menos duradouras.",
-        "Induz adaptações mais lentas mas geralmente mais duradouras.",
-        "Não produz qualquer adaptação.",
-        "Só actua sobre o sistema ATP-PCr."
-      ],
-      "correct": 1
-    },
-    {
       "question": "A transferência positiva do treino ocorre quando:",
       "options": [
         "O treino de uma capacidade prejudica outra.",
@@ -1430,42 +1420,12 @@ window.STUDY_UNITS.push({
       "correct": 0
     },
     {
-      "question": "Atletas «non-responders» são aqueles que:",
-      "options": [
-        "Respondem melhor que a média ao mesmo estímulo.",
-        "Não apresentam melhorias significativas apesar de treinarem adequadamente.",
-        "Só treinam uma vez por semana.",
-        "Nunca devem individualizar a carga."
-      ],
-      "correct": 1
-    },
-    {
       "question": "O desenvolvimento multilateral na infância e adolescência:",
       "options": [
         "É perda de tempo para atletas de elite.",
         "Constrói base ampla de competências antes da especialização.",
         "Substitui completamente o treino técnico.",
         "Só se aplica após os 18 anos."
-      ],
-      "correct": 1
-    },
-    {
-      "question": "Qual destes é um pilar da literacia física?",
-      "options": [
-        "Especialização precoce.",
-        "Motivação e confiança para ser fisicamente activo.",
-        "Exclusão de actividades lúdicas.",
-        "Treino apenas competitivo."
-      ],
-      "correct": 1
-    },
-    {
-      "question": "O princípio da continuidade implica que:",
-      "options": [
-        "O treino deve ser interrompido frequentemente.",
-        "Os estímulos devem ser regulares e sistemáticos ao longo do tempo.",
-        "Só se treina em período competitivo.",
-        "Não existem pausas planeadas."
       ],
       "correct": 1
     }
@@ -1730,42 +1690,12 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
-      "question": "O parâmetro «densidade» da carga de treino mede:",
-      "options": [
-        "A massa corporal do atleta.",
-        "A relação entre trabalho e tempo de recuperação entre séries/repetições.",
-        "A altura do salto vertical.",
-        "A idade cronológica."
-      ],
-      "correct": 1
-    },
-    {
-      "question": "Os exercícios de competição são especialmente indicados para:",
-      "options": [
-        "Crianças em fase de iniciação (7–11 anos).",
-        "Atletas de elite em fase específica.",
-        "Qualquer praticante sedentário.",
-        "Atletas que nunca competiram."
-      ],
-      "correct": 1
-    },
-    {
       "question": "As capacidades condicionais incluem:",
       "options": [
         "Equilíbrio, orientação e reacção.",
         "Resistência, força, velocidade e flexibilidade.",
         "Apenas coordenação e ritmo.",
         "Só capacidades cognitivas."
-      ],
-      "correct": 1
-    },
-    {
-      "question": "Na estrutura do exercício de treino, a «identidade» refere-se a:",
-      "options": [
-        "A ordem dos exercícios na sessão.",
-        "A relação do exercício com a modalidade/competição.",
-        "A cor dos cones utilizados.",
-        "O número de atletas presentes."
       ],
       "correct": 1
     }
@@ -2100,36 +2030,6 @@ window.STUDY_UNITS.push({
         "Capacidade aeróbia e anaeróbia de alta intensidade.",
         "Apenas força máxima.",
         "Coordenação geral em crianças."
-      ],
-      "correct": 1
-    },
-    {
-      "question": "A velocidade de deslocamento depende de:",
-      "options": [
-        "Apenas da frequência de passada.",
-        "Apenas da amplitude de passada.",
-        "Da amplitude e da frequência de passada.",
-        "Só da resistência aeróbia."
-      ],
-      "correct": 2
-    },
-    {
-      "question": "O método contínuo de longa duração e baixa intensidade desenvolve sobretudo:",
-      "options": [
-        "Potência anaeróbia láctica.",
-        "Capacidade aeróbia de base.",
-        "Força máxima.",
-        "Velocidade de reacção."
-      ],
-      "correct": 1
-    },
-    {
-      "question": "O treino fartlek caracteriza-se por:",
-      "options": [
-        "Ritmo constante e uniforme durante toda a sessão.",
-        "Variações livres de ritmo e intensidade ao longo do percurso.",
-        "Apenas sprints de 10 segundos.",
-        "Ausência total de componente aeróbia."
       ],
       "correct": 1
     }
@@ -2605,26 +2505,6 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
-      "question": "O método PNF de alongamento baseia-se em:",
-      "options": [
-        "Contracção isométrica seguida de relaxamento e alongamento passivo.",
-        "Saltos pliométricos contínuos.",
-        "Corrida contínua de 60 minutos.",
-        "Apenas balanços dinâmicos rápidos."
-      ],
-      "correct": 0
-    },
-    {
-      "question": "Os fusos musculares são responsáveis por detectar:",
-      "options": [
-        "Alterações de temperatura corporal.",
-        "Alterações no comprimento muscular.",
-        "Níveis de glicémia.",
-        "Frequência cardíaca de repouso."
-      ],
-      "correct": 1
-    },
-    {
       "question": "O ciclo de alongamento-encurtamento (CAE) é importante para:",
       "options": [
         "Aumentar a eficiência do trabalho elástico e a potência.",
@@ -2635,12 +2515,32 @@ window.STUDY_UNITS.push({
       "correct": 0
     },
     {
-      "question": "A força explosiva é treinada preferencialmente com:",
+      "question": "Segundo a literatura citada no curso, o método de flexibilidade mais eficaz é:",
       "options": [
-        "Cargas muito elevadas e movimentos lentos.",
-        "Cargas moderadas e movimentos rápidos (potência).",
-        "Apenas alongamentos estáticos longos.",
-        "Treino exclusivamente contínuo de 90 minutos."
+        "Balístico.",
+        "Estático passivo isolado.",
+        "FNP (facilitação neuromuscular proprioceptiva).",
+        "Apenas alongamento antes do treino sem aquecimento."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O Órgão Tendinoso de Golgi está associado principalmente a:",
+      "options": [
+        "Reflexo miotático.",
+        "Inibição autogénica.",
+        "Aumento da velocidade de sprint.",
+        "Hipertrofia muscular direta."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O ciclo alongamento-encurtamento (CAE) pode aumentar a força da fase concêntrica seguinte em aproximadamente:",
+      "options": [
+        "5–8%.",
+        "15–20%.",
+        "40–50%.",
+        "Não tem efeito mensurável."
       ],
       "correct": 1
     }
@@ -3147,36 +3047,6 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
-      "question": "A sessão de repetição destina-se a:",
-      "options": [
-        "Introduzir conteúdos completamente novos.",
-        "Consolidar e automatizar conteúdos já aprendidos.",
-        "Substituir o período de recuperação.",
-        "Evitar qualquer repetição de exercícios."
-      ],
-      "correct": 1
-    },
-    {
-      "question": "Entre duas sessões com o mesmo objectivo principal, o tempo mínimo de recuperação recomendado é de:",
-      "options": [
-        "6 horas.",
-        "24 horas.",
-        "48 horas.",
-        "1 semana."
-      ],
-      "correct": 2
-    },
-    {
-      "question": "Na iniciação desportiva (7–11 anos), o princípio prioritário é:",
-      "options": [
-        "Especialização precoce.",
-        "Multilateralidade e diversificação de estímulos.",
-        "Treino exclusivo de competição.",
-        "Volume máximo de intensidade elevada."
-      ],
-      "correct": 1
-    },
-    {
       "question": "O mesociclo corresponde tipicamente a:",
       "options": [
         "1 sessão de treino.",
@@ -3185,6 +3055,36 @@ window.STUDY_UNITS.push({
         "4 anos de planificação."
       ],
       "correct": 2
+    },
+    {
+      "question": "A recuperação recomendada para voltar a treinar o mesmo objectivo é de:",
+      "options": [
+        "12 horas.",
+        "24 horas.",
+        "48–72 horas.",
+        "1 semana obrigatoriamente."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Na iniciação desportiva (7–11 anos), a prioridade deve ser:",
+      "options": [
+        "Especialização precoce na modalidade.",
+        "Multilateralidade, componente lúdica e gosto pela prática.",
+        "Treino exclusivo de força máxima.",
+        "Competição de alto rendimento."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A prioridade dos conteúdos numa sessão de treino deve seguir a ordem:",
+      "options": [
+        "Resistência → Força → Técnica.",
+        "Técnica → Capacidades motoras → Coordenação motora.",
+        "Competição → Avaliação → Recuperação.",
+        "Aquecimento → Competição → Técnica."
+      ],
+      "correct": 1
     }
   ],
     contentSections: [
@@ -3586,16 +3486,6 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
-      "question": "A parte preparatória da sessão deve ocupar aproximadamente:",
-      "options": [
-        "5% do tempo total.",
-        "10–25% do tempo total.",
-        "50% do tempo total.",
-        "80% do tempo total."
-      ],
-      "correct": 1
-    },
-    {
       "question": "A ordem correcta das fases do aquecimento é:",
       "options": [
         "Específica → Cardiorrespiratória → Articular → Neuromuscular.",
@@ -3616,22 +3506,52 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
-      "question": "A parte final da sessão (volta à calma) serve para:",
-      "options": [
-        "Aumentar abruptamente a intensidade.",
-        "Facilitar a recuperação e a supercompensação.",
-        "Substituir o sono nocturno.",
-        "Eliminar a necessidade de hidratação."
-      ],
-      "correct": 1
-    },
-    {
       "question": "Se a técnica se deteriora por fadiga durante a parte principal, o treinador deve:",
       "options": [
         "Manter a mesma carga até ao fim.",
         "Reduzir a carga ou o volume para preservar a qualidade técnica.",
         "Ignorar a técnica e focar só a intensidade.",
         "Terminar imediatamente a época desportiva."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A parte preparatória (aquecimento) deve representar aproximadamente:",
+      "options": [
+        "5% do tempo total.",
+        "15–20% do tempo total.",
+        "40–50% do tempo total.",
+        "70% do tempo total."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A sessão de treino divide-se em quantas partes fundamentais?",
+      "options": [
+        "Duas.",
+        "Três.",
+        "Quatro.",
+        "Cinco."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Na parte principal, a sequência recomendada de conteúdos é:",
+      "options": [
+        "Resistência → Força → Velocidade → Técnica.",
+        "Técnica e aprendizagem → Velocidade e coordenação → Força → Resistência.",
+        "Força → Técnica → Resistência → Velocidade.",
+        "Competição → Jogos → Alongamento → Técnica."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A ficha de treino deve incluir, entre outros:",
+      "options": [
+        "Apenas o resultado da última competição.",
+        "Objectivos, exercícios, material, volume, intensidade, recuperação e organização dos grupos.",
+        "Só a lista de atletas presentes.",
+        "Apenas a temperatura ambiente."
       ],
       "correct": 1
     }

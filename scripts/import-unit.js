@@ -211,7 +211,7 @@ function normalizeTopicAccordionContent(html) {
     let body = bodyMatch[1].replace(/<\/div>\s*$/, '');
     body = body.replace(/<div class="pt"([^>]*)>/g, '<div class="point"$1>');
     body = body.replace(/<div class="point"([^>]*)>/g, '<p class="point"$1>');
-    body = body.replace(/<\/div>(\s*)(?=<p class="point"|<div class="(?:tip|ex|grid3|grid4|grid|cycle|six|three|two-col|four|dim|mini|law|warn|quote)")/g, '</p>$1');
+    body = body.replace(/<\/div>(\s*)(?=<p class="point"|<div class="(?:tip|ex|grid3|grid4|grid|cycle|six|three|two-col|four|dim|mini|law|warn|quote|perc-grid|steps)")/g, '</p>$1');
     body = body.replace(/<div class="ex"([^>]*)>/g, '<div class="alert-box ex-box"$1>');
     body = body.replace(/<div class="warn"([^>]*)>/g, '<div class="alert-box warn-box"$1>');
     parts.push(`<div class="card topic-card"><p class="section-label">${title}</p>${body}</div>`);
@@ -250,13 +250,130 @@ function normalizeResumoContent(html) {
   return content;
 }
 
+function extractTopicCards(html) {
+  const cards = [];
+  const re = /<div class="topic-card[^"]*">/g;
+  let match;
+
+  while ((match = re.exec(html)) !== null) {
+    const contentStart = match.index + match[0].length;
+    let depth = 1;
+    let i = contentStart;
+
+    while (i < html.length && depth > 0) {
+      const nextOpen = html.indexOf('<div', i);
+      const nextClose = html.indexOf('</div>', i);
+      if (nextClose === -1) break;
+
+      if (nextOpen !== -1 && nextOpen < nextClose) {
+        depth += 1;
+        i = nextOpen + 4;
+      } else {
+        depth -= 1;
+        if (depth === 0) {
+          cards.push(html.slice(contentStart, nextClose));
+          break;
+        }
+        i = nextClose + 6;
+      }
+    }
+  }
+
+  return cards;
+}
+
+function normalizeTopicCardBody(body) {
+  let content = body.trim();
+
+  content = content.replace(
+    /<div class="(concept-block|purple-block|orange-block|warn-block)">([\s\S]*?)<\/div>/g,
+    (_, className, inner) => {
+      const boxClass =
+        className === 'purple-block'
+          ? 'purple-box'
+          : className === 'orange-block'
+            ? 'orange-box'
+            : className === 'warn-block'
+              ? 'warn-block-box'
+              : 'concept-box';
+      const label = inner.match(/<div class="label">([\s\S]*?)<\/div>/);
+      const paragraph = inner.match(/<p>([\s\S]*?)<\/p>/);
+      const labelHtml = label ? `<p class="section-label">${label[1].trim()}</p>` : '';
+      const text = paragraph ? paragraph[1] : inner;
+      return `<div class="alert-box ${boxClass}">${labelHtml}<p class="point">${text}</p></div>`;
+    }
+  );
+
+  content = content.replace(/<ul class="point-list">([\s\S]*?)<\/ul>/g, (_, inner) => {
+    const items = inner.match(/<li>([\s\S]*?)<\/li>/g) || [];
+    return items
+      .map((li) => `<p class="point">${li.replace(/<\/?li>/g, '').trim()}</p>`)
+      .join('\n');
+  });
+
+  content = content.replace(
+    /<div class="example-box">([\s\S]*?)<\/div>/g,
+    (_, inner) => {
+      const label = inner.match(/<div class="ex-label">([\s\S]*?)<\/div>/);
+      const paragraph = inner.match(/<p>([\s\S]*?)<\/p>/);
+      const labelText = label ? label[1].trim() : 'Exemplo';
+      const text = paragraph ? paragraph[1] : '';
+      return `<div class="alert-box ex-box"><strong>${labelText}</strong><p>${text}</p></div>`;
+    }
+  );
+
+  content = content.replace(
+    /<div class="key-rule">([\s\S]*?)<\/div>/g,
+    '<div class="alert-box key-rule">$1</div>'
+  );
+
+  content = content.replace(
+    /<div style="[^"]*font-weight:\s*600[^"]*">([\s\S]*?)<\/div>/g,
+    '<p class="section-label subsection-label">$1</p>'
+  );
+
+  content = content.replace(
+    /<p style="[^"]*font-weight:\s*600[^"]*">([\s\S]*?)<\/p>/g,
+    '<p class="section-label subsection-label">$1</p>'
+  );
+
+  content = content.replace(
+    /<p style="[^"]*">([\s\S]*?)<\/p>/g,
+    '<p class="point intro-text">$1</p>'
+  );
+
+  return content;
+}
+
+function normalizeTopicCardContent(html) {
+  const parts = [];
+
+  for (const cardHtml of extractTopicCards(html)) {
+    const titleMatch = cardHtml.match(/<h2>([\s\S]*?)<\/h2>/);
+    const bodyMatch = cardHtml.match(/<div class="topic-body">([\s\S]*)/);
+    if (!titleMatch || !bodyMatch) continue;
+
+    const title = titleMatch[1].trim();
+    let body = bodyMatch[1].replace(/<\/div>\s*$/, '');
+    body = normalizeTopicCardBody(body);
+    parts.push(`<div class="card topic-card"><p class="section-label">${title}</p>${body}</div>`);
+  }
+
+  return parts.join('\n');
+}
+
 function extractResumoConteudo(html) {
   const inner = extractElementById(html, 'resumo');
   if (!inner) return null;
 
-  const normalized = inner.includes('class="topic"')
-    ? normalizeTopicAccordionContent(inner)
-    : normalizeResumoContent(inner);
+  let normalized;
+  if (inner.includes('class="topic"')) {
+    normalized = normalizeTopicAccordionContent(inner);
+  } else if (inner.includes('class="topic-card"')) {
+    normalized = normalizeTopicCardContent(inner);
+  } else {
+    normalized = normalizeResumoContent(inner);
+  }
 
   return { html: normalized, sections: [] };
 }
@@ -594,4 +711,13 @@ function main() {
   console.log(`\nImportação concluída: ${imported.map((i) => i.unit.id).join(', ')}`);
 }
 
-main();
+module.exports = {
+  extractQuizFromHtml,
+  toQuiz,
+  extractFlashcardsFromHtml,
+  toFlashcards,
+};
+
+if (require.main === module) {
+  main();
+}

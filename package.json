@@ -4,6 +4,7 @@
   "scripts": {
     "start": "npx --yes serve . -l 3000",
     "serve": "npx --yes serve . -l 3000",
-    "import": "node scripts/import-unit.js"
+    "import": "node scripts/import-unit.js",
+    "build-exam": "node scripts/build-exam-quiz.js"
   }
 }

@@ -32,16 +32,6 @@
         "correct": 1
       },
       {
-        "question": "Qual destes indicadores NÃO é habitualmente monitorizado no controlo diário do atleta?",
-        "options": [
-          "Qualidade do sono.",
-          "Humor e motivação.",
-          "Percentagem de gordura corporal medida diariamente.",
-          "Perceção subjetiva de esforço (RPE)."
-        ],
-        "correct": 2
-      },
-      {
         "question": "O ciclo de gestão do planeamento segue a sequência:",
         "options": [
           "Planear → Executar → Controlar → Avaliar.",
@@ -50,6 +40,96 @@
           "Avaliar → Executar → Controlar → Planear."
         ],
         "correct": 0
+      },
+      {
+        "question": "O planeamento de médio prazo corresponde aproximadamente a:",
+        "options": [
+          "8 a 10 anos.",
+          "4 anos (ex.: ciclo olímpico).",
+          "2 anos.",
+          "1 época desportiva."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "As quatro componentes da unidade de treino são:",
+        "options": [
+          "Objetivo, Conteúdo, Métodos e Meios.",
+          "Volume, Intensidade, Densidade e Recuperação.",
+          "Técnica, Tática, Física e Mental.",
+          "Macrociclo, Mesociclo, Microciclo e Sessão."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Segundo o modelo de Newell, a aprendizagem motora resulta da interação de:",
+        "options": [
+          "Praticante, Envolvimento e Tarefa.",
+          "Carga, Volume e Intensidade.",
+          "Técnica, Tática e Estratégia.",
+          "Objetivo, Conteúdo e Método."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "O Peak Height Velocity (PHV) ocorre aproximadamente aos:",
+        "options": [
+          "12 anos nas meninas e 14 nos rapazes.",
+          "14 anos nas meninas e 12 nos rapazes.",
+          "10 anos em ambos os sexos.",
+          "16 anos em ambos os sexos."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "No percurso de formação desportiva de um praticante, quando ocorre a fase de treinar para a vitória?",
+        "options": [
+          "A partir dos 18 anos nos rapazes e 17 nas raparigas.",
+          "A partir dos 16 anos nos rapazes e 15 nas raparigas.",
+          "Entre os 9-12 anos nos rapazes e 8-11 anos nas raparigas.",
+          "Entre os 12-16 anos nos rapazes e 11-15 nas raparigas."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Em que idades se deve dar primazia ao desenvolvimento de habilidades motoras especializadas?",
+        "options": [
+          "Entre os 9-12 anos em ambos os sexos.",
+          "Entre os 6-9 anos nos meninos e 6-8 anos nas meninas.",
+          "Entre os 9-12 anos nos rapazes e 8-11 anos nas raparigas.",
+          "Entre os 12-16 anos nos rapazes e 11-15 nas raparigas."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Qual é a duração de um planeamento de médio prazo?",
+        "options": [
+          "2 anos",
+          "4 anos",
+          "8 anos",
+          "1 época"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Quais os 4 indicadores de controlo e avaliação do atleta?",
+        "options": [
+          "Peso, altura, VO₂ máx, força",
+          "FC repouso, variabilidade da FC, humor, questionários",
+          "Lactato, FC, potência, velocidade",
+          "Tensão arterial, sono, nutrição, treino"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "No modelo de Bompa, o calendário competitivo é um fator:",
+        "options": [
+          "De apoio",
+          "Direto",
+          "Indireto",
+          "Externo"
+        ],
+        "correct": 1
       }
     ],
     "sub2": [
@@ -62,16 +142,6 @@
           "Mais de 5 minutos."
         ],
         "correct": 0
-      },
-      {
-        "question": "O domínio de intensidade «moderado» corresponde tipicamente a:",
-        "options": [
-          "Intensidade muito baixa, abaixo do limiar aeróbio.",
-          "Intensidade abaixo do limiar anaeróbio/lactato.",
-          "Intensidade entre o limiar anaeróbio e o VO₂máx.",
-          "Intensidade acima do VO₂máx."
-        ],
-        "correct": 1
       },
       {
         "question": "As fibras musculares do tipo I caracterizam-se por:",
@@ -94,14 +164,44 @@
         "correct": 1
       },
       {
-        "question": "Treinar próximo do limiar anaeróbio/lactato visa sobretudo melhorar:",
+        "question": "O ciclo de Krebs tem como função:",
         "options": [
-          "A potência máxima de 1–5 segundos.",
-          "A capacidade aeróbia de alta intensidade.",
-          "A flexibilidade estática.",
-          "A força máxima (1RM)."
+          "Formação de dióxido de carbono.",
+          "Formação de ácido lático.",
+          "Formação de ATP e água.",
+          "Oxidar substratos energéticos para reduzir NAD+."
+        ],
+        "correct": 3
+      },
+      {
+        "question": "Qual sistema energético domina nos 400m planos (~45-50 s)?",
+        "options": [
+          "ATP-PCr",
+          "Glicolítico Anaeróbio",
+          "Oxidativo Aeróbio",
+          "Todos em igual proporção"
         ],
         "correct": 1
+      },
+      {
+        "question": "A ressíntese completa do glicogénio muscular demora:",
+        "options": [
+          "30 minutos",
+          "3-5 horas",
+          "20-24 horas",
+          "48-72 horas"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "O ciclo de Krebs faz parte de qual sistema energético?",
+        "options": [
+          "ATP-PCr",
+          "Glicolítico",
+          "Oxidativo Aeróbio",
+          "Fosfagénio"
+        ],
+        "correct": 2
       }
     ],
     "sub3": [
@@ -126,26 +226,6 @@
         "correct": 1
       },
       {
-        "question": "Segundo Castelo (1996), as adaptações que se perdem primeiro com o destreino são:",
-        "options": [
-          "As adaptações estruturais profundas.",
-          "As adaptações funcionais e metabólicas mais recentes.",
-          "A massa óssea.",
-          "As adaptações genéticas."
-        ],
-        "correct": 1
-      },
-      {
-        "question": "No princípio da heterocronia, um estímulo de baixa intensidade:",
-        "options": [
-          "Induz adaptações mais rápidas mas menos duradouras.",
-          "Induz adaptações mais lentas mas geralmente mais duradouras.",
-          "Não produz qualquer adaptação.",
-          "Só actua sobre o sistema ATP-PCr."
-        ],
-        "correct": 1
-      },
-      {
         "question": "A transferência positiva do treino ocorre quando:",
         "options": [
           "O treino de uma capacidade prejudica outra.",
@@ -154,6 +234,46 @@
           "Só se treina um único músculo isolado."
         ],
         "correct": 1
+      },
+      {
+        "question": "A procura em aumentar o estímulo de treino, que posteriormente levará a novas adaptações, define:",
+        "options": [
+          "O princípio da especificidade.",
+          "O princípio da sobrecarga.",
+          "O princípio da heterocronia.",
+          "O princípio da continuidade."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Qual é o momento ideal para aplicar uma nova carga de treino?",
+        "options": [
+          "Logo após a fadiga",
+          "Durante a recuperação",
+          "No pico da supercompensação",
+          "Antes do início da fadiga"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "O que representa a 'densidade' no princípio da sobrecarga?",
+        "options": [
+          "A quantidade de repetições",
+          "A velocidade de execução",
+          "O tempo de descanso entre exercícios",
+          "O número de sessões por semana"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Um nadador que treina sprints de 50m pretende melhorar para competição de 50m. Qual princípio está a aplicar?",
+        "options": [
+          "Sobrecarga",
+          "Reversibilidade",
+          "Especificidade",
+          "Heterocronia"
+        ],
+        "correct": 2
       }
     ],
     "sub4": [
@@ -168,16 +288,6 @@
         "correct": 0
       },
       {
-        "question": "Atletas «non-responders» são aqueles que:",
-        "options": [
-          "Respondem melhor que a média ao mesmo estímulo.",
-          "Não apresentam melhorias significativas apesar de treinarem adequadamente.",
-          "Só treinam uma vez por semana.",
-          "Nunca devem individualizar a carga."
-        ],
-        "correct": 1
-      },
-      {
         "question": "O desenvolvimento multilateral na infância e adolescência:",
         "options": [
           "É perda de tempo para atletas de elite.",
@@ -188,24 +298,54 @@
         "correct": 1
       },
       {
-        "question": "Qual destes é um pilar da literacia física?",
+        "question": "O princípio da individualização depende de fatores como:",
         "options": [
-          "Especialização precoce.",
-          "Motivação e confiança para ser fisicamente activo.",
-          "Exclusão de actividades lúdicas.",
-          "Treino apenas competitivo."
+          "Maturação.",
+          "A hora do treino.",
+          "Número de treinos por semana.",
+          "Número de exercícios no treino."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "A literacia física:",
+        "options": [
+          "Apenas é desenvolvida na infância.",
+          "Incorpora a motivação, confiança, competência física, conhecimento e compreensão.",
+          "Nada tem que ver com o processo de treino.",
+          "Promove o desenvolvimento especializado."
         ],
         "correct": 1
       },
       {
-        "question": "O princípio da continuidade implica que:",
+        "question": "Qual é a ordem correta de progressão da carga segundo Navarro?",
         "options": [
-          "O treino deve ser interrompido frequentemente.",
-          "Os estímulos devem ser regulares e sistemáticos ao longo do tempo.",
-          "Só se treina em período competitivo.",
-          "Não existem pausas planeadas."
+          "Volume → Frequência → Densidade → Intensidade",
+          "Intensidade → Volume → Frequência → Densidade",
+          "Frequência → Volume → Densidade → Intensidade",
+          "Densidade → Frequência → Intensidade → Volume"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "O que é o princípio da continuidade no contexto da progressão?",
+        "options": [
+          "O treino deve ter sempre a mesma intensidade",
+          "Os exercícios devem ser aplicados regularmente sem quebras prolongadas",
+          "O atleta deve treinar todos os dias sem descanso",
+          "A carga deve manter-se igual ao longo da época"
         ],
         "correct": 1
+      },
+      {
+        "question": "Um atleta não melhora apesar de treinar com a mesma carga que os colegas. Qual o conceito mais adequado para descrever esta situação?",
+        "options": [
+          "Overtraining",
+          "Destreino",
+          "Non-responder",
+          "Reversibilidade"
+        ],
+        "correct": 2
       }
     ],
     "sub5": [
@@ -220,26 +360,6 @@
         "correct": 1
       },
       {
-        "question": "O parâmetro «densidade» da carga de treino mede:",
-        "options": [
-          "A massa corporal do atleta.",
-          "A relação entre trabalho e tempo de recuperação entre séries/repetições.",
-          "A altura do salto vertical.",
-          "A idade cronológica."
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Os exercícios de competição são especialmente indicados para:",
-        "options": [
-          "Crianças em fase de iniciação (7–11 anos).",
-          "Atletas de elite em fase específica.",
-          "Qualquer praticante sedentário.",
-          "Atletas que nunca competiram."
-        ],
-        "correct": 1
-      },
-      {
         "question": "As capacidades condicionais incluem:",
         "options": [
           "Equilíbrio, orientação e reacção.",
@@ -250,14 +370,54 @@
         "correct": 1
       },
       {
-        "question": "Na estrutura do exercício de treino, a «identidade» refere-se a:",
+        "question": "A carga de treino:",
         "options": [
-          "A ordem dos exercícios na sessão.",
-          "A relação do exercício com a modalidade/competição.",
-          "A cor dos cones utilizados.",
-          "O número de atletas presentes."
+          "É medida apenas de forma individual.",
+          "Só é mensurável através de parâmetros fisiológicos.",
+          "Compreende apenas uma grandeza externa.",
+          "Determina a grandeza e a intensidade dos processos de recuperação."
+        ],
+        "correct": 3
+      },
+      {
+        "question": "Entre que idades as capacidades coordenativas têm o seu período de desenvolvimento crucial:",
+        "options": [
+          "Depende da modalidade desportiva.",
+          "Entre os 5 e 8 anos.",
+          "Entre os 9 e os 11 anos.",
+          "Entre os 12 e 14 anos."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Um treino de 30 minutos de corrida a 4:30 min/km prescrito para toda a equipa é um exemplo de:",
+        "options": [
+          "Carga interna",
+          "Carga externa",
+          "Adaptação crónica",
+          "Efeito específico"
         ],
         "correct": 1
+      },
+      {
+        "question": "A frequência cardíaca durante o treino é um indicador de:",
+        "options": [
+          "Carga externa",
+          "Volume de treino",
+          "Carga interna",
+          "Complexidade do exercício"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "A 'densidade' como parâmetro de carga refere-se a:",
+        "options": [
+          "O número de repetições por sessão",
+          "A velocidade de execução",
+          "O equilíbrio entre fases de trabalho e recuperação",
+          "O número de sessões semanais"
+        ],
+        "correct": 2
       }
     ],
     "sub6": [
@@ -282,32 +442,42 @@
         "correct": 1
       },
       {
-        "question": "A velocidade de deslocamento depende de:",
+        "question": "O método contínuo deve ser aplicado para desenvolver:",
         "options": [
-          "Apenas da frequência de passada.",
-          "Apenas da amplitude de passada.",
-          "Da amplitude e da frequência de passada.",
-          "Só da resistência aeróbia."
+          "O estado estacionário máximo de lactato.",
+          "Capacidade aeróbia de alta intensidade.",
+          "Capacidade aeróbia de baixa intensidade.",
+          "A velocidade."
         ],
         "correct": 2
       },
       {
-        "question": "O método contínuo de longa duração e baixa intensidade desenvolve sobretudo:",
+        "question": "Qual o domínio de intensidade de um exercício realizado acima do EEML?",
         "options": [
-          "Potência anaeróbia láctica.",
-          "Capacidade aeróbia de base.",
-          "Força máxima.",
-          "Velocidade de reacção."
+          "Moderada",
+          "Pesada",
+          "Severa",
+          "Máxima"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
-        "question": "O treino fartlek caracteriza-se por:",
+        "question": "O VO₂máx é influenciado por qual dos seguintes fatores?",
         "options": [
-          "Ritmo constante e uniforme durante toda a sessão.",
-          "Variações livres de ritmo e intensidade ao longo do percurso.",
-          "Apenas sprints de 10 segundos.",
-          "Ausência total de componente aeróbia."
+          "Aquecimento prévio",
+          "Refeição leve de 600 kcal",
+          "Altitude",
+          "Temperatura ambiente até 32°C"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "No método contínuo uniforme extensivo, qual a percentagem do VO₂máx trabalhada?",
+        "options": [
+          "20–40%",
+          "45–65%",
+          "80–90%",
+          "95–100%"
         ],
         "correct": 1
       }
@@ -324,26 +494,6 @@
         "correct": 1
       },
       {
-        "question": "O método PNF de alongamento baseia-se em:",
-        "options": [
-          "Contracção isométrica seguida de relaxamento e alongamento passivo.",
-          "Saltos pliométricos contínuos.",
-          "Corrida contínua de 60 minutos.",
-          "Apenas balanços dinâmicos rápidos."
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Os fusos musculares são responsáveis por detectar:",
-        "options": [
-          "Alterações de temperatura corporal.",
-          "Alterações no comprimento muscular.",
-          "Níveis de glicémia.",
-          "Frequência cardíaca de repouso."
-        ],
-        "correct": 1
-      },
-      {
         "question": "O ciclo de alongamento-encurtamento (CAE) é importante para:",
         "options": [
           "Aumentar a eficiência do trabalho elástico e a potência.",
@@ -354,12 +504,82 @@
         "correct": 0
       },
       {
-        "question": "A força explosiva é treinada preferencialmente com:",
+        "question": "Segundo a literatura citada no curso, o método de flexibilidade mais eficaz é:",
         "options": [
-          "Cargas muito elevadas e movimentos lentos.",
-          "Cargas moderadas e movimentos rápidos (potência).",
-          "Apenas alongamentos estáticos longos.",
-          "Treino exclusivamente contínuo de 90 minutos."
+          "Balístico.",
+          "Estático passivo isolado.",
+          "FNP (facilitação neuromuscular proprioceptiva).",
+          "Apenas alongamento antes do treino sem aquecimento."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "O Órgão Tendinoso de Golgi está associado principalmente a:",
+        "options": [
+          "Reflexo miotático.",
+          "Inibição autogénica.",
+          "Aumento da velocidade de sprint.",
+          "Hipertrofia muscular direta."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "O ciclo alongamento-encurtamento (CAE) pode aumentar a força da fase concêntrica seguinte em aproximadamente:",
+        "options": [
+          "5–8%.",
+          "15–20%.",
+          "40–50%.",
+          "Não tem efeito mensurável."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "O treino da força máxima implica:",
+        "options": [
+          "Percentagens de carga entre 90 a 100% da 1RM, e realização de 1 a 5 repetições.",
+          "Percentagens de carga entre 45 a 55% da 1 RM, e realização de 1 a 5 repetições.",
+          "Percentagens de carga entre 60 a 80% da 1RM, e realização de 6 a 12 repetições.",
+          "Percentagens de carga entre 90 a 100% da 1 RM, e realização de 10 a 15 repetições."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "O método de treino mais eficaz para melhorar a flexibilidade corresponde:",
+        "options": [
+          "Ao método PNF.",
+          "Ao método estático.",
+          "Ao método passivo.",
+          "Ao método balístico."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Qual das seguintes ações musculares é a MAIS eficiente e a MAIS lesiva?",
+        "options": [
+          "Concêntrica",
+          "Isométrica",
+          "Excêntrica",
+          "Pliométrica"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Para treinar potência, qual a percentagem da carga máxima recomendada?",
+        "options": [
+          "80–90%",
+          "60–80%",
+          "45–55%",
+          "20–30%"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "O Squat Jump difere do Countermovement Jump porque:",
+        "options": [
+          "Usa uma carga externa",
+          "Não tem fase excêntrica — avalia ação concêntrica pura",
+          "É realizado em água",
+          "Mede apenas resistência muscular"
         ],
         "correct": 1
       }
@@ -376,36 +596,6 @@
         "correct": 1
       },
       {
-        "question": "A sessão de repetição destina-se a:",
-        "options": [
-          "Introduzir conteúdos completamente novos.",
-          "Consolidar e automatizar conteúdos já aprendidos.",
-          "Substituir o período de recuperação.",
-          "Evitar qualquer repetição de exercícios."
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Entre duas sessões com o mesmo objectivo principal, o tempo mínimo de recuperação recomendado é de:",
-        "options": [
-          "6 horas.",
-          "24 horas.",
-          "48 horas.",
-          "1 semana."
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Na iniciação desportiva (7–11 anos), o princípio prioritário é:",
-        "options": [
-          "Especialização precoce.",
-          "Multilateralidade e diversificação de estímulos.",
-          "Treino exclusivo de competição.",
-          "Volume máximo de intensidade elevada."
-        ],
-        "correct": 1
-      },
-      {
         "question": "O mesociclo corresponde tipicamente a:",
         "options": [
           "1 sessão de treino.",
@@ -414,19 +604,89 @@
           "4 anos de planificação."
         ],
         "correct": 2
-      }
-    ],
-    "sub9": [
+      },
       {
-        "question": "A parte preparatória da sessão deve ocupar aproximadamente:",
+        "question": "A recuperação recomendada para voltar a treinar o mesmo objectivo é de:",
         "options": [
-          "5% do tempo total.",
-          "10–25% do tempo total.",
-          "50% do tempo total.",
-          "80% do tempo total."
+          "12 horas.",
+          "24 horas.",
+          "48–72 horas.",
+          "1 semana obrigatoriamente."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Na iniciação desportiva (7–11 anos), a prioridade deve ser:",
+        "options": [
+          "Especialização precoce na modalidade.",
+          "Multilateralidade, componente lúdica e gosto pela prática.",
+          "Treino exclusivo de força máxima.",
+          "Competição de alto rendimento."
         ],
         "correct": 1
       },
+      {
+        "question": "A prioridade dos conteúdos numa sessão de treino deve seguir a ordem:",
+        "options": [
+          "Resistência → Força → Técnica.",
+          "Técnica → Capacidades motoras → Coordenação motora.",
+          "Competição → Avaliação → Recuperação.",
+          "Aquecimento → Competição → Técnica."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Que tipo de sessões de treino é constituído por um conjunto mínimo de exercícios que são executados a um nível de intensidade e densidade reduzidos:",
+        "options": [
+          "Sessões de reconhecimento.",
+          "Sessões de repetição.",
+          "Sessões de controlo.",
+          "Sessões de aprendizagem."
+        ],
+        "correct": 3
+      },
+      {
+        "question": "Existem três tipos de objetivos fundamentais numa sessão, que são:",
+        "options": [
+          "Os primários, secundários e terciários.",
+          "Os principais, secundários e terciários.",
+          "Os prioritários, secundários e suplementares.",
+          "Os principais, os gerais e os específicos."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "A sessão de treino é considerada:",
+        "options": [
+          "O mesmo que o microciclo semanal",
+          "O elo de ligação de todo o sistema de preparação do atleta",
+          "Um plano teórico de longo prazo",
+          "Um exercício individual dentro do plano"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Qual o tempo mínimo de recuperação entre sessões com o mesmo objetivo?",
+        "options": [
+          "12 a 24 horas",
+          "24 a 36 horas",
+          "48 a 72 horas",
+          "96 a 120 horas"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Qual é o PRIMEIRO conteúdo a trabalhar na sessão de treino?",
+        "options": [
+          "Resistência aeróbia",
+          "Força máxima",
+          "Técnica",
+          "Velocidade de reação"
+        ],
+        "correct": 2
+      }
+    ],
+    "sub9": [
       {
         "question": "A ordem correcta das fases do aquecimento é:",
         "options": [
@@ -448,16 +708,6 @@
         "correct": 1
       },
       {
-        "question": "A parte final da sessão (volta à calma) serve para:",
-        "options": [
-          "Aumentar abruptamente a intensidade.",
-          "Facilitar a recuperação e a supercompensação.",
-          "Substituir o sono nocturno.",
-          "Eliminar a necessidade de hidratação."
-        ],
-        "correct": 1
-      },
-      {
         "question": "Se a técnica se deteriora por fadiga durante a parte principal, o treinador deve:",
         "options": [
           "Manter a mesma carga até ao fim.",
@@ -466,8 +716,959 @@
           "Terminar imediatamente a época desportiva."
         ],
         "correct": 1
+      },
+      {
+        "question": "A parte preparatória (aquecimento) deve representar aproximadamente:",
+        "options": [
+          "5% do tempo total.",
+          "15–20% do tempo total.",
+          "40–50% do tempo total.",
+          "70% do tempo total."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "A sessão de treino divide-se em quantas partes fundamentais?",
+        "options": [
+          "Duas.",
+          "Três.",
+          "Quatro.",
+          "Cinco."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Na parte principal, a sequência recomendada de conteúdos é:",
+        "options": [
+          "Resistência → Força → Velocidade → Técnica.",
+          "Técnica e aprendizagem → Velocidade e coordenação → Força → Resistência.",
+          "Força → Técnica → Resistência → Velocidade.",
+          "Competição → Jogos → Alongamento → Técnica."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "A ficha de treino deve incluir, entre outros:",
+        "options": [
+          "Apenas o resultado da última competição.",
+          "Objectivos, exercícios, material, volume, intensidade, recuperação e organização dos grupos.",
+          "Só a lista de atletas presentes.",
+          "Apenas a temperatura ambiente."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "A parte da sessão de treino em que são apresentados os objetivos planeados para essa sessão treino é:",
+        "options": [
+          "A parte fundamental.",
+          "A parte introdutória.",
+          "A parte final.",
+          "A parte preparatória."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Em quantas partes se divide a sessão de treino?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Que percentagem do tempo total representa a parte preparatória?",
+        "options": [
+          "5–10%",
+          "10–15%",
+          "15–20%",
+          "25–30%"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Qual é a ordem correta das fases do aquecimento?",
+        "options": [
+          "Articular → Cardio → Neuromuscular → Específico",
+          "Cardio → Articular → Neuromuscular → Específico",
+          "Neuromuscular → Cardio → Articular → Específico",
+          "Específico → Cardio → Articular → Neuromuscular"
+        ],
+        "correct": 1
       }
     ]
   },
-  "unit-pdd": {}
+  "unit-pdd": {
+    "sub1": [
+      {
+        "question": "O Desporto ajuda a promover valores como:",
+        "options": [
+          "Capacidade de análise tática.",
+          "A cooperação entre pares.",
+          "Espírito de sacrifício.",
+          "A vitória a todo o custo."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Em primeira instância, o desenvolvimento pessoal e desportivo do praticante nas fases precoces da formação desportiva irá depender:",
+        "options": [
+          "Da forma como o treinador orienta e conduz o processo de treino.",
+          "Da forma como os praticantes respondem aos exercícios de treino.",
+          "Dos resultados alcançados em competição.",
+          "Das instalações desportivas disponibilizadas pelos gestores desportivos."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Os valores são importantes para todas as áreas da nossa vida. Mas a prática desportiva também nos ensina:",
+        "options": [
+          "Podermos prescindir do treinador.",
+          "A dependermos só de nós.",
+          "Seguir apenas as orientações da família.",
+          "O respeito pelo meio ambiente."
+        ],
+        "correct": 3
+      },
+      {
+        "question": "Como deve ser entendida a competição na formação desportiva?",
+        "options": [
+          "Como objetivo principal de vitória a qualquer custo.",
+          "Como ferramenta educativa, participativa e convivencial.",
+          "Como substituto do treino técnico.",
+          "Como momento exclusivo de avaliação dos melhores atletas."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Segundo Teotónio Lima, qual deve ser a prioridade na formação desportiva de jovens?",
+        "options": [
+          "Treinar primeiro, ensinar depois",
+          "Ensinar primeiro e treinar depois",
+          "Focar nos resultados competitivos",
+          "Especializar precocemente o jovem"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Uma competição educativa deve ter como finalidade principal:",
+        "options": [
+          "Maximizar os resultados e vitórias",
+          "Selecionar os melhores talentos",
+          "O desenvolvimento pessoal e coletivo",
+          "Eliminar os praticantes menos capazes"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "O que determina o carácter positivo ou negativo da prática desportiva?",
+        "options": [
+          "O tipo de modalidade praticada",
+          "A natureza das experiências proporcionadas",
+          "O nível de competição envolvido",
+          "O número de horas de treino"
+        ],
+        "correct": 1
+      }
+    ],
+    "sub2": [
+      {
+        "question": "Liberdade de oportunidades no desporto significa:",
+        "options": [
+          "Adaptar as oportunidades tendo em conta as diferenças, procurando a justiça.",
+          "Depender da capacidade dos clubes.",
+          "Ter autonomia nas opções.",
+          "Depender das escolhas dos pais."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Igualdade de oportunidades no desporto significa:",
+        "options": [
+          "Dar as mesmas oportunidades independentemente das questões raciais, religiosas, morfológicas, sociais, entre outras.",
+          "Depender da capacidade dos clubes.",
+          "Ter autonomia nas opções.",
+          "Adaptar as oportunidades tendo conta as diferenças, procurando a justiça."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Qual das seguintes afirmações descreve corretamente o conceito de equidade no desporto?",
+        "options": [
+          "Dar exactamente o mesmo a todos os atletas, independentemente das suas necessidades.",
+          "Ajustar o apoio às necessidades específicas de cada atleta.",
+          "Privilegiar os atletas com mais talento.",
+          "Excluir atletas com dificuldades para não atrasar o grupo."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "O que significa ética pelo exemplo no papel do treinador?",
+        "options": [
+          "Falar muito sobre ética durante o treino.",
+          "Demonstrar ética com o comportamento em treino e competição.",
+          "Punir imediatamente qualquer falta de fair-play.",
+          "Delegar a ética aos pais e encarregados de educação."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Qual das seguintes afirmações descreve corretamente o conceito de 'equidade' no desporto?",
+        "options": [
+          "Dar exatamente o mesmo apoio a todos os atletas",
+          "Ajustar o apoio às necessidades individuais de cada praticante",
+          "Garantir que todos os atletas competem nas mesmas condições físicas",
+          "Eliminar todas as diferenças entre os atletas"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Quando pensamos em igualdade de oportunidades no desporto, temos tendência a focar em:",
+        "options": [
+          "Questões geográficas e climáticas",
+          "Questões de género e deficiência, principalmente",
+          "As sete dimensões de forma equilibrada",
+          "Questões de estrato social e religião"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Um atleta de 10 anos é muito baixo para a sua faixa etária. O que deve fazer o treinador?",
+        "options": [
+          "Aconselhá-lo a mudar para uma modalidade mais adequada à sua estatura",
+          "Excluí-lo das competições para proteger a sua autoestima",
+          "Criar espaço de evolução para ele, pois as diferenças morfológicas nesta idade não predizem o futuro",
+          "Colocá-lo sempre em posições que não requeiram altura"
+        ],
+        "correct": 2
+      }
+    ],
+    "sub3": [
+      {
+        "question": "No que diz respeito ao papel e responsabilidade do treinador:",
+        "options": [
+          "Este desempenha um papel decisivo apenas no alto rendimento.",
+          "Este influencia o praticante apenas ao nível do desporto infantojuvenil.",
+          "Este tem uma visão centrada nas questões técnicas, táticas e estratégicas.",
+          "Este desempenha um papel decisivo nos diferentes contextos desportivos onde intervém, desde as etapas mais elementares da prática desportiva até aos níveis mais avançados de rendimento."
+        ],
+        "correct": 3
+      },
+      {
+        "question": "Selecione a opção que melhor reflete as competências básicas do treinador:",
+        "options": [
+          "Realizar registos do treino e da competição dos praticantes com mais talento para que o acompanhamento seja mais eficaz.",
+          "Realizar o registo de toda a informação do treino e da competição pertinente para a monitorização da atividade desportiva do praticante.",
+          "Realizar os registos apenas das sessões de treino.",
+          "Realizar apenas os registos das competições para planear os treinos seguintes."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Algumas das competências básicas do treinador passam por:",
+        "options": [
+          "Organizar os praticantes, o equipamento e as infraestruturas na sessão de treino, independentemente das condições de segurança.",
+          "Colocar ênfase na instrução em detrimento de outras competências de comunicação.",
+          "Avaliar o treino dos praticantes com foco nos resultados alcançados.",
+          "Dirigir os praticantes na sessão de treino, assegurando o exercício das competências de ensino fundamentais (explicação, demonstração, observação e correção)."
+        ],
+        "correct": 3
+      },
+      {
+        "question": "Qual lei reconheceu a profissão de treinador em Portugal?",
+        "options": [
+          "Lei n.º 20/2010, de 15 de março.",
+          "Lei n.º 40/2012, de 28 de agosto.",
+          "Lei n.º 106/2015, de 6 de setembro.",
+          "Lei n.º 75/2013, de 12 de setembro."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Quais os três domínios das 'competências ecléticas' do treinador?",
+        "options": [
+          "Físico, técnico e tático",
+          "Técnico, relacional e deontológico",
+          "Pedagógico, científico e cultural",
+          "Comunicativo, organizativo e avaliativo"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "O que significa 'a comunicação faz parte do planeamento'?",
+        "options": [
+          "O treinador deve falar mais durante o treino",
+          "O treinador deve antecipar dificuldades dos atletas e preparar intervenções antes da sessão",
+          "A comunicação deve ser planeada no final da sessão",
+          "O planeamento deve incluir reuniões com os pais dos atletas"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Qual a afirmação CORRETA sobre o treino de jovens?",
+        "options": [
+          "Deve replicar o treino de séniors com menor intensidade",
+          "Deve ser claramente diferente do treino de adultos",
+          "Deve focar-se exclusivamente no desenvolvimento técnico",
+          "Deve priorizar os resultados competitivos desde cedo"
+        ],
+        "correct": 1
+      }
+    ],
+    "sub4": [
+      {
+        "question": "No que diz respeito à influência da prática desportiva no desenvolvimento dos indivíduos/praticantes:",
+        "options": [
+          "Sendo o treinador o primeiro responsável pela iniciação, deve tratar todos como futuras estrelas e evitar o abandono da modalidade.",
+          "Os benefícios normalmente atribuídos à prática desportiva são garantidos, automaticamente, por simples participação.",
+          "Os benefícios normalmente atribuídos à prática desportiva não são garantidos, automaticamente, por simples participação, podendo a prática contribuir para a formação, saúde e bem estar dos jovens como para desenvolver perturbações comportamentais e hábitos de fraude e violência.",
+          "Os benefícios são garantidos automaticamente por simples participação."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "O objetivo principal do treinador de Grau I em relação à adesão é:",
+        "options": [
+          "Tornar os atletas profissionais na modalidade.",
+          "Garantir vitórias nas competições.",
+          "Desenvolver o gosto pela prática desportiva e reduzir o abandono.",
+          "Especializar precocemente os jovens atletas."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Uma equipa perde 7-0 mas todos os atletas cumprem as regras, mostram empenho e cumprimentam os adversários. Como se avalia este resultado pedagógico?",
+        "options": [
+          "Mau resultado — o objetivo é sempre vencer",
+          "Bom resultado — o treinador cumpriu o mais importante nesta faixa etária",
+          "Resultado neutro — nem bom nem mau",
+          "Mau resultado — a equipa precisa de mais treino técnico"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Um atleta que praticava futebol mudou para basquetebol e continua a praticar regularmente. Do ponto de vista pedagógico, isto representa:",
+        "options": [
+          "Um fracasso do treinador — perdeu o atleta para a modalidade",
+          "Um sucesso parcial — o atleta devia ter ficado no futebol",
+          "Um sucesso — o objetivo era a adesão à prática desportiva, não à modalidade",
+          "Um fracasso — o atleta não desenvolveu gosto pelo futebol"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "O que deve fazer o treinador quando um atleta comete um erro?",
+        "options": [
+          "Punir imediatamente para evitar que o erro se repita",
+          "Ignorar o erro para não desmotivar o atleta",
+          "Ver o erro como oportunidade de intervenção e corrigir de forma positiva",
+          "Interromper o treino de todos para explicar o erro em público"
+        ],
+        "correct": 2
+      }
+    ],
+    "sub5": [
+      {
+        "question": "Um atleta que mudou de modalidade mas continua a praticar desporto regularmente representa, pedagogicamente:",
+        "options": [
+          "Um fracasso do treinador — perdeu o atleta para a modalidade.",
+          "Um sucesso parcial — devia ter ficado na modalidade original.",
+          "Um sucesso — o objetivo era a adesão à prática desportiva, não à modalidade.",
+          "Um fracasso — não desenvolveu gosto pela modalidade inicial."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Qual das seguintes atitudes NÃO favorece um ambiente adequado de prática?",
+        "options": [
+          "Evitar pressões e metas irrealistas.",
+          "Abrir linhas de comunicação com linguagem clara.",
+          "Ridicularizar erros em público para acelerar a aprendizagem.",
+          "Ter paciência e tolerância para com os erros."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "A continuidade do atleta no sistema desportivo depende de:",
+        "options": [
+          "Apenas do talento natural do atleta",
+          "Da natureza da exercitação, da organização da instrução e do estilo de intervenção do treinador",
+          "Principalmente dos pais e dirigentes do clube",
+          "Do número de vitórias conquistadas nos primeiros anos"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Os benefícios normalmente atribuídos à prática desportiva são:",
+        "options": [
+          "Garantidos automaticamente por qualquer participação desportiva",
+          "Dependentes apenas da intensidade do treino",
+          "Não garantidos automaticamente — dependem de como a prática é organizada e enquadrada",
+          "Apenas físicos — os benefícios sociais não existem comprovadamente"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Qual a Lei de Bases da Atividade Física e do Desporto em Portugal?",
+        "options": [
+          "Lei n.º 46/86, de 14 de outubro",
+          "Lei n.º 40/2012, de 28 de agosto",
+          "Lei n.º 5/2007, de 16 de janeiro",
+          "Lei n.º 49/2005, de 30 de agosto"
+        ],
+        "correct": 2
+      }
+    ],
+    "sub6": [
+      {
+        "question": "O modelo da aprendizagem cooperativa contribui particularmente para o desenvolvimento das competências pessoais e sociais pela valorização das componentes cognitivas e sociais, seja no contexto escolar ou desportivo. Esta afirmação é:",
+        "options": [
+          "Incorreta, pois os modelos de aprendizagem cooperativa contribuem apenas em contexto desportivo.",
+          "Correta.",
+          "Incorreta, pois os modelos de aprendizagem cooperativa valorizam apenas as componentes cognitivas e não as sociais.",
+          "Incorreta, pois os modelos de aprendizagem cooperativa contribuem apenas em contexto escolar."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Qual destes NÃO é um dos 6 fatores básicos do treinador facilitador?",
+        "options": [
+          "Competência.",
+          "Comportamento reflexivo.",
+          "Seleção dos melhores atletas.",
+          "Definição de objetivos."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Autonomia no treino é equivalente a abandonar o atleta sem orientação.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Qual destas é uma estratégia para promover a autonomia?",
+        "options": [
+          "O treinador forma sempre os grupos",
+          "O atleta avalia o próprio desempenho",
+          "O treinador intervém em cada erro",
+          "A tarefa é sempre definida pelo treinador"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "A que distância o treinador observa no trabalho por estações para promover autonomia?",
+        "options": [
+          "1-2 metros",
+          "4-5 metros",
+          "6-7 metros",
+          "10 metros"
+        ],
+        "correct": 2
+      }
+    ],
+    "sub7": [
+      {
+        "question": "Os principais fatores que concorrem para o incremento da qualidade da sessão de treino e que têm uma expressão operacional na didática de cada modalidade, assentam num reportório de fatores básicos, entre os quais:",
+        "options": [
+          "Privilegiar as decisões organizativas dos praticantes.",
+          "Marcação das presenças.",
+          "Definição de objetivos.",
+          "Ser crítico e agressivo."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Quais são os três fatores que o treinador deve gerir para melhorar a qualidade da sessão?",
+        "options": [
+          "Alimentação, sono e motivação.",
+          "Tempo de treino, situações de aprendizagem e tipo de comunicação.",
+          "Material, instalações e número de atletas.",
+          "Competições, resultados e prémios."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "O treinador é um mero transmissor de conhecimento técnico.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Qual destas atitudes NÃO favorece um ambiente adequado de prática?",
+        "options": [
+          "Usar linguagem clara e acessível",
+          "Ter paciência com os erros",
+          "Propor metas irrealistas para motivar",
+          "Ouvir os praticantes com atenção"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Quais são os fatores que o treinador deve gerir para melhorar a qualidade da sessão?",
+        "options": [
+          "Alimentação, sono e motivação",
+          "Tempo de treino, situações de aprendizagem e tipo de comunicação",
+          "Material, instalações e número de atletas",
+          "Competições, resultados e prémios"
+        ],
+        "correct": 1
+      }
+    ],
+    "sub8": [
+      {
+        "question": "A competição deve ser vista como:",
+        "options": [
+          "Um momento de pressão excecional separado do treino.",
+          "Uma continuação do treino.",
+          "O único momento em que se avalia o atleta.",
+          "Um obstáculo à formação multilateral."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Como se define sucesso num contexto de competição de formação desportiva?",
+        "options": [
+          "Apenas pela vitória final.",
+          "Também pelo progresso individual, participação e aplicação do conteúdo treinado.",
+          "Pelo número de golos marcados.",
+          "Pela classificação no campeonato."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "A competição no desporto de formação deve ser um momento separado e de maior pressão do que o treino.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Qual destas NÃO é uma virtualidade educativa do desporto de competição para jovens?",
+        "options": [
+          "Desenvolver persistência e autodisciplina",
+          "Promover o sentido de pertença ao grupo",
+          "Garantir que todos ganham sempre",
+          "Ensinar a cooperar e a competir"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Como se define 'sucesso' num contexto de competição de formação desportiva?",
+        "options": [
+          "Exclusivamente pelo resultado final (vitória ou derrota)",
+          "Apenas pelo número de golos ou pontos marcados",
+          "Pelo progresso, participação, atitude e aplicação dos conteúdos treinados",
+          "Pela classificação final na tabela"
+        ],
+        "correct": 2
+      }
+    ],
+    "sub9": [
+      {
+        "question": "De uma forma geral, durante o desenrolar da competição, o treinador deve:",
+        "options": [
+          "Focar-se nos aspetos negativos dos seus praticantes e corrigi-los.",
+          "Ser um bom exemplo tentando manter um comportamento sereno e equilibrado, inclusive para com os juízes, mesmo que sinta que cometeram um erro.",
+          "Manter-se em silêncio e deixar as intervenções para os treinos.",
+          "Focar-se nos praticantes que têm mais sucesso. Aos restantes deve manter-se em silêncio."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Durante o desenrolar da competição, o treinador deve:",
+        "options": [
+          "Evitar saturar os praticantes com recomendações demasiado longas e fastidiosas.",
+          "Ser longo e exaustivo nas suas intervenções.",
+          "Manter-se em silêncio e deixar as intervenções para os treinos.",
+          "Focar-se apenas nos atletas com mais sucesso."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "O foco das intervenções do treinador na competição deve estar:",
+        "options": [
+          "No adversário e no resultado final.",
+          "Na ligação treino-competição e no que foi trabalhado.",
+          "Apenas nos erros dos árbitros.",
+          "Exclusivamente na vitória."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "O objetivo dominante do treinador durante a competição é vencer a todo o custo.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "O treinador deve avaliar na competição todos os comportamentos dos atletas, mesmo os não treinados na semana.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Como devem ser as intervenções do treinador durante a competição?",
+        "options": [
+          "Longas e detalhadas, para corrigir tudo o que está errado",
+          "Equilibradas, curtas e focadas no que foi treinado",
+          "Apenas no intervalo, nunca durante o jogo",
+          "Reativas e imediatas a cada erro do atleta"
+        ],
+        "correct": 1
+      }
+    ],
+    "sub10": [
+      {
+        "question": "Sabemos que os ganhos de aprendizagem estão intimamente dependentes do tempo passado na tarefa, bem como da quantidade máxima de tempo de atividade motora passada em atividades específicas. Esta afirmação está:",
+        "options": [
+          "Correta.",
+          "Incorreta, pois depende da forma como se gere as questões dos materiais.",
+          "Incorreta, pois está dependente apenas no tempo passado na tarefa.",
+          "Incorreta, pois está dependente apenas da quantidade máxima de tempo de atividade motora passada em atividades específicas."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Como podemos definir decisões interativas:",
+        "options": [
+          "Decisões de ajuste ao planificado em função da avaliação contínua.",
+          "Decisões de ajuste à intervenção e planificação futura.",
+          "Decisões que são tomadas antes do treino e da competição.",
+          "Decisões de estruturação do processo de ensino no treino desportivo."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "O objetivo da gestão no treino desportivo é:",
+        "options": [
+          "Maximizar o tempo disponível para a prática motora.",
+          "Aumentar o número de discursos do treinador.",
+          "Reduzir a participação dos atletas.",
+          "Eliminar a competição da formação."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "O que é a 'gestão' no contexto pedagógico do treino desportivo?",
+        "options": [
+          "A estratégia de jogo definida pelo treinador",
+          "O conjunto de comportamentos que regulam praticantes, tempos, tarefas, espaços e materiais",
+          "O processo de avaliação dos atletas ao longo da época",
+          "A forma como o treinador comunica com os pais"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Os ganhos de aprendizagem estão intimamente dependentes de:",
+        "options": [
+          "O número de competições realizadas",
+          "O tempo passado na tarefa e a quantidade de atividade motora em atividades específicas",
+          "A qualidade do equipamento desportivo disponível",
+          "O número de treinadores na sessão"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Como se define o 'tempo disponível para a prática' numa sessão de treino?",
+        "options": [
+          "O tempo total da sessão sem qualquer desconto",
+          "O tempo previsto menos o tempo passado em tarefas de organização",
+          "O tempo em que os atletas estão a descansar entre exercícios",
+          "O tempo dedicado ao aquecimento e ao retorno à calma"
+        ],
+        "correct": 1
+      }
+    ],
+    "sub11": [
+      {
+        "question": "Aprendemos maior percentagem de informação através de:",
+        "options": [
+          "O ouvido.",
+          "A vista.",
+          "O tato.",
+          "O paladar."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Qual das seguintes estratégias é fundamental para fomentar a compreensão dos conteúdos pelos praticantes?",
+        "options": [
+          "Questionamento.",
+          "Demonstração.",
+          "Gestão.",
+          "Instrução."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "O feedback pedagógico distingue-se da instrução porque:",
+        "options": [
+          "A instrução reage ao que o atleta fez; o feedback explica antecipadamente.",
+          "A instrução explica; o feedback reage ao comportamento observado.",
+          "São exactamente a mesma coisa.",
+          "O feedback só se usa na competição."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Qual a percentagem de aprendizagem pela vista?",
+        "options": [
+          "11%",
+          "50%",
+          "83%",
+          "30%"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Qual o nível de retenção mais elevado?",
+        "options": [
+          "O que lemos (10%)",
+          "O que ouvimos (20%)",
+          "O que vemos e ouvimos (50%)",
+          "O que dizemos e fazemos simultaneamente (90%)"
+        ],
+        "correct": 3
+      },
+      {
+        "question": "Em que três momentos da sessão se deve usar a instrução?",
+        "options": [
+          "Aquecimento, parte principal e retorno à calma",
+          "Início, durante e conclusão da sessão",
+          "Antes e depois de cada exercício",
+          "Apenas no início e no fim da sessão"
+        ],
+        "correct": 1
+      }
+    ],
+    "sub12": [
+      {
+        "question": "O objetivo último do treinador, no plano do desenvolvimento pessoal do praticante, deverá ser desenvolver naqueles a capacidade de perceber, interpretar e controlar a informação de retorno e por extensão a sua execução. Esta afirmação é:",
+        "options": [
+          "Incorreta, pois o praticante não tem capacidade para se autoavaliar.",
+          "Incorreta, pois o treino depende unicamente do treinador.",
+          "Incorreta, pois quem avalia a prestação do praticante é sempre o treinador.",
+          "Correta."
+        ],
+        "correct": 3
+      },
+      {
+        "question": "O que é a Descoberta Guiada?",
+        "options": [
+          "O treinador dá todas as respostas e o atleta repete.",
+          "O treinador define objetivos e o atleta investiga e descobre soluções.",
+          "O atleta treina sem qualquer orientação.",
+          "Um método exclusivo de alto rendimento."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Qual é o objetivo último do treinador no plano do desenvolvimento pessoal do praticante?",
+        "options": [
+          "Dar o máximo de feedback possível em cada sessão",
+          "Desenvolver a capacidade de autocorreção nos praticantes",
+          "Demonstrar sempre a execução correta do gesto técnico",
+          "Manter o controlo total sobre todas as decisões do atleta"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "A informação propriocetiva é um exemplo de informação de retorno...",
+        "options": [
+          "Extrínseca fornecida pelo treinador",
+          "Intrínseca proveniente do próprio praticante",
+          "Visual proveniente de colegas",
+          "Auditiva emitida pelo árbitro"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Na Descoberta Guiada, qual é o papel principal do praticante?",
+        "options": [
+          "Seguir rigorosamente as instruções do treinador",
+          "Observar e imitar os colegas mais avançados",
+          "Investigar e descobrir soluções dentro da estrutura proposta",
+          "Avaliar o treinador no final de cada exercício"
+        ],
+        "correct": 2
+      }
+    ],
+    "sub13": [
+      {
+        "question": "As Técnicas de Intervenção Pedagógica (TIP) aplicadas ao treino e à competição são os instrumentos fundamentais para fomentar a compreensão dos conteúdos pelos praticantes. Esta afirmação é:",
+        "options": [
+          "Incorreta, pois apenas a instrução é relevante.",
+          "Incorreta, pois a atitude do praticante é que é relevante.",
+          "Correta.",
+          "Incorreta, pois apenas o feedback é relevante."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Um ambiente positivo no treino é especialmente importante porque:",
+        "options": [
+          "Garante vitórias imediatas.",
+          "Cria condições seguras para aprender, sobretudo na iniciação.",
+          "Elimina a necessidade de regras.",
+          "Substitui a técnica desportiva."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "O que distingue as TIP de outros conceitos pedagógicos?",
+        "options": [
+          "São técnicas exclusivas do desporto de alto rendimento",
+          "São instrumentos aplicados no treino e competição para fomentar a compreensão dos praticantes",
+          "São regras fixas que devem ser aplicadas igual em todas as modalidades",
+          "São apenas relevantes na fase de competição"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Um treinador que planeia as TIP em função dos praticantes que tem está a:",
+        "options": [
+          "Perder tempo que devia dedicar à parte técnica",
+          "Garantir maior eficácia pedagógica ao adaptar os instrumentos ao contexto",
+          "Compensar a falta de conhecimento da modalidade",
+          "Aplicar um estilo de liderança autocrático"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Qual das seguintes afirmações sobre o questionamento está CORRETA?",
+        "options": [
+          "Deve ser evitado porque atrasa o treino",
+          "Obrigar o atleta a refletir e verbalizar as razões das suas ações é uma das formas mais eficazes de reter conteúdos",
+          "Só é eficaz com atletas adultos",
+          "Deve substituir completamente o feedback técnico do treinador"
+        ],
+        "correct": 1
+      }
+    ],
+    "sub14": [
+      {
+        "question": "Ao definir um objetivo, o treinador deverá certificar-se que o mesmo é:",
+        "options": [
+          "Mensurável.",
+          "Abrangente.",
+          "Formulado de forma neutra.",
+          "Irrealista."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "O tempo que o treinador passa com cada praticante deverá:",
+        "options": [
+          "Ser igual para todos, garantindo igual atenção e feedback por parte do treinador.",
+          "Depender da etapa de formação em que os praticantes se encontram.",
+          "Estar alinhado com os interesses coletivos do clube, dedicando mais tempo aos atletas mais aptos.",
+          "Ser variável, em função das virtudes e dificuldades de cada um."
+        ],
+        "correct": 3
+      },
+      {
+        "question": "Um bom objetivo deve ser:",
+        "options": [
+          "Vago, para não limitar o atleta.",
+          "Realista, preciso, mensurável, positivo, ecológico e reatualizável.",
+          "Definido apenas pelo treinador sem envolver o atleta.",
+          "Focado exclusivamente no resultado competitivo."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "O objetivo central na formação dos praticantes é facilitar a transição de que processos?",
+        "options": [
+          "De avaliação para certificação",
+          "De direção para delegação",
+          "De individual para coletivo",
+          "De iniciação para especialização"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Quando um praticante competente recebe menos atenção do treinador, como deve perceber isso?",
+        "options": [
+          "Como descuido ou abandono por parte do treinador",
+          "Como reconhecimento das suas capacidades — quase como um elogio",
+          "Como sinal de que deve treinar menos",
+          "Como punição por algum comportamento anterior"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Qual dos seguintes NÃO é um dos 3 fatores que determinam os objetivos do praticante?",
+        "options": [
+          "Nível do praticante",
+          "Gostos, motivações e expetativas",
+          "Necessidades do praticante",
+          "Preferências do encarregado de educação"
+        ],
+        "correct": 3
+      }
+    ],
+    "sub15": [
+      {
+        "question": "Durante o desenrolar da sessão o treinador deve utilizar as seguintes estratégias:",
+        "options": [
+          "Observar e deixar os praticantes decidirem sem intervir.",
+          "Observar com atenção as respostas dos praticantes às solicitações feitas para determinar o que é necessário corrigir, em função dos objetivos de cada um.",
+          "Observar com atenção as respostas dos praticantes às solicitações feitas para determinar o que é necessário corrigir, em função dos objetivos principais de cada sessão de treino.",
+          "Intervir sem observar."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "O ciclo completo de feedback do treinador é:",
+        "options": [
+          "Observar → intervir → verificar.",
+          "Gritar → corrigir → punir.",
+          "Planear → competir → avaliar resultados.",
+          "Demonstrar → repetir → avaliar notas."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Qual das seguintes NÃO é uma finalidade de ocupar uma boa posição no espaço de treino?",
+        "options": [
+          "Avaliar como os praticantes cumprem as tarefas",
+          "Evitar que o treinador se canse durante a sessão",
+          "Detetar quem precisa de apoio individualizado imediato",
+          "Registar situações que aconselhem a emissão de elogios"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Um treinador que intervém em cada erro individual dos praticantes, parando o treino para todo o grupo, está a:",
+        "options": [
+          "Garantir maior qualidade técnica em todos os momentos",
+          "Reduzir desnecessariamente o tempo de prática motora da maioria",
+          "Aplicar corretamente o princípio da exigência desde o início",
+          "Assegurar que todos os praticantes aprendem ao mesmo ritmo"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Quando deve o treinador interromper um exercício?",
+        "options": [
+          "Apenas quando o tempo planeado para o exercício terminar",
+          "Antes que os praticantes comecem a perder empenhamento, mesmo que antes do tempo planeado",
+          "Apenas quando ocorre um comportamento inapropriado grave",
+          "Sempre que um praticante comete um erro técnico visível"
+        ],
+        "correct": 1
+      }
+    ]
+  }
 }

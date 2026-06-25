@@ -1,4 +1,4 @@
-const CACHE_NAME = 'studytrainer-v21';
+const CACHE_NAME = 'studytrainer-v35';
 
 const ASSETS = [
   '/',

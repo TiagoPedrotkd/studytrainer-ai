@@ -423,6 +423,51 @@
           "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade7_V1.html",
           "extraFlashcards": [],
           "extraQuiz": []
+        },
+        {
+          "id": "sub11",
+          "number": 11,
+          "title": "Otimização da instrução",
+          "description": "Canais de aprendizagem, gestão da instrução, demonstração, feedback pedagógico e questionamento.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade7_V2.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub12",
+          "number": 12,
+          "title": "Autonomia no Desporto",
+          "description": "Autocorreção, feedback intrínseco, descoberta guiada e autonomização progressiva dos praticantes.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade8_V1.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub13",
+          "number": 13,
+          "title": "Compreensão e orientação",
+          "description": "Técnicas de intervenção pedagógica, questionamento, ambiente positivo e orientação na iniciação.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade8_V2.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub14",
+          "number": 14,
+          "title": "Responsabilização dos praticantes",
+          "description": "Objetivos individuais e coletivos, horizonte temporal, tarefas complementares e respeito pelo clube.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade9_V1.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub15",
+          "number": 15,
+          "title": "Monitorização e gestão da aprendizagem",
+          "description": "Ocupação do espaço, intervenção no treino, feedback, clima positivo e reflexão pós-treino.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 2/SubUnidade9_V2.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
         }
       ]
     }
