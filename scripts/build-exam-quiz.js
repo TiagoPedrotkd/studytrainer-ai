@@ -790,6 +790,353 @@ const CURATED = {
       },
     ],
   },
+  'unit-fch': {
+    sub1: [
+      {
+        question: 'Quantas peças ósseas tem o corpo humano adulto (aproximadamente)?',
+        options: ['150', '206', '250', '320'],
+        correct: 1,
+      },
+      {
+        question: 'Qual célula óssea é responsável pela síntese/construção de osso?',
+        options: ['Osteoclasto', 'Osteócito', 'Osteoblasto', 'Osteoprogenitora'],
+        correct: 2,
+      },
+      {
+        question: 'Uma unidade motora é composta por:',
+        options: [
+          'Vários axónios e uma fibra muscular.',
+          'Um axónio e o conjunto de fibras musculares que inerva.',
+          'Um tendão e um músculo.',
+          'Duas fibras tipo I ligadas entre si.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Qual artéria transporta sangue venoso (não oxigenado)?',
+        options: ['Aorta', 'Artéria pulmonar', 'Veia cava', 'Veia pulmonar'],
+        correct: 1,
+      },
+      {
+        question: 'Na fórmula de Fick, o que representa Q?',
+        options: [
+          'Quantidade de hemoglobina.',
+          'Débito cardíaco (FC × volume sistólico).',
+          'Volume de ar inspirado.',
+          'Diferença arteriovenosa de CO₂.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Qual é o principal fator limitante do VO₂ máximo?',
+        options: [
+          'Capacidade pulmonar de ventilação.',
+          'Débito cardíaco.',
+          'Concentração de mioglobina.',
+          'Flexibilidade articular.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Em exercício, a principal via de dissipação de calor é:',
+        options: ['Radiação.', 'Condução.', 'Convecção.', 'Evaporação (sudorese).'],
+        correct: 3,
+      },
+      {
+        question: 'A retroação negativa no sistema hormonal significa que:',
+        options: [
+          'A hormona estimula a sua própria secreção.',
+          'Níveis elevados de hormona inibem a secreção.',
+          'Só actua na hipófise posterior.',
+          'Elimina a necessidade de hormonas periféricas.',
+        ],
+        correct: 1,
+      },
+    ],
+    sub2: [
+      {
+        question: 'Qual é a hora ideal para treinar outdoors de modo a minimizar a exposição a poluentes?',
+        options: [
+          '12h — sol reduz poluentes.',
+          'Antes das 6h da manhã.',
+          'Entre as 18h e as 20h.',
+          'Após as 22h.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Acima de que concentração o monóxido de carbono (CO) é considerado perigoso?',
+        options: ['50 ppm', '100 ppm', '200 ppm', '10 ppm'],
+        correct: 1,
+      },
+      {
+        question: 'Qual o sinal diagnóstico mais característico da fascite plantar?',
+        options: [
+          'Dor à noite em repouso.',
+          'Edema no tornozelo ao final do dia.',
+          'Dor máxima ao primeiro apoio matinal.',
+          'Dor constante que aumenta com o exercício.',
+        ],
+        correct: 2,
+      },
+      {
+        question: 'Quanto tempo de paragem completa é necessário numa fratura de stress?',
+        options: ['2 a 4 semanas', '4 a 6 semanas', '8 a 10 semanas', '12 a 16 semanas'],
+        correct: 2,
+      },
+      {
+        question: 'O que é uma recidiva no contexto de lesão desportiva?',
+        options: [
+          'Uma nova lesão numa zona diferente.',
+          'O regresso à fase inflamatória por reapresentação precoce ao agente lesivo.',
+          'A ausência de cicatrização após 4 semanas.',
+          'Uma lesão com sinais flogísticos intensos.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Quais os quatro sinais flogísticos da fase inflamatória?',
+        options: [
+          'Dor, febre, náuseas e tonturas.',
+          'Dor, calor, rubor e tumor (edema).',
+          'Rigidez, cãibras, espasmos e formigueiro.',
+          'Edema, hematoma, deformidade e incapacidade.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Porque é a velocidade mais lesiva que a massa numa colisão desportiva?',
+        options: [
+          'Porque a massa não afeta a lesão.',
+          'Porque Ec = ½mv² — a velocidade é elevada ao quadrado.',
+          'Porque a velocidade reduz o tempo de reação.',
+          'Porque a massa anula o impacto.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Quem é obrigado a realizar o exame médico desportivo em Portugal?',
+        options: [
+          'Todos os praticantes de desporto escolar.',
+          'Atletas federados, alto rendimento, juízes, árbitros e cronometristas.',
+          'Apenas atletas profissionais.',
+          'Apenas menores de 18 anos.',
+        ],
+        correct: 1,
+      },
+    ],
+    sub3: [
+      {
+        question: 'Qual é a sequência correta do algoritmo SBV?',
+        options: [
+          'Via aérea → Segurança → 112 → CTE → Ventilação.',
+          'Segurança → Consciência → Via aérea → Ventilação → 112 → CTE → Insuflações.',
+          '112 → Segurança → Consciência → CTE → Ventilação.',
+          'Consciência → 112 → Segurança → CTE → Ventilação.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Qual destes ritmos TEM indicação para choque com DAE?',
+        options: [
+          'Assistolia.',
+          'Bradicardia sinusal.',
+          'Fibrilação ventricular.',
+          'Bloqueio auriculoventricular completo.',
+        ],
+        correct: 2,
+      },
+      {
+        question: 'A que ritmo devem ser realizadas as compressões torácicas externas?',
+        options: [
+          '60–80 por minuto.',
+          '80–100 por minuto.',
+          '100–120 por minuto.',
+          '120–140 por minuto.',
+        ],
+        correct: 2,
+      },
+      {
+        question: 'O SBV sozinho reverte a paragem cardiorrespiratória?',
+        options: [
+          'Sim, se iniciado nos primeiros 2 minutos.',
+          'Não, apenas mantém perfusão mínima até chegada do SAV.',
+          'Sim, desde que com insuflações corretas.',
+          'Depende do tipo de ritmo cardíaco.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Quanto diminui a sobrevida por minuto numa PCR sem intervenção?',
+        options: ['1–2%.', '7–10%.', '15–20%.', '25–30%.'],
+        correct: 1,
+      },
+      {
+        question: 'O protocolo RAISED aplica-se nas primeiras:',
+        options: ['12 horas.', '24 horas.', '72 horas.', '1 semana.'],
+        correct: 2,
+      },
+      {
+        question: 'Uma lesão vertebromedular acima de C3 tem como consequência:',
+        options: [
+          'Paraplegia com função respiratória preservada.',
+          'Tetraplegia com ventilação autónoma possível.',
+          'Incompatibilidade com ventilação autónoma.',
+          'Espasticidade nos membros inferiores.',
+        ],
+        correct: 2,
+      },
+      {
+        question: 'Numa perfuração com objeto empalado, o procedimento correto é:',
+        options: [
+          'Remover o objeto cuidadosamente antes de imobilizar.',
+          'Deixar o objeto no local, caseamento com gaze e penso oclusivo.',
+          'Puxar metade do objeto e fixar com ligadura.',
+          'Aguardar sem tocar na vítima.',
+        ],
+        correct: 1,
+      },
+    ],
+    sub4: [
+      {
+        question: 'Qual é o volume mínimo de urina exigido num controlo de dopagem?',
+        options: ['50 ml', '90 ml', '120 ml', '75 ml'],
+        correct: 1,
+      },
+      {
+        question: 'Qual dos seguintes volumes é colocado no frasco B na divisão da amostra?',
+        options: ['60 ml', '45 ml', '30 ml', '90 ml'],
+        correct: 2,
+      },
+      {
+        question: 'A AMA (Agência Mundial Antidopagem) foi criada em que ano?',
+        options: ['1984', '1999', '2004', '2012'],
+        correct: 1,
+      },
+      {
+        question: 'Em que data entrou em vigor o primeiro Código Mundial Antidopagem?',
+        options: ['1 jan. 2000', '1 jan. 2004', '1 jan. 2012', '1 jan. 2019'],
+        correct: 1,
+      },
+      {
+        question: 'Que temperatura é usada para armazenar a amostra B no laboratório?',
+        options: ['0 °C', '−4 °C', '−20 °C', '−80 °C'],
+        correct: 2,
+      },
+      {
+        question: 'Qual é a sigla da estrutura da ADoP responsável pelo planeamento dos controlos?',
+        options: ['CNAD', 'CAUT', 'LAD', 'ESPAD'],
+        correct: 3,
+      },
+      {
+        question: 'Durante o fornecimento da amostra de urina, quem pode estar presente?',
+        options: [
+          'Atleta, RCD e treinador.',
+          'Apenas o atleta.',
+          'Atleta e RCD.',
+          'Atleta, RCD e médico da equipa.',
+        ],
+        correct: 2,
+      },
+      {
+        question: 'Qual dos seguintes NÃO é um objetivo da luta contra a dopagem?',
+        options: [
+          'Preservação da saúde.',
+          'Maximização dos lucros do desporto.',
+          'Preservação do espírito desportivo.',
+          'Preservação da verdade desportiva.',
+        ],
+        correct: 1,
+      },
+    ],
+    sub5: [
+      {
+        question: 'Qual foi o primeiro organismo responsável pela lista de substâncias proibidas no desporto?',
+        options: [
+          'Agência Mundial Antidopagem (AMA).',
+          'Comissão Médica do COI.',
+          'Autoridade Antidopagem de Portugal.',
+          'OMS.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Quantos critérios têm de estar presentes para incluir uma substância na lista proibida?',
+        options: [
+          'Apenas 1.',
+          'Pelo menos 2 dos 3.',
+          'Obrigatoriamente os 3.',
+          'Nenhum critério específico.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Qual destas é uma área da lista de substâncias proibidas?',
+        options: [
+          'Substâncias proibidas apenas em treino.',
+          'Substâncias proibidas em desportos específicos.',
+          'Substâncias proibidas para atletas seniores.',
+          'Substâncias proibidas em provas internacionais.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'O que são "substâncias específicas"?',
+        options: [
+          'Substâncias com fórmula química específica.',
+          'Substâncias capazes de originar violações não intencionais.',
+          'Substâncias proibidas apenas em certos países.',
+          'Substâncias apenas detetáveis por análise específica.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'De acordo com o princípio da responsabilidade objetiva, quem é responsável por uma substância proibida no organismo?',
+        options: [
+          'O treinador ou equipa técnica.',
+          'O médico prescritor.',
+          'O próprio atleta.',
+          'O fabricante do suplemento.',
+        ],
+        correct: 2,
+      },
+      {
+        question: 'Qual das seguintes condições NÃO é necessária para a concessão de uma AUT?',
+        options: [
+          'Não existirem alternativas médicas.',
+          'A substância não aumentar o rendimento desportivo.',
+          'O atleta ter mais de 18 anos.',
+          'A necessidade não resultar de dopagem passada.',
+        ],
+        correct: 2,
+      },
+      {
+        question: 'Qual o risco associado a suplementos com alegações de "queima de gordura"?',
+        options: [
+          'Podem conter estimulantes ou anabolisantes proibidos.',
+          'Causam sempre resultados positivos em controlo.',
+          'São ilegais de vender em Portugal.',
+          'Têm excesso de proteínas.',
+        ],
+        correct: 0,
+      },
+      {
+        question: 'Quando é que o laboratório arquiva o processo após um resultado positivo?',
+        options: [
+          'Quando o atleta pede desculpa.',
+          'Quando existe AUT válida para a substância em causa.',
+          'Quando o resultado é inferior ao limite legal.',
+          'Quando o atleta não voltou a competir.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Em que ano entrou em vigor o Código Mundial Antidopagem?',
+        options: ['1963.', '1999.', '1 de janeiro de 2004.', '2012.'],
+        correct: 2,
+      },
+    ],
+  },
 };
 
 function normalizeQuestionKey(q) {

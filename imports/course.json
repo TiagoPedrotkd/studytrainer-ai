@@ -470,6 +470,81 @@
           "extraQuiz": []
         }
       ]
+    },
+    {
+      "id": "unit-fch",
+      "number": 3,
+      "title": "Funcionamento do corpo humano",
+      "description": "Anatomia, fisiologia, prevenção de lesões, higiene desportiva, primeiros socorros e antidopagem.",
+      "subunits": [
+        {
+          "id": "sub1",
+          "number": 1,
+          "title": "Funcionamento do corpo humano",
+          "description": "Anatomia e fisiologia aplicada ao desporto: ossos, músculos, circulação, respiração, Fick, hormonas e termorregulação.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 3/SubUnidade1_V1.html",
+          "contentPanels": [
+            { "id": "resumo", "label": "Visão geral" },
+            { "id": "fick", "label": "Fórmula de Fick" }
+          ],
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub2",
+          "number": 2,
+          "title": "Prevenção de lesões e higiene desportiva",
+          "description": "Higiene outdoor e indoor, exame médico desportivo, mecanismos de lesão, fatores de risco e lesões crónicas.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 3/SubUnidade2_V1.html",
+          "contentPanels": [
+            { "id": "resumo", "label": "Visão geral" },
+            { "id": "lesoes", "label": "Lesões crónicas" }
+          ],
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub3",
+          "number": 3,
+          "title": "Primeiros socorros e emergência médica",
+          "description": "SBV, DAE, cadeia de sobrevivência, feridas, hemorragias, lesões músculo-esqueléticas, TCE e imobilização.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 3/SubUnidade2_V2.html",
+          "contentPanels": [
+            { "id": "sec-temas", "label": "Temas" },
+            { "id": "sec-resumo", "label": "Resumo rápido" }
+          ],
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub4",
+          "number": 4,
+          "title": "Controlo antidopagem",
+          "description": "Objetivos, ADoP/WADA, procedimentos de controlo, amostras A/B, sanções e legislação nacional.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 3/SubUnidade3_V1.html",
+          "contentPanels": [
+            { "id": "sec-objetivos", "label": "Objetivos" },
+            { "id": "sec-estruturas", "label": "Estruturas" },
+            { "id": "sec-procedimentos", "label": "Procedimentos" },
+            { "id": "sec-sancoes", "label": "Sanções" }
+          ],
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub5",
+          "number": 5,
+          "title": "Lista proibida, AUT e suplementos",
+          "description": "Lista WADA, critérios de proibição, autorização terapêutica (AUT), suplementos e responsabilidade objetiva.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 3/SubUnidade4_V1.html",
+          "contentPanels": [
+            { "id": "resumo", "label": "Resumo" },
+            { "id": "checklist", "label": "Checklist atleta" }
+          ],
+          "extraFlashcards": [],
+          "extraQuiz": []
+        }
+      ]
     }
   ]
 }

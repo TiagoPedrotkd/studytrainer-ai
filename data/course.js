@@ -244,6 +244,63 @@ window.STUDY_COURSE = {
           "blockCount": 5
         }
       ]
+    },
+    {
+      "id": "unit-fch",
+      "number": 3,
+      "title": "Funcionamento do corpo humano",
+      "description": "Anatomia, fisiologia, prevenção de lesões, higiene desportiva, primeiros socorros e antidopagem.",
+      "subunitCount": 5,
+      "flashcardCount": 62,
+      "quizCount": 60,
+      "blockCount": 40,
+      "subunits": [
+        {
+          "id": "sub1",
+          "number": 1,
+          "title": "Funcionamento do corpo humano",
+          "description": "Anatomia e fisiologia aplicada ao desporto: ossos, músculos, circulação, respiração, Fick, hormonas e termorregulação.",
+          "flashcardCount": 14,
+          "quizCount": 13,
+          "blockCount": 11
+        },
+        {
+          "id": "sub2",
+          "number": 2,
+          "title": "Prevenção de lesões e higiene desportiva",
+          "description": "Higiene outdoor e indoor, exame médico desportivo, mecanismos de lesão, fatores de risco e lesões crónicas.",
+          "flashcardCount": 14,
+          "quizCount": 12,
+          "blockCount": 7
+        },
+        {
+          "id": "sub3",
+          "number": 3,
+          "title": "Primeiros socorros e emergência médica",
+          "description": "SBV, DAE, cadeia de sobrevivência, feridas, hemorragias, lesões músculo-esqueléticas, TCE e imobilização.",
+          "flashcardCount": 16,
+          "quizCount": 12,
+          "blockCount": 8
+        },
+        {
+          "id": "sub4",
+          "number": 4,
+          "title": "Controlo antidopagem",
+          "description": "Objetivos, ADoP/WADA, procedimentos de controlo, amostras A/B, sanções e legislação nacional.",
+          "flashcardCount": 10,
+          "quizCount": 12,
+          "blockCount": 7
+        },
+        {
+          "id": "sub5",
+          "number": 5,
+          "title": "Lista proibida, AUT e suplementos",
+          "description": "Lista WADA, critérios de proibição, autorização terapêutica (AUT), suplementos e responsabilidade objetiva.",
+          "flashcardCount": 8,
+          "quizCount": 11,
+          "blockCount": 7
+        }
+      ]
     }
   ]
 };

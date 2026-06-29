@@ -134,8 +134,106 @@ function isSectionBodyFormat(html, panelId) {
   return extractSectionBodyContent(html, panelId) !== null;
 }
 
+function cleanTopicTitle(titleHtml) {
+  return titleHtml
+    .replace(/<span class="topic-badge">[\s\S]*?<\/span>/g, '')
+    .replace(/<i[^>]*><\/i>/g, '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function normalizeTopicGridContent(html) {
+  let content = html.trim();
+  content = content.replace(/\s*onclick="[^"]*"/g, '');
+  content = content.replace(/class="topic-grid"/g, 'class="topic-grid content-grid"');
+  content = content.replace(
+    /<div class="topic-card[^"]*">\s*<div class="topic-title">([\s\S]*?)<\/div>\s*<div class="topic-body">\s*([\s\S]*?)<\/div>\s*<\/div>/g,
+    (_, title, body) => {
+      const label = cleanTopicTitle(title);
+      let b = body.trim();
+      b = b.replace(/class="pill pill-blue"/g, 'class="badge badge-blue"');
+      b = b.replace(/class="pill pill-green"/g, 'class="badge badge-green"');
+      b = b.replace(/class="pill pill-red"/g, 'class="badge badge-red"');
+      b = b.replace(/class="pill pill-warn"/g, 'class="badge badge-warn"');
+      b = b.replace(/class="mnemonic-box"/g, 'class="alert-box mnemonic-box"');
+      b = b.replace(/<div class="kv-label">([\s\S]*?)<\/div>/g, '<strong>$1:</strong> ');
+      b = b.replace(/<div class="kv-row">/g, '<p class="point">');
+      b = b.replace(/<\/div>\s*(?=<p class="point"|<div class="alert-box)/g, '</p>\n');
+      return `<div class="card topic-card"><p class="section-label">${label}</p>${b}</div>`;
+    }
+  );
+  content = content.replace(/class="cs-title"/g, 'class="section-label subsection-label"');
+  content = content.replace(/class="seq-num"/g, 'class="step-num"');
+  content = content.replace(/class="seq-text"/g, 'class="step-text"');
+  content = content.replace(/class="seq-item"/g, 'class="step"');
+  content = content.replace(/class="seq-list"/g, 'class="steps"');
+  content = content.replace(/class="mini-title"/g, 'class="mini-title"');
+  return content;
+}
+
+function normalizeAntidopingListContent(html) {
+  let content = html.trim();
+  content = content.replace(/\s*onclick="[^"]*"/g, '');
+  content = content.replace(
+    /<div class="card">\s*<span class="tag[^"]*">[^<]*<\/span>\s*<h2>([\s\S]*?)<\/h2>/g,
+    '<div class="card topic-card"><p class="section-label">$1</p>'
+  );
+  content = content.replace(
+    /<div class="card">\s*<h2([^>]*)>([\s\S]*?)<\/h2>/g,
+    '<div class="card topic-card"><p class="section-label">$2</p>'
+  );
+  content = content.replace(/class="tag tag-blue"/g, 'class="badge badge-blue"');
+  content = content.replace(/class="tag tag-teal"/g, 'class="badge badge-teal"');
+  content = content.replace(/class="tag tag-amber"/g, 'class="badge badge-warn"');
+  content = content.replace(/class="checklist-item"/g, 'class="checklist-item point"');
+  content = content.replace(/class="crit-card"/g, 'class="crit-card mini-card"');
+  content = normalizeStudyTagsAndGrids(content);
+  return content;
+}
+
+function normalizeObjectivePanel(html) {
+  let content = html.trim();
+  content = content.replace(/\s*onclick="[^"]*"/g, '');
+  content = content.replace(
+    /<div class="objective-card">\s*<div class="obj-header"[^>]*>[\s\S]*?<div class="obj-title">([\s\S]*?)<\/div>[\s\S]*?<\/div>\s*<div class="obj-body">\s*([\s\S]*?)<\/div>\s*<\/div>/g,
+    (_, title, body) =>
+      `<div class="card topic-card"><p class="section-label">${title.trim()}</p>${body.trim()}</div>`
+  );
+  content = content.replace(/class="card-title"/g, 'class="section-label subsection-label"');
+  content = content.replace(/class="org-grid"/g, 'class="org-grid two-col"');
+  content = normalizeStudyTagsAndGrids(content);
+  return content;
+}
+
+function normalizeLesoesPanel(html) {
+  let content = html.trim();
+  content = content.replace(/\s*onclick="[^"]*"/g, '');
+  content = content.replace(/class="lesao-card"/g, 'class="lesao-card-static"');
+  content = content.replace(
+    /<div id="ld-(\w+)" class="lesao-detail">/g,
+    '<div id="ld-$1" class="card topic-card lesao-detail-static">'
+  );
+  content = content.replace(/<h3>/g, '<p class="section-label subsection-label">');
+  content = content.replace(/<\/h3>/g, '</p>');
+  content = content.replace(/class="alert-box"/g, 'class="alert-box warn-box"');
+  return content;
+}
+
 function normalizeImportedContent(html, panelLabel, isSectionFormat) {
   let content = html.trim();
+  if (panelLabel === 'Lesões crónicas') {
+    content = normalizeLesoesPanel(content);
+  } else if (content.includes('objective-card')) {
+    content = normalizeObjectivePanel(content);
+  } else if (content.includes('timeline') || content.includes('checklist-item')) {
+    content = normalizeAntidopingListContent(content);
+  } else if (content.includes('topic-card') && content.includes('topic-title')) {
+    content = normalizeTopicGridContent(content);
+  } else {
+    content = normalizeAccordionCards(content);
+    content = normalizeStudyTagsAndGrids(content);
+  }
 
   if (isSectionFormat) {
     content = `<p class="section-label">${panelLabel}</p>\n${content}`;
@@ -220,8 +318,34 @@ function normalizeTopicAccordionContent(html) {
   return parts.join('\n');
 }
 
+function normalizeAccordionCards(html) {
+  return html.replace(
+    /<div class="card"[^>]*>\s*<div class="card-head"[^>]*>[\s\S]*?<span class="card-label">([\s\S]*?)<\/span>[\s\S]*?<\/div>\s*<div class="card-body[^"]*">\s*([\s\S]*?)\s*<\/div>\s*<\/div>/g,
+    (_, title, body) =>
+      `<div class="card topic-card"><p class="section-label">${title.trim()}</p>${body.trim()}</div>`
+  );
+}
+
+function normalizeStudyTagsAndGrids(html) {
+  let content = html;
+  content = content.replace(/<div class="mini-label">/g, '<div class="mini-title">');
+  content = content.replace(/<div class="mini-val">/g, '<div class="mini-desc">');
+  content = content.replace(/class="grid2"/g, 'class="grid2 param-grid"');
+  content = content.replace(
+    /<span class="tag ([^"]+)">/g,
+    '<span class="badge badge-$1">'
+  );
+  content = content.replace(
+    /<p class="section-title">([\s\S]*?)<\/p>/g,
+    '<p class="point intro-text"><strong>$1</strong></p>'
+  );
+  return content;
+}
+
 function normalizeResumoContent(html) {
   let content = html.trim();
+  content = normalizeAccordionCards(content);
+  content = normalizeStudyTagsAndGrids(content);
 
   content = content.replace(
     /<div class="(?:card-title|ct)">([\s\S]*?)<\/div>/g,
@@ -448,7 +572,7 @@ function toFlashcards(arr) {
 }
 
 function toQuiz(arr) {
-  return arr.map(({ q, opts, ans, question, options, correct, c }) => ({
+  return arr.map(({ q, opts, ans, question, options, correct, c, fb, exp }) => ({
     question: q || question,
     options: opts || options,
     correct: ans !== undefined ? ans : correct !== undefined ? correct : c,
@@ -652,6 +776,36 @@ function syncServiceWorker(unitIds) {
     /(  '\/data\/(?:course|unit-|sub)\S*',\r?\n)+/,
     `${dataAssets}\n`
   );
+
+  const anatomyDir = path.join(ROOT, 'assets', 'anatomy');
+  const anatomyAssets = fs.existsSync(anatomyDir)
+    ? fs
+        .readdirSync(anatomyDir)
+        .filter((f) => /\.(jpg|jpeg|png|webp|svg)$/i.test(f))
+        .sort()
+        .map((f) => `  '/assets/anatomy/${f}',`)
+    : [];
+
+  if (anatomyAssets.length) {
+    if (sw.includes("'/assets/anatomy/")) {
+      sw = sw.replace(
+        /(  '\/assets\/anatomy\/\S*',\r?\n)+/,
+        `${anatomyAssets.join('\n')}\n`
+      );
+    } else {
+      sw = sw.replace(
+        "  '/styles/content-anatomy.css',",
+        `  '/styles/content-anatomy.css',\n${anatomyAssets.join('\n')}`
+      );
+    }
+  }
+
+  if (!sw.includes('/styles/content-anatomy.css')) {
+    sw = sw.replace(
+      "  '/styles/content.css',",
+      "  '/styles/content.css',\n  '/styles/content-anatomy.css',"
+    );
+  }
 
   if (!sw.includes('/pages/unidade.html')) {
     sw = sw.replace(
