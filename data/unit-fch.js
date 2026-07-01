@@ -75,6 +75,18 @@ window.STUDY_UNITS.push({
     {
       "question": "Artéria pulmonar vs. veia pulmonar: qual transporta sangue venoso?",
       "answer": "A artéria pulmonar é a única artéria com sangue venoso (não oxigenado). A veia pulmonar é a única veia com sangue arterializado (oxigenado)."
+    },
+    {
+      "question": "Como se define o débito cardíaco?",
+      "answer": "Produto da frequência cardíaca pelo volume sistólico — volume de sangue bombeado pelo coração por minuto."
+    },
+    {
+      "question": "De que é composto o sangue?",
+      "answer": "Tecido conjuntivo formado por eritrócitos, leucócitos, plaquetas e plasma."
+    },
+    {
+      "question": "Que mecanismo de termorregulação usa a vasodilatação cutânea?",
+      "answer": "Convecção — o sangue transporta calor para a superfície da pele, onde se dissipa."
     }
   ],
   "quiz": [
@@ -159,6 +171,56 @@ window.STUDY_UNITS.push({
       "correct": 2
     },
     {
+      "question": "O débito cardíaco pode ser definido como:",
+      "options": [
+        "Diminui sempre que a pressão arterial diastólica aumenta",
+        "Produto entre a frequência cardíaca e o volume sistólico",
+        "Quantifica-se em mmHg",
+        "Diminui sempre que o volume sistólico aumenta"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O sangue pode ser definido como:",
+      "options": [
+        "Tecido conjuntivo composto exclusivamente por plasma e glóbulos vermelhos",
+        "Tecido conjuntivo composto por eritrócitos, leucócitos, plaquetas e plasma",
+        "Cumpre a função de transporte de azoto aos tecidos metabolicamente ativos",
+        "Tecido conjuntivo composto exclusivamente por hemoglobina e plasma"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A dissipação de calor pela distribuição de sangue à superfície da pele enquadra-se em:",
+      "options": [
+        "Condução",
+        "Evaporação",
+        "Convecção",
+        "Radiação"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O epimísio corresponde a:",
+      "options": [
+        "Folheto conjuntivo que envolve fibras musculares",
+        "Folheto conjuntivo que envolve o ventre muscular",
+        "Folheto conjuntivo que envolve o tendão",
+        "Folheto conjuntivo que envolve o perimísio"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A Fórmula de Fick permite determinar o consumo de oxigénio através de:",
+      "options": [
+        "FC e pressão diastólica",
+        "DC e pressão diastólica",
+        "DC e resistência vascular periférica",
+        "DC e diferença artério-venosa em O₂"
+      ],
+      "correct": 3
+    },
+    {
       "question": "Uma unidade motora é composta por:",
       "options": [
         "Vários axónios e uma fibra muscular.",
@@ -207,6 +269,36 @@ window.STUDY_UNITS.push({
         "Elimina a necessidade de hormonas periféricas."
       ],
       "correct": 1
+    },
+    {
+      "question": "A dissipação de calor a partir da distribuição de sangue à superfície da pele, enquadra-se no mecanismo de:",
+      "options": [
+        "Condução.",
+        "Evaporação.",
+        "Convecção.",
+        "Radiação."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Tendo por referência as estruturas músculo-tendinosas do sistema músculo-esquelético, selecione a opção correta:",
+      "options": [
+        "O perimísio corresponde a um folheto de tecido conjuntivo que envolve o ventre muscular.",
+        "O tendão corresponde a um folheto de tecido conjuntivo que envolve o ventre muscular.",
+        "O endomísio corresponde a um folheto de tecido conjuntivo que envolve o ventre muscular.",
+        "O epimísio corresponde a um folheto de tecido conjuntivo que envolve o ventre muscular."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Que fenómeno fisiológico é explicado através da Fórmula de Fick:",
+      "options": [
+        "Permite determinar o consumo de oxigénio à custa da relação entre frequência cardíaca e pressão arterial diastólica.",
+        "Permite determinar o consumo de oxigénio à custa da relação entre débito cardíaco e pressão arterial diastólica.",
+        "Permite determinar o consumo de oxigénio à custa da relação entre débito cardíaco e resistência vascular periférica.",
+        "Permite determinar o consumo de oxigénio à custa da relação entre débito cardíaco e diferença artério-venosa em oxigénio."
+      ],
+      "correct": 3
     }
   ],
     contentSections: [
@@ -221,6 +313,8 @@ window.STUDY_UNITS.push({
   ],
     contentHtml: `<div id="sec-resumo" class="content-section"><p class="section-label">Visão geral</p>
 <p class="point intro-text"><strong>Tópicos da aula</strong></p>
+
+  <div style="padding:10px 14px;background:var(--bg-warning);border:0.5px solid var(--border-warning);border-radius:8px;font-size:13px;margin-bottom:12px;color:var(--text-warning)"><strong>⚠️ Exame:</strong> ~<strong>206 ossos</strong> · <strong>osteoblasto</strong> constrói · UM = 1 axónio + fibras inervadas · <strong>artéria pulmonar</strong> transporta sangue venoso · VO₂ = DC × (a–v)O₂ · dissipação calor exercício = <strong>evaporação</strong>.</div>
 
   <div class="card topic-card"><p class="section-label">1 — Sistema músculo-esquelético</p><div class="grid2 param-grid">
         <div class="mini-card"><div class="mini-title">Ossos</div><div class="mini-desc">~206 peças</div>
@@ -316,7 +410,7 @@ window.STUDY_UNITS.push({
   <div class="card topic-card"><p class="section-label">6 — Termorregulação</p><p>O músculo é o principal termogérador. A dissipação de calor faz-se por 4 mecanismos:</p>
       <div style="margin:6px 0">
         <span class="badge badge-red">Evaporação — via principal em exercício (1 L suor ≈ 580 kcal)</span>
-        <span class="badge badge-blue">Convecção — ar ou sangue transportam calor</span>
+        <span class="badge badge-blue">Convecção — ar ou sangue transportam calor (ex.: vasodilatação cutânea)</span>
         <span class="badge badge-green">Condução — transferência por contacto</span>
         <span class="badge badge-warn">Radiação — emissão eletromagnética</span>
       </div>
@@ -483,6 +577,46 @@ window.STUDY_UNITS.push({
       "correct": 2
     },
     {
+      "question": "A exposição a agentes poluentes na atmosfera:",
+      "options": [
+        "É superior às 6h e às 22h",
+        "Está aumentada nas manhãs (~6h)",
+        "É inferior no inverno e no verão",
+        "Aumenta à tarde/manhã para O₃ e à noite para CO"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Em que estação os níveis de CO atmosférico são geralmente mais elevados?",
+      "options": [
+        "Primavera",
+        "Inverno",
+        "Verão",
+        "Outono"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O exame médico nos Centros de Medicina Desportiva tem validade de:",
+      "options": [
+        "12 meses",
+        "6 meses",
+        "24 meses",
+        "3 meses"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Fratura de stress na porção médio-tibial:",
+      "options": [
+        "Implica 8–10 semanas sem qualquer atividade",
+        "Tem sempre origem no calçado inapropriado",
+        "Podem ser recomendadas atividades alternativas com menor carga compressiva",
+        "A dor desaparece após ~45 min de corrida"
+      ],
+      "correct": 2
+    },
+    {
       "question": "Porque é a velocidade mais lesiva que a massa numa colisão ou queda desportiva?",
       "options": [
         "Porque a massa não afeta a lesão",
@@ -531,6 +665,26 @@ window.STUDY_UNITS.push({
         "Apenas menores de 18 anos."
       ],
       "correct": 1
+    },
+    {
+      "question": "Qual é a altura do ano em que os níveis de monóxido de carbono atmosféricos se encontram geralmente mais elevados, influenciando a prática de exercício físico?",
+      "options": [
+        "Durante a Primavera.",
+        "Durante o Inverno.",
+        "Durante o Verão.",
+        "Durante o Outono."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O exame médico desportivo realizado nos Centros de Medicina Desportiva:",
+      "options": [
+        "Tem validade de 12 meses.",
+        "Implica um custo financeiro a ser suportado pelo atleta ou federação na qual se encontra filiado.",
+        "É obrigatório para atletas de alto rendimento e todos os filiados em federações desportivas.",
+        "É recomendável, mas não obrigatório para os casos de sobreclassificação."
+      ],
+      "correct": 0
     }
   ],
     contentSections: [
@@ -545,6 +699,8 @@ window.STUDY_UNITS.push({
   ],
     contentHtml: `<div id="sec-resumo" class="content-section"><p class="section-label">Visão geral</p>
 <p class="point intro-text"><strong>Tópicos da aula</strong></p>
+
+  <div class="alert-box"><strong>⚠️ Exame:</strong> Treinar outdoor ideal: <strong>antes das 6h</strong>. CO perigoso &gt;<strong>100 ppm</strong>. Fascite plantar: dor ao <strong>primeiro apoio matinal</strong>. Fratura stress: <strong>8–10 semanas</strong> paragem. Ec = ½mv² (velocidade mais lesiva).</div>
 
   <div class="card topic-card"><p class="section-label">1 — Higiene outdoor</p><p><strong>Superfície:</strong> asfalto devolve impacto elevado às estruturas. Tartan é mais adequado para alta intensidade.</p>
       <p><strong>Espaço urbano vs. natureza:</strong> meio urbano é menos vantajoso para a saúde.</p>
@@ -574,9 +730,10 @@ window.STUDY_UNITS.push({
         <div class="mini-card"><div class="mini-title">Quem deve realizar</div><div class="mini-desc">Atletas federados, alto rendimento, juízes, árbitros, cronometristas</div>
         <div class="mini-card"><div class="mini-title">Periodicidade</div><div class="mini-desc">Anual — renovado no mês de aniversário</div></div>
         <div class="mini-card"><div class="mini-title">Caso geral</div><div class="mini-desc">Médico assistente — história clínica + ECG de repouso</div></div>
-        <div class="mini-card"><div class="mini-title">Alta competição</div><div class="mini-desc">Centros de medicina desportiva (Lisboa, Coimbra, Porto)</div></div>
+        <div class="mini-card"><div class="mini-title">Validade nos CMD</div><div class="mini-desc">12 meses</div></div>
+        <div class="mini-card"><div class="mini-title">Custo</div><div class="mini-desc">Suportado pelo atleta ou federação</div></div>
       </div>
-      <p>Formulário disponível em ipdj.gov.pt.</p>
+      <p>Formulário disponível em ipdj.gov.pt. O <strong>IPDJ</strong> tutela o desporto em Portugal, mas não integra a organização interna da ADoP.</p>
     </div>
   </div>
 
@@ -675,7 +832,7 @@ window.STUDY_UNITS.push({
     <p class="section-label subsection-label"><i class="ti ti-bone" aria-hidden="true"></i> Fratura de stress</p>
     <p><strong>Mecanismo:</strong> microfraturas acumuladas por carga repetitiva, sem trauma único.</p>
     <p><strong>Sintoma:</strong> dor intensa, progressiva, que não cede com repouso breve.</p>
-    <p><strong>Tratamento:</strong> paragem completa de <strong>8 a 10 semanas</strong>.</p>
+    <p><strong>Tratamento:</strong> paragem completa de <strong>8 a 10 semanas</strong>. Em casos como fratura de stress na porção médio-tibial, podem ser recomendadas <strong>atividades alternativas</strong> com menor carga compressiva (ex.: natação, ciclismo) durante a recuperação.</p>
     <div class="alert-box warn-box">⚠️ Os sintomas surgem 2 a 4 semanas <em>antes</em> de ser visível no raio-x — não desvalorizar dor progressiva!</div>
   </div>
   <div id="ld-lombalgia" class="card topic-card lesao-detail-static">
@@ -712,8 +869,8 @@ window.STUDY_UNITS.push({
       "answer": "100–120 compressões/min · profundidade 4–5 cm · descompressão completa"
     },
     {
-      "question": "O SBV reverte a paragem cardiorrespiratória?",
-      "answer": "Não! O SBV apenas ganha tempo, mantendo perfusão mínima dos neurónios. Quem reverte é a desfibrilação."
+      "question": "O SBV sozinho reverte a paragem cardiorrespiratória?",
+      "answer": "Não — apenas mantém perfusão mínima. A desfibrilação rápida com DAE reverte ~95% das PCR com ritmo desfibrilhável (FV/TVSP)."
     },
     {
       "question": "Em que ritmos está indicada a DAE?",
@@ -728,8 +885,16 @@ window.STUDY_UNITS.push({
       "answer": "Ventilação ineficaz, ocasional e ruidosa — ocorre em ~40% das PCR. Deve ser tratada como sinal de PCR e iniciar SBV."
     },
     {
-      "question": "O que é o protocolo RAISED e quando se aplica?",
-      "answer": "Rest · Ice · Compression · Elevation · Diagnosis — aplica-se nas primeiras 72h para lesões de grau I e II"
+      "question": "Qual o grau de eficácia da rápida DAE nos casos de PCR?",
+      "answer": "Ronda os 95% nos ritmos desfibrilháveis (FV e TVSP), quando aplicada rapidamente"
+    },
+    {
+      "question": "Qual o propósito das MOUPs?",
+      "answer": "Interpor barreira entre reanimador e fluidos corporais ou aerossóis da vítima"
+    },
+    {
+      "question": "Qual o objetivo do protocolo RICE?",
+      "answer": "Controlar inflamação tecidular e estabelecer diagnóstico quanto à gravidade da lesão (graus I e II, primeiras 72h)"
     },
     {
       "question": "Que tipos de feridas existem e qual nunca deve ter o objeto removido?",
@@ -822,6 +987,36 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
+      "question": "Qual o grau de eficácia da rápida DAE nos casos de PCR?",
+      "options": [
+        "Ronda os 65%",
+        "Ronda os 95%",
+        "Ronda os 25%",
+        "Ronda os 45%"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual é o propósito das medidas universais de proteção individual?",
+      "options": [
+        "Lenços de bolso são suficientes",
+        "São dispensáveis com familiares",
+        "Interpor barreira entre reanimador e fluidos/aerossóis da vítima",
+        "Luvas e bata são dispensáveis"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O programa RICE:",
+      "options": [
+        "Recomenda-se a todos os casos de fratura aberta",
+        "Indicado para rutura de 3º grau do ventre muscular",
+        "Controla inflamação e estabelece diagnóstico de gravidade",
+        "Deve ser aplicado no máximo 48 h"
+      ],
+      "correct": 2
+    },
+    {
       "question": "O protocolo RAISED aplica-se nas primeiras:",
       "options": [
         "12 horas",
@@ -864,10 +1059,10 @@ window.STUDY_UNITS.push({
     {
       "question": "Quanto diminui a sobrevida por minuto numa PCR sem intervenção?",
       "options": [
-        "1–2%.",
-        "7–10%.",
-        "15–20%.",
-        "25–30%."
+        "1–2%",
+        "7–10%",
+        "15–20%",
+        "25–30%"
       ],
       "correct": 1
     },
@@ -893,7 +1088,8 @@ window.STUDY_UNITS.push({
     }
   ],
     contentHtml: `<div id="sec-sec-temas" class="content-section"><p class="section-label">Temas</p>
-<div class="topic-grid content-grid">
+<div style="padding:10px 14px;background:var(--bg-warning);border:0.5px solid var(--border-warning);border-radius:8px;font-size:13px;margin-bottom:12px;color:var(--text-warning)"><strong>⚠️ Exame:</strong> Sobrevida PCR −<strong>7–10%/min</strong>. SBV: Segurança→Consciência→Via aérea→Ventilação→<strong>112</strong>→30 CTE→2 insuflações. CTE <strong>100–120/min</strong>. SBV <strong>não reverte</strong> PCR. FV = choque DAE.</div>
+    <div class="topic-grid content-grid">
 
       <div class="card topic-card"><p class="section-label">Sistema de emergência médica</p><div class="kv">
             <p class="point"><strong>Sobrevida:</strong> Diminui 7–10% por minuto sem intervenção após paragem cardiorrespiratória (PCR)</p>
@@ -911,7 +1107,7 @@ window.STUDY_UNITS.push({
             <div class="mnemonic-title">Cadeia de sobrevivência — 4 elos</div>
             <div class="mnemonic-letter"><span class="mnemonic-char">1</span><span class="mnemonic-desc">Ativação do 112</span></div>
             <div class="mnemonic-letter"><span class="mnemonic-char">2</span><span class="mnemonic-desc">SBV — <em>ganha tempo</em>, não reverte a paragem</span></div>
-            <div class="mnemonic-letter"><span class="mnemonic-char">3</span><span class="mnemonic-desc">Desfibrilação — reverte ~60% das PCR com ritmo desfibrilhável</span></div>
+            <div class="mnemonic-letter"><span class="mnemonic-char">3</span><span class="mnemonic-desc">Desfibrilação — reverte ~95% das PCR com ritmo desfibrilhável (DAE rápida)</span></div>
             <div class="mnemonic-letter"><span class="mnemonic-char">4</span><span class="mnemonic-desc">SAV — estabilização pós-reversão</span></div>
           </div>
         </div>
@@ -923,7 +1119,7 @@ window.STUDY_UNITS.push({
             <div class="mnemonic-letter"><span class="mnemonic-char">E</span><span class="mnemonic-desc"><strong>Envolvimento</strong> — observar perigos (tráfego, objetos)</span></div>
             <div class="mnemonic-letter"><span class="mnemonic-char">T</span><span class="mnemonic-desc"><strong>Tráfego</strong> / cinemática do acidente</span></div>
             <div class="mnemonic-letter"><span class="mnemonic-char">U</span><span class="mnemonic-desc"><strong>Unknown hazards</strong> — fluidos da vítima (sangue = vetor)</span></div>
-            <div class="mnemonic-letter"><span class="mnemonic-char">P</span><span class="mnemonic-desc"><strong>Proteção</strong> — MOUPs (luvas, óculos, máscara com válvula)</span></div>
+            <div class="mnemonic-letter"><span class="mnemonic-char">P</span><span class="mnemonic-desc"><strong>Proteção</strong> — MOUPs: barreira contra fluidos corporais e aerossóis (luvas, óculos, máscara)</span></div>
           <figure class="anatomy-diagram anatomy-figure" aria-label="Algoritmo SBV">
             <img src="../assets/anatomy/sbv-algorithm.jpg" alt="Algoritmo de Suporte Básico de Vida — SETUP, consciência, ventilação, 112, CTE" class="anatomy-img" loading="lazy" width="1200" height="800" />
             <figcaption>30 CTE → 2 insuflações · 100–120/min · 4–5 cm de profundidade</figcaption>
@@ -955,7 +1151,8 @@ window.STUDY_UNITS.push({
             <div class="mnemonic-letter"><span class="mnemonic-char">4</span><span class="mnemonic-desc">Afastar todos · analisar ritmo · administrar choque se indicado</span></div>
             <div class="mnemonic-letter"><span class="mnemonic-char">5</span><span class="mnemonic-desc">Retomar SBV imediatamente após o choque</span></div>
           </div>
-          <div class="kv-row" style="font-size:13px;padding:6px 0;"><div class="kv-label">Em Portugal</div>Requer formação específica e delegação de competência médica</div>
+            <div class="kv-row"><div class="kv-label">Eficácia</div>A rápida aplicação da DAE reverte ~95% das PCR com ritmo desfibrilhável (FV/TVSP)</div>
+            <div class="kv-row"><div class="kv-label">Em Portugal</div>Requer formação específica e delegação de competência médica</div>
         </div>
       </div>
 
@@ -1106,6 +1303,18 @@ window.STUDY_UNITS.push({
     {
       "question": "Qual a legislação nacional antidopagem em Portugal?",
       "answer": "Lei n.º 38/2012 (atualizada pela Lei n.º 111/2019) e Portaria n.º 11/2013 (atualizada pela Portaria n.º 232/2014)."
+    },
+    {
+      "question": "Qual o objetivo da luta antidopagem considerado o principal (exame)?",
+      "answer": "A preservação da saúde do praticante — embora os três objetivos sejam verdade desportiva, espírito desportivo e saúde."
+    },
+    {
+      "question": "Diferença CNAD vs CAUT?",
+      "answer": "CNAD (Conselho Nacional Antidopagem) = sanções e atenuações. CAUT = Autorização de Utilização Terapêutica de substâncias proibidas."
+    },
+    {
+      "question": "Quantos dias de medicamentos/suplementos regista o atleta no controlo?",
+      "answer": "Os últimos 7 dias — no formulário de controlo de dopagem."
     }
   ],
   "quiz": [
@@ -1210,6 +1419,66 @@ window.STUDY_UNITS.push({
       "correct": 2
     },
     {
+      "question": "Qual destes serviços não integra a organização da ADoP?",
+      "options": [
+        "Instituto Português do Desporto e Juventude, I.P.",
+        "Gabinete jurídico",
+        "Laboratório de análises de dopagem",
+        "Estrutura de Suporte ao Programa Antidopagem"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Qual a sequência correta no controlo de dopagem?",
+      "options": [
+        "Seleção → amostra → notificação → estação",
+        "Notificação → seleção → amostra → estação",
+        "Notificação → estação → amostra → seleção",
+        "Seleção → notificação → estação → amostra"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Qual temática NÃO é dos programas educacionais da ADoP?",
+      "options": [
+        "Lista de substâncias proibidas",
+        "Sistema de AUT",
+        "Suplementos nutricionais",
+        "Gestão de Resultados"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Quais os grandes objetivos da luta contra a dopagem?",
+      "options": [
+        "Espírito e saúde",
+        "Verdade, saúde e espírito desportivo",
+        "Verdade e espírito",
+        "Verdade e saúde"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual destas estruturas trata das autorizações terapêuticas (AUT)?",
+      "options": [
+        "CNAD",
+        "CAUT",
+        "PISCO",
+        "LAD"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "No formulário de controlo, o atleta deve declarar medicamentos e suplementos dos últimos:",
+      "options": [
+        "3 dias",
+        "7 dias",
+        "14 dias",
+        "30 dias"
+      ],
+      "correct": 1
+    },
+    {
       "question": "Qual é a sigla da estrutura da ADoP responsável pelo planeamento dos controlos?",
       "options": [
         "CNAD",
@@ -1228,6 +1497,66 @@ window.STUDY_UNITS.push({
         "Atleta, RCD e médico da equipa."
       ],
       "correct": 2
+    },
+    {
+      "question": "O primeiro Código Mundial Antidopagem entrou em a 1 de Janeiro de:",
+      "options": [
+        "1999.",
+        "2019.",
+        "2004.",
+        "2010."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Qual é a sequência correta de etapas no processo do controlo de dopagem?",
+      "options": [
+        "Seleção do atleta, notificação, fornecimento da amostra, apresentação na estação de controlo de dopagem.",
+        "Notificação, seleção do atleta, fornecimento da amostra, apresentação na estação de controlo de dopagem.",
+        "Notificação, apresentação na estação de controlo de dopagem, fornecimento da amostra, seleção do atleta.",
+        "Seleção do atleta, notificação, apresentação na estação de controlo de dopagem, fornecimento da amostra."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Qual das seguintes temáticas não é das mais abordadas nos programas informativos e educacionais da ADoP?",
+      "options": [
+        "Lista de Substâncias e Métodos Proibidos.",
+        "Sistema de Autorização de Utilização Terapêutica.",
+        "Suplementos nutricionais.",
+        "Gestão de Resultados."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Quais os grandes objetivos da luta contra dopagem?",
+      "options": [
+        "Preservação do espírito desportivo e da saúde do atleta.",
+        "Preservação da verdade desportiva, da saúde do atleta e do espírito desportivo.",
+        "Preservação da verdade desportiva e do espírito desportivo.",
+        "Preservação da verdade desportiva e da saúde do atleta."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Selecione a opção correspondente à sequência correta de procedimentos para controlo de dopagem:",
+      "options": [
+        "Seleção, divisão da amostra, notificação, fecho e selagem dos frascos.",
+        "Notificação, seleção, divisão da amostra, fecho e selagem dos frascos.",
+        "Notificação, seleção, fecho e selagem dos frascos, divisão da amostra.",
+        "Seleção, notificação, divisão da amostra, fecho e selagem dos frascos."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Qual das seguintes temáticas é frequentemente abordada nos programas informativos e educacionais da ADoP?",
+      "options": [
+        "Prescrição do treino de resistência.",
+        "Técnicas de treino de potência.",
+        "Fundamentos da química medicinal, fisiologia e toxicologia de várias substâncias.",
+        "Lista de substâncias e métodos proibidos."
+      ],
+      "correct": 3
     }
   ],
     contentSections: [
@@ -1311,6 +1640,17 @@ window.STUDY_UNITS.push({
   <div class="card">
     <div class="card-title">Legislação nacional</div>
     <div class="card-body">Lei n.º 38/2012 de 28 de agosto (atualizada pela Lei n.º 111/2019) · Portaria n.º 11/2013 (atualizada pela Portaria n.º 232/2014)</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Programas educativos da ADoP</div>
+    <div class="card-body">
+      Temáticas frequentemente abordadas: <strong>lista de substâncias e métodos proibidos</strong>, <strong>AUT</strong>, <strong>suplementos nutricionais</strong> e riscos associados.
+      <br><br>
+      <span class="badge badge-red">Não abordado</span> Gestão de Resultados — não faz parte dos programas informativos/educacionais.
+      <br><br>
+      O <strong>IPDJ</strong> tutela o desporto em Portugal, mas <em>não integra</em> a organização interna da ADoP (LAD, ESPAD, gabinete jurídico, etc.).
+    </div>
   </div></div>
 
 <div id="sec-sec-procedimentos" class="content-section"><p class="section-label">Procedimentos</p>
@@ -1357,6 +1697,16 @@ window.STUDY_UNITS.push({
   <div class="card">
     <div class="card-title">Procedimento disciplinar</div>
     <div class="card-body">Todas as federações possuem regulamento federativo antidopagem com as sanções aplicáveis. Para uma sanção inferior a 2 anos de suspensão ser aprovada, é necessário parecer prévio vinculativo da ADoP (Conselho Nacional Antidopagem — CNAD).</div>
+  </div>
+  <div class="card" style="background:var(--bg-warning);border-color:var(--border-warning)">
+    <div class="card-title" style="color:var(--text-warning)">⚠️ Factos-chave para o exame</div>
+    <div class="card-body" style="color:var(--text-warning);font-size:13px;line-height:1.7">
+      <strong>Objetivo principal:</strong> preservação da <strong>saúde</strong> do praticante (frequentemente esquecido no exame).<br>
+      <strong>CNAD</strong> = sanções e atenuações · <strong>CAUT</strong> = autorizações terapêuticas · <strong>ESPAD</strong> = planeamento dos controlos.<br>
+      <strong>IPDJ</strong> tutela o desporto mas <em>não integra</em> a ADoP.<br>
+      Formulário de controlo: medicamentos e suplementos dos <strong>últimos 7 dias</strong>.<br>
+      Sequência: <strong>Seleção → Notificação → Estação → Amostra</strong> (não notificar antes de selecionar).
+    </div>
   </div>
   <div class="card" style="background:var(--bg-warning);border-color:var(--border-warning)">
     <div class="card-title" style="color:var(--text-warning)">Regra de uniformidade global</div>
@@ -1408,8 +1758,20 @@ window.STUDY_UNITS.push({
       "answer": "Quando: suspender o tratamento prejudicaria a saúde; não existem alternativas; a necessidade não decorre de dopagem anterior; e a medicação não aumenta o rendimento."
     },
     {
-      "question": "Por que razão os suplementos com alegações de \"aumenta a massa muscular\" têm maior risco?",
-      "answer": "Têm maior probabilidade de conter substâncias proibidas como agentes anabolisantes ou estimulantes, frequentemente não declaradas no rótulo."
+      "question": "Quais os 3 critérios de inclusão na lista proibida (quantos bastam)?",
+      "answer": "Potencial para melhorar rendimento; risco para a saúde; violação do espírito desportivo — bastam 2 dos 3 critérios."
+    },
+    {
+      "question": "O que são as 3 áreas de proibição da lista WADA?",
+      "answer": "1) Proibidas em e fora de competição; 2) Proibidas só em competição; 3) Proibidas em desportos específicos."
+    },
+    {
+      "question": "Porque são os suplementos nutricionais uma causa frequente de casos positivos?",
+      "answer": "Ingredientes podem não corresponder ao rótulo e muitos produtos com alegações de massa muscular ou queima de gordura contêm substâncias proibidas não declaradas."
+    },
+    {
+      "question": "O que deve fazer um atleta antes de tomar um suplemento?",
+      "answer": "Consultar profissional competente, adquirir de empresas reputadas, verificar ingredientes, evitar mercado negro/internet e desconfiar de alegações exageradas no rótulo."
     }
   ],
   "quiz": [
@@ -1494,6 +1856,36 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
+      "question": "Que Norma Internacional estabelece os critérios para aprovação de uma AUT?",
+      "options": [
+        "Norma Internacional para Educação",
+        "Norma Internacional para Controlo",
+        "Norma Internacional para Laboratórios",
+        "Norma Internacional para Autorização de Utilização Terapêutica"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Os atletas são responsáveis por qualquer substância no organismo. Que princípio representa?",
+      "options": [
+        "Responsabilidade objetiva",
+        "Intervenção mínima",
+        "Razoabilidade",
+        "Integridade de saúde"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "A utilização de suplementos nutricionais é uma das causas mais frequentes de casos positivos. Esta afirmação está:",
+      "options": [
+        "Incorreta — sem relação com doping",
+        "Incorreta — sem dados estatísticos",
+        "Correta",
+        "Incorreta — poucos casos relacionados"
+      ],
+      "correct": 2
+    },
+    {
       "question": "De acordo com o princípio da responsabilidade objetiva, quem é responsável por uma substância proibida no organismo?",
       "options": [
         "O treinador ou equipa técnica.",
@@ -1520,6 +1912,36 @@ window.STUDY_UNITS.push({
         "1999.",
         "1 de janeiro de 2004.",
         "2012."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Que Norma Internacional estabelece os critérios para aprovação de uma solicitação de autorização de utilização terapêutica?",
+      "options": [
+        "Norma Internacional para Educação.",
+        "Norma Internacional para Controlo.",
+        "Norma Internacional para Laboratórios.",
+        "Norma Internacional para Autorização de Utilização Terapêutica."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Os atletas são responsáveis por qualquer substância encontrada no seu organismo. Que princípio se encontra aqui representado?",
+      "options": [
+        "Princípio da responsabilidade objetiva.",
+        "Princípio da intervenção mínima.",
+        "Princípio da razoabilidade.",
+        "Princípio da integridade de saúde."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "A utilização de suplementos nutricionais é uma das causas mais frequentes de casos positivos de Doping. Esta afirmação está:",
+      "options": [
+        "Incorreta, pois não existe relação entre a utilização de suplementos nutricionais e casos positivos de doping.",
+        "Incorreta, pois não existem dados estatísticos que suportem esta afirmação.",
+        "Correta.",
+        "Incorreta, pois existem poucos casos positivos de doping relacionados com a utilização de suplementos nutricionais."
       ],
       "correct": 2
     }
@@ -1563,6 +1985,8 @@ window.STUDY_UNITS.push({
       <div class="area-card"><div class="area-num">2</div><p>Proibidas <em>exclusivamente</em> em competição</p></div>
       <div class="area-card"><div class="area-num">3</div><p>Proibidas em desportos específicos</p></div>
     </div>
+    <p style="margin-top:12px;font-size:13px"><strong>Substâncias específicas:</strong> podem originar violações <em>não intencionais</em> — frequentemente presentes em medicamentos de venda comum.</p>
+    <div style="margin-top:12px;padding:10px 14px;background:var(--bg-warning);border:0.5px solid var(--border-warning);border-radius:8px;font-size:13px;color:var(--text-warning)"><strong>⚠️ Exame:</strong> Para incluir uma substância na lista bastam <strong>2 dos 3</strong> critérios (rendimento, saúde, espírito desportivo). Responsabilidade <strong>sempre do atleta</strong> (princípio da responsabilidade objetiva), mesmo ingestão não intencional.</div>
   </div>
 
   <div class="card topic-card"><p class="section-label">Sistema de Autorização de Utilização Terapêutica (AUT)</p>
@@ -1590,6 +2014,7 @@ window.STUDY_UNITS.push({
     </div>
     <div style="background:var(--surface-1);border-radius:var(--radius);padding:12px;margin-top:12px;border:0.5px solid var(--border)">
       <p style="font-size:13px;color:var(--text-muted)">Controlo positivo → verificar AUT concedida e válida → processo arquivado se sim</p>
+      <p style="font-size:13px;margin-top:8px">A <strong>Norma Internacional para Autorização de Utilização Terapêutica</strong> estabelece os critérios para aprovação de uma solicitação de AUT.</p>
     </div>
   </div>
 

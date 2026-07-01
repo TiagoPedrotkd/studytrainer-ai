@@ -545,6 +545,32 @@
           "extraQuiz": []
         }
       ]
+    },
+    {
+      "id": "unit-da",
+      "number": 4,
+      "title": "Desporto adaptado",
+      "description": "Inclusão, classificação funcional, modalidades adaptadas e papel do treinador na prática desportiva inclusiva.",
+      "subunits": [
+        {
+          "id": "sub1",
+          "number": 1,
+          "title": "Inclusão e fatores ambientais",
+          "description": "Conceito de desporto adaptado, integração vs. inclusão, modelo ecológico, barreiras e facilitadores, categorias de movimento.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 4/SubUnidade1_2_V1.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub2",
+          "number": 2,
+          "title": "Adaptação prática e apoios",
+          "description": "Princípios de adaptação, variantes de facilidade/dificuldade, regras, materiais e equipamentos, suporte humano, produtos de apoio e análise de dificuldades motoras.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 4/SubUnidade3_4_V1.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        }
+      ]
     }
   ]
 }

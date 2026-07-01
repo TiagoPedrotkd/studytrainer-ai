@@ -35,6 +35,35 @@ const DEFAULT_CONTENT_PANELS = [
   { id: 'velocidade', label: 'Velocidade' },
 ];
 
+function extractSectionById(html, id) {
+  const re = new RegExp(`<section[^>]*\\bid="${id}"[^>]*>`, 'i');
+  const match = html.match(re);
+  if (!match) return null;
+
+  const startIdx = html.indexOf(match[0]);
+  const contentStart = startIdx + match[0].length;
+  const endIdx = html.indexOf('</section>', contentStart);
+  if (endIdx === -1) return null;
+
+  return html.slice(contentStart, endIdx).trim();
+}
+
+function normalizeDaAccordionContent(html) {
+  let content = html.trim();
+  content = content.replace(/<div class="section-head">[\s\S]*?<\/div>/g, '');
+  content = content.replace(/<p class="section-sub">[\s\S]*?<\/p>/g, '');
+
+  content = content.replace(
+    /<div class="acc">\s*<div class="acc-head">([\s\S]*?)<span class="chev">[\s\S]*?<\/span>\s*<\/div>\s*<div class="acc-body">\s*([\s\S]*?)<\/div>\s*<\/div>/g,
+    (_, title, body) => {
+      const cleanTitle = title.replace(/<span class="tag[^"]*">[\s\S]*?<\/span>/g, '').trim();
+      return `<div class="card topic-card"><p class="section-label">${cleanTitle}</p>${body.trim()}</div>`;
+    }
+  );
+
+  return content;
+}
+
 function extractElementById(html, id) {
   const re = new RegExp(`<div[^>]*\\bid="${id}"[^>]*>`, 'i');
   const match = html.match(re);
@@ -474,12 +503,28 @@ function normalizeTopicCardContent(html) {
 
   for (const cardHtml of extractTopicCards(html)) {
     const titleMatch = cardHtml.match(/<h2>([\s\S]*?)<\/h2>/);
+    const topicTitleMatch = cardHtml.match(/<div class="topic-title">([\s\S]*?)<\/div>/);
     const bodyMatch = cardHtml.match(/<div class="topic-body">([\s\S]*)/);
-    if (!titleMatch || !bodyMatch) continue;
 
-    const title = titleMatch[1].trim();
-    let body = bodyMatch[1].replace(/<\/div>\s*$/, '');
-    body = normalizeTopicCardBody(body);
+    let title = '';
+    if (titleMatch) {
+      title = titleMatch[1].trim();
+    } else if (topicTitleMatch) {
+      title = topicTitleMatch[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    } else {
+      continue;
+    }
+
+    let body = '';
+    if (bodyMatch) {
+      body = normalizeTopicCardBody(bodyMatch[1].replace(/<\/div>\s*$/, ''));
+    } else {
+      let remainder = cardHtml;
+      if (topicTitleMatch) remainder = remainder.replace(topicTitleMatch[0], '');
+      else if (titleMatch) remainder = remainder.replace(titleMatch[0], '');
+      body = normalizeResumoContent(remainder);
+    }
+
     parts.push(`<div class="card topic-card"><p class="section-label">${title}</p>${body}</div>`);
   }
 
@@ -487,6 +532,11 @@ function normalizeTopicCardContent(html) {
 }
 
 function extractResumoConteudo(html) {
+  const notas = extractSectionById(html, 'notas');
+  if (notas) {
+    return { html: normalizeDaAccordionContent(notas), sections: [] };
+  }
+
   const inner = extractElementById(html, 'resumo');
   if (!inner) return null;
 
@@ -495,6 +545,7 @@ function extractResumoConteudo(html) {
     normalized = normalizeTopicAccordionContent(inner);
   } else if (inner.includes('class="topic-card"')) {
     normalized = normalizeTopicCardContent(inner);
+    if (!normalized.trim()) normalized = normalizeResumoContent(inner);
   } else {
     normalized = normalizeResumoContent(inner);
   }
@@ -523,17 +574,32 @@ function extractConteudo(html, panels) {
 }
 
 function extractArray(html, name) {
-  const regex = new RegExp(`const ${name}\\s*=\\s*\\[([\\s\\S]*?)\\];`);
-  const match = html.match(regex);
+  const re = new RegExp(`(?:const|let)\\s+${name}\\s*=\\s*\\[`);
+  const match = html.match(re);
   if (!match) throw new Error(`Array «${name}» não encontrado no HTML`);
-  return new Function(`return [${match[1]}];`)();
+
+  const start = html.indexOf('[', match.index);
+  let depth = 0;
+
+  for (let i = start; i < html.length; i++) {
+    const ch = html[i];
+    if (ch === '[') depth += 1;
+    else if (ch === ']') {
+      depth -= 1;
+      if (depth === 0) {
+        return new Function(`return ${html.slice(start, i + 1)};`)();
+      }
+    }
+  }
+
+  throw new Error(`Array «${name}» mal formado no HTML`);
 }
 
 function extractFlashcardsFromHtml(html) {
-  if (/const flashcards\s*=/.test(html)) {
+  if (/(?:const|let)\s+flashcards\s*=/.test(html)) {
     return toFlashcards(extractArray(html, 'flashcards'));
   }
-  if (/const cards\s*=/.test(html)) {
+  if (/(?:const|let)\s+cards\s*=/.test(html)) {
     return toFlashcards(extractArray(html, 'cards'));
   }
   if (/const flashData\s*=/.test(html)) {
@@ -548,13 +614,13 @@ function extractFlashcardsFromHtml(html) {
 }
 
 function extractQuizFromHtml(html) {
-  if (/const questions\s*=/.test(html)) {
+  if (/(?:const|let)\s+questions\s*=/.test(html)) {
     return toQuiz(extractArray(html, 'questions'));
   }
-  if (/const qs\s*=/.test(html)) {
+  if (/(?:const|let)\s+qs\s*=/.test(html)) {
     return toQuiz(extractArray(html, 'qs'));
   }
-  if (/const quizData\s*=/.test(html)) {
+  if (/(?:const|let)\s+quizData\s*=/.test(html)) {
     return toQuiz(extractArray(html, 'quizData'));
   }
   throw new Error('Quiz não encontrado no HTML (questions, qs ou quizData)');

@@ -34,7 +34,7 @@ window.STUDY_UNITS.push({
     },
     {
       "question": "Que valores transmite a prática desportiva para a vida?",
-      "answer": "Respeito pelas pessoas e regras, cooperação (mesmo em modalidades individuais), respeito pela privacidade, respeito pelo próprio corpo, saber lidar com vitória e derrota, hábitos de vida saudável, responsabilidade ambiental e respeito pelos espaços desportivos."
+      "answer": "Respeito pelas pessoas e regras, cooperação entre pares (mesmo em modalidades individuais), respeito pela privacidade, respeito pelo próprio corpo, saber lidar com vitória e derrota, hábitos de vida saudável, respeito pelo meio ambiente e pelos espaços desportivos."
     },
     {
       "question": "O que é o 'currículo oculto' do treinador?",
@@ -59,6 +59,14 @@ window.STUDY_UNITS.push({
     {
       "question": "Qual o impacto das redes sociais no papel do treinador atual?",
       "answer": "Os comportamentos em treino e competição são filmados e partilhados, pelo que o treinador não pode dissociar-se das suas ações públicas. A era digital exige ainda mais coerência e consistência no comportamento do treinador."
+    },
+    {
+      "question": "Nas fases iniciais da formação, o desenvolvimento depende sobretudo de quê?",
+      "answer": "De como o treinador orienta o treino — não dos resultados em competição nem das instalações."
+    },
+    {
+      "question": "Que valor ambiental transmite a prática desportiva?",
+      "answer": "Respeito pelo meio ambiente e pelos espaços desportivos, para além dos hábitos de vida saudável."
     }
   ],
   "quiz": [
@@ -143,6 +151,26 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
+      "question": "Nas fases iniciais da formação, o desenvolvimento pessoal e desportivo depende sobretudo:",
+      "options": [
+        "Dos resultados em competição",
+        "Das instalações disponíveis",
+        "De como o treinador orienta o treino",
+        "Do número de horas de treino semanal"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "A prática desportiva ensina também:",
+      "options": [
+        "Competição acima da cooperação",
+        "Respeito pelo meio ambiente e espaços desportivos",
+        "Exclusão dos menos capazes",
+        "Foco apenas no rendimento"
+      ],
+      "correct": 1
+    },
+    {
       "question": "O Desporto ajuda a promover valores como:",
       "options": [
         "Capacidade de análise tática.",
@@ -183,7 +211,26 @@ window.STUDY_UNITS.push({
       "correct": 1
     }
   ],
-    contentHtml: ``
+    contentHtml: `<div class="card topic-card"><p class="section-label">Tópico 1 O treino como ato pedagógico</p><div class="alert-box quote-box">
+      "Ensinar primeiro e treinar depois deverá ser, necessariamente, a prática que os treinadores responsáveis pela formação desportiva dos jovens têm de seguir."
+      <div class="quote-attr">— Teotónio Lima (2000), <em>Saber treinar aprende-se</em></div>
+    </p>
+<p class="point">O treino é um <strong>processo pedagógico e de ensino</strong>, inseparável de preocupações formativas e educativas — vai além da técnica e da tática.</p>
+<p class="point">A <strong>competição como ferramenta educativa</strong>: ensina valores, atitudes e comportamentos.</p>
+<p class="point">A competição educativa deve ter <strong>espírito lúdico</strong>, ser <strong>inclusiva</strong>, promover o respeito, estimular o esforço e focar-se no <strong>desenvolvimento pessoal</strong>, não só nos resultados.</p>
+<p class="point">O sucesso deve estar ligado a <strong>objetivos individuais</strong>, não ao resultado final.</div></div>
+<div class="card topic-card"><p class="section-label">Tópico 2 O valor educativo do desporto</p><p class="point">O desporto é um <strong>facto social</strong> — os valores aprendidos no treino transferem-se para a vida (pontualidade, respeito, trabalho em equipa).</p>
+<p class="point">Valores transmitidos: <strong>respeito pelas pessoas e regras</strong>, <strong>cooperação entre pares</strong>, privacidade, respeito pelo corpo, lidar com vitória e derrota.</p>
+<p class="point">A prática desportiva ensina também <strong>hábitos saudáveis</strong>, <strong>respeito pelo meio ambiente</strong> e pelos espaços desportivos.</p>
+<p class="point"><strong>Não é o desporto por si</strong> que determina o carácter positivo ou negativo — é a natureza das experiências proporcionadas.</p>
+<p class="point">Contexto atual: redes sociais exigem que o treinador seja coerente nas suas ações públicas — comportamentos em treino e competição são filmados e partilhados.</div></div>
+<div class="card topic-card"><p class="section-label">Tópico 3 O papel do treinador na formação</p><p class="point">O treinador tem <strong>elevada responsabilidade</strong> na formação — geral e desportiva — exigindo ambientes positivos de aprendizagem.</p>
+<p class="point"><strong>"Faça o que eu digo, não faça o que eu faço" não existe</strong> na formação desportiva. Coerência entre discurso e ação é determinante.</p>
+<p class="point">O <strong>currículo oculto</strong> do treinador: experiências como atleta, voluntariado, relações interpessoais moldam a sua ação pedagógica.</p>
+<p class="point">O fundamental para o treinador deve ser sempre <strong>o praticante desportivo</strong> — nunca trabalhar para a média, mas para cada um individualmente.</p>
+<p class="point">Nas <strong>fases iniciais</strong> da formação, o desenvolvimento pessoal e desportivo depende sobretudo de <strong>como o treinador orienta o treino</strong>, não dos resultados em competição nem das instalações.</p>
+<p class="point">O treinador é um <strong>modelo de referência</strong>: deve ser o primeiro a cumprir o que exige — pontualidade, organização, postura na competição.</p>
+<p class="point">Responsabilidades: orientar fatores de treino (psicológico, físico, técnico e tático), planear, aumentar o entusiasmo, promover <strong>formação multilateral</strong> (evitar especialização precoce).</div></div>`
   },
   {
   "id": "sub2",
@@ -193,11 +240,11 @@ window.STUDY_UNITS.push({
   "flashcards": [
     {
       "question": "Qual a diferença fundamental entre igualdade e equidade no contexto desportivo?",
-      "answer": "Igualdade é dar o mesmo a todos, mas não garante oportunidade real. Equidade é ajustar o apoio às necessidades específicas de cada atleta — quem tem mais dificuldades recebe mais apoio."
+      "answer": "Igualdade = dar as mesmas oportunidades a todos (raça, religião, morfologia, estrato social…). Equidade = ajustar o apoio às necessidades específicas de cada atleta."
     },
     {
       "question": "O que é a 'liberdade' no trio igualdade–equidade–liberdade?",
-      "answer": "Remover barreiras estruturais para que cada atleta possa tomar decisões de forma autónoma e participar plenamente, sem constrangimentos externos."
+      "answer": "Autonomia nas opções — poder escolher participar sem constrangimentos externos."
     },
     {
       "question": "Quais são as sete dimensões da igualdade de oportunidades no desporto?",
@@ -322,6 +369,26 @@ window.STUDY_UNITS.push({
       "correct": 2
     },
     {
+      "question": "A 'igualdade' no desporto significa:",
+      "options": [
+        "Dar mais apoio a quem tem mais dificuldades",
+        "Dar as mesmas oportunidades a todos, independentemente de raça, religião ou morfologia",
+        "Eliminar todas as diferenças entre atletas",
+        "Garantir vitórias equilibradas"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A 'liberdade' no desporto refere-se a:",
+      "options": [
+        "Liberdade de usar qualquer substância",
+        "Autonomia nas opções de participação sem constrangimentos",
+        "Treinar sem regras",
+        "Escolher sempre a modalidade mais fácil"
+      ],
+      "correct": 1
+    },
+    {
       "question": "Liberdade de oportunidades no desporto significa:",
       "options": [
         "Adaptar as oportunidades tendo em conta as diferenças, procurando a justiça.",
@@ -367,15 +434,15 @@ window.STUDY_UNITS.push({
     <div class="three-cols">
       <div class="concept-box">
         <div class="concept-title">Igualdade</div>
-        <div class="concept-sub">Dar o mesmo a todos — não garante oportunidade real</div>
+        <div class="concept-sub">Dar as <strong>mesmas oportunidades</strong> a todos, independentemente de raça, religião, morfologia, estrato social, etc.</div>
       </div>
       <div class="concept-box">
         <div class="concept-title">Equidade</div>
-        <div class="concept-sub">Ajustar o apoio às necessidades de cada atleta</div>
+        <div class="concept-sub"><strong>Ajustar o apoio</strong> às necessidades específicas de cada atleta</div>
       </div>
       <div class="concept-box">
         <div class="concept-title">Liberdade</div>
-        <div class="concept-sub">Remover barreiras para decisão autónoma</div>
+        <div class="concept-sub"><strong>Autonomia nas opções</strong> — poder escolher participar sem constrangimentos externos</div>
       </div>
     </p>
 <p class="point">No treino: atleta com mais dificuldades requer <strong>mais apoio</strong>; atleta avançado precisa de apoios diferentes — cada um segundo as suas necessidades.</p>
@@ -459,6 +526,18 @@ window.STUDY_UNITS.push({
     {
       "question": "Quais os 7 princípios do papel do treinador na promoção da prática desportiva em jovens?",
       "answer": "1) Treino integrado no desenvolvimento global; 2) Prática diferente da dos adultos; 3) Desenvolver o gosto pela modalidade; 4) Objetivos além da vitória (satisfação, alegria); 5) Aprendizagem técnica não é imediata; 6) Cada criança tem o seu desenvolvimento próprio; 7) Aprendizagem depende do desenvolvimento motor."
+    },
+    {
+      "question": "Qual o papel do treinador nos diferentes contextos desportivos (exame)?",
+      "answer": "Papel decisivo desde as etapas mais elementares até aos níveis mais avançados de rendimento — não apenas no alto rendimento nem só na iniciação."
+    },
+    {
+      "question": "O que deve registar o treinador sobre treino e competição?",
+      "answer": "Toda a informação pertinente para monitorizar a atividade de cada praticante — não apenas os mais talentosos nem só competições."
+    },
+    {
+      "question": "Quais competências de ensino fundamentais ao dirigir a sessão?",
+      "answer": "Explicação, demonstração, observação e correção — são o núcleo da intervenção pedagógica na sessão."
     }
   ],
   "quiz": [
@@ -543,6 +622,36 @@ window.STUDY_UNITS.push({
       "correct": 2
     },
     {
+      "question": "O papel do treinador desportivo é decisivo:",
+      "options": [
+        "Apenas no alto rendimento",
+        "Apenas na iniciação desportiva",
+        "Em todos os contextos, da iniciação ao alto rendimento",
+        "Apenas quando há resultados competitivos"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O registo do treinador deve incluir:",
+      "options": [
+        "Apenas os atletas com mais talento",
+        "Apenas as competições",
+        "Toda a informação de treino e competição pertinente para cada praticante",
+        "Apenas as sessões de treino"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Ao dirigir a sessão, o treinador deve assegurar:",
+      "options": [
+        "Apenas a demonstração técnica",
+        "Explicação, demonstração, observação e correção",
+        "Apenas observação silenciosa",
+        "Apenas correção após a competição"
+      ],
+      "correct": 1
+    },
+    {
       "question": "No que diz respeito ao papel e responsabilidade do treinador:",
       "options": [
         "Este desempenha um papel decisivo apenas no alto rendimento.",
@@ -579,7 +688,8 @@ window.STUDY_UNITS.push({
 <p class="point">Ser treinador deve ser um <strong>projeto de vida</strong>: meio de realização pessoal, crescimento e valorização, não apenas uma profissão técnica.</p>
 <p class="point">A formação deve dotar o treinador de <strong>competências ecléticas</strong>: técnicas, relacionais e deontológicas. A formação não termina com o curso — é contínua.</p>
 <p class="point">Analogia ao médico: opera de forma diferente ao fim de 10, 20 ou 30 anos de experiência. O treinador também <strong>melhora com a experiência acumulada</strong>.</div>
-    <div class="alert-box law-box"><i class="ti ti-scale" style="font-size:14px;margin-right:6px" aria-hidden="true"></i><strong>Lei n.º 40/2012</strong> (atualizada pela Lei n.º 106, em vigor desde março de 2020) — reconheceu legalmente a atividade de treinador como profissão. O reconhecimento legal é positivo, mas insuficiente sem reconhecimento social.</p>
+    <div class="alert-box law-box"><i class="ti ti-scale" style="font-size:14px;margin-right:6px" aria-hidden="true"></i><strong>Lei n.º 40/2012</strong> (atualizada pela Lei n.º 106, em vigor desde março de 2020) — reconheceu legalmente a atividade de treinador como profissão. O reconhecimento legal é positivo, mas insuficiente sem reconhecimento social.</div>
+    <div class="warn-box" style="background:#FAEEDA;border:0.5px solid #EF9F27;border-radius:var(--border-radius-md);padding:10px 14px;margin:8px 0;font-size:13px;color:#633806"><strong>⚠️ Factos de exame:</strong> O treinador tem papel <strong>decisivo em todos os contextos</strong> (iniciação → alto rendimento), não só no infantojuvenil. Deve registar <strong>toda</strong> a informação de treino e competição pertinente (não só os mais talentosos). Ao dirigir a sessão, assegurar <strong>explicação, demonstração, observação e correção</strong>.</p>
 <p class="point">O treinador deve adotar <strong>posturas sociocríticas</strong>: encarar o conhecimento como meio de realização pessoal, não apenas como instrumento profissional.</div>
   </p>
 <div class="card">
@@ -758,6 +868,26 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
+      "question": "Os benefícios normalmente atribuídos à prática desportiva são garantidos automaticamente?",
+      "options": [
+        "Sim, por simples participação",
+        "Sim, se o atleta treinar 3x por semana",
+        "Não — dependem de como a prática é organizada e enquadrada",
+        "Apenas em modalidades coletivas"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Qual atitude NÃO favorece um ambiente adequado de prática?",
+      "options": [
+        "Ter paciência com os erros",
+        "Ridicularizar erros em público para acelerar a aprendizagem",
+        "Usar linguagem clara",
+        "Evitar metas irrealistas"
+      ],
+      "correct": 1
+    },
+    {
       "question": "No que diz respeito à influência da prática desportiva no desenvolvimento dos indivíduos/praticantes:",
       "options": [
         "Sendo o treinador o primeiro responsável pela iniciação, deve tratar todos como futuras estrelas e evitar o abandono da modalidade.",
@@ -768,7 +898,8 @@ window.STUDY_UNITS.push({
       "correct": 2
     }
   ],
-    contentHtml: `<div class="card">
+    contentHtml: `<div class="warn-box" style="background:#FAEEDA;border:0.5px solid #EF9F27;border-radius:var(--border-radius-md);padding:10px 14px;margin-bottom:12px;font-size:13px;color:#633806"><strong>⚠️ Exame:</strong> Os benefícios da prática desportiva <strong>não são automáticos</strong> — dependem de como treinadores, pais e dirigentes organizam a experiência. A prática pode formar <em>ou</em> desenvolver fraude e violência.</p>
+<div class="card">
     <p class="section-label"><span class="badge b-teal">Tópico 1</span> Princípios de boas práticas pedagógicas</p>
     <p class="point">Ser treinador vai muito além da técnica e da tática: envolve <strong>obrigatoriamente transmitir hábitos, regras de comportamento e convivência</strong> que valorizem o jovem como indivíduo e cidadão.</p>
 <p class="point">Boas práticas = repetir o que se faz bem e <strong>corrigir o que se faz menos bem</strong>. No desporto infanto-juvenil, os aspetos extra-técnicos são centrais.</div>
@@ -953,6 +1084,16 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
+      "question": "Qual atitude NÃO favorece um ambiente adequado de prática?",
+      "options": [
+        "Evitar pressões e metas irrealistas",
+        "Ridicularizar erros em público para acelerar a aprendizagem",
+        "Abrir linhas de comunicação com linguagem clara",
+        "Ter paciência e tolerância para com os erros"
+      ],
+      "correct": 1
+    },
+    {
       "question": "Um atleta que mudou de modalidade mas continua a praticar desporto regularmente representa, pedagogicamente:",
       "options": [
         "Um fracasso do treinador — perdeu o atleta para a modalidade.",
@@ -1069,6 +1210,14 @@ window.STUDY_UNITS.push({
     {
       "question": "O que acontece quando um atleta mais competente dá feedback ao menos competente?",
       "answer": "O atleta não se torna treinador, mas assume um papel de responsabilidade. O colega menos competente respeita e aproveita a informação do par mais experiente — a complexidade dessas responsabilidades aumenta com a idade e maturidade."
+    },
+    {
+      "question": "Autonomia é o mesmo que abandono do atleta?",
+      "answer": "Não. Autonomia = liberdade de decidir dentro do processo com feedback do treinador. Abandono = «toma a bola e joga» sem orientação."
+    },
+    {
+      "question": "Quem toma a decisão final num contexto de autonomia?",
+      "answer": "Sempre o atleta — o treinador orienta e dá feedback, mas não decide por ele."
     }
   ],
   "quiz": [
@@ -1165,6 +1314,26 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
+      "question": "Na autonomia do praticante, quem toma a decisão final?",
+      "options": [
+        "O treinador, após ouvir o atleta",
+        "O atleta, com feedback do treinador",
+        "Os pais ou encarregados de educação",
+        "O capitão de equipa"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Autonomia no treino significa:",
+      "options": [
+        "Deixar o atleta treinar sozinho sem orientação",
+        "Dar liberdade de decisão dentro do processo, com feedback do treinador",
+        "Só aplicar a atletas com mais de 15 anos",
+        "Eliminar toda a estrutura e regras da sessão"
+      ],
+      "correct": 1
+    },
+    {
       "question": "O modelo da aprendizagem cooperativa contribui particularmente para o desenvolvimento das competências pessoais e sociais pela valorização das componentes cognitivas e sociais, seja no contexto escolar ou desportivo. Esta afirmação é:",
       "options": [
         "Incorreta, pois os modelos de aprendizagem cooperativa contribuem apenas em contexto desportivo.",
@@ -1186,6 +1355,7 @@ window.STUDY_UNITS.push({
     }
   ],
     contentHtml: `<div class="card topic-card"><p class="section-label">Autonomia do Praticante</p>
+        <p class="point" style="background:#FAEEDA;border-left:3px solid #EF9F27;padding:10px 14px;border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;margin-bottom:10px;color:#633806"><strong>⚠️ Exame:</strong> Autonomia <strong>≠ abandono</strong> («toma a bola e joga»). O treinador dá feedback, mas a <strong>decisão final é do atleta</strong>. Construir desde o início — nunca introduzir aos 15 anos. Estações: observar a <strong>6–7 m</strong>.</p>
         <p class="point"><strong>Não é abandono</strong> — não é "toma a bola e joga". É dar liberdade para tomar decisões dentro do processo.</p>
         <p class="point">O treinador fornece feedback, mas a <strong>decisão final é sempre do atleta</strong>.</p>
         <p class="point"><strong>Cresce com a idade</strong>: criança de 4-6 anos tem pouca autonomia; jovem de 14-15 anos tem mais.</p>
@@ -1648,10 +1818,10 @@ window.STUDY_UNITS.push({
     {
       "question": "A competição deve ser vista como:",
       "options": [
-        "Um momento de pressão excecional separado do treino.",
-        "Uma continuação do treino.",
-        "O único momento em que se avalia o atleta.",
-        "Um obstáculo à formação multilateral."
+        "Um momento de pressão excecional separado do treino",
+        "Uma continuação do treino",
+        "O único momento em que se avalia o atleta",
+        "Um obstáculo à formação multilateral"
       ],
       "correct": 1
     },
@@ -1891,6 +2061,36 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
+      "question": "Durante a competição, o treinador deve:",
+      "options": [
+        "Evitar saturar os praticantes com recomendações demasiado longas",
+        "Ser longo e exaustivo nas suas intervenções",
+        "Manter-se em silêncio e deixar as intervenções para os treinos",
+        "Focar-se apenas nos atletas com mais sucesso"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "O foco das intervenções do treinador na competição deve estar:",
+      "options": [
+        "No adversário e no resultado final",
+        "Na ligação treino-competição e no que foi trabalhado",
+        "Apenas nos erros dos árbitros",
+        "Exclusivamente na vitória"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "De uma forma geral, durante a competição o treinador deve:",
+      "options": [
+        "Focar-se nos aspetos negativos e corrigi-los",
+        "Manter comportamento sereno e equilibrado, inclusive com juízes",
+        "Manter-se em silêncio total",
+        "Focar-se só nos atletas com mais sucesso"
+      ],
+      "correct": 1
+    },
+    {
       "question": "De uma forma geral, durante o desenrolar da competição, o treinador deve:",
       "options": [
         "Focar-se nos aspetos negativos dos seus praticantes e corrigi-los.",
@@ -1909,16 +2109,6 @@ window.STUDY_UNITS.push({
         "Focar-se apenas nos atletas com mais sucesso."
       ],
       "correct": 0
-    },
-    {
-      "question": "O foco das intervenções do treinador na competição deve estar:",
-      "options": [
-        "No adversário e no resultado final.",
-        "Na ligação treino-competição e no que foi trabalhado.",
-        "Apenas nos erros dos árbitros.",
-        "Exclusivamente na vitória."
-      ],
-      "correct": 1
     }
   ],
     contentHtml: `<div class="card topic-card"><p class="section-label">Coerência treino-competição</p>
@@ -2159,6 +2349,26 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
+      "question": "Como se definem as decisões interativas no processo de treino?",
+      "options": [
+        "Decisões tomadas antes do treino",
+        "Decisões de ajuste ao planificado em função da avaliação contínua",
+        "Decisões apenas sobre substituições na competição",
+        "Decisões sobre o calendário da época"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O objetivo da gestão no treino desportivo é:",
+      "options": [
+        "Maximizar o tempo disponível para a prática motora",
+        "Aumentar o número de discursos do treinador",
+        "Reduzir o número de atletas por sessão",
+        "Focar exclusivamente nos resultados competitivos"
+      ],
+      "correct": 0
+    },
+    {
       "question": "Sabemos que os ganhos de aprendizagem estão intimamente dependentes do tempo passado na tarefa, bem como da quantidade máxima de tempo de atividade motora passada em atividades específicas. Esta afirmação está:",
       "options": [
         "Correta.",
@@ -2177,16 +2387,6 @@ window.STUDY_UNITS.push({
         "Decisões de estruturação do processo de ensino no treino desportivo."
       ],
       "correct": 0
-    },
-    {
-      "question": "O objetivo da gestão no treino desportivo é:",
-      "options": [
-        "Maximizar o tempo disponível para a prática motora.",
-        "Aumentar o número de discursos do treinador.",
-        "Reduzir a participação dos atletas.",
-        "Eliminar a competição da formação."
-      ],
-      "correct": 0
     }
   ],
     contentHtml: `<div class="card topic-card"><p class="section-label">Gestão: maximizar o tempo de prática</p>
@@ -2195,7 +2395,8 @@ window.STUDY_UNITS.push({
       <p class="point">Objetivo: <strong>tempo disponível para a prática = tempo total menos episódios de gestão</strong> (deslocamentos, arrumação, instrução). Deve ser o maior possível.</p>
       <p class="point">Para aumentar o tempo de prática: <strong>reduzir episódios de gestão</strong>, reduzir discursos e informação verbal, e <strong>planear e treinar as rotinas</strong> da sessão.</p>
       <div class="alert-box ex-box"><i class="ti ti-bulb" aria-hidden="true"></i> Imagem ou demonstração (30 seg) substitui uma explicação verbal longa (3 min). Rotinas fixas — a partir do 3.º treino, os atletas já as fazem automaticamente.</p>
-      <div class="tip"><i class="ti ti-info-circle" aria-hidden="true"></i> Estratégias práticas: treinador prepara material antes; atletas autónomos ajudam na montagem; gamificação da transição (contagem decrescente para arrumar bolas); trabalho por estações multiplica tempo simultâneo de prática.</div>
+      <div class="tip"><i class="ti ti-info-circle" aria-hidden="true"></i> Estratégias práticas: treinador prepara material antes; atletas autónomos ajudam na montagem; gamificação da transição (contagem decrescente para arrumar bolas); trabalho por estações multiplica tempo simultâneo de prática.</p>
+      <div class="alert-box ex-box"><i class="ti ti-bulb" aria-hidden="true"></i> <strong>Exame:</strong> Decisões <strong>interativas</strong> = ajuste ao planificado com base na avaliação contínua durante a sessão. Objetivo da gestão = <strong>maximizar tempo de prática motora</strong>.</div>
     </div>
 <div class="card topic-card"><p class="section-label">Instrução: qualidade sobre quantidade</p>
       <p class="point">Objetivo da instrução: <strong>comunicar informação de qualidade</strong> consumindo o mínimo tempo; utilizar o questionamento como método de ensino; corrigir através de feedback pedagógico.</p>
@@ -2447,10 +2648,30 @@ window.STUDY_UNITS.push({
     {
       "question": "Aprendemos maior percentagem de informação através de:",
       "options": [
-        "O ouvido.",
-        "A vista.",
-        "O tato.",
-        "O paladar."
+        "O ouvido",
+        "A vista",
+        "O tato",
+        "O paladar"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual estratégia é fundamental para fomentar a compreensão dos conteúdos?",
+      "options": [
+        "Questionamento",
+        "Demonstração isolada",
+        "Gestão de presenças",
+        "Instrução sem feedback"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "O feedback pedagógico distingue-se da instrução porque:",
+      "options": [
+        "A instrução reage ao que o atleta fez; o feedback explica antecipadamente",
+        "A instrução explica; o feedback reage ao comportamento observado",
+        "São exactamente a mesma coisa",
+        "O feedback só se usa na competição"
       ],
       "correct": 1
     },
@@ -2463,16 +2684,6 @@ window.STUDY_UNITS.push({
         "Instrução."
       ],
       "correct": 0
-    },
-    {
-      "question": "O feedback pedagógico distingue-se da instrução porque:",
-      "options": [
-        "A instrução reage ao que o atleta fez; o feedback explica antecipadamente.",
-        "A instrução explica; o feedback reage ao comportamento observado.",
-        "São exactamente a mesma coisa.",
-        "O feedback só se usa na competição."
-      ],
-      "correct": 1
     }
   ],
     contentHtml: `<div class="card topic-card"><p class="section-label">Como aprendemos — base da instrução eficaz</p>
@@ -2485,7 +2696,8 @@ window.STUDY_UNITS.push({
         <div class="perc-card pc-lo"><span class="perc-num">20%</span>O que ouvimos</div>
         <div class="perc-card pc-lo"><span class="perc-num">10%</span>O que lemos</div>
       </p>
-      <div class="tip" style="margin-top:10px"><i class="ti ti-info-circle" aria-hidden="true"></i> "O que eu ouço esqueço · O que vejo recordo · O que faço compreendo" — a prática ativa é o nível mais profundo de aprendizagem.</div>
+      <div class="tip" style="margin-top:10px"><i class="ti ti-info-circle" aria-hidden="true"></i> "O que eu ouço esqueço · O que vejo recordo · O que faço compreendo" — a prática ativa é o nível mais profundo de aprendizagem.</p>
+      <div class="alert-box ex-box" style="margin-top:10px"><i class="ti ti-alert-triangle" aria-hidden="true"></i> <strong>Exame:</strong> Aprendemos sobretudo pela <strong>vista (83%)</strong>. <strong>Questionamento</strong> fomenta compreensão. <strong>Feedback</strong> reage ao comportamento; <strong>instrução</strong> explica antecipadamente.</div>
     </div>
 <div class="card topic-card"><p class="section-label">Gestão da instrução — início e fim da sessão</p>
       <p class="point"><strong>Instrução usa-se em 3 momentos</strong>: início da sessão, durante a sessão e na conclusão.</p>
@@ -2677,6 +2889,26 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
+      "question": "O objetivo último do treinador é desenvolver no praticante a capacidade de perceber, interpretar e controlar a informação de retorno. Esta afirmação é:",
+      "options": [
+        "Incorreta — o praticante não se autoavalia",
+        "Incorreta — o treino depende só do treinador",
+        "Incorreta — quem avalia é sempre o treinador",
+        "Correta"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "O que é a Descoberta Guiada?",
+      "options": [
+        "O treinador dá todas as respostas e o atleta repete",
+        "O treinador define objetivos e o atleta investiga e descobre soluções",
+        "O atleta treina sem qualquer orientação",
+        "Um método exclusivo de alto rendimento"
+      ],
+      "correct": 1
+    },
+    {
       "question": "O objetivo último do treinador, no plano do desenvolvimento pessoal do praticante, deverá ser desenvolver naqueles a capacidade de perceber, interpretar e controlar a informação de retorno e por extensão a sua execução. Esta afirmação é:",
       "options": [
         "Incorreta, pois o praticante não tem capacidade para se autoavaliar.",
@@ -2685,16 +2917,6 @@ window.STUDY_UNITS.push({
         "Correta."
       ],
       "correct": 3
-    },
-    {
-      "question": "O que é a Descoberta Guiada?",
-      "options": [
-        "O treinador dá todas as respostas e o atleta repete.",
-        "O treinador define objetivos e o atleta investiga e descobre soluções.",
-        "O atleta treina sem qualquer orientação.",
-        "Um método exclusivo de alto rendimento."
-      ],
-      "correct": 1
     }
   ],
     contentHtml: `<div class="card topic-card"><p class="section-label">Autonomização: Conceito Central</p><div class="alert-box concept-box"><p class="point">
@@ -2804,6 +3026,10 @@ window.STUDY_UNITS.push({
     {
       "question": "Que papel tem o conhecimento da modalidade na eficácia das TIP?",
       "answer": "O conhecimento profundo e atualizado da modalidade e dos meios pedagógicos permite ao treinador saber como, quando e porque atuar. Facilita a transmissão de informação e a adaptação das TIP a cada situação concreta."
+    },
+    {
+      "question": "As TIP são instrumentos fundamentais para fomentar a compreensão dos conteúdos?",
+      "answer": "Sim — aplicadas no treino e na competição. A eficácia depende de como são usadas e adaptadas; não basta só instrução ou só feedback isoladamente."
     }
   ],
   "quiz": [
@@ -3041,6 +3267,14 @@ window.STUDY_UNITS.push({
     {
       "question": "Porque é que o respeito pelo clube se transfere para a vida fora do desporto?",
       "answer": "Porque os valores adquiridos no clube — respeitar todos os funcionários, cuidar dos materiais, cumprir horários — são os mesmos exigidos em casa, na escola e no emprego. O clube é uma escola de valores, não apenas de técnica."
+    },
+    {
+      "question": "Ao definir um objetivo, o treinador deve certificar-se que é:",
+      "answer": "Mensurável — o progresso deve poder ser medido e reconhecido (critérios quantitativos e qualitativos)."
+    },
+    {
+      "question": "O tempo que o treinador passa com cada praticante deve ser:",
+      "answer": "Variável, em função das virtudes e dificuldades de cada um — não igual para todos nem alinhado só com interesses coletivos do clube a favor dos mais aptos."
     }
   ],
   "quiz": [
@@ -3190,7 +3424,7 @@ window.STUDY_UNITS.push({
           <p>Presença constante do treinador é <strong>cuidado</strong>, não pressão. Explicar: "Estou aqui porque quero que evoluas mais rapidamente." Paciência e elogio são essenciais.</p>
         </div>
       </div>
-      <div class="alert-box key-rule">A chave está em <span>comunicar o porquê</span> da atenção diferenciada — seja ela maior ou menor — para que o praticante a perceba como positiva.</div></div>
+      <div class="alert-box key-rule">A chave está em <span>comunicar o porquê</span> da atenção diferenciada — seja ela maior ou menor — para que o praticante a perceba como positiva. O tempo com cada praticante deve ser <span>variável</span>, em função das suas virtudes e dificuldades.</div></div>
 <div class="card topic-card"><p class="section-label">Estabelecimento de Objetivos Individuais e Coletivos</p><div class="alert-box concept-box"><p class="point">
         <div class="label">Princípio base</p></div>
         <p>Cada modalidade tem um repertório técnico e tático próprio. Os objetivos devem <strong>conjugar necessidades individuais e coletivas</strong>. Num grupo de 10 praticantes: 10 níveis, 10 motivações, 10 necessidades diferentes.</p>

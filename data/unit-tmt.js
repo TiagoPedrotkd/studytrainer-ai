@@ -70,7 +70,15 @@ window.STUDY_UNITS.push({
     },
     {
       "question": "Qual é o ciclo de gestão do planeamento?",
-      "answer": "Elaboração → Execução → Avaliação. A avaliação permite verificar se o treino está a atingir os objectivos e ajustar o plano."
+      "answer": "Planear → Executar → Controlar → Avaliar. Controlar = monitorização diária (FC repouso, humor, questionários); Avaliar permite ajustar o plano."
+    },
+    {
+      "question": "Qual a duração do curto prazo operacional (microciclo)?",
+      "answer": "1 semana a 1 mês — não confundir com curto prazo estratégico (~2 anos)."
+    },
+    {
+      "question": "Qual é a unidade mínima de planeamento do treino?",
+      "answer": "A sessão de treino (não o microciclo). Hierarquia: macrociclo → mesociclo → microciclo → sessão → tarefa."
     },
     {
       "question": "Quais indicadores de controlo devem ser monitorizados diariamente?",
@@ -218,11 +226,31 @@ window.STUDY_UNITS.push({
       "question": "O ciclo de gestão do planeamento é:",
       "options": [
         "Planeamento → Treino → Competição",
-        "Elaboração → Execução → Avaliação",
+        "Planear → Executar → Controlar → Avaliar",
         "Carga → Recuperação → Adaptação",
-        "Treino → Avaliação → Overtraining"
+        "Elaboração → Execução → Avaliação"
       ],
       "correct": 1
+    },
+    {
+      "question": "A unidade mínima de planeamento e organização do treino é:",
+      "options": [
+        "O microciclo",
+        "O mesociclo",
+        "A sessão de treino",
+        "A tarefa"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O curto prazo operacional (nível microciclo) corresponde a:",
+      "options": [
+        "2 anos",
+        "1 época",
+        "1 semana a 1 mês",
+        "8–10 anos"
+      ],
+      "correct": 2
     },
     {
       "question": "Para além de FC e humor, que indicador monitoriza a recuperação?",
@@ -263,16 +291,6 @@ window.STUDY_UNITS.push({
         "1 a 4 anos."
       ],
       "correct": 0
-    },
-    {
-      "question": "A unidade mínima de planeamento e organização do treino é:",
-      "options": [
-        "O microciclo.",
-        "A sessão de treino.",
-        "O mesociclo.",
-        "O macrociclo."
-      ],
-      "correct": 1
     },
     {
       "question": "Na fase «Aprender a Treinar» (Treinar para Treinar), o foco principal é:",
@@ -343,7 +361,7 @@ window.STUDY_UNITS.push({
     <div class="detail-row"><span class="detail-key">Competição</span><span class="detail-val">Objectivo final do processo de preparação</span></div>
     <div class="detail-row"><span class="detail-key">Controlo</span><span class="detail-val">Monitorização diária integrada no planeamento</span></div>
   </div>
-  <div class="alert-box"><strong>Planeamento</strong> é a ferramenta mais importante do treinador — organiza estratégias com base científica. O ciclo de gestão: <strong>Elaboração → Execução → Avaliação</strong> (ajustes contínuos ao plano).</div>
+  <div class="alert-box"><strong>Planeamento</strong> é a ferramenta mais importante do treinador — organiza estratégias com base científica. Ciclo de gestão (exame): <strong>Planear → Executar → Controlar → Avaliar</strong>. Controlar = monitorização diária (FC repouso, humor, questionários).</div>
   <div class="card">
     <div style="font-size:13px;font-weight:500;margin-bottom:.5rem">Definição de treino</div>
     <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.7"><strong style="font-weight:500">Carvalho (1984):</strong> processo que organiza estratégias para atingir os objectivos do planeamento.<br><strong style="font-weight:500">Komi (1986):</strong> indução sistemática de um estímulo que causa resposta fisiológica específica, após indução da recuperação.</div>
@@ -354,9 +372,10 @@ window.STUDY_UNITS.push({
     <div style="font-size:14px;font-weight:500;margin-bottom:.75rem">Prazos de planeamento</div>
     <div class="detail-row"><span class="detail-key">Longo prazo</span><span class="detail-val">8–10 anos — plano orientador da carreira, etapas e fases de formação</span></div>
     <div class="detail-row"><span class="detail-key">Médio prazo</span><span class="detail-val">~4 anos — plano intermédio de carreira ou preparação para Jogos Olímpicos</span></div>
-    <div class="detail-row"><span class="detail-key">Curto prazo</span><span class="detail-val">~2 anos — preparação olímpica segura (Mundial, Europeu)</span></div>
+    <div class="detail-row"><span class="detail-key">Curto prazo (estratégico)</span><span class="detail-val">~2 anos — preparação olímpica segura (Mundial, Europeu)</span></div>
     <div class="detail-row"><span class="detail-key">Anual</span><span class="detail-val">1 época — tudo minuciosamente organizado e previsto</span></div>
   </div>
+  <div class="alert-box warn-box" style="border-left-color:#EF9F27"><strong>⚠️ Factos de exame — não confundir:</strong> Em perguntas sobre <em>curto prazo operacional</em> (microciclo/semana), a resposta é <strong>1 semana a 1 mês</strong>. A <strong>unidade mínima</strong> de planeamento e organização do treino é a <strong>sessão de treino</strong> (não o microciclo). Hierarquia: macrociclo → mesociclo → microciclo → <strong>sessão</strong> → tarefa.</div>
   <div class="alert-box"><strong>Relação-chave:</strong> Carga + Recuperação equilibradas → adaptação positiva. Carga &gt; Recuperação (repetida) → fadiga excessiva → <strong>overtraining</strong>.</div>
   <div class="two-col">
     <div class="col-card">
@@ -551,6 +570,10 @@ window.STUDY_UNITS.push({
       "answer": "Moderado (abaixo LL), Pesado (abaixo EEML, acima LL), Severo (acima EEML/acumulação máxima de lactato)."
     },
     {
+      "question": "Qual a função principal do ciclo de Krebs na respiração celular?",
+      "answer": "Oxidar substratos energéticos com redução de NAD⁺ (e FAD). O ATP em grande quantidade resulta sobretudo da cadeia de transporte de electrões, não do Krebs isolado."
+    },
+    {
       "question": "Porque é económico o princípio de Henneman?",
       "answer": "Recruta primeiro motoneurónios pequenos (Tipo S) e só activa os maiores (Tipo FF) em esforços máximos — poupa fibras rápidas e resistentes à fadiga."
     }
@@ -697,14 +720,14 @@ window.STUDY_UNITS.push({
       "correct": 2
     },
     {
-      "question": "O ciclo de Krebs tem como função:",
+      "question": "No ciclo de Krebs, a produção massiva de ATP resulta sobretudo de:",
       "options": [
-        "Formação de dióxido de carbono.",
-        "Formação de ácido lático.",
-        "Formação de ATP e água.",
-        "Oxidar substratos energéticos para reduzir NAD+."
+        "O Krebs isolado",
+        "A cadeia de transporte de electrões",
+        "A glicólise anaeróbia",
+        "A fosfocreatina"
       ],
-      "correct": 3
+      "correct": 1
     },
     {
       "question": "O sistema ATP-PCr fornece energia durante aproximadamente:",
@@ -735,9 +758,21 @@ window.STUDY_UNITS.push({
         "Apenas lactato."
       ],
       "correct": 1
+    },
+    {
+      "question": "O ciclo de Krebs tem como função:",
+      "options": [
+        "Formação de dióxido de carbono.",
+        "Formação de ácido lático.",
+        "Formação de ATP e água.",
+        "Oxidar substratos energéticos para reduzir NAD+."
+      ],
+      "correct": 3
     }
   ],
-    contentHtml: `<p class="section-label">Sistemas Energéticos</p>
+    contentHtml: `<div class="alert-box"><strong>⚠️ Exame:</strong> ATP-PCr ≈ <strong>10 s</strong>. Fibras <strong>tipo I</strong>: baixa velocidade, alta resistência à fadiga. Sistema <strong>oxidativo</strong>: glicogénio + ácidos gordos. Krebs <strong>reduz NAD⁺</strong> — ATP massivo na cadeia de transporte de electrões.</div>
+
+  <p class="section-label">Sistemas Energéticos</p>
 
   <div class="card" style="margin-bottom:.75rem">
     <div class="card-title">Pré-requisito energético</div>
@@ -762,7 +797,7 @@ window.STUDY_UNITS.push({
         <div class="tl-dot blue"></div>
         <div class="tl-time">Acima de 2 minutos</div>
         <div class="tl-title">Sistema Oxidativo <span class="badge badge-blue" style="margin-left:6px">Aeróbio</span></div>
-        <div class="tl-desc">Respiração mitocondrial: <strong>Ciclo de Krebs</strong> + <strong>cadeia de transporte de electrões</strong>. Oxida glícidos, lípidos e aminoácidos. Resultado: ATP + H₂O (O₂ = recetor final de hidrogénio). Rendimento: <strong>38 ATP (glicose)</strong> / <strong>39 ATP (glicogénio)</strong>. Maior capacidade, activação mais lenta.</div>
+        <div class="tl-desc">Respiração mitocondrial: <strong>Ciclo de Krebs</strong> + <strong>cadeia de transporte de electrões</strong>. O Krebs <strong>oxida substratos energéticos com redução de NAD⁺</strong> (e FAD); o ATP em grande quantidade resulta sobretudo da <strong>cadeia de transporte de electrões</strong>, não do Krebs isolado. Rendimento total: <strong>~38 ATP (glicose)</strong> / <strong>~39 ATP (glicogénio)</strong>. Maior capacidade, activação mais lenta.</div>
       </div>
     </div>
   </div>
@@ -956,6 +991,14 @@ window.STUDY_UNITS.push({
     {
       "question": "O que caracteriza a supercompensação além do glicogénio?",
       "answer": "Mais músculo, melhor transporte de oxigénio e adaptações físicas, metabólicas e neuropsicológicas — nível de homeostasia superior ao anterior."
+    },
+    {
+      "question": "O que é a dimensão neuromuscular da especificidade?",
+      "answer": "Padrões de recrutamento e coordenação motora exigidos na competição — complementa as dimensões mecânica e bioenergética."
+    },
+    {
+      "question": "Diferença entre transferência positiva e negativa?",
+      "answer": "Positiva: o treino numa tarefa melhora o desempenho noutra relacionada. Negativa: prejudica outra capacidade. Maior semelhança treino–competição = maior transferência positiva."
     }
   ],
   "quiz": [
@@ -1080,32 +1123,22 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
-      "question": "A procura em aumentar o estímulo de treino, que posteriormente levará a novas adaptações, define:",
-      "options": [
-        "O princípio da especificidade.",
-        "O princípio da sobrecarga.",
-        "O princípio da heterocronia.",
-        "O princípio da continuidade."
-      ],
-      "correct": 1
-    },
-    {
       "question": "A dimensão neuromuscular da especificidade refere-se a:",
       "options": [
-        "O tipo de substrato energético utilizado.",
-        "Os padrões de recrutamento e coordenação motora exigidos.",
-        "A duração total da sessão.",
-        "O número de repetições prescritas."
+        "O sistema energético predominante",
+        "Padrões de recrutamento e coordenação motora na competição",
+        "Apenas músculos e articulações",
+        "O volume semanal de treino"
       ],
       "correct": 1
     },
     {
-      "question": "O momento ideal para aplicar um novo estímulo de sobrecarga é:",
+      "question": "Transferência negativa significa que o treino numa tarefa:",
       "options": [
-        "Durante a fase de fadiga aguda.",
-        "No pico da supercompensação, após recuperação completa.",
-        "Imediatamente após a sessão, sem descanso.",
-        "Só após 4 semanas de destreino."
+        "Melhora sempre outra capacidade",
+        "Prejudica o desempenho noutra capacidade relacionada",
+        "Só ocorre em atletas sedentários",
+        "É igual à transferência positiva"
       ],
       "correct": 1
     },
@@ -1118,9 +1151,31 @@ window.STUDY_UNITS.push({
         "Só se treina um único músculo isolado."
       ],
       "correct": 1
+    },
+    {
+      "question": "A procura em aumentar o estímulo de treino, que posteriormente levará a novas adaptações, define:",
+      "options": [
+        "O princípio da especificidade.",
+        "O princípio da sobrecarga.",
+        "O princípio da heterocronia.",
+        "O princípio da continuidade."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O momento ideal para aplicar um novo estímulo de sobrecarga é:",
+      "options": [
+        "Durante a fase de fadiga aguda.",
+        "No pico da supercompensação, após recuperação completa.",
+        "Imediatamente após a sessão, sem descanso.",
+        "Só após 4 semanas de destreino."
+      ],
+      "correct": 1
     }
   ],
-    contentHtml: `<p class="section-label">Introdução — Objectivo do treino</p>
+    contentHtml: `<div class="alert-box" style="border-left-color:#EF9F27"><strong>⚠️ Exame:</strong> Novo estímulo no <strong>pico da supercompensação</strong>. Especificidade <strong>neuromuscular</strong> = padrões de recrutamento/coordenação. <strong>Transferência positiva</strong> = treino numa tarefa beneficia outra relacionada.</div>
+
+  <p class="section-label">Introdução — Objectivo do treino</p>
   <div class="card">
     <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.7;margin-bottom:.75rem">O objectivo do treino é permitir que o atleta se <strong>adapte às cargas</strong> de treino e competição. Cria-se um conjunto variável de situações condicionadas pelos <strong>princípios biológicos e metodológicos</strong>, provocando alterações nos planos <strong>morfológico, fisiológico, técnico, táctico e psicológico</strong>.</div>
     <div class="alert-box" style="margin:0">Há <strong>perturbação da homeostasia</strong> com intuito de alcançar um nível qualitativo superior → <strong>adaptação</strong>. A sobrecarga não significa treinar sempre «mais e mais forte» — pode esgotar a capacidade do organismo de responder ao estímulo (Bompa &amp; Buzzichelli, 2019).</div>
@@ -1145,7 +1200,7 @@ window.STUDY_UNITS.push({
   <div class="alert-box"><strong>Regra de ouro:</strong> a mudança estrutural e funcional muscular é determinada pela natureza do estímulo. Quanto mais o treino se assemelhar à competição, maior a <strong>transferência</strong> para o rendimento real.</div>
   <div class="card" style="margin-bottom:.75rem">
     <div style="font-size:13px;font-weight:500;margin-bottom:.5rem">Transferência do treino</div>
-    <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.6">Grau de adaptação ao desempenho resultante de um exercício. Inclui associações <strong>cinéticas e cinemáticas</strong>: padrões de movimento, pico de força, taxa de produção de força, aceleração e velocidade. Tarefas específicas induzem adaptações neuromusculares e metabólicas → melhor economia motora.</div>
+    <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.6">Grau de adaptação ao desempenho resultante de um exercício. <strong>Transferência positiva:</strong> o treino numa tarefa <em>melhora</em> o desempenho noutra relacionada. <strong>Transferência negativa:</strong> prejudica outra capacidade. Quanto maior a semelhança treino–competição, maior a transferência positiva.</div>
   </div>
   <div class="two-col">
     <div class="col-card">
@@ -1154,6 +1209,11 @@ window.STUDY_UNITS.push({
       <div class="col-item">Músculos e articulações envolvidos</div>
       <div class="col-item">Velocidade de execução</div>
       <div class="col-item">Recrutamento de unidades motoras específicas</div>
+    </div>
+    <div class="col-card">
+      <div class="badge badge-purple">Dimensão Neuromuscular</div>
+      <div class="col-item">Padrões de <strong>recrutamento e coordenação motora</strong> exigidos na competição</div>
+      <div class="col-item">Complementa a dimensão mecânica e bioenergética</div>
     </div>
     <div class="col-card">
       <div class="badge badge-amber">Dimensão Bioenergética</div>
@@ -1286,6 +1346,10 @@ window.STUDY_UNITS.push({
     {
       "question": "Qual a relação entre literacia física e o LTAD?",
       "answer": "Uma criança fisicamente literada tem formação mais generalizada, explora capacidades ao máximo e reconhece os benefícios de um estilo de vida ativo — preparando melhor a base para qualquer especialização futura."
+    },
+    {
+      "question": "Segundo Navarro (exame), qual a sequência oficial de progressão da carga?",
+      "answer": "Volume → Intensidade → Complexidade. (A sequência Frequência → Volume → Densidade → Intensidade descreve a progressão operacional detalhada na sessão/semana.)"
     }
   ],
   "quiz": [
@@ -1390,6 +1454,16 @@ window.STUDY_UNITS.push({
       "correct": 2
     },
     {
+      "question": "Na progressão da carga (Navarro — versão exame), a ordem correcta é:",
+      "options": [
+        "Volume → Intensidade → Complexidade",
+        "Frequência → Volume → Densidade → Intensidade",
+        "Intensidade → Volume → Complexidade",
+        "Complexidade → Volume → Intensidade"
+      ],
+      "correct": 0
+    },
+    {
       "question": "O princípio da individualização depende de fatores como:",
       "options": [
         "Maturação.",
@@ -1445,6 +1519,7 @@ window.STUDY_UNITS.push({
     <div class="step-h"><span class="num">4</span><div class="lbl">Intensidade</div><div class="ex">Última a aumentar</div></div>
   </div>
   <div class="alert-box"><strong>Regra:</strong> Quanto maior o aumento repentino da carga, maior o período de adaptação necessário — e maior o risco de lesão. A progressão deve ser sempre gradual.</div>
+  <div class="alert-box warn-box" style="border-left-color:#EF9F27"><strong>⚠️ Exame — Navarro (progressão da carga):</strong> a sequência oficial é <strong>Volume → Intensidade → Complexidade</strong>. A sequência Frequência → Volume → Densidade → Intensidade (acima) descreve a progressão <em>operacional detalhada</em> na sessão/semana.</div>
 
   <p class="section-label">Princípio da Individualização</p>
   <div class="card">
@@ -1700,7 +1775,9 @@ window.STUDY_UNITS.push({
       "correct": 1
     }
   ],
-    contentHtml: `<p class="section-label">Carga de Treino — Conceito</p>
+    contentHtml: `<div class="alert-box" style="border-left-color:#EF9F27"><strong>⚠️ Exame:</strong> <strong>Carga externa</strong> = trabalho prescrito (volume, intensidade, densidade). <strong>Capacidades condicionais</strong> = resistência, força, velocidade, flexibilidade.</div>
+
+  <p class="section-label">Carga de Treino — Conceito</p>
   <div class="card">
     <div style="font-size:13px;line-height:1.6;margin-bottom:.5rem">Estímulo aplicado ao atleta através do confronto entre o atleta e o exercício (Matveev: "atividade funcional adicional ao organismo"). A carga determina a grandeza e intensidade dos processos de recuperação.</div>
     <div class="detail-row"><span class="detail-key">Sem incremento de carga</span><span class="detail-val">Estagnação da performance</span></div>
@@ -2004,16 +2081,6 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
-      "question": "O método contínuo deve ser aplicado para desenvolver:",
-      "options": [
-        "O estado estacionário máximo de lactato.",
-        "Capacidade aeróbia de alta intensidade.",
-        "Capacidade aeróbia de baixa intensidade.",
-        "A velocidade."
-      ],
-      "correct": 2
-    },
-    {
       "question": "O VO₂máx representa:",
       "options": [
         "A velocidade máxima de sprint.",
@@ -2032,6 +2099,16 @@ window.STUDY_UNITS.push({
         "Coordenação geral em crianças."
       ],
       "correct": 1
+    },
+    {
+      "question": "O método contínuo deve ser aplicado para desenvolver:",
+      "options": [
+        "O estado estacionário máximo de lactato.",
+        "Capacidade aeróbia de alta intensidade.",
+        "Capacidade aeróbia de baixa intensidade.",
+        "A velocidade."
+      ],
+      "correct": 2
     }
   ],
     contentSections: [
@@ -2053,7 +2130,9 @@ window.STUDY_UNITS.push({
     }
   ],
     contentHtml: `<div id="sec-resistencia" class="content-section"><p class="section-label">Resistência</p>
-<p class="section-label">Resistência — Conceito</p>
+<div class="alert-box" style="border-left-color:#EF9F27;margin-bottom:.75rem"><strong>⚠️ Exame:</strong> <strong>VO₂máx</strong> = consumo máximo de oxigénio. <strong>Método intervalado</strong> = capacidade aeróbia e anaeróbia de alta intensidade. <strong>Método contínuo</strong> = capacidade aeróbia de baixa intensidade.</div>
+
+  <p class="section-label">Resistência — Conceito</p>
   <div class="card">
     <div style="font-size:13px;line-height:1.6;margin-bottom:.5rem">Capacidade de <strong>retardar a fadiga</strong> e manter alto nível de atividade muscular durante treinos e competições. O atleta consegue realizar esforços prolongados, repetir ações intensas, manter potência com precisão e recuperar rapidamente.</div>
     <div class="detail-row"><span class="detail-key">Potencial energético</span><span class="detail-val">Sistemas bioenergéticos do atleta</span></div>
@@ -2475,6 +2554,16 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
+      "question": "O treino de força resistida (força máxima) utiliza tipicamente:",
+      "options": [
+        "45–55% 1RM com 15–20 repetições.",
+        "90–100% 1RM com 1–5 repetições.",
+        "30% 1RM com 30 repetições.",
+        "Apenas peso corporal, sem carga externa."
+      ],
+      "correct": 1
+    },
+    {
       "question": "O treino da força máxima implica:",
       "options": [
         "Percentagens de carga entre 90 a 100% da 1RM, e realização de 1 a 5 repetições.",
@@ -2493,16 +2582,6 @@ window.STUDY_UNITS.push({
         "Ao método balístico."
       ],
       "correct": 0
-    },
-    {
-      "question": "O treino de força resistida (força máxima) utiliza tipicamente:",
-      "options": [
-        "45–55% 1RM com 15–20 repetições.",
-        "90–100% 1RM com 1–5 repetições.",
-        "30% 1RM com 30 repetições.",
-        "Apenas peso corporal, sem carga externa."
-      ],
-      "correct": 1
     },
     {
       "question": "O ciclo de alongamento-encurtamento (CAE) é importante para:",
@@ -2568,7 +2647,9 @@ window.STUDY_UNITS.push({
     }
   ],
     contentHtml: `<div id="sec-forca" class="content-section"><p class="section-label">Força</p>
-<p class="section-label">O que é a Força?</p>
+<div class="alert-box" style="border-left-color:#EF9F27;margin-bottom:.75rem"><strong>⚠️ Exame:</strong> Força máxima: <strong>90–100% 1RM</strong>, 1–5 reps. Flexibilidade mais eficaz: <strong>FNP/PNF</strong>. <strong>OTG</strong> = inibição autogénica. <strong>CAE</strong> +15–20% na concêntrica.</div>
+
+  <p class="section-label">O que é a Força?</p>
   <div class="card">
     <div style="font-size:13px;line-height:1.6;margin-bottom:.5rem">Toda a causa suscetível de alterar, ou tender a alterar, o <strong>estado de repouso ou movimento da matéria</strong>. É a medida de ação de um corpo contra outro e a sua magnitude depende das características e movimentos de ambos os corpos (Zatsiorsky, 2020).</div>
     <div class="detail-row"><span class="detail-key">Relação com a saúde</span><span class="detail-val">Inversamente relacionada com a morte prematura</span></div>
@@ -2933,6 +3014,10 @@ window.STUDY_UNITS.push({
     {
       "question": "Maturação biológica",
       "answer": "Ritmo de desenvolvimento fisiológico; pode variar 2–3 anos entre atletas da mesma idade."
+    },
+    {
+      "question": "Objetivos da sessão",
+      "answer": "Prioritários (foco principal), secundários (apoio) e suplementares (complementares)."
     }
   ],
   "quiz": [
@@ -3017,6 +3102,36 @@ window.STUDY_UNITS.push({
       "correct": 2
     },
     {
+      "question": "Os objetivos de uma sessão podem classificar-se em:",
+      "options": [
+        "Primários, terciários e opcionais",
+        "Prioritários, secundários e suplementares",
+        "Técnicos, táticos e físicos apenas",
+        "Individuais e coletivos apenas"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O mesociclo é:",
+      "options": [
+        "Uma sessão de treino",
+        "Um bloco de várias semanas (tipicamente 3–6+) com orientação definida",
+        "O mesmo que o microciclo semanal",
+        "O plano anual completo"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A sessão de reconhecimento tem como objectivo principal:",
+      "options": [
+        "Competição oficial.",
+        "Familiarização com exercícios, material ou condições novas.",
+        "Avaliação máxima de VO₂máx.",
+        "Recuperação passiva total."
+      ],
+      "correct": 1
+    },
+    {
       "question": "Que tipo de sessões de treino é constituído por um conjunto mínimo de exercícios que são executados a um nível de intensidade e densidade reduzidos:",
       "options": [
         "Sessões de reconhecimento.",
@@ -3035,16 +3150,6 @@ window.STUDY_UNITS.push({
         "Os principais, os gerais e os específicos."
       ],
       "correct": 2
-    },
-    {
-      "question": "A sessão de reconhecimento tem como objectivo principal:",
-      "options": [
-        "Competição oficial.",
-        "Familiarização com exercícios, material ou condições novas.",
-        "Avaliação máxima de VO₂máx.",
-        "Recuperação passiva total."
-      ],
-      "correct": 1
     },
     {
       "question": "O mesociclo corresponde tipicamente a:",
@@ -3183,7 +3288,9 @@ window.STUDY_UNITS.push({
     </ul></div>
 
 <div id="sec-t4" class="content-section"><p class="section-label">Objetivos</p>
-<div class="card"><p style="font-size:13px;line-height:1.6;margin:0">Os objetivos de cada sessão são <strong>subordinados à hierarquia</strong> do plano anual. Uma sessão no microciclo de choque não pode ter objetivos contraditórios com o macrociclo.</p>
+<div class="card"><p style="font-size:13px;line-height:1.6;margin:0">Os objetivos de cada sessão são <strong>subordinados à hierarquia</strong> do plano anual. Uma sessão no microciclo de choque não pode ter objetivos contraditórios com o macrociclo.</p></div>
+<div class="alert-box" style="border-left-color:#378ADD"><strong>Tipos de objetivos da sessão (exame):</strong> <strong>prioritários</strong> (foco principal), <strong>secundários</strong> (apoio) e <strong>suplementares</strong> (complementares).</div>
+    <div class="alert-box" style="border-left-color:#378ADD"><strong>Mesociclo:</strong> bloco de <strong>várias semanas</strong> (tipicamente 3–6+) com orientação/objetivo definido — não confundir com microciclo (1 semana) nem com sessão.</div>
 
     <p class="section-label">Prioridade dos conteúdos</p>
     <div class="priority-chain">
@@ -3194,8 +3301,8 @@ window.STUDY_UNITS.push({
 
     <div class="alert-box" style="border-left-color:#EF9F27">Conteúdos de maior exigência do sistema nervoso devem estar no <strong>PRIMEIRO TERÇO</strong> da sessão, antes de qualquer fadiga acumulada.</div>
 
-    <p class="section-label">Organização dentro da sessão</p></div>
-<table class="data-table">
+    <p class="section-label">Organização dentro da sessão</p>
+    <table class="data-table">
       <tr><th>Momento</th><th>Conteúdo recomendado</th></tr>
       <tr><td>Início (sem fadiga)</td><td>Técnica nova, exercícios técnicos, conteúdos de maior exigência nervosa</td></tr>
       <tr><td>Meio</td><td>Capacidades motoras (força, velocidade, resistência)</td></tr>
@@ -3476,6 +3583,16 @@ window.STUDY_UNITS.push({
       "correct": 2
     },
     {
+      "question": "A ficha de treino deve incluir, entre outros:",
+      "options": [
+        "Apenas o resultado da última competição.",
+        "Objectivos, exercícios, material, volume, intensidade, recuperação e organização dos grupos.",
+        "Só a lista de atletas presentes.",
+        "Apenas a temperatura ambiente."
+      ],
+      "correct": 1
+    },
+    {
       "question": "A parte da sessão de treino em que são apresentados os objetivos planeados para essa sessão treino é:",
       "options": [
         "A parte fundamental.",
@@ -3544,16 +3661,6 @@ window.STUDY_UNITS.push({
         "Competição → Jogos → Alongamento → Técnica."
       ],
       "correct": 1
-    },
-    {
-      "question": "A ficha de treino deve incluir, entre outros:",
-      "options": [
-        "Apenas o resultado da última competição.",
-        "Objectivos, exercícios, material, volume, intensidade, recuperação e organização dos grupos.",
-        "Só a lista de atletas presentes.",
-        "Apenas a temperatura ambiente."
-      ],
-      "correct": 1
     }
   ],
     contentSections: [
@@ -3614,7 +3721,8 @@ window.STUDY_UNITS.push({
         <div class="sf-time">5–10 min</div>
       </div></a>
     </div>
-    <div class="alert-box" style="border-left-color:#1D9E75">A sessão é o <strong>elo de ligação</strong> entre o planeamento e a execução real do treino. Hierarquia: Macrociclo → Mesociclo → Microciclo → Sessão → Tarefa.</div></div>
+    <div class="alert-box" style="border-left-color:#1D9E75">A sessão é o <strong>elo de ligação</strong> entre o planeamento e a execução real do treino. Hierarquia: Macrociclo → Mesociclo → Microciclo → Sessão → Tarefa.</div>
+    <div class="alert-box" style="border-left-color:#EF9F27"><strong>Exame:</strong> <strong>4 partes</strong> da sessão · aquecimento <strong>15–20%</strong> · ordem Cardio→Articular→Neuromuscular→Específica · parte principal: <strong>técnica primeiro</strong> · ficha com objetivos, volume, intensidade.</div></div>
 
 <div id="sec-t1" class="content-section"><p class="section-label">Parte Inicial</p>
 <p>Momento em que os atletas se reúnem e o treinador cria as condições para uma sessão produtiva. Uma saudação calorosa cria bem-estar e sentimento de pertença.</p>

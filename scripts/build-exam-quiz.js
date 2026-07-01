@@ -11,7 +11,7 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const COURSE_FILE = path.join(ROOT, 'imports', 'course.json');
 const EXAM_QUIZ_FILE = path.join(ROOT, 'imports', 'exam-quiz.json');
-const MAX_AUTO_PER_SUB = 3;
+const MAX_AUTO_PER_SUB = 50;
 
 // --- Perguntas curadas (testes + conteúdo pedagógico) ---
 
@@ -852,6 +852,53 @@ const CURATED = {
         ],
         correct: 1,
       },
+      {
+        question: 'O débito cardíaco pode ser definido como:',
+        options: [
+          'Diminui sempre que a pressão arterial diastólica aumenta.',
+          'Produto entre a frequência cardíaca e o volume sistólico.',
+          'Quantifica-se em mmHg.',
+          'Diminui sempre que o volume sistólico aumenta.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'O sangue pode ser definido como:',
+        options: [
+          'Tecido conjuntivo composto exclusivamente por fase plasmática e glóbulos vermelhos.',
+          'Tecido conjuntivo composto por eritrócitos, leucócitos, plaquetas e plasma.',
+          'Cumpre a função de transporte de azoto aos tecidos metabolicamente ativos.',
+          'Tecido conjuntivo composto exclusivamente por hemoglobina e plasma.',
+        ],
+        correct: 1,
+      },
+      {
+        question:
+          'A dissipação de calor a partir da distribuição de sangue à superfície da pele, enquadra-se no mecanismo de:',
+        options: ['Condução.', 'Evaporação.', 'Convecção.', 'Radiação.'],
+        correct: 2,
+      },
+      {
+        question:
+          'Tendo por referência as estruturas músculo-tendinosas do sistema músculo-esquelético, selecione a opção correta:',
+        options: [
+          'O perimísio corresponde a um folheto de tecido conjuntivo que envolve o ventre muscular.',
+          'O tendão corresponde a um folheto de tecido conjuntivo que envolve o ventre muscular.',
+          'O endomísio corresponde a um folheto de tecido conjuntivo que envolve o ventre muscular.',
+          'O epimísio corresponde a um folheto de tecido conjuntivo que envolve o ventre muscular.',
+        ],
+        correct: 3,
+      },
+      {
+        question: 'Que fenómeno fisiológico é explicado através da Fórmula de Fick:',
+        options: [
+          'Permite determinar o consumo de oxigénio à custa da relação entre frequência cardíaca e pressão arterial diastólica.',
+          'Permite determinar o consumo de oxigénio à custa da relação entre débito cardíaco e pressão arterial diastólica.',
+          'Permite determinar o consumo de oxigénio à custa da relação entre débito cardíaco e resistência vascular periférica.',
+          'Permite determinar o consumo de oxigénio à custa da relação entre débito cardíaco e diferença artério-venosa em oxigénio.',
+        ],
+        correct: 3,
+      },
     ],
     sub2: [
       {
@@ -923,6 +970,47 @@ const CURATED = {
           'Apenas menores de 18 anos.',
         ],
         correct: 1,
+      },
+      {
+        question: 'A exposição a agentes poluentes na atmosfera:',
+        options: [
+          'É superior por volta das 6 h da manhã e 22 h da noite, respetivamente.',
+          'Está francamente aumentada nos períodos matinais (~ 6 h da manhã).',
+          'É inferior no período do inverno e no verão, respetivamente.',
+          'Aumenta na parte da tarde e durante as manhãs para o ozono, bem como durante a noite para o monóxido de carbono.',
+        ],
+        correct: 3,
+      },
+      {
+        question:
+          'Qual é a altura do ano em que os níveis de monóxido de carbono atmosféricos se encontram geralmente mais elevados, influenciando a prática de exercício físico?',
+        options: [
+          'Durante a Primavera.',
+          'Durante o Inverno.',
+          'Durante o Verão.',
+          'Durante o Outono.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'O exame médico desportivo realizado nos Centros de Medicina Desportiva:',
+        options: [
+          'Tem validade de 12 meses.',
+          'Implica um custo financeiro a ser suportado pelo atleta ou federação na qual se encontra filiado.',
+          'É obrigatório para atletas de alto rendimento e todos os filiados em federações desportivas.',
+          'É recomendável, mas não obrigatório para os casos de sobreclassificação.',
+        ],
+        correct: 0,
+      },
+      {
+        question: 'Fratura de stress na porção médio-tibial:',
+        options: [
+          'Implica 8 a 10 semanas de recuperação com interrupção total de qualquer atividade física.',
+          'Tem sempre origem no recurso a calçado inapropriado para a prática desportiva.',
+          'Poderão ser recomendadas atividades alternativas (com menor carga compressiva) durante a recuperação do atleta.',
+          'A dor tende a desaparecer ao fim de ~ 45 min de corrida contínua.',
+        ],
+        correct: 2,
       },
     ],
     sub3: [
@@ -996,6 +1084,36 @@ const CURATED = {
         ],
         correct: 1,
       },
+      {
+        question: 'Qual o grau de eficácia da rápida DAE nos casos de PCR?',
+        options: [
+          'Ronda os 65%.',
+          'Ronda os 95%.',
+          'Ronda os 25%.',
+          'Ronda os 45%.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'O programa RICE:',
+        options: [
+          'Recomenda-se a todos os casos de fratura aberta.',
+          'Está indicado para um rutura de 3º grau do ventre muscular.',
+          'Pretende controlar a inflamação tecidular e estabelecer um diagnóstico quanto à gravidade da lesão.',
+          'Deve ser aplicado por um período extensível a não mais de 48 h.',
+        ],
+        correct: 2,
+      },
+      {
+        question: 'Qual é o propósito das medidas universais de proteção individual?',
+        options: [
+          'Lenços de bolso são eficazes no que respeita a proteção do reanimador e da vítima.',
+          'São perfeitamente dispensáveis nos casos em que se presta assistência a um familiar mais próximo.',
+          'Pretendem interpor uma barreira entre o reanimador e os fluidos corporais ou aerossóis provenientes da vítima.',
+          'Luvas e bata são dispensáveis.',
+        ],
+        correct: 2,
+      },
     ],
     sub4: [
       {
@@ -1047,6 +1165,74 @@ const CURATED = {
           'Preservação da verdade desportiva.',
         ],
         correct: 1,
+      },
+      {
+        question: 'O primeiro Código Mundial Antidopagem entrou em a 1 de Janeiro de:',
+        options: ['1999.', '2019.', '2004.', '2010.'],
+        correct: 2,
+      },
+      {
+        question: 'Qual é a sequência correta de etapas no processo do controlo de dopagem?',
+        options: [
+          'Seleção do atleta, notificação, fornecimento da amostra, apresentação na estação de controlo de dopagem.',
+          'Notificação, seleção do atleta, fornecimento da amostra, apresentação na estação de controlo de dopagem.',
+          'Notificação, apresentação na estação de controlo de dopagem, fornecimento da amostra, seleção do atleta.',
+          'Seleção do atleta, notificação, apresentação na estação de controlo de dopagem, fornecimento da amostra.',
+        ],
+        correct: 3,
+      },
+      {
+        question:
+          'Qual das seguintes temáticas não é das mais abordadas nos programas informativos e educacionais da ADoP?',
+        options: [
+          'Lista de Substâncias e Métodos Proibidos.',
+          'Sistema de Autorização de Utilização Terapêutica.',
+          'Suplementos nutricionais.',
+          'Gestão de Resultados.',
+        ],
+        correct: 3,
+      },
+      {
+        question: 'Qual destes serviços não integra a organização da ADoP?',
+        options: [
+          'Instituto Português do Desporto e Juventude, I.P.',
+          'Gabinete jurídico.',
+          'Laboratório de análises de dopagem.',
+          'Estrutura de Suporte ao Programa Antidopagem.',
+        ],
+        correct: 0,
+      },
+      {
+        question: 'Quais os grandes objetivos da luta contra dopagem?',
+        options: [
+          'Preservação do espírito desportivo e da saúde do atleta.',
+          'Preservação da verdade desportiva, da saúde do atleta e do espírito desportivo.',
+          'Preservação da verdade desportiva e do espírito desportivo.',
+          'Preservação da verdade desportiva e da saúde do atleta.',
+        ],
+        correct: 1,
+      },
+      {
+        question:
+          'Selecione a opção correspondente à sequência correta de procedimentos para controlo de dopagem:',
+        options: [
+          'Seleção, divisão da amostra, notificação, fecho e selagem dos frascos.',
+          'Notificação, seleção, divisão da amostra, fecho e selagem dos frascos.',
+          'Notificação, seleção, fecho e selagem dos frascos, divisão da amostra.',
+          'Seleção, notificação, divisão da amostra, fecho e selagem dos frascos.',
+        ],
+        correct: 3,
+      },
+      {
+        question:
+          'Qual das seguintes temáticas é frequentemente abordada nos programas informativos e educacionais da ADoP?',
+        options: [
+          'Prescrição do treino de resistência.',
+          'Técnicas de treino de potência.',
+          'Fundamentos da química medicinal, fisiologia e toxicologia de várias substâncias.',
+          'Lista de substâncias e métodos proibidos.',
+        ],
+        correct: 3,
       },
     ],
     sub5: [
@@ -1135,8 +1321,42 @@ const CURATED = {
         options: ['1963.', '1999.', '1 de janeiro de 2004.', '2012.'],
         correct: 2,
       },
+      {
+        question:
+          'Que Norma Internacional estabelece os critérios para aprovação de uma solicitação de autorização de utilização terapêutica?',
+        options: [
+          'Norma Internacional para Educação.',
+          'Norma Internacional para Controlo.',
+          'Norma Internacional para Laboratórios.',
+          'Norma Internacional para Autorização de Utilização Terapêutica.',
+        ],
+        correct: 3,
+      },
+      {
+        question:
+          'Os atletas são responsáveis por qualquer substância encontrada no seu organismo. Que princípio se encontra aqui representado?',
+        options: [
+          'Princípio da responsabilidade objetiva.',
+          'Princípio da intervenção mínima.',
+          'Princípio da razoabilidade.',
+          'Princípio da integridade de saúde.',
+        ],
+        correct: 0,
+      },
+      {
+        question:
+          'A utilização de suplementos nutricionais é uma das causas mais frequentes de casos positivos de Doping. Esta afirmação está:',
+        options: [
+          'Incorreta, pois não existe relação entre a utilização de suplementos nutricionais e casos positivos de doping.',
+          'Incorreta, pois não existem dados estatísticos que suportem esta afirmação.',
+          'Correta.',
+          'Incorreta, pois existem poucos casos positivos de doping relacionados com a utilização de suplementos nutricionais.',
+        ],
+        correct: 2,
+      },
     ],
   },
+  'unit-da': {},
 };
 
 function normalizeQuestionKey(q) {
