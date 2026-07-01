@@ -389,6 +389,16 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
+      "question": "Quando falamos de igualdade de oportunidades no desporto, devemos abordar, entre outras, as seguintes temáticas:",
+      "options": [
+        "As questões estratégicas.",
+        "As questões raciais.",
+        "As questões táticas.",
+        "As questões técnicas."
+      ],
+      "correct": 1
+    },
+    {
       "question": "Liberdade de oportunidades no desporto significa:",
       "options": [
         "Adaptar as oportunidades tendo em conta as diferenças, procurando a justiça.",
@@ -652,6 +662,26 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
+      "question": "Selecione a opção que melhor reflete as competências básicas do treinador:",
+      "options": [
+        "Realizar os registos apenas das sessões de treino.",
+        "Realizar registos do treino e da competição dos praticantes com mais talento para que o acompanhamento seja mais eficaz.",
+        "Realizar apenas os registos das competições para planear os treinos seguintes.",
+        "Realizar o registo de toda a informação do treino e da competição pertinente para a monitorização da atividade desportiva do praticante."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "O respeito pela diversidade em contexto desportivo:",
+      "options": [
+        "Consiste em apoiar sobretudo os praticantes mais fracos.",
+        "Consiste em focar-se nas vitórias e nos resultados desportivos.",
+        "Consiste em aceitar as diferenças e respeitar as capacidades de todos os praticantes.",
+        "Consiste em respeitar apenas os colegas de equipa."
+      ],
+      "correct": 2
+    },
+    {
       "question": "No que diz respeito ao papel e responsabilidade do treinador:",
       "options": [
         "Este desempenha um papel decisivo apenas no alto rendimento.",
@@ -660,16 +690,6 @@ window.STUDY_UNITS.push({
         "Este desempenha um papel decisivo nos diferentes contextos desportivos onde intervém, desde as etapas mais elementares da prática desportiva até aos níveis mais avançados de rendimento."
       ],
       "correct": 3
-    },
-    {
-      "question": "Selecione a opção que melhor reflete as competências básicas do treinador:",
-      "options": [
-        "Realizar registos do treino e da competição dos praticantes com mais talento para que o acompanhamento seja mais eficaz.",
-        "Realizar o registo de toda a informação do treino e da competição pertinente para a monitorização da atividade desportiva do praticante.",
-        "Realizar os registos apenas das sessões de treino.",
-        "Realizar apenas os registos das competições para planear os treinos seguintes."
-      ],
-      "correct": 1
     },
     {
       "question": "Algumas das competências básicas do treinador passam por:",
@@ -884,6 +904,26 @@ window.STUDY_UNITS.push({
         "Ridicularizar erros em público para acelerar a aprendizagem",
         "Usar linguagem clara",
         "Evitar metas irrealistas"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O treinador de Grau I tem a responsabilidade de desenvolver nos praticantes:",
+      "options": [
+        "O gosto pela aprendizagem e pelo aperfeiçoamento, fatores determinantes, a longo prazo, do progresso qualitativo.",
+        "A adesão incondicional à modalidade desportiva.",
+        "A lealdade incondicional ao clube.",
+        "A vitória a qualquer custo."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Selecione a opção que melhor define o papel do treinador em termos pedagógicos:",
+      "options": [
+        "Ser treinador consiste unicamente na transmissão de conhecimentos técnicos, táticos e regulamentares.",
+        "Ser treinador envolve também, obrigatoriamente, a transmissão de hábitos de trabalho e regras de comportamento e convivência que valorizem o jovem não só como praticante, mas, simultaneamente, como indivíduo e cidadão.",
+        "Ser treinador consiste unicamente na transmissão de hábitos de trabalho e regras de comportamento.",
+        "Ser treinador consiste em formar atletas vencedores a qualquer custo."
       ],
       "correct": 1
     },
@@ -1569,6 +1609,16 @@ window.STUDY_UNITS.push({
       "correct": 2
     },
     {
+      "question": "Quais os principais fatores que caracterizam a aprendizagem cooperativa:",
+      "options": [
+        "Recompensas individuais.",
+        "Os praticantes trabalham em equipa.",
+        "Trabalho individual.",
+        "Equipas semelhantes."
+      ],
+      "correct": 1
+    },
+    {
       "question": "Os principais fatores que concorrem para o incremento da qualidade da sessão de treino e que têm uma expressão operacional na didática de cada modalidade, assentam num reportório de fatores básicos, entre os quais:",
       "options": [
         "Privilegiar as decisões organizativas dos praticantes.",
@@ -1824,6 +1874,16 @@ window.STUDY_UNITS.push({
         "Um obstáculo à formação multilateral"
       ],
       "correct": 1
+    },
+    {
+      "question": "Para contribuir para a formação global dos praticantes em todas as suas vertentes, isto é, concretizar as virtualidades educativas e formativas do desporto, o treinador deverá procurar:",
+      "options": [
+        "Levar os praticantes a irem além dos seus limites físicos.",
+        "Desenvolver nos praticantes a obsessão pela vitória.",
+        "Focar-se exclusivamente no rendimento técnico-tático.",
+        "Desenvolver, nos praticantes, os hábitos de persistência, organização e autodisciplina."
+      ],
+      "correct": 3
     },
     {
       "question": "Como se define sucesso num contexto de competição de formação desportiva?",
@@ -2367,6 +2427,16 @@ window.STUDY_UNITS.push({
         "Focar exclusivamente nos resultados competitivos"
       ],
       "correct": 0
+    },
+    {
+      "question": "Selecione a opção correta no que diz respeito à tarefa mais importante na gestão do tempo de treino, dos recursos humanos e logísticos:",
+      "options": [
+        "Focar-se na gestão do tempo de treino.",
+        "Fazer com que o treino dure o tempo que for preciso.",
+        "Planear o treino.",
+        "Apresentar as tarefas de forma exaustiva."
+      ],
+      "correct": 2
     },
     {
       "question": "Sabemos que os ganhos de aprendizagem estão intimamente dependentes do tempo passado na tarefa, bem como da quantidade máxima de tempo de atividade motora passada em atividades específicas. Esta afirmação está:",
@@ -3142,6 +3212,16 @@ window.STUDY_UNITS.push({
         "Incorreta, pois apenas o feedback é relevante."
       ],
       "correct": 2
+    },
+    {
+      "question": "Mas a orientação de praticantes também consiste em:",
+      "options": [
+        "Afastar-se dos pais e encarregados de educação.",
+        "Limitar-se ao início da prática desportiva.",
+        "Acompanhar e aconselhar o praticante fora do contexto de treino e competição.",
+        "Desvalorizar o percurso escolar do praticante."
+      ],
+      "correct": 2
     }
   ],
     contentHtml: `<div class="card topic-card"><p class="section-label">Técnicas de Intervenção Pedagógica (TIP)</p><div class="alert-box concept-box"><p class="point">
@@ -3407,6 +3487,16 @@ window.STUDY_UNITS.push({
         "Focado exclusivamente no resultado competitivo."
       ],
       "correct": 1
+    },
+    {
+      "question": "Existe um conjunto de valores que o praticante tem de adquirir e que deve ser responsabilizado por isso. Selecione a opção que reflete este critério:",
+      "options": [
+        "Ajudar os colegas.",
+        "Discutir com os árbitros.",
+        "Centrar-se na prestação desportiva.",
+        "Ignorar as regras de convivência."
+      ],
+      "correct": 0
     }
   ],
     contentHtml: `<div class="card topic-card"><p class="section-label">Responsabilização nas Tarefas de Aprendizagem</p><div class="alert-box concept-box"><p class="point">

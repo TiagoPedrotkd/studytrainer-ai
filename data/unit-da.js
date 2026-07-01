@@ -53,6 +53,10 @@ window.STUDY_UNITS.push({
       "answer": "Facilitador: fator cuja presença/ausência melhora a funcionalidade. Barreira: fator cuja presença/ausência limita a funcionalidade."
     },
     {
+      "question": "Dá um exemplo de barreira relacionada com transporte.",
+      "answer": "O transporte consumir tempo de socialização com os pares — limita a participação social."
+    },
+    {
       "question": "Dá um exemplo de um fator que é facilitador para uns e barreira para outros.",
       "answer": "Uma rampa sem piso antiderrapante: facilita um utilizador de cadeira de rodas, mas dificulta uma pessoa com cegueira."
     },
@@ -83,12 +87,62 @@ window.STUDY_UNITS.push({
   ],
   "quiz": [
     {
+      "question": "Selecione qual das afirmações corresponde a uma barreira:",
+      "options": [
+        "O transporte para o treino custar 5 euros cada vez que é utilizado.",
+        "O transporte demorar 1 hora até ao treino.",
+        "O transporte circula por toda a cidade.",
+        "O transporte consome tempo de socialização com os meus pares."
+      ],
+      "correct": 3
+    },
+    {
       "question": "Qual o termo correto a usar para nos referirmos a alguém com uma incapacidade?",
       "options": [
         "Deficiente",
         "Pessoa deficiente",
         "Pessoa com deficiência",
         "Incapacitado"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Qual o termo diferenciador entre integração e inclusão?",
+      "options": [
+        "Significativo.",
+        "Estar no controlo.",
+        "Sensação de pertença.",
+        "Participação."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Quais os fatores que devem ser classificados como barreiras ou facilitadores:",
+      "options": [
+        "Ambiente.",
+        "Indivíduo.",
+        "Tarefa.",
+        "Pessoal."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Selecione a opção correta relativamente ao papel de suporte de pares e família no contexto do desporto adaptado:",
+      "options": [
+        "Este é sempre considerado como facilitador.",
+        "A família constitui um pilar de suporte, em qualquer circunstância.",
+        "Este poderá nem ser considerado barreira ou facilitador.",
+        "Este é sempre considerado como barreira."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Para um indivíduo com cegueira total, um passeio rebaixado sem piso antiderrapante corresponde:",
+      "options": [
+        "Um auxiliar arquitetónico presente no envolvimento.",
+        "Apresenta-se como um objeto neutro, não influenciado a funcionalidade do indivíduo.",
+        "A uma barreira à sua locomoção.",
+        "Um facilitador da sua locomoção."
       ],
       "correct": 2
     },
@@ -181,12 +235,72 @@ window.STUDY_UNITS.push({
         "Meta pessoal ou socialmente significativa"
       ],
       "correct": 2
+    },
+    {
+      "question": "Por vezes, a maior barreira para a prática desportiva por parte das pessoas com deficiência:",
+      "options": [
+        "É a falta de parceiros com quem praticar.",
+        "É a falta de modalidades desportivas adaptadas que ainda não foram inventadas.",
+        "É o acesso à informação de que existe prática adaptada.",
+        "É a incapacidade geral para a prática desportiva."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O termo desporto para pessoas com deficiência:",
+      "options": [
+        "É o termo preferido no desporto adaptado.",
+        "Refere-se exclusivamente ao desporto convencional.",
+        "É sinónimo de desporto adaptado.",
+        "Não está adequado."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "As crenças e atitudes da sociedade sobre as pessoas com deficiência:",
+      "options": [
+        "São baseadas em factos científicos comprovados.",
+        "Têm tendência para ter um impacto negativo no desporto adaptado.",
+        "São baseadas na experiência direta da própria pessoa com deficiência.",
+        "Têm tendência para ter um impacto positivo no desporto adaptado."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "No contexto do desporto adaptado, os facilitadores correspondem:",
+      "options": [
+        "A fatores que permitem a uma pessoa participar em todas as atividades desportivas.",
+        "A fatores que diminuem o estigma social associado à deficiência.",
+        "A fatores que melhoram a funcionalidade e reduzem a incapacidade de uma pessoa.",
+        "A fatores que não limitam e provocam incapacidade."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O desenvolvimento motor rege-se por que princípios?",
+      "options": [
+        "Ser linear e contínuo.",
+        "Ser igual para todas as pessoas.",
+        "Ser não linear, descontínuo e individualizado.",
+        "Depender exclusivamente da idade cronológica."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Sabendo que cada atleta com deficiência é único, o treino deve ser:",
+      "options": [
+        "O mesmo para todos para não desvirtuar a modalidade desportiva.",
+        "Diversificado nos estímulos propostos.",
+        "Massificado para reduzir custos operacionais.",
+        "Exclusivamente individual, sem trabalho em grupo."
+      ],
+      "correct": 1
     }
   ],
     contentHtml: `
   
 
-  <div style="padding:12px 16px;background:#fff8e6;border-left:4px solid var(--gold);border-radius:0 10px 10px 0;margin-bottom:16px;font-size:14px;color:#5b4a1a"><strong>⚠️ Exame:</strong> Termo: <strong>pessoa com deficiência</strong>. Inclusão ≠ integração (participação ativa). Modelo ecológico: <strong>Indivíduo–Ambiente–Tarefa</strong>. Intervenção no <strong>ambiente e tarefa</strong>. Movimento: Estabilidade→Locomoção→Manipulação.</div>
+  <div style="padding:12px 16px;background:#fff8e6;border-left:4px solid var(--gold);border-radius:0 10px 10px 0;margin-bottom:16px;font-size:14px;color:#5b4a1a"><strong>⚠️ Exame:</strong> Termo: <strong>pessoa com deficiência</strong>; usar <strong>desporto adaptado</strong> (não «desporto para pessoas com deficiência»). Diferenciador integração/inclusão: <strong>participação</strong>. <strong>Facilitador</strong> = melhora funcionalidade. <strong>Exemplo barreira:</strong> transporte que <strong>consome tempo de socialização com pares</strong>. <strong>Exemplo facilitador:</strong> transporte que <strong>circula por toda a cidade</strong>. Maior barreira prática: <strong>desinformação</strong>. Atitudes da sociedade → impacto <strong>negativo</strong>. Desenvolvimento motor: <strong>não linear, descontínuo, individualizado</strong>. Movimento: Estabilidade→Locomoção→Manipulação.</div>
 
   <div class="card topic-card"><p class="section-label">Conceito e terminologia</p><ul>
         <li>O termo <strong>"desporto adaptado"</strong> substitui "desporto para pessoas com deficiência"
@@ -206,7 +320,7 @@ window.STUDY_UNITS.push({
 
   <div class="card topic-card"><p class="section-label">Integração vs. Inclusão</p><ul>
         <li><strong>Integração</strong>: trazer a pessoa para o espaço, mas sem participação plena — termo considerado insuficiente e abandonado</li>
-        <li><strong>Inclusão</strong>: estar presente <em>e</em> participar ativamente — a participação é o conceito-chave diferenciador</li>
+        <li><strong>Inclusão</strong>: estar presente <em>e</em> participar ativamente — <strong>participação</strong> é o termo diferenciador face à integração</li>
         <li>Atributos da participação plena:
           <ul class="sub">
             <li>Estar com alguém ou em algo (sentido de pertença)</li>
@@ -244,7 +358,7 @@ window.STUDY_UNITS.push({
             <li>Acessibilidade física e sinalética inadequada</li>
             <li>Desinformação sobre oportunidades de prática</li>
             <li>Recursos financeiros (equipamentos, transporte adaptado)</li>
-            <li>Tempo (deslocação, equipar, higiene pessoal)</li>
+            <li>Tempo (deslocação, equipar, higiene pessoal; ex.: transporte que consome tempo de socialização com pares)</li>
           </ul>
         </li>
         <li>Principais <strong>facilitadores</strong>:
@@ -252,6 +366,7 @@ window.STUDY_UNITS.push({
             <li>Suporte de pares e família (quando bem realizado)</li>
             <li>Conhecimento dos benefícios da prática (saúde física e mental)</li>
             <li>Captação ativa de praticantes pelo treinador</li>
+            <li>Transporte disponível e organizado (ex.: circula por toda a cidade)</li>
           </ul>
         </li>
       </ul></div>
@@ -318,6 +433,10 @@ window.STUDY_UNITS.push({
     {
       "question": "Define facilitador e barreira ambiental.",
       "answer": "Facilitador: fator cuja presença/ausência melhora a funcionalidade. Barreira: fator cuja presença/ausência limita a funcionalidade."
+    },
+    {
+      "question": "Dá um exemplo de barreira relacionada com transporte.",
+      "answer": "O transporte consumir tempo de socialização com os pares — limita a participação social."
     },
     {
       "question": "Dá um exemplo de um fator que é facilitador para uns e barreira para outros.",
@@ -398,6 +517,16 @@ window.STUDY_UNITS.push({
         "Incapacitado"
       ],
       "correct": 2
+    },
+    {
+      "question": "Qual o termo diferenciador entre integração e inclusão?",
+      "options": [
+        "Significativo.",
+        "Estar no controlo.",
+        "Sensação de pertença.",
+        "Participação."
+      ],
+      "correct": 3
     },
     {
       "question": "O que distingue a Inclusão da Integração?",
@@ -608,12 +737,142 @@ window.STUDY_UNITS.push({
         "Só adaptação na competição"
       ],
       "correct": 1
+    },
+    {
+      "question": "Alguns dos meios de otimizar a aprendizagem no contexto de treino com pessoas deficientes:",
+      "options": [
+        "Modificar os materiais e introduzir novas regras.",
+        "Reduzir o espaço e número de elementos de um determinado jogo/tarefa.",
+        "Usar instrumentos e implementos de dimensões menores, aumentando a segurança.",
+        "Adaptar o modo de instrução face às condições dos materiais."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Caso um atleta não consiga realizar o seguimento (visual) de determinado objeto podemos:",
+      "options": [
+        "Diminuir o tamanho do objeto.",
+        "Aumentar o contraste do objeto com o espaço (cor).",
+        "Aumentar a distância do alvo ao objeto.",
+        "Diminuir o alvo."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O treinador fica responsável por acompanhar todos os atletas menos aptos por determinado exercício adaptado não permitindo dedicar tempo à observação, feedback e acompanhamento da atividade:",
+      "options": [
+        "Nesta situação dever-se-á ponderar abdicar desta adaptação.",
+        "O treinador deverá continuar, está a fazer um ótimo trabalho.",
+        "É um pequeno revés para grandes ganhos na aprendizagem e formação.",
+        "Devem-se correr riscos e este é um que vale a pena."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Um equipamento de apoio tem como principal propósito:",
+      "options": [
+        "É condição essencial para permitir a prática de desporto adaptado.",
+        "Compensar, monitorizar, aliviar ou neutralizar as incapacidades ou limitações associadas à participação na atividade.",
+        "Permitir que a atividade desportiva seja realizada em pleno.",
+        "É essencial face às dificuldades técnicas dos praticantes com deficiência."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Se uma regra não é entendida pelo praticante, deve-se:",
+      "options": [
+        "Eliminar completamente a regra.",
+        "Simplificar a mesma.",
+        "Manter a regra inalterada.",
+        "Aumentar a complexidade da regra."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Os dispositivos de comunicação alternativa são particularmente úteis para:",
+      "options": [
+        "Pessoas com deficiência visual.",
+        "Pessoas com paralisia cerebral.",
+        "Pessoas com deficiência auditiva.",
+        "Atletas de alto rendimento."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A adaptação desportiva deve proporcionar:",
+      "options": [
+        "Vitórias em competição.",
+        "Que o praticante participe mais.",
+        "Igualdade de resultados entre todos.",
+        "A eliminação de todas as barreiras."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Na estruturação e adaptação do treino, dois aspetos centrais são:",
+      "options": [
+        "Planeamento e segurança.",
+        "Volume e intensidade.",
+        "Competição e resultados.",
+        "Equipamento e instalações."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Perante um atleta com deficiência motora que fatiga precocemente e tem maior dificuldade, a estratégia adequada é:",
+      "options": [
+        "Aumentar os períodos de repouso entre exercício, diminuir o intervalo de duração de cada repetição e diminuir a complexidade da tarefa.",
+        "Aumentar os períodos de repouso entre exercício, diminuir a complexidade da tarefa e aumentar a instrução.",
+        "Diminuir os períodos de repouso e aumentar a complexidade da tarefa.",
+        "Manter a mesma carga e complexidade para não desvirtuar o exercício."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "No contexto do desporto adaptado, os produtos de apoio correspondem:",
+      "options": [
+        "A equipamentos de segurança geral obrigatórios em todas as modalidades.",
+        "A substitutos permanentes do treinador.",
+        "A materiais desportivos convencionais sem qualquer modificação.",
+        "A dispositivos para compensar incapacidades e permitir maior participação."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Qual destes é um exemplo de produto de apoio?",
+      "options": [
+        "Colete de proteção.",
+        "Óculos de sol.",
+        "Prótese de fibra de carbono.",
+        "Bastão de caminhada convencional."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Os dispositivos de comunicação alternativa podem ser usados preferencialmente por:",
+      "options": [
+        "Pessoas com paralisia cerebral.",
+        "Pessoas com lesão medular baixa.",
+        "Pessoas com amputação da mão.",
+        "Pessoas com amputação de ambas as pernas."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Selecione a opção que corresponde a um produto de apoio:",
+      "options": [
+        "Colete refletor.",
+        "Óculos de proteção.",
+        "Bastão de equilíbrio.",
+        "Prótese de fibra de carbono."
+      ],
+      "correct": 3
     }
   ],
     contentHtml: `
   
 
-  <div style="padding:12px 16px;background:#fff8e6;border-left:4px solid var(--gold);border-radius:0 10px 10px 0;margin-bottom:16px;font-size:14px;color:#5b4a1a"><strong>⚠️ Exame:</strong> Adaptação = grau de modificação para participação. <strong>Não alterar tudo</strong> (regras+materiais+tarefa+objetivo) em simultâneo. Variante <strong>dificuldade</strong> quando 100% sucesso. Categorias: regras, materiais, equipamento, <strong>apoio humano</strong>. Prótese substitui; ortótese auxilia.</div>
+  <div style="padding:12px 16px;background:#fff8e6;border-left:4px solid var(--gold);border-radius:0 10px 10px 0;margin-bottom:16px;font-size:14px;color:#5b4a1a"><strong>⚠️ Exame:</strong> Adaptação = permitir <strong>participar mais</strong>. Estruturação: <strong>planeamento e segurança</strong>. Regra não entendida → <strong>simplificar</strong>. Comunicação alternativa (PC). Fadiga motora: mais <strong>repouso</strong>, repetições mais <strong>curtas</strong>, menos <strong>complexidade</strong>. Produto de apoio (ISO 9999): compensar incapacidades → maior participação (ex.: <strong>prótese</strong>). <strong>Barreira transporte:</strong> consome tempo de <strong>socialização com pares</strong>.</div>
 
   <div class="card topic-card"><p class="section-label">Conceito e terminologia</p><ul>
         <li>O termo <strong>"desporto adaptado"</strong> substitui "desporto para pessoas com deficiência"
@@ -671,7 +930,7 @@ window.STUDY_UNITS.push({
             <li>Acessibilidade física e sinalética inadequada</li>
             <li>Desinformação sobre oportunidades de prática</li>
             <li>Recursos financeiros (equipamentos, transporte adaptado)</li>
-            <li>Tempo (deslocação, equipar, higiene pessoal)</li>
+            <li>Tempo (deslocação, equipar, higiene pessoal; ex.: transporte que consome tempo de socialização com pares)</li>
           </ul>
         </li>
         <li>Principais <strong>facilitadores</strong>:
@@ -679,6 +938,7 @@ window.STUDY_UNITS.push({
             <li>Suporte de pares e família (quando bem realizado)</li>
             <li>Conhecimento dos benefícios da prática (saúde física e mental)</li>
             <li>Captação ativa de praticantes pelo treinador</li>
+            <li>Transporte disponível e organizado (ex.: circula por toda a cidade)</li>
           </ul>
         </li>
       </ul></div>

@@ -110,8 +110,25 @@ const CURATED = {
         ],
         correct: 1,
       },
+      {
+        question:
+          'Qual corresponde às unidades motoras com motoneurónios de maiores dimensões e axónio de maior calibre?',
+        options: ['Tipo S.', 'Tipo FF.', 'Tipo FR.', 'Tipo I.'],
+        correct: 1,
+      },
     ],
     sub3: [
+      {
+        question:
+          'O princípio do treino baseado na capacidade do organismo responder positivamente às exigências do treino (adaptação) é:',
+        options: [
+          'O princípio da heterocronia.',
+          'O princípio da reversibilidade.',
+          'O princípio da individualização.',
+          'O princípio da sobrecarga.',
+        ],
+        correct: 3,
+      },
       {
         question: 'A dimensão neuromuscular da especificidade refere-se a:',
         options: [
@@ -166,6 +183,16 @@ const CURATED = {
       },
     ],
     sub5: [
+      {
+        question: 'A carga de treino:',
+        options: [
+          'É medida apenas de forma individual.',
+          'Determina a grandeza e a intensidade dos processos de recuperação.',
+          'Só é mensurável através de parâmetros fisiológicos.',
+          'Compreende apenas uma grandeza externa.',
+        ],
+        correct: 1,
+      },
       {
         question: 'A carga externa de treino corresponde a:',
         options: [
@@ -241,6 +268,16 @@ const CURATED = {
         correct: 2,
       },
       {
+        question: 'O método de treino mais eficaz para melhorar a flexibilidade corresponde:',
+        options: [
+          'Ao método estático.',
+          'Ao método passivo.',
+          'Ao método balístico.',
+          'Ao método PNF.',
+        ],
+        correct: 3,
+      },
+      {
         question: 'O Órgão Tendinoso de Golgi está associado principalmente a:',
         options: [
           'Reflexo miotático.',
@@ -304,6 +341,16 @@ const CURATED = {
       },
     ],
     sub9: [
+      {
+        question: 'O aquecimento visa mobilizar e preparar o atleta do ponto de vista:',
+        options: [
+          'Fisiológico e psicológico.',
+          'Físico e técnico.',
+          'Físico e tático.',
+          'Cardiovascular e emocional.',
+        ],
+        correct: 0,
+      },
       {
         question: 'A ordem correcta das fases do aquecimento é:',
         options: [
@@ -412,6 +459,17 @@ const CURATED = {
     ],
     sub2: [
       {
+        question:
+          'Quando falamos de igualdade de oportunidades no desporto, devemos abordar, entre outras, as seguintes temáticas:',
+        options: [
+          'As questões estratégicas.',
+          'As questões raciais.',
+          'As questões táticas.',
+          'As questões técnicas.',
+        ],
+        correct: 1,
+      },
+      {
         question: 'Liberdade de oportunidades no desporto significa:',
         options: [
           'Adaptar as oportunidades tendo em conta as diferenças, procurando a justiça.',
@@ -454,6 +512,26 @@ const CURATED = {
     ],
     sub3: [
       {
+        question: 'Selecione a opção que melhor reflete as competências básicas do treinador:',
+        options: [
+          'Realizar os registos apenas das sessões de treino.',
+          'Realizar registos do treino e da competição dos praticantes com mais talento para que o acompanhamento seja mais eficaz.',
+          'Realizar apenas os registos das competições para planear os treinos seguintes.',
+          'Realizar o registo de toda a informação do treino e da competição pertinente para a monitorização da atividade desportiva do praticante.',
+        ],
+        correct: 3,
+      },
+      {
+        question: 'O respeito pela diversidade em contexto desportivo:',
+        options: [
+          'Consiste em apoiar sobretudo os praticantes mais fracos.',
+          'Consiste em focar-se nas vitórias e nos resultados desportivos.',
+          'Consiste em aceitar as diferenças e respeitar as capacidades de todos os praticantes.',
+          'Consiste em respeitar apenas os colegas de equipa.',
+        ],
+        correct: 2,
+      },
+      {
         question: 'No que diz respeito ao papel e responsabilidade do treinador:',
         options: [
           'Este desempenha um papel decisivo apenas no alto rendimento.',
@@ -495,6 +573,27 @@ const CURATED = {
       },
     ],
     sub4: [
+      {
+        question: 'O treinador de Grau I tem a responsabilidade de desenvolver nos praticantes:',
+        options: [
+          'O gosto pela aprendizagem e pelo aperfeiçoamento, fatores determinantes, a longo prazo, do progresso qualitativo.',
+          'A adesão incondicional à modalidade desportiva.',
+          'A lealdade incondicional ao clube.',
+          'A vitória a qualquer custo.',
+        ],
+        correct: 0,
+      },
+      {
+        question:
+          'Selecione a opção que melhor define o papel do treinador em termos pedagógicos:',
+        options: [
+          'Ser treinador consiste unicamente na transmissão de conhecimentos técnicos, táticos e regulamentares.',
+          'Ser treinador envolve também, obrigatoriamente, a transmissão de hábitos de trabalho e regras de comportamento e convivência que valorizem o jovem não só como praticante, mas, simultaneamente, como indivíduo e cidadão.',
+          'Ser treinador consiste unicamente na transmissão de hábitos de trabalho e regras de comportamento.',
+          'Ser treinador consiste em formar atletas vencedores a qualquer custo.',
+        ],
+        correct: 1,
+      },
       {
         question:
           'No que diz respeito à influência da prática desportiva no desenvolvimento dos indivíduos/praticantes:',
@@ -563,6 +662,16 @@ const CURATED = {
     ],
     sub7: [
       {
+        question: 'Quais os principais fatores que caracterizam a aprendizagem cooperativa:',
+        options: [
+          'Recompensas individuais.',
+          'Os praticantes trabalham em equipa.',
+          'Trabalho individual.',
+          'Equipas semelhantes.',
+        ],
+        correct: 1,
+      },
+      {
         question:
           'Os principais fatores que concorrem para o incremento da qualidade da sessão de treino e que têm uma expressão operacional na didática de cada modalidade, assentam num reportório de fatores básicos, entre os quais:',
         options: [
@@ -585,6 +694,17 @@ const CURATED = {
       },
     ],
     sub8: [
+      {
+        question:
+          'Para contribuir para a formação global dos praticantes em todas as suas vertentes, isto é, concretizar as virtualidades educativas e formativas do desporto, o treinador deverá procurar:',
+        options: [
+          'Levar os praticantes a irem além dos seus limites físicos.',
+          'Desenvolver nos praticantes a obsessão pela vitória.',
+          'Focar-se exclusivamente no rendimento técnico-tático.',
+          'Desenvolver, nos praticantes, os hábitos de persistência, organização e autodisciplina.',
+        ],
+        correct: 3,
+      },
       {
         question: 'A competição deve ser vista como:',
         options: [
@@ -639,6 +759,17 @@ const CURATED = {
       },
     ],
     sub10: [
+      {
+        question:
+          'Selecione a opção correta no que diz respeito à tarefa mais importante na gestão do tempo de treino, dos recursos humanos e logísticos:',
+        options: [
+          'Focar-se na gestão do tempo de treino.',
+          'Fazer com que o treino dure o tempo que for preciso.',
+          'Planear o treino.',
+          'Apresentar as tarefas de forma exaustiva.',
+        ],
+        correct: 2,
+      },
       {
         question:
           'Sabemos que os ganhos de aprendizagem estão intimamente dependentes do tempo passado na tarefa, bem como da quantidade máxima de tempo de atividade motora passada em atividades específicas. Esta afirmação está:',
@@ -718,6 +849,16 @@ const CURATED = {
     ],
     sub13: [
       {
+        question: 'Mas a orientação de praticantes também consiste em:',
+        options: [
+          'Afastar-se dos pais e encarregados de educação.',
+          'Limitar-se ao início da prática desportiva.',
+          'Acompanhar e aconselhar o praticante fora do contexto de treino e competição.',
+          'Desvalorizar o percurso escolar do praticante.',
+        ],
+        correct: 2,
+      },
+      {
         question:
           'As Técnicas de Intervenção Pedagógica (TIP) aplicadas ao treino e à competição são os instrumentos fundamentais para fomentar a compreensão dos conteúdos pelos praticantes. Esta afirmação é:',
         options: [
@@ -740,6 +881,17 @@ const CURATED = {
       },
     ],
     sub14: [
+      {
+        question:
+          'Existe um conjunto de valores que o praticante tem de adquirir e que deve ser responsabilizado por isso. Selecione a opção que reflete este critério:',
+        options: [
+          'Ajudar os colegas.',
+          'Discutir com os árbitros.',
+          'Centrar-se na prestação desportiva.',
+          'Ignorar as regras de convivência.',
+        ],
+        correct: 0,
+      },
       {
         question: 'Ao definir um objetivo, o treinador deverá certificar-se que o mesmo é:',
         options: ['Mensurável.', 'Abrangente.', 'Formulado de forma neutra.', 'Irrealista.'],
@@ -792,6 +944,16 @@ const CURATED = {
   },
   'unit-fch': {
     sub1: [
+      {
+        question: 'Em que estrutura dos ossos longos se encontram as cartilagens de crescimento?',
+        options: [
+          'Na transição entre a metáfise e a diáfise.',
+          'No topo das epífises.',
+          'No interior da diáfise.',
+          'Ao nível das metáfises dos ossos longos.',
+        ],
+        correct: 3,
+      },
       {
         question: 'Quantas peças ósseas tem o corpo humano adulto (aproximadamente)?',
         options: ['150', '206', '250', '320'],
@@ -1092,7 +1254,7 @@ const CURATED = {
           'Ronda os 25%.',
           'Ronda os 45%.',
         ],
-        correct: 1,
+        correct: 3,
       },
       {
         question: 'O programa RICE:',
@@ -1116,6 +1278,27 @@ const CURATED = {
       },
     ],
     sub4: [
+      {
+        question:
+          'Fora de competição, os critérios de seleção dos atletas para controlo antidoping são: sorteio e classificação na prova. Esta afirmação está:',
+        options: [
+          'Incorreta, porque fora de competição os critérios de seleção dos atletas são: sorteio e forma direcionada.',
+          'Correta.',
+          'Incorreta, porque fora de competição os critérios de seleção dos atletas são apenas o sorteio.',
+          'Incorreta, porque fora de competição não existem controlos antidoping.',
+        ],
+        correct: 0,
+      },
+      {
+        question: 'Na ADoP, que Comissão avalia as solicitações para autorização de utilização terapêutica?',
+        options: [
+          'Comissão Nacional Antidopagem.',
+          'Comissão de Autorização de Utilização Terapêutica.',
+          'Comissão Jurídica.',
+          'Comissão Financeira.',
+        ],
+        correct: 1,
+      },
       {
         question: 'Qual é o volume mínimo de urina exigido num controlo de dopagem?',
         options: ['50 ml', '90 ml', '120 ml', '75 ml'],
@@ -1237,6 +1420,17 @@ const CURATED = {
     ],
     sub5: [
       {
+        question:
+          'Qual das seguintes situações não complementa a seguinte frase: Atletas que precisam de suplementos nutricionais devem...',
+        options: [
+          'Adquirir produtos de empresas com boa reputação.',
+          'Consultar um profissional competente.',
+          'Obter informação adicional sobre os ingredientes.',
+          'Dar prioridade a compras pela internet.',
+        ],
+        correct: 3,
+      },
+      {
         question: 'Qual foi o primeiro organismo responsável pela lista de substâncias proibidas no desporto?',
         options: [
           'Agência Mundial Antidopagem (AMA).',
@@ -1356,7 +1550,483 @@ const CURATED = {
       },
     ],
   },
-  'unit-da': {},
+  'unit-da': {
+    sub1: [
+      {
+        question: 'Selecione qual das afirmações corresponde a uma barreira:',
+        options: [
+          'O transporte para o treino custar 5 euros cada vez que é utilizado.',
+          'O transporte demorar 1 hora até ao treino.',
+          'O transporte circula por toda a cidade.',
+          'O transporte consome tempo de socialização com os meus pares.',
+        ],
+        correct: 3,
+      },
+      {
+        question: 'Qual o termo diferenciador entre integração e inclusão?',
+        options: ['Significativo.', 'Estar no controlo.', 'Sensação de pertença.', 'Participação.'],
+        correct: 3,
+      },
+      {
+        question: 'Quais os fatores que devem ser classificados como barreiras ou facilitadores:',
+        options: ['Ambiente.', 'Indivíduo.', 'Tarefa.', 'Pessoal.'],
+        correct: 0,
+      },
+      {
+        question:
+          'Selecione a opção correta relativamente ao papel de suporte de pares e família no contexto do desporto adaptado:',
+        options: [
+          'Este é sempre considerado como facilitador.',
+          'A família constitui um pilar de suporte, em qualquer circunstância.',
+          'Este poderá nem ser considerado barreira ou facilitador.',
+          'Este é sempre considerado como barreira.',
+        ],
+        correct: 2,
+      },
+      {
+        question:
+          'Para um indivíduo com cegueira total, um passeio rebaixado sem piso antiderrapante corresponde:',
+        options: [
+          'Um auxiliar arquitetónico presente no envolvimento.',
+          'Apresenta-se como um objeto neutro, não influenciado a funcionalidade do indivíduo.',
+          'A uma barreira à sua locomoção.',
+          'Um facilitador da sua locomoção.',
+        ],
+        correct: 2,
+      },
+      {
+        question: 'Por vezes, a maior barreira para a prática desportiva por parte das pessoas com deficiência:',
+        options: [
+          'É a falta de parceiros com quem praticar.',
+          'É a falta de modalidades desportivas adaptadas que ainda não foram inventadas.',
+          'É o acesso à informação de que existe prática adaptada.',
+          'É a incapacidade geral para a prática desportiva.',
+        ],
+        correct: 2,
+      },
+      {
+        question: 'O termo desporto para pessoas com deficiência:',
+        options: [
+          'É o termo preferido no desporto adaptado.',
+          'Refere-se exclusivamente ao desporto convencional.',
+          'É sinónimo de desporto adaptado.',
+          'Não está adequado.',
+        ],
+        correct: 3,
+      },
+      {
+        question: 'As crenças e atitudes da sociedade sobre as pessoas com deficiência:',
+        options: [
+          'São baseadas em factos científicos comprovados.',
+          'Têm tendência para ter um impacto negativo no desporto adaptado.',
+          'São baseadas na experiência direta da própria pessoa com deficiência.',
+          'Têm tendência para ter um impacto positivo no desporto adaptado.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'No contexto do desporto adaptado, os facilitadores correspondem:',
+        options: [
+          'A fatores que permitem a uma pessoa participar em todas as atividades desportivas.',
+          'A fatores que diminuem o estigma social associado à deficiência.',
+          'A fatores que melhoram a funcionalidade e reduzem a incapacidade de uma pessoa.',
+          'A fatores que não limitam e provocam incapacidade.',
+        ],
+        correct: 2,
+      },
+      {
+        question: 'O desenvolvimento motor rege-se por que princípios?',
+        options: [
+          'Ser linear e contínuo.',
+          'Ser igual para todas as pessoas.',
+          'Ser não linear, descontínuo e individualizado.',
+          'Depender exclusivamente da idade cronológica.',
+        ],
+        correct: 2,
+      },
+      {
+        question: 'Sabendo que cada atleta com deficiência é único, o treino deve ser:',
+        options: [
+          'O mesmo para todos para não desvirtuar a modalidade desportiva.',
+          'Diversificado nos estímulos propostos.',
+          'Massificado para reduzir custos operacionais.',
+          'Exclusivamente individual, sem trabalho em grupo.',
+        ],
+        correct: 1,
+      },
+    ],
+    sub2: [
+      {
+        question:
+          'Alguns dos meios de otimizar a aprendizagem no contexto de treino com pessoas deficientes:',
+        options: [
+          'Modificar os materiais e introduzir novas regras.',
+          'Reduzir o espaço e número de elementos de um determinado jogo/tarefa.',
+          'Usar instrumentos e implementos de dimensões menores, aumentando a segurança.',
+          'Adaptar o modo de instrução face às condições dos materiais.',
+        ],
+        correct: 3,
+      },
+      {
+        question:
+          'Caso um atleta não consiga realizar o seguimento (visual) de determinado objeto podemos:',
+        options: [
+          'Diminuir o tamanho do objeto.',
+          'Aumentar o contraste do objeto com o espaço (cor).',
+          'Aumentar a distância do alvo ao objeto.',
+          'Diminuir o alvo.',
+        ],
+        correct: 1,
+      },
+      {
+        question:
+          'O treinador fica responsável por acompanhar todos os atletas menos aptos por determinado exercício adaptado não permitindo dedicar tempo à observação, feedback e acompanhamento da atividade:',
+        options: [
+          'Nesta situação dever-se-á ponderar abdicar desta adaptação.',
+          'O treinador deverá continuar, está a fazer um ótimo trabalho.',
+          'É um pequeno revés para grandes ganhos na aprendizagem e formação.',
+          'Devem-se correr riscos e este é um que vale a pena.',
+        ],
+        correct: 0,
+      },
+      {
+        question: 'Um equipamento de apoio tem como principal propósito:',
+        options: [
+          'É condição essencial para permitir a prática de desporto adaptado.',
+          'Compensar, monitorizar, aliviar ou neutralizar as incapacidades ou limitações associadas à participação na atividade.',
+          'Permitir que a atividade desportiva seja realizada em pleno.',
+          'É essencial face às dificuldades técnicas dos praticantes com deficiência.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Se uma regra não é entendida pelo praticante, deve-se:',
+        options: [
+          'Eliminar completamente a regra.',
+          'Simplificar a mesma.',
+          'Manter a regra inalterada.',
+          'Aumentar a complexidade da regra.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Os dispositivos de comunicação alternativa podem ser usados preferencialmente por:',
+        options: [
+          'Pessoas com paralisia cerebral.',
+          'Pessoas com lesão medular baixa.',
+          'Pessoas com amputação da mão.',
+          'Pessoas com amputação de ambas as pernas.',
+        ],
+        correct: 0,
+      },
+      {
+        question: 'Os dispositivos de comunicação alternativa são particularmente úteis para:',
+        options: [
+          'Pessoas com deficiência visual.',
+          'Pessoas com paralisia cerebral.',
+          'Pessoas com deficiência auditiva.',
+          'Atletas de alto rendimento.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'A adaptação desportiva deve proporcionar:',
+        options: [
+          'Vitórias em competição.',
+          'Que o praticante participe mais.',
+          'Igualdade de resultados entre todos.',
+          'A eliminação de todas as barreiras.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Na estruturação e adaptação do treino, dois aspetos centrais são:',
+        options: [
+          'Planeamento e segurança.',
+          'Volume e intensidade.',
+          'Competição e resultados.',
+          'Equipamento e instalações.',
+        ],
+        correct: 0,
+      },
+      {
+        question:
+          'Perante um atleta com deficiência motora que fatiga precocemente e tem maior dificuldade, a estratégia adequada é:',
+        options: [
+          'Aumentar os períodos de repouso entre exercício, diminuir o intervalo de duração de cada repetição e diminuir a complexidade da tarefa.',
+          'Aumentar os períodos de repouso entre exercício, diminuir a complexidade da tarefa e aumentar a instrução.',
+          'Diminuir os períodos de repouso e aumentar a complexidade da tarefa.',
+          'Manter a mesma carga e complexidade para não desvirtuar o exercício.',
+        ],
+        correct: 0,
+      },
+      {
+        question: 'No contexto do desporto adaptado, os produtos de apoio correspondem:',
+        options: [
+          'A equipamentos de segurança geral obrigatórios em todas as modalidades.',
+          'A substitutos permanentes do treinador.',
+          'A materiais desportivos convencionais sem qualquer modificação.',
+          'A dispositivos para compensar incapacidades e permitir maior participação.',
+        ],
+        correct: 3,
+      },
+      {
+        question: 'Selecione a opção que corresponde a um produto de apoio:',
+        options: [
+          'Colete refletor.',
+          'Óculos de proteção.',
+          'Bastão de equilíbrio.',
+          'Prótese de fibra de carbono.',
+        ],
+        correct: 3,
+      },
+      {
+        question: 'Qual destes é um exemplo de produto de apoio?',
+        options: [
+          'Colete de proteção.',
+          'Óculos de sol.',
+          'Prótese de fibra de carbono.',
+          'Bastão de caminhada convencional.',
+        ],
+        correct: 2,
+      },
+    ],
+  },
+  'unit-ed': {
+    sub1: [
+      {
+        question: 'A ética normativa ou do dever:',
+        options: [
+          'Defendida por Emanuel Kant (1724-1804), refere que caso a ação seja aceite por todos então esta está correta.',
+          'Defendida por John Stuart Mill (1806-1873), afirma que se deve procurar o bem e diminuir o mal.',
+          'Defendida por Aristóteles (385-323, AC) assenta mais na pessoa e menos na ação, sublinhado o seu carácter.',
+          'Defendida por Kohlberg (1927-1987), observa as diferentes crenças das pessoas sobre a moralidade.',
+        ],
+        correct: 0,
+      },
+      {
+        question:
+          'Se o treinador incorrer num comportamento desonesto, terá que aceitar que outros indivíduos hajam também dessa maneira, podendo os prejuízos cair sobre si e, de igual forma, contribuir para um clima generalizado de desconfiança. A perspetiva ética que aqui se apresenta corresponde:',
+        options: [
+          'À ética universal, defendida por James Rachels.',
+          'À ética deontológica, defendida por Emanuel Kant.',
+          'À ética das virtudes, defendida por Aristóteles.',
+          'À ética utilitarista, defendida por John Stuart Mill.',
+        ],
+        correct: 1,
+      },
+      {
+        question: 'Qual é o objeto de estudo da Ética, enquanto área de conhecimento?',
+        options: ['A sociedade.', 'O desporto.', 'O comportamento humano.', 'A felicidade.'],
+        correct: 2,
+      },
+      {
+        question: 'Qual o contexto dos valores cívicos?',
+        options: [
+          'O próprio indivíduo.',
+          'A interação entre as pessoas.',
+          'Os instrumentos de ação.',
+          'O espaço e o meio envolvente.',
+        ],
+        correct: 3,
+      },
+      {
+        question: 'Qual o contexto dos valores pessoais?',
+        options: [
+          'Os instrumentos de ação.',
+          'A interação entre as pessoas.',
+          'O próprio indivíduo.',
+          'O espaço e o meio envolvente.',
+        ],
+        correct: 2,
+      },
+      {
+        question:
+          'Relativamente ao desenvolvimento da sustentabilidade através do desporto, uma das opções apresentadas é incorreta. Qual?',
+        options: [
+          'É uma temática completamente alheia ao mundo do desporto.',
+          'Atualmente é promovida por diversas instituições através da relação com os objetivos para o Desenvolvimento Sustentável da ONU.',
+          'É uma problemática cada vez mais considerada.',
+          'Tem na Agenda 21 publicada pelo Comité Olímpico Internacional em 1992 o seu primeiro documento.',
+        ],
+        correct: 0,
+      },
+      {
+        question: 'O que é um código de ética desportiva?',
+        options: [
+          'É um manual de regras desportivas obrigatórias para todos os agentes envolvidos, que são fiscalizadas e cujo incumprimento pode levar à punição.',
+          'É o equivalente a um regulamento competitivo de uma qualquer modalidade desportiva.',
+          'Consiste num manual de boas práticas que contém todos os comportamentos de ética necessários e possíveis no contexto desportivo.',
+          'É uma estrutura axiológica indicativa do comportamento e conduta que todos os agentes desportivos (e demais envolvidos no fenómeno desportivo) devem adotar.',
+        ],
+        correct: 3,
+      },
+      {
+        question: 'São atitudes demonstrativas de fair-play:',
+        options: [
+          'A defesa da excelência, amizade e respeito.',
+          'Sair em defesa do colega de equipa depois de o árbitro lhe atribuir um cartão vermelho.',
+          'A demonstração de dignidade, respeito e justiça.',
+          'O judoca que perdeu o combate não cumprimentar o seu adversário.',
+        ],
+        correct: 2,
+      },
+      {
+        question:
+          'Relativamente à ocorrência de bullying no desporto, uma das opções apresentadas é incorreta. Qual?',
+        options: [
+          'É uma realidade entre atletas mas também entre treinador e atletas.',
+          'Quando ocorre, é frequente que seja no balneário e longe de elementos externos.',
+          'Faz referência ao uso sistemático de poder com o objetivo de humilhar, e rebaixar o outro, ferindo a sua dignidade e personalidade.',
+          'Carateriza-se única e fundamentalmente pela agressão física por parte de um atleta sobre outro.',
+        ],
+        correct: 3,
+      },
+      {
+        question: 'A Carta Internacional da Educação Física, Atividade Física e Desporto:',
+        options: [
+          'Foi publicada pela Comissão Europeia.',
+          'Foi publicada pela Organização Mundial de Saúde.',
+          'Foi publicada pela UNICEF.',
+          'Foi publicada pela UNESCO.',
+        ],
+        correct: 3,
+      },
+      {
+        question: 'Qual o objetivo do Olimpismo?',
+        options: [
+          'Promover uma relação de respeito entre as pessoas.',
+          'Criar as condições para que se possam desenvolver amizades entre as pessoas.',
+          'Colocar o desporto ao serviço do desenvolvimento harmonioso da pessoa humana em vista de promover uma sociedade pacífica preocupada com a preservação da dignidade Humana.',
+          'Formar atletas capazes de desenvolver performances de excelência.',
+        ],
+        correct: 2,
+      },
+    ],
+    sub2: [
+      {
+        question: 'Como podemos caracterizar a intervenção pelo desporto?',
+        options: [
+          'Tem como foco a via da participação.',
+          'Tem como foco o desporto profissional.',
+          'Tem como foco a atividade física sénior.',
+          'Tem como foco a via da competição.',
+        ],
+        correct: 0,
+      },
+      {
+        question: 'Como podemos caracterizar a intervenção para o desporto?',
+        options: [
+          'Tem como foco a via da participação.',
+          'Tem como foco o desporto profissional.',
+          'Tem como foco a atividade física sénior.',
+          'Tem como foco a via da competição.',
+        ],
+        correct: 3,
+      },
+      {
+        question:
+          'Um dos seguintes recursos não foi publicado pelo Plano Nacional de Ética no Desporto. Qual não foi publicado, entre os seguintes?',
+        options: [
+          'Programa de educação Olímpica.',
+          'Folheto ética no Desporto para pais.',
+          'Cartão Branco/Fair-play.',
+          'Caravana/centro de estágio dos valores.',
+        ],
+        correct: 0,
+      },
+      {
+        question: 'No desporto, os treinadores devem sempre procurar formar:',
+        options: ['Outros treinadores.', 'Atletas.', 'Campeões.', 'Cidadãos.'],
+        correct: 3,
+      },
+      {
+        question:
+          'O treinador de judo que não inicia o treino sem que todos os praticantes tenham arrumado apropriadamente o seu material no cacifo correspondente demonstra uma atitude promotora:',
+        options: [
+          'De obediência ao comando do treinador.',
+          'De valores pessoais.',
+          'De caráter e desenvolvimento pessoal.',
+          'De valores cívicos.',
+        ],
+        correct: 3,
+      },
+      {
+        question: 'Quais os valores do Olimpismo?',
+        options: [
+          'Excelência, amizade e lealdade.',
+          'Fair-play, respeito e amizade.',
+          'Fair-play, dignidade e honra.',
+          'Excelência, amizade e respeito.',
+        ],
+        correct: 3,
+      },
+      {
+        question:
+          'Selecione a opção incorreta relativamente à promoção de valores no treino desportivo:',
+        options: [
+          'Recorrer à imagem e à mensagem de grandes atletas.',
+          'Utilizar rituais e manifestações demonstrativas de cordialidade e respeito pelo outro e pelo espaço de prática.',
+          'Utilizar critérios de interação inconsistentes.',
+          'Conceber diferentes responsabilidades na organização dos treinos.',
+        ],
+        correct: 2,
+      },
+      {
+        question:
+          'Selecione a opção incorreta relativamente à promoção de valores no treino desportivo:',
+        options: [
+          'Utilizar critérios de interação inconsistentes.',
+          'Recorrer à imagem e à mensagem de grandes atletas.',
+          'Conceber diferentes responsabilidades na organização dos treinos.',
+          'Utilizar rituais e manifestações demonstrativas de cordialidade e respeito pelo outro e pelo espaço de prática.',
+        ],
+        correct: 0,
+      },
+      {
+        question:
+          'Tendo por referência os compromissos do treinador, uma das opções apresentadas é incorreta. Qual?',
+        options: [
+          'Promover e potenciar os benefícios a nível biológico, psicológico e social que a prática desportiva acarreta.',
+          'Entender a competição como uma manifestação desportiva que é parte do processo e não o seu produto.',
+          'Focar-se exclusivamente no desenvolvimento de atletas de alto-rendimento.',
+          'Estabelecer uma relação exemplar com todos os outros agentes.',
+        ],
+        correct: 2,
+      },
+      {
+        question: 'Para a promoção dos valores no desporto, é importante que o treinador:',
+        options: [
+          'Controle todas as ações dos atletas.',
+          'Limite os comportamentos dos atletas',
+          'Dê ou retire liberdade, de forma intencional e pedagógica, em função das necessidades da circunstância e dos atletas.',
+          'Dê total liberdade em todos os momentos.',
+        ],
+        correct: 2,
+      },
+      {
+        question:
+          'Tendo por referência a promoção de valores no treino desportivo, uma das opções apresentadas é correta. Qual?',
+        options: [
+          'Deixar os atletas fazerem tudo o que querem.',
+          'Ser muito diretivo.',
+          'Gerir o diálogo e utilizar linguagem que transmita confiança e compreensão.',
+          'Nunca dar confiança aos atletas.',
+        ],
+        correct: 2,
+      },
+      {
+        question: 'Para a promoção dos valores no desporto, é importante que o treinador:',
+        options: [
+          'Acompanhe todas as vontades dos atletas.',
+          'Seja íntegro, no equilíbrio entre situações.',
+          'Sobretudo, seja diretivo e confiante.',
+          'Sobretudo, seja não diretivo e flexível.',
+        ],
+        correct: 1,
+      },
+    ],
+  },
 };
 
 function normalizeQuestionKey(q) {

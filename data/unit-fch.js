@@ -221,6 +221,16 @@ window.STUDY_UNITS.push({
       "correct": 3
     },
     {
+      "question": "Em que estrutura dos ossos longos se encontram as cartilagens de crescimento?",
+      "options": [
+        "Na transição entre a metáfise e a diáfise.",
+        "No topo das epífises.",
+        "No interior da diáfise.",
+        "Ao nível das metáfises dos ossos longos."
+      ],
+      "correct": 3
+    },
+    {
       "question": "Uma unidade motora é composta por:",
       "options": [
         "Vários axónios e uma fibra muscular.",
@@ -870,7 +880,7 @@ window.STUDY_UNITS.push({
     },
     {
       "question": "O SBV sozinho reverte a paragem cardiorrespiratória?",
-      "answer": "Não — apenas mantém perfusão mínima. A desfibrilação rápida com DAE reverte ~95% das PCR com ritmo desfibrilhável (FV/TVSP)."
+      "answer": "Não — apenas mantém perfusão mínima. A desfibrilação rápida com DAE nos casos de PCR tem eficácia de cerca de 45% (ritmos desfibrilháveis: FV/TVSP)."
     },
     {
       "question": "Em que ritmos está indicada a DAE?",
@@ -886,7 +896,7 @@ window.STUDY_UNITS.push({
     },
     {
       "question": "Qual o grau de eficácia da rápida DAE nos casos de PCR?",
-      "answer": "Ronda os 95% nos ritmos desfibrilháveis (FV e TVSP), quando aplicada rapidamente"
+      "answer": "Ronda os 45%."
     },
     {
       "question": "Qual o propósito das MOUPs?",
@@ -994,7 +1004,7 @@ window.STUDY_UNITS.push({
         "Ronda os 25%",
         "Ronda os 45%"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
       "question": "Qual é o propósito das medidas universais de proteção individual?",
@@ -1088,7 +1098,7 @@ window.STUDY_UNITS.push({
     }
   ],
     contentHtml: `<div id="sec-sec-temas" class="content-section"><p class="section-label">Temas</p>
-<div style="padding:10px 14px;background:var(--bg-warning);border:0.5px solid var(--border-warning);border-radius:8px;font-size:13px;margin-bottom:12px;color:var(--text-warning)"><strong>⚠️ Exame:</strong> Sobrevida PCR −<strong>7–10%/min</strong>. SBV: Segurança→Consciência→Via aérea→Ventilação→<strong>112</strong>→30 CTE→2 insuflações. CTE <strong>100–120/min</strong>. SBV <strong>não reverte</strong> PCR. FV = choque DAE.</div>
+<div style="padding:10px 14px;background:var(--bg-warning);border:0.5px solid var(--border-warning);border-radius:8px;font-size:13px;margin-bottom:12px;color:var(--text-warning)"><strong>⚠️ Exame:</strong> Sobrevida PCR −<strong>7–10%/min</strong>. SBV: Segurança→Consciência→Via aérea→Ventilação→<strong>112</strong>→30 CTE→2 insuflações. CTE <strong>100–120/min</strong>. SBV <strong>não reverte</strong> PCR. FV = choque DAE. <strong>Eficácia da rápida DAE nos casos de PCR: ~45%</strong>.</div>
     <div class="topic-grid content-grid">
 
       <div class="card topic-card"><p class="section-label">Sistema de emergência médica</p><div class="kv">
@@ -1107,7 +1117,7 @@ window.STUDY_UNITS.push({
             <div class="mnemonic-title">Cadeia de sobrevivência — 4 elos</div>
             <div class="mnemonic-letter"><span class="mnemonic-char">1</span><span class="mnemonic-desc">Ativação do 112</span></div>
             <div class="mnemonic-letter"><span class="mnemonic-char">2</span><span class="mnemonic-desc">SBV — <em>ganha tempo</em>, não reverte a paragem</span></div>
-            <div class="mnemonic-letter"><span class="mnemonic-char">3</span><span class="mnemonic-desc">Desfibrilação — reverte ~95% das PCR com ritmo desfibrilhável (DAE rápida)</span></div>
+            <div class="mnemonic-letter"><span class="mnemonic-char">3</span><span class="mnemonic-desc">Desfibrilação — eficácia da rápida DAE nos casos de PCR: <strong>~45%</strong> (FV/TVSP)</span></div>
             <div class="mnemonic-letter"><span class="mnemonic-char">4</span><span class="mnemonic-desc">SAV — estabilização pós-reversão</span></div>
           </div>
         </div>
@@ -1151,7 +1161,7 @@ window.STUDY_UNITS.push({
             <div class="mnemonic-letter"><span class="mnemonic-char">4</span><span class="mnemonic-desc">Afastar todos · analisar ritmo · administrar choque se indicado</span></div>
             <div class="mnemonic-letter"><span class="mnemonic-char">5</span><span class="mnemonic-desc">Retomar SBV imediatamente após o choque</span></div>
           </div>
-            <div class="kv-row"><div class="kv-label">Eficácia</div>A rápida aplicação da DAE reverte ~95% das PCR com ritmo desfibrilhável (FV/TVSP)</div>
+            <div class="kv-row"><div class="kv-label">Eficácia</div>A rápida aplicação da DAE nos casos de PCR tem eficácia de cerca de <strong>45%</strong> (ritmos desfibrilháveis: FV/TVSP)</div>
             <div class="kv-row"><div class="kv-label">Em Portugal</div>Requer formação específica e delegação de competência médica</div>
         </div>
       </div>
@@ -1475,6 +1485,26 @@ window.STUDY_UNITS.push({
         "7 dias",
         "14 dias",
         "30 dias"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Fora de competição, os critérios de seleção dos atletas para controlo antidoping são: sorteio e classificação na prova. Esta afirmação está:",
+      "options": [
+        "Incorreta, porque fora de competição os critérios de seleção dos atletas são: sorteio e forma direcionada.",
+        "Correta.",
+        "Incorreta, porque fora de competição os critérios de seleção dos atletas são apenas o sorteio.",
+        "Incorreta, porque fora de competição não existem controlos antidoping."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Na ADoP, que Comissão avalia as solicitações para autorização de utilização terapêutica?",
+      "options": [
+        "Comissão Nacional Antidopagem.",
+        "Comissão de Autorização de Utilização Terapêutica.",
+        "Comissão Jurídica.",
+        "Comissão Financeira."
       ],
       "correct": 1
     },
@@ -1884,6 +1914,16 @@ window.STUDY_UNITS.push({
         "Incorreta — poucos casos relacionados"
       ],
       "correct": 2
+    },
+    {
+      "question": "Qual das seguintes situações não complementa a seguinte frase: Atletas que precisam de suplementos nutricionais devem...",
+      "options": [
+        "Adquirir produtos de empresas com boa reputação.",
+        "Consultar um profissional competente.",
+        "Obter informação adicional sobre os ingredientes.",
+        "Dar prioridade a compras pela internet."
+      ],
+      "correct": 3
     },
     {
       "question": "De acordo com o princípio da responsabilidade objetiva, quem é responsável por uma substância proibida no organismo?",

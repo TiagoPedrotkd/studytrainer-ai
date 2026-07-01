@@ -118,11 +118,11 @@
               "question": "A carga de treino:",
               "options": [
                 "É medida apenas de forma individual.",
+                "Determina a grandeza e a intensidade dos processos de recuperação.",
                 "Só é mensurável através de parâmetros fisiológicos.",
-                "Compreende apenas uma grandeza externa.",
-                "Determina a grandeza e a intensidade dos processos de recuperação."
+                "Compreende apenas uma grandeza externa."
               ],
-              "correct": 3
+              "correct": 1
             },
             {
               "question": "Entre que idades as capacidades coordenativas têm o seu período de desenvolvimento crucial:",
@@ -199,12 +199,12 @@
             {
               "question": "O método de treino mais eficaz para melhorar a flexibilidade corresponde:",
               "options": [
-                "Ao método PNF.",
                 "Ao método estático.",
                 "Ao método passivo.",
-                "Ao método balístico."
+                "Ao método balístico.",
+                "Ao método PNF."
               ],
-              "correct": 0
+              "correct": 3
             }
           ]
         },
@@ -567,6 +567,32 @@
           "title": "Adaptação prática e apoios",
           "description": "Princípios de adaptação, variantes de facilidade/dificuldade, regras, materiais e equipamentos, suporte humano, produtos de apoio e análise de dificuldades motoras.",
           "html": "d:/Treinador_Curso/Resumos/Unidade 4/SubUnidade3_4_V1.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        }
+      ]
+    },
+    {
+      "id": "unit-ed",
+      "number": 5,
+      "title": "Ética no Desporto",
+      "description": "Fundamentos éticos, correntes filosóficas, papel do treinador, espírito desportivo, fair-play, olimpismo e problemáticas éticas.",
+      "subunits": [
+        {
+          "id": "sub1",
+          "number": 1,
+          "title": "Ética e valores no desporto",
+          "description": "Conceito de ética, correntes (virtudes, dever, utilitarismo), treinador como agente ético, fair-play, olimpismo e oito problemáticas.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 5/SubUnidade1_V1.html",
+          "extraFlashcards": [],
+          "extraQuiz": []
+        },
+        {
+          "id": "sub2",
+          "number": 2,
+          "title": "O papel do treinador",
+          "description": "Prioridade da pessoa, paradigmas PELO/PARA o desporto, códigos de ética, deveres do treinador, PNED, recursos e estratégias de intervenção.",
+          "html": "d:/Treinador_Curso/Resumos/Unidade 5/SubUnidade2_V1.html",
           "extraFlashcards": [],
           "extraQuiz": []
         }

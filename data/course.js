@@ -12,7 +12,7 @@ window.STUDY_COURSE = {
       "description": "Planeamento, princípios biológicos e metodológicos, capacidades físicas, sessão e estrutura do treino.",
       "subunitCount": 9,
       "flashcardCount": 140,
-      "quizCount": 160,
+      "quizCount": 163,
       "blockCount": 112,
       "subunits": [
         {
@@ -30,7 +30,7 @@ window.STUDY_COURSE = {
           "title": "Sistemas Energéticos",
           "description": "ATP-PCr, glicolítico, oxidativo, domínios de intensidade, limiares e unidades motoras.",
           "flashcardCount": 17,
-          "quizCount": 19,
+          "quizCount": 20,
           "blockCount": 6
         },
         {
@@ -39,7 +39,7 @@ window.STUDY_COURSE = {
           "title": "Princípios Biológicos do Treino",
           "description": "Sobrecarga, especificidade, reversibilidade, heterocronia e supercompensação.",
           "flashcardCount": 17,
-          "quizCount": 17,
+          "quizCount": 18,
           "blockCount": 6
         },
         {
@@ -93,7 +93,7 @@ window.STUDY_COURSE = {
           "title": "Estrutura da Sessão de Treino",
           "description": "Partes inicial, preparatória, principal e final, fases do aquecimento, ficha, microciclos e supercompensação.",
           "flashcardCount": 12,
-          "quizCount": 18,
+          "quizCount": 19,
           "blockCount": 23
         }
       ]
@@ -105,7 +105,7 @@ window.STUDY_COURSE = {
       "description": "Treino como ato pedagógico, valor educativo do desporto, papel do treinador e competição formativa.",
       "subunitCount": 15,
       "flashcardCount": 204,
-      "quizCount": 205,
+      "quizCount": 214,
       "blockCount": 67,
       "subunits": [
         {
@@ -123,7 +123,7 @@ window.STUDY_COURSE = {
           "title": "Igualdade como princípio estruturante",
           "description": "Igualdade, equidade e liberdade; sete dimensões no desporto; treinador promotor do respeito.",
           "flashcardCount": 12,
-          "quizCount": 14,
+          "quizCount": 15,
           "blockCount": 3
         },
         {
@@ -132,7 +132,7 @@ window.STUDY_COURSE = {
           "title": "Papel e responsabilidade do treinador",
           "description": "Profissão e missão, competências básicas, promoção desportiva e comunicação pedagógica.",
           "flashcardCount": 15,
-          "quizCount": 14,
+          "quizCount": 15,
           "blockCount": 4
         },
         {
@@ -141,7 +141,7 @@ window.STUDY_COURSE = {
           "title": "Boas práticas e adesão ao desporto",
           "description": "Práticas pedagógicas, adesão à prática, lidar com o erro, elogio e repreensão com critério.",
           "flashcardCount": 12,
-          "quizCount": 11,
+          "quizCount": 13,
           "blockCount": 4
         },
         {
@@ -168,7 +168,7 @@ window.STUDY_COURSE = {
           "title": "O treinador como agente promotor",
           "description": "Facilitador, aprendizagem cooperativa, competências individuais e individualização no coletivo.",
           "flashcardCount": 16,
-          "quizCount": 14,
+          "quizCount": 15,
           "blockCount": 4
         },
         {
@@ -177,7 +177,7 @@ window.STUDY_COURSE = {
           "title": "Competição na formação desportiva",
           "description": "Lugar da competição, formação global, relativizar vitória/derrota, inclusão e ética do treinador.",
           "flashcardCount": 16,
-          "quizCount": 14,
+          "quizCount": 15,
           "blockCount": 5
         },
         {
@@ -195,7 +195,7 @@ window.STUDY_COURSE = {
           "title": "Fatores de eficácia pedagógica",
           "description": "Gestão do tempo, instrução, clima relacional, logística e ciclo planear-executar-avaliar.",
           "flashcardCount": 17,
-          "quizCount": 16,
+          "quizCount": 17,
           "blockCount": 5
         },
         {
@@ -222,7 +222,7 @@ window.STUDY_COURSE = {
           "title": "Compreensão e orientação",
           "description": "Técnicas de intervenção pedagógica, questionamento, ambiente positivo e orientação na iniciação.",
           "flashcardCount": 11,
-          "quizCount": 11,
+          "quizCount": 12,
           "blockCount": 5
         },
         {
@@ -231,7 +231,7 @@ window.STUDY_COURSE = {
           "title": "Responsabilização dos praticantes",
           "description": "Objetivos individuais e coletivos, horizonte temporal, tarefas complementares e respeito pelo clube.",
           "flashcardCount": 12,
-          "quizCount": 13,
+          "quizCount": 14,
           "blockCount": 5
         },
         {
@@ -252,7 +252,7 @@ window.STUDY_COURSE = {
       "description": "Anatomia, fisiologia, prevenção de lesões, higiene desportiva, primeiros socorros e antidopagem.",
       "subunitCount": 5,
       "flashcardCount": 73,
-      "quizCount": 95,
+      "quizCount": 99,
       "blockCount": 40,
       "subunits": [
         {
@@ -261,7 +261,7 @@ window.STUDY_COURSE = {
           "title": "Funcionamento do corpo humano",
           "description": "Anatomia e fisiologia aplicada ao desporto: ossos, músculos, circulação, respiração, Fick, hormonas e termorregulação.",
           "flashcardCount": 17,
-          "quizCount": 21,
+          "quizCount": 22,
           "blockCount": 11
         },
         {
@@ -288,7 +288,7 @@ window.STUDY_COURSE = {
           "title": "Controlo antidopagem",
           "description": "Objetivos, ADoP/WADA, procedimentos de controlo, amostras A/B, sanções e legislação nacional.",
           "flashcardCount": 13,
-          "quizCount": 24,
+          "quizCount": 26,
           "blockCount": 7
         },
         {
@@ -297,7 +297,7 @@ window.STUDY_COURSE = {
           "title": "Lista proibida, AUT e suplementos",
           "description": "Lista WADA, critérios de proibição, autorização terapêutica (AUT), suplementos e responsabilidade objetiva.",
           "flashcardCount": 11,
-          "quizCount": 17,
+          "quizCount": 18,
           "blockCount": 7
         }
       ]
@@ -308,8 +308,8 @@ window.STUDY_COURSE = {
       "title": "Desporto adaptado",
       "description": "Inclusão, classificação funcional, modalidades adaptadas e papel do treinador na prática desportiva inclusiva.",
       "subunitCount": 2,
-      "flashcardCount": 40,
-      "quizCount": 32,
+      "flashcardCount": 42,
+      "quizCount": 57,
       "blockCount": 16,
       "subunits": [
         {
@@ -317,8 +317,8 @@ window.STUDY_COURSE = {
           "number": 1,
           "title": "Inclusão e fatores ambientais",
           "description": "Conceito de desporto adaptado, integração vs. inclusão, modelo ecológico, barreiras e facilitadores, categorias de movimento.",
-          "flashcardCount": 15,
-          "quizCount": 10,
+          "flashcardCount": 16,
+          "quizCount": 21,
           "blockCount": 6
         },
         {
@@ -326,9 +326,39 @@ window.STUDY_COURSE = {
           "number": 2,
           "title": "Adaptação prática e apoios",
           "description": "Princípios de adaptação, variantes de facilidade/dificuldade, regras, materiais e equipamentos, suporte humano, produtos de apoio e análise de dificuldades motoras.",
-          "flashcardCount": 25,
-          "quizCount": 22,
+          "flashcardCount": 26,
+          "quizCount": 36,
           "blockCount": 10
+        }
+      ]
+    },
+    {
+      "id": "unit-ed",
+      "number": 5,
+      "title": "Ética no Desporto",
+      "description": "Fundamentos éticos, correntes filosóficas, papel do treinador, espírito desportivo, fair-play, olimpismo e problemáticas éticas.",
+      "subunitCount": 2,
+      "flashcardCount": 37,
+      "quizCount": 54,
+      "blockCount": 26,
+      "subunits": [
+        {
+          "id": "sub1",
+          "number": 1,
+          "title": "Ética e valores no desporto",
+          "description": "Conceito de ética, correntes (virtudes, dever, utilitarismo), treinador como agente ético, fair-play, olimpismo e oito problemáticas.",
+          "flashcardCount": 11,
+          "quizCount": 28,
+          "blockCount": 10
+        },
+        {
+          "id": "sub2",
+          "number": 2,
+          "title": "O papel do treinador",
+          "description": "Prioridade da pessoa, paradigmas PELO/PARA o desporto, códigos de ética, deveres do treinador, PNED, recursos e estratégias de intervenção.",
+          "flashcardCount": 26,
+          "quizCount": 26,
+          "blockCount": 16
         }
       ]
     }

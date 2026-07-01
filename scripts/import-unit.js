@@ -553,10 +553,257 @@ function extractResumoConteudo(html) {
   return { html: normalized, sections: [] };
 }
 
+function stripEticaSectionHeader(html) {
+  return html
+    .replace(/<div class="section-head">[\s\S]*?<\/div>/g, '')
+    .replace(/<p class="section-sub"[^>]*>[\s\S]*?<\/p>/g, '')
+    .replace(/<div class="grid3" id="correntesGrid"><\/div>/g, '')
+    .replace(/<div class="grid4" id="taxonomiaGrid"><\/div>/g, '')
+    .replace(/<div id="accGrid"><\/div>/g, '')
+    .trim();
+}
+
+function normalizeEticaStatic(html) {
+  let content = html;
+  content = content.replace(
+    /<div class="scoreboard">\s*<div class="h">([\s\S]*?)<\/div>\s*<div class="h">([\s\S]*?)<\/div>\s*<div class="b">([\s\S]*?)<\/div>\s*<div class="b">([\s\S]*?)<\/div>\s*<\/div>/,
+    '<div class="two-col"><div class="col-card"><h4>$1</h4><p>$3</p></div><div class="col-card"><h4>$2</h4><p>$4</p></div></div>'
+  );
+  content = content.replace(/<div class="vcard">/g, '<div class="col-card">');
+  content = content.replace(/class="grid3"/g, 'class="param-grid"');
+  content = content.replace(/class="grid4"/g, 'class="param-grid"');
+  content = content.replace(/class="relbox center"/g, 'class="col-card"');
+  content = content.replace(/class="relbox"/g, 'class="col-card"');
+  content = content.replace(/class="relwrap"/g, 'class="param-grid"');
+  content = content.replace(/<div class="relarrow">[^<]*<\/div>/g, '');
+  content = content.replace(/<div class="rellabel">([\s\S]*?)<\/div>/g, '<p class="section-label">$1</p>');
+  content = content.replace(/<span class="badge">/g, '<span class="badge badge-green">');
+  content = content.replace(/<h3([^>]*)>/g, '<p class="section-label"$1>');
+  content = content.replace(/<\/h3>/g, '</p>');
+  return normalizeStudyTagsAndGrids(content);
+}
+
+function extractEticaConteudo(html) {
+  if (!html.includes('id="conceito"') || !/(?:const|let)\s+glossary\s*=/.test(html)) {
+    return null;
+  }
+
+  const parts = [];
+  const examBox =
+    '<div class="alert-box"><strong>⚠️ Exame:</strong> Ethos = <strong>caráter</strong>. Ética estuda <strong>comportamento humano</strong>. <strong>Kant</strong> = dever/universalização; <strong>Aristóteles</strong> = virtudes; <strong>Mill</strong> = utilitarismo. Fair-play = <strong>dignidade, respeito, justiça</strong>. Olimpismo: desenvolvimento harmonioso + sociedade pacífica. Valores <strong>pessoais</strong> = indivíduo; <strong>cívicos</strong> = espaço/meio. Bullying ≠ só físico. Sustentabilidade <strong>não</strong> é alheia ao desporto. Carta Internacional = <strong>UNESCO</strong>.</div>';
+
+  const conceito = extractSectionById(html, 'conceito');
+  if (conceito) {
+    parts.push(
+      `<div class="card topic-card"><p class="section-label">Ética: conceito e fundamento</p>${normalizeEticaStatic(stripEticaSectionHeader(conceito))}</div>`
+    );
+  }
+
+  if (/(?:const|let)\s+correntes\s*=/.test(html)) {
+    const correntes = extractArray(html, 'correntes');
+    const correntesHtml = `<div class="princip-grid">${correntes
+      .map(
+        (c) =>
+          `<div class="princip-card"><h4>${c.nome}</h4><p><strong>${c.quem}</strong> — ${c.def}</p><p>${c.exemplo}</p><p>${c.papel}</p></div>`
+      )
+      .join('')}</div>`;
+    parts.push(
+      `<div class="card topic-card"><p class="section-label">Correntes éticas aplicadas ao desporto</p>${correntesHtml}</div>`
+    );
+  }
+
+  const treinador = extractSectionById(html, 'treinador');
+  if (treinador) {
+    let treinadorHtml = normalizeEticaStatic(stripEticaSectionHeader(treinador));
+    if (/(?:const|let)\s+taxonomia\s*=/.test(html)) {
+      const taxonomia = extractArray(html, 'taxonomia');
+      treinadorHtml += `<div class="param-grid">${taxonomia
+        .map((v) => `<div class="param-card"><h4>${v.t}</h4><p>${v.d}</p></div>`)
+        .join('')}</div>`;
+    }
+    parts.push(
+      `<div class="card topic-card"><p class="section-label">O treinador como agente ético central</p>${treinadorHtml}</div>`
+    );
+  }
+
+  const espirito = extractSectionById(html, 'espirito');
+  if (espirito) {
+    parts.push(
+      `<div class="card topic-card"><p class="section-label">Espírito desportivo, fair-play e olimpismo</p>${normalizeEticaStatic(stripEticaSectionHeader(espirito))}</div>`
+    );
+  }
+
+  if (/(?:const|let)\s+problematicas\s*=/.test(html)) {
+    const problematicas = extractArray(html, 'problematicas');
+    const probHtml = problematicas
+      .map(
+        (p, i) =>
+          `<div class="step"><div class="step-num">${String(i + 1).padStart(2, '0')}</div><div class="step-text"><strong>${p.t}</strong> — ${p.d}<div class="alert-box" style="margin-top:0.5rem">${p.role}</div><p style="font-size:12px;margin-top:0.35rem;font-style:italic">${p.ref}</p></div></div>`
+      )
+      .join('');
+    parts.push(
+      `<div class="card topic-card"><p class="section-label">Problemáticas éticas no desporto</p>${probHtml}</div>`
+    );
+  }
+
+  if (/(?:const|let)\s+casos\s*=/.test(html)) {
+    const casos = extractArray(html, 'casos');
+    const casosHtml = casos
+      .map(
+        (c, i) =>
+          `<div class="col-card"><h4>Caso ${i + 1}: ${c.t}</h4><p>${c.d}</p><div class="alert-box" style="margin-top:0.5rem"><strong>Sugestão:</strong> ${c.r}</div></div>`
+      )
+      .join('');
+    parts.push(
+      `<div class="card topic-card"><p class="section-label">Exercícios de aplicação — casos práticos</p><div class="two-col">${casosHtml}</div></div>`
+    );
+  }
+
+  return { html: examBox + parts.join('\n'), sections: [] };
+}
+
+function normalizeEticaGuideBody(html) {
+  return html
+    .replace(/<h3 class="sub-title">/g, '<p class="section-label">')
+    .replace(/<div class="keybox">/g, '<div class="alert-box">')
+    .replace(/<div class="kb-title">/g, '<strong>')
+    .replace(/<blockquote class="q">/g, '<div class="mnem-box">')
+    .replace(/<\/blockquote>/g, '</div>')
+    .replace(/<cite>/g, '<p style="font-size:12px;margin-top:0.5rem;font-style:italic">')
+    .replace(/<\/cite>/g, '</p>')
+    .replace(/<div class="divider"><\/div>/g, '')
+    .replace(/class="bullets"/g, 'class="bullets"')
+    .replace(/class="body-text"/g, 'class="body-text"');
+}
+
+function normalizeEticaGuideContent(html) {
+  let content = html
+    .trim()
+    .replace(/<button class="next-btn"[^>]*>[\s\S]*?<\/button>/g, '')
+    .replace(/style="margin-top:\d+px;?"/g, '');
+
+  const examBox =
+    '<div class="alert-box"><strong>⚠️ Exame:</strong> UNESCO = <strong>cidadania</strong>; OMS = <strong>saúde</strong>. Intervenção <strong>PELO</strong> desporto = <strong>participação</strong>; <strong>PARA</strong> = <strong>competição</strong>/rendimento. Formar <strong>cidadãos</strong>, não só atletas. Integridade + equilíbrio mão fechada/aberta. <strong>Gerir diálogo</strong>. PNED: Cartão Branco, Bandeira, Juramento, Tríptico — <strong>não</strong> Educação Olímpica (COP). Código ética = estrutura <strong>axiológica</strong>.</div>';
+
+  const chunks = content.split(/<h2 class="section-title"[^>]*>/).filter(Boolean);
+  const cards = chunks
+    .map((chunk) => {
+      const titleMatch = chunk.match(/^([\s\S]*?)<\/h2>/);
+      if (!titleMatch) return null;
+      const title = titleMatch[1].replace(/^\d+\.\s*/, '').trim();
+      const body = normalizeEticaGuideBody(chunk.slice(titleMatch[0].length));
+      return `<div class="card topic-card"><p class="section-label">${title}</p>${body}</div>`;
+    })
+    .filter(Boolean);
+
+  return examBox + cards.join('\n');
+}
+
+function extractEticaGuideConteudo(html) {
+  if (!html.includes('id="view-guide"')) return null;
+  const inner = extractElementById(html, 'view-guide');
+  if (!inner) return null;
+  return { html: normalizeEticaGuideContent(inner), sections: [] };
+}
+
+function extractDivBlockAt(html, startIdx) {
+  const contentStart = html.indexOf('>', startIdx) + 1;
+  let depth = 1;
+  let i = contentStart;
+
+  while (i < html.length && depth > 0) {
+    const nextOpen = html.indexOf('<div', i);
+    const nextClose = html.indexOf('</div>', i);
+    if (nextClose === -1) break;
+
+    if (nextOpen !== -1 && nextOpen < nextClose) {
+      depth += 1;
+      i = nextOpen + 4;
+    } else {
+      depth -= 1;
+      if (depth === 0) return html.slice(startIdx, nextClose + 6);
+      i = nextClose + 6;
+    }
+  }
+  return null;
+}
+
+function parseAssessmentQuizBlock(block) {
+  const openTag = block.match(/^<div[^>]*>/)?.[0] || '';
+  if (!openTag.includes('data-type')) return [];
+
+  const type = openTag.match(/data-type="([^"]*)"/)?.[1];
+  const qText = (block.match(/<div class="q-text">([\s\S]*?)<\/div>/) || [])[1]?.trim();
+  if (!type || !qText) return [];
+
+  if (type === 'mc') {
+    const correct = parseInt(openTag.match(/data-correct="([^"]*)"/)?.[1] ?? '0', 10);
+    const options = [...block.matchAll(/<label class="opt">[\s\S]*?value="(\d)"[^>]*>([\s\S]*?)<\/label>/g)]
+      .sort((a, b) => parseInt(a[1], 10) - parseInt(b[1], 10))
+      .map((m) => m[2].trim());
+    return [{ question: qText, options, correct }];
+  }
+
+  if (type === 'tf') {
+    const correctStr = openTag.match(/data-correct="([^"]*)"/)?.[1];
+    const correct = correctStr === 'true' ? 0 : 1;
+    return [{ question: qText, options: ['Verdadeiro', 'Falso'], correct }];
+  }
+
+  if (type === 'match') {
+    const rows = [
+      ...block.matchAll(
+        /<div class="match-term">([\s\S]*?)<\/div>\s*<select class="match" data-correct="(\d)">([\s\S]*?)<\/select>/g
+      ),
+    ];
+    if (!rows.length) return [];
+
+    const options = [...rows[0][3].matchAll(/<option value="(\d)">([\s\S]*?)<\/option>/g)]
+      .filter((m) => m[1] !== '')
+      .sort((a, b) => parseInt(a[1], 10) - parseInt(b[1], 10))
+      .map((m) => m[2].trim());
+
+    return rows.map((row) => ({
+      question: `${qText.replace(/:$/, '')} — ${row[1].trim()}:`,
+      options,
+      correct: parseInt(row[2], 10),
+    }));
+  }
+
+  return [];
+}
+
+function extractAssessmentHtmlQuiz(html) {
+  if (!html.includes('id="view-quiz"')) return [];
+
+  const quizView = extractElementById(html, 'view-quiz');
+  if (!quizView) return [];
+
+  const questions = [];
+  const needle = '<div class="q"';
+  let i = 0;
+
+  while (i < quizView.length) {
+    const start = quizView.indexOf(needle, i);
+    if (start === -1) break;
+    const block = extractDivBlockAt(quizView, start);
+    if (block) questions.push(...parseAssessmentQuizBlock(block));
+    i = start + needle.length;
+  }
+
+  return questions;
+}
+
 function extractConteudo(html, panels) {
   const panelList = panels?.length ? panels : DEFAULT_CONTENT_PANELS;
   const multi = extractMultiPanelConteudo(html, panelList);
   if (multi) return multi;
+
+  const eticaGuide = extractEticaGuideConteudo(html);
+  if (eticaGuide) return eticaGuide;
+
+  const etica = extractEticaConteudo(html);
+  if (etica) return etica;
 
   const resumo = extractResumoConteudo(html);
   if (resumo) return resumo;
@@ -596,6 +843,12 @@ function extractArray(html, name) {
 }
 
 function extractFlashcardsFromHtml(html) {
+  if (/(?:const|let)\s+glossary\s*=/.test(html)) {
+    return extractArray(html, 'glossary').map((item) => ({
+      question: item.term,
+      answer: item.def,
+    }));
+  }
   if (/(?:const|let)\s+flashcards\s*=/.test(html)) {
     return toFlashcards(extractArray(html, 'flashcards'));
   }
@@ -614,16 +867,20 @@ function extractFlashcardsFromHtml(html) {
 }
 
 function extractQuizFromHtml(html) {
-  if (/(?:const|let)\s+questions\s*=/.test(html)) {
-    return toQuiz(extractArray(html, 'questions'));
+  const parts = [];
+  parts.push(...extractAssessmentHtmlQuiz(html));
+
+  for (const name of ['examQuiz', 'quiz', 'questions', 'qs', 'quizData']) {
+    if (new RegExp(`(?:const|let)\\s+${name}\\s*=\\s*\\[`).test(html)) {
+      parts.push(...toQuiz(extractArray(html, name)));
+    }
   }
-  if (/(?:const|let)\s+qs\s*=/.test(html)) {
-    return toQuiz(extractArray(html, 'qs'));
+
+  if (!parts.length) {
+    throw new Error('Quiz não encontrado no HTML (examQuiz, quiz, avaliação HTML ou quizData)');
   }
-  if (/(?:const|let)\s+quizData\s*=/.test(html)) {
-    return toQuiz(extractArray(html, 'quizData'));
-  }
-  throw new Error('Quiz não encontrado no HTML (questions, qs ou quizData)');
+
+  return mergeUniqueQuiz([], parts);
 }
 
 function escapeTemplate(str) {

@@ -620,6 +620,16 @@ window.STUDY_UNITS.push({
       "correct": 1
     },
     {
+      "question": "Qual corresponde às unidades motoras com motoneurónios de maiores dimensões e axónio de maior calibre?",
+      "options": [
+        "Tipo S",
+        "Tipo FF",
+        "Tipo FR",
+        "Tipo I"
+      ],
+      "correct": 1
+    },
+    {
       "question": "Segundo Henneman, qual é a ordem de recrutamento das fibras musculares?",
       "options": [
         "FF → FR → S",
@@ -1161,6 +1171,16 @@ window.STUDY_UNITS.push({
         "O princípio da continuidade."
       ],
       "correct": 1
+    },
+    {
+      "question": "O princípio do treino baseado na capacidade do organismo responder positivamente às exigências do treino (adaptação) é:",
+      "options": [
+        "O princípio da heterocronia.",
+        "O princípio da reversibilidade.",
+        "O princípio da individualização.",
+        "O princípio da sobrecarga."
+      ],
+      "correct": 3
     },
     {
       "question": "O momento ideal para aplicar um novo estímulo de sobrecarga é:",
@@ -1738,11 +1758,11 @@ window.STUDY_UNITS.push({
       "question": "A carga de treino:",
       "options": [
         "É medida apenas de forma individual.",
+        "Determina a grandeza e a intensidade dos processos de recuperação.",
         "Só é mensurável através de parâmetros fisiológicos.",
-        "Compreende apenas uma grandeza externa.",
-        "Determina a grandeza e a intensidade dos processos de recuperação."
+        "Compreende apenas uma grandeza externa."
       ],
-      "correct": 3
+      "correct": 1
     },
     {
       "question": "Entre que idades as capacidades coordenativas têm o seu período de desenvolvimento crucial:",
@@ -2576,12 +2596,12 @@ window.STUDY_UNITS.push({
     {
       "question": "O método de treino mais eficaz para melhorar a flexibilidade corresponde:",
       "options": [
-        "Ao método PNF.",
         "Ao método estático.",
         "Ao método passivo.",
-        "Ao método balístico."
+        "Ao método balístico.",
+        "Ao método PNF."
       ],
-      "correct": 0
+      "correct": 3
     },
     {
       "question": "O ciclo de alongamento-encurtamento (CAE) é importante para:",
@@ -3601,6 +3621,16 @@ window.STUDY_UNITS.push({
         "A parte preparatória."
       ],
       "correct": 1
+    },
+    {
+      "question": "O aquecimento visa mobilizar e preparar o atleta do ponto de vista:",
+      "options": [
+        "Fisiológico e psicológico.",
+        "Físico e técnico.",
+        "Físico e tático.",
+        "Cardiovascular e emocional."
+      ],
+      "correct": 0
     },
     {
       "question": "A ordem correcta das fases do aquecimento é:",
